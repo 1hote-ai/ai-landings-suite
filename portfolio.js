@@ -154,8 +154,8 @@ function initCalculator() {
 
   if (!priceDisplay || !termDisplay) return;
 
-  let basePrice = 25000;
-  let baseHours = 24;
+  let basePrice = 9000;
+  let baseHours = 48;
   let urgencyMultiplier = 1.0;
 
   function calculate() {
