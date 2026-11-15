@@ -1,0 +1,1394 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HOP & BARREL | Крафтовая пивоварня & Гастропаб в Москве</title>
+  <meta name="description" content="Крафтовая пивоварня полного цикла и гастропаб HOP & BARREL в Москве. 24 поворотных крана свежего эля и лагера, техасский смокер с 14-часовым брискетом, экскурсии на производство.">
+  <meta name="keywords" content="крафтовое пиво, крафтовая пивоварня Москва, гастропаб, брискет, бар на Достоевской, дегустационные сеты, экскурсия на пивоварню, Hop and Barrel">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="HOP & BARREL | Крафтовая пивоварня & Гастропаб">
+  <meta property="og:description" content="24 поворотных крана свежего эля и лагера, техасский смокер, бочковая выдержка и бронирование столов онлайн.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1518176258769-f227c798150e?auto=format&fit=crop&w=1200&q=85">
+  <meta property="og:url" content="https://hopbarrel.ru">
+  <meta name="theme-color" content="#2B1B17">
+
+  <!-- Google Fonts: Bebas Neue + Roboto Slab -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Slab:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Favicon (Amber Craft Hop & Barrel SVG) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%232B1B17'/%3E%3Cpath d='M8 10 C8 6, 24 6, 24 10 C24 10, 27 16, 24 22 C24 26, 8 26, 8 22 C5 16, 8 10, 8 10 Z' fill='none' stroke='%23D97706' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='3.5' fill='%23FEF3C7'/%3E%3C/svg%3E">
+
+  <!-- Yandex Maps 2.1 API -->
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+</head>
+<body class="site-body">
+
+  <!-- Top Announcement & Live Bar Status -->
+  <div class="top-bar">
+    <div class="container top-bar__inner">
+      <div class="top-bar__status" id="live-status-pill">
+        <span class="status-indicator-dot"></span>
+        <span class="status-text" id="live-status-text">Проверяем статус бара...</span>
+      </div>
+      <div class="top-bar__info">
+        <span class="top-bar__address">
+          <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          <span data-config="address">Москва, ул. Самотёчная, 13</span>
+        </span>
+        <span class="top-bar__divider">•</span>
+        <a href="tel:+74958904213" class="top-bar__phone" data-config-href="phoneClean">
+          <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          <span data-config="phone">+7 (495) 890-42-13</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Primary Navigation Header -->
+  <header class="site-header" id="header">
+    <div class="container site-header__inner">
+      <a href="#hero" class="brand-logo" aria-label="HOP & BARREL на главную">
+        <div class="brand-logo__mark">
+          <svg viewBox="0 0 44 44" class="brand-logo__icon" fill="currentColor">
+            <!-- Stylized Barrel with Hop Cone Stamp -->
+            <path d="M8 12 C8 6, 36 6, 36 12 C36 12, 40 22, 36 32 C36 38, 8 38, 8 32 C4 22, 8 12, 8 12 Z" fill="none" stroke="#D97706" stroke-width="2.5" />
+            <path d="M12 10 L12 34 M32 10 L32 34" stroke="#D97706" stroke-width="1.5" stroke-dasharray="2 2" />
+            <path d="M6 22 L38 22" stroke="#D97706" stroke-width="2" />
+            <!-- Hop Cone Center -->
+            <path d="M22 14 C19 17, 19 21, 22 25 C25 21, 25 17, 22 14 Z" fill="#FEF3C7" />
+            <path d="M18 19 C16 22, 17 25, 20 27" stroke="#FEF3C7" stroke-width="1.5" fill="none" />
+            <path d="M26 19 C28 22, 27 25, 24 27" stroke="#FEF3C7" stroke-width="1.5" fill="none" />
+          </svg>
+        </div>
+        <div class="brand-logo__text">
+          <span class="brand-logo__title" data-config="brandShort">HOP &amp; BARREL</span>
+          <span class="brand-logo__subtitle">CRAFT BREWERY &amp; GASTROPUB</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="desktop-nav" aria-label="Основное меню">
+        <ul class="desktop-nav__list">
+          <li><a href="#about" class="nav-link">О пивоварне</a></li>
+          <li><a href="#tap-list" class="nav-link">На кранах <span class="nav-badge">24</span></a></li>
+          <li><a href="#flight-builder" class="nav-link">Сеты</a></li>
+          <li><a href="#kitchen" class="nav-link">Смокер &amp; Меню</a></li>
+          <li><a href="#tours" class="nav-link">Экскурсии</a></li>
+          <li><a href="#gallery" class="nav-link">Атмосфера</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
+          <li><a href="#contacts" class="nav-link">Контакты</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="site-header__actions">
+        <button type="button" class="btn btn--amber btn--header open-reservation-btn" data-modal="modal-reservation">
+          <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 4H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z"></path><path d="M16 2v4"></path><path d="M8 2v4"></path><path d="M3 10h18"></path></svg>
+          <span>Бронь стола</span>
+        </button>
+
+        <button type="button" class="mobile-burger" id="burger-btn" aria-label="Открыть мобильное меню" aria-expanded="false">
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <aside class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+    <div class="mobile-drawer__overlay" id="mobile-drawer-overlay"></div>
+    <div class="mobile-drawer__content">
+      <div class="mobile-drawer__header">
+        <div class="brand-logo">
+          <div class="brand-logo__title">HOP &amp; BARREL</div>
+          <div class="brand-logo__subtitle">ХМЕЛЬ &amp; БОЧКА</div>
+        </div>
+        <button type="button" class="drawer-close-btn" id="drawer-close-btn" aria-label="Закрыть меню">&times;</button>
+      </div>
+
+      <nav class="mobile-drawer__nav">
+        <ul>
+          <li><a href="#about" class="drawer-nav-link">О пивоварне</a></li>
+          <li><a href="#tap-list" class="drawer-nav-link">Кран-лист (24 сорта)</a></li>
+          <li><a href="#flight-builder" class="drawer-nav-link">Конструктор дегустаций</a></li>
+          <li><a href="#kitchen" class="drawer-nav-link">Смокер &amp; Кухня</a></li>
+          <li><a href="#tours" class="drawer-nav-link">Экскурсии и варки</a></li>
+          <li><a href="#gallery" class="drawer-nav-link">Фотогалерея</a></li>
+          <li><a href="#reviews" class="drawer-nav-link">Отзывы &amp; Рейтинги</a></li>
+          <li><a href="#faq" class="drawer-nav-link">Частые вопросы</a></li>
+          <li><a href="#contacts" class="drawer-nav-link">Контакты и карта</a></li>
+        </ul>
+      </nav>
+
+      <div class="mobile-drawer__footer">
+        <button type="button" class="btn btn--amber btn--full open-reservation-btn" data-modal="modal-reservation">
+          Забронировать стол
+        </button>
+        <div class="mobile-drawer__contact-item">
+          <span class="label">Телефон:</span>
+          <a href="tel:+74958904213" data-config-href="phoneClean" data-config="phone">+7 (495) 890-42-13</a>
+        </div>
+        <div class="mobile-drawer__contact-item">
+          <span class="label">Адрес:</span>
+          <span data-config="address">Москва, ул. Самотёчная, 13</span>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Landing Content -->
+  <main id="main-content">
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+      <div class="hero-section__bg-overlay"></div>
+      <div class="hero-section__industrial-glow"></div>
+      
+      <div class="container hero-section__container">
+        <div class="hero-section__content">
+          <div class="craft-stamp-badge">
+            <span class="stamp-icon">★</span>
+            <span>НАСТОЯЩИЙ МОСКОВСКИЙ КРАФТ С 2018 ГОДА</span>
+            <span class="stamp-icon">★</span>
+          </div>
+
+          <h1 class="hero-title">
+            ХМЕЛЬ &amp; БОЧКА:
+            <span class="text-amber-glow">ЖЕЛЕЗНЫЙ ТЕМПЕРАМЕНТ</span>
+            И ЧИСТАЯ МЕДЬ
+          </h1>
+
+          <p class="hero-subtitle">
+            Собственная крафтовая варка в историческом центре Москвы. 24 поворотных крана непастеризованного эля, созревание в дубовых бочках из-под бурбона и техасский смокер с 14-часовым томлением брискета.
+          </p>
+
+          <div class="hero-actions">
+            <button type="button" class="btn btn--amber btn--lg open-reservation-btn" data-modal="modal-reservation">
+              <span>Забронировать стол</span>
+              <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+            </button>
+            <a href="#tap-list" class="btn btn--copper-outline btn--lg">
+              <span>Смотреть кран-лист</span>
+              <span class="badge-mini">24 сорта</span>
+            </a>
+          </div>
+
+          <div class="hero-guarantees">
+            <div class="guarantee-item">
+              <span class="guarantee-icon">⚡</span>
+              <span>Варка без фильтрации и пастеризации</span>
+            </div>
+            <div class="guarantee-item">
+              <span class="guarantee-icon">🪵</span>
+              <span>Выдержка в бочках Heaven Hill &amp; Buffalo Trace</span>
+            </div>
+            <div class="guarantee-item">
+              <span class="guarantee-icon">🔥</span>
+              <span>Настоящий смокер на дубовых поленьях</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Stats Board -->
+        <div class="hero-stats-board">
+          <div class="hero-stats-board__header">
+            <span class="stats-label">ТАБЛО ПИВОВАРНИ</span>
+            <span class="stats-live-dot" title="Данные обновлены сегодня"></span>
+          </div>
+          <div class="hero-stats-board__grid">
+            <div class="stat-card">
+              <span class="stat-number">24</span>
+              <span class="stat-desc">Поворотных крана с ротацией сортов</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">1200Л</span>
+              <span class="stat-desc">Объем еженедельной свежей варки</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">18<small>мес</small></span>
+              <span class="stat-desc">Максимальная выдержка в дубе</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">4.9</span>
+              <span class="stat-desc">Рейтинг гостей в Яндекс &amp; Untappd</span>
+            </div>
+          </div>
+          <div class="hero-stats-board__footer">
+            <div class="current-schedule-badge">
+              <span class="schedule-icon">⏰</span>
+              <span id="hero-schedule-text">Сегодня открыты: 14:00 – 02:00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Philosophy & Heritage Section -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-kicker">ФИЛОСОФИЯ И ТЕХНОЛОГИЯ</div>
+          <h2 class="section-title">КАК РОЖДАЕТСЯ НАШ КРАФТ</h2>
+          <div class="section-divider"></div>
+          <p class="section-subtitle">
+            Мы не идем на компромиссы ради удешевления. Никаких концентратов, мальтозных паток и искусственной газации. Только премиальный солод, редкий свежий хмель и кристальная артезианская вода с тонкой минерализацией.
+          </p>
+        </div>
+
+        <div class="heritage-grid">
+          <!-- Card 1 -->
+          <article class="heritage-card">
+            <div class="heritage-card__icon-wrapper">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="heritage-icon"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+            </div>
+            <h3 class="heritage-card__title">Медные варочные порядки</h3>
+            <p class="heritage-card__text">
+              Наш варочный цех собран по индивидуальному проекту с медной рубашкой. Плавный конвекционный нагрев исключает пригарание сусла и сохраняет тончайшие карамельные и хлебные профили отборного солода из Баварии.
+            </p>
+            <div class="heritage-card__tag">Варка 1200 л / партия</div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="heritage-card">
+            <div class="heritage-card__icon-wrapper">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="heritage-icon"><rect x="3" y="4" width="18" height="16" rx="2"></rect><line x1="3" y1="10" x2="21" y2="10"></line><line x1="3" y1="16" x2="21" y2="16"></line><line x1="8" y1="4" x2="8" y2="20"></line><line x1="16" y1="4" x2="16" y2="20"></line></svg>
+            </div>
+            <h3 class="heritage-card__title">Бочковая выдержка (Barrel-Aged)</h3>
+            <p class="heritage-card__text">
+              В отдельном погребе с контролируемой влажностью созревают наши барливайны и имперские стауты. Мы используем аутентичные бочки из американского белого дуба из-под бурбона Heaven Hill и хереса Oloroso.
+            </p>
+            <div class="heritage-card__tag">До 18 месяцев в дубе</div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="heritage-card">
+            <div class="heritage-card__icon-wrapper">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="heritage-icon"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
+            </div>
+            <h3 class="heritage-card__title">Двойное сухое охмеление (DDH)</h3>
+            <p class="heritage-card__text">
+              Для ярких New England IPA и West Coast элей мы применяем двойное холодное охмеление свежими гранулами хмеля прямого авиаимпорта: Citra Lupomax, Nelson Sauvin, Mosaic и новозеландский Nectaron.
+            </p>
+            <div class="heritage-card__tag">До 22 г хмеля на 1 л пива</div>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="heritage-card">
+            <div class="heritage-card__icon-wrapper">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="heritage-icon"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg>
+            </div>
+            <h3 class="heritage-card__title">Настоящий техасский смокер</h3>
+            <p class="heritage-card__text">
+              Крафтовое пиво требует честной гастрономии. Мы готовим мясо в дровяном смокере методом Low &amp; Slow: говяжий брискет коптится 14 часов на дубовых дровах до тающей шелковой текстуры.
+            </p>
+            <div class="heritage-card__tag">14 часов Low &amp; Slow</div>
+          </article>
+        </div>
+
+        <!-- Visual Brewery Banner -->
+        <div class="brewery-feature-banner">
+          <div class="brewery-feature-banner__content">
+            <span class="banner-badge">ОТКРЫТАЯ ВАРНЯ</span>
+            <h3 class="banner-title">ВАРНИЧНЫЙ ЗАЛ ПРЯМО ЗА СТЕКЛОМ ПАБА</h3>
+            <p class="banner-text">
+              В нашем основном зале установлена панорамная перегородка: пока вы пробуете свежий эль, прямо за вашим столом пивовары контролируют затирание и фильтрацию сусла. Никаких тайн — только мастерство.
+            </p>
+            <button type="button" class="btn btn--amber open-tour-modal-btn" data-modal="modal-tour">
+              Записаться на экскурсию к пивовару
+            </button>
+          </div>
+          <div class="brewery-feature-banner__visual">
+            <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/brewery-tanks.jpg -->
+            <img src="https://images.unsplash.com/photo-1584225064785-c62a8b43d148?auto=format&fit=crop&w=800&q=80" alt="Варочные чаны пивоварни Hop and Barrel" class="banner-img" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Live Tap List -->
+    <section class="section taplist-section" id="tap-list">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-kicker">ОНЛАЙН РОТАЦИЯ 24 КРАНОВ</div>
+          <h2 class="section-title">СВЕЖИЙ РОЗЛИВ ПРЯМО СЕЙЧАС</h2>
+          <div class="section-divider"></div>
+          <p class="section-subtitle">
+            Все кеги хранятся в охлаждаемой камере при стабильных +3°C и подаются через короткую прямую линию. Выбирайте по стилю, крепости и горечи или соберите дегустационный сет из 4 сортов!
+          </p>
+        </div>
+
+        <!-- Filter & Search Controls -->
+        <div class="tap-controls-panel">
+          <div class="tap-controls-row">
+            <!-- Search -->
+            <div class="search-box">
+              <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+              <input type="text" id="tap-search-input" class="search-input" placeholder="Поиск по названию, стилю или сорту хмеля (напр. Citra, Stout)...">
+              <button type="button" id="search-clear-btn" class="search-clear-btn" aria-label="Очистить поиск">&times;</button>
+            </div>
+
+            <!-- Sort By -->
+            <div class="sort-box">
+              <label for="tap-sort-select" class="sort-label">Сортировка:</label>
+              <select id="tap-sort-select" class="sort-select">
+                <option value="tap-asc">По номеру крана (1 → 12)</option>
+                <option value="abv-asc">Крепость ABV (легкое → крепкое)</option>
+                <option value="abv-desc">Крепость ABV (крепкое → легкое)</option>
+                <option value="ibu-desc">Горечь IBU (яркая горечь)</option>
+                <option value="price-asc">По цене (0.5 л)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Style Category Pills -->
+          <div class="category-pills" id="style-filter-container">
+            <button type="button" class="cat-pill active" data-category="all">Все сорта (<span id="count-all">12</span>)</button>
+            <button type="button" class="cat-pill" data-category="ipa">IPA &amp; APA (<span id="count-ipa">3</span>)</button>
+            <button type="button" class="cat-pill" data-category="stout">Stout &amp; Porter (<span id="count-stout">3</span>)</button>
+            <button type="button" class="cat-pill" data-category="lager">Lager &amp; Pilsner (<span id="count-lager">2</span>)</button>
+            <button type="button" class="cat-pill" data-category="wheat">Wheat &amp; Rauch (<span id="count-wheat">2</span>)</button>
+            <button type="button" class="cat-pill" data-category="sour">Sour, Wild &amp; Cider (<span id="count-sour">2</span>)</button>
+          </div>
+
+          <!-- Quick Range Sliders / Tags -->
+          <div class="tap-parameters-row">
+            <div class="param-filter-group">
+              <span class="param-filter-title">Крепость ABV:</span>
+              <div class="param-tags" id="abv-filter-tags">
+                <button type="button" class="param-tag active" data-abv-range="all">Любая</button>
+                <button type="button" class="param-tag" data-abv-range="light">&lt; 5.5% (Легкое)</button>
+                <button type="button" class="param-tag" data-abv-range="medium">5.5% – 7.5% (Классика)</button>
+                <button type="button" class="param-tag" data-abv-range="strong">&gt; 7.5% (Крепкое)</button>
+              </div>
+            </div>
+
+            <div class="param-filter-group">
+              <span class="param-filter-title">Горечь IBU:</span>
+              <div class="param-tags" id="ibu-filter-tags">
+                <button type="button" class="param-tag active" data-ibu-range="all">Любая</button>
+                <button type="button" class="param-tag" data-ibu-range="mild">&lt; 25 IBU (Мягкое)</button>
+                <button type="button" class="param-tag" data-ibu-range="balanced">25 – 50 IBU (Баланс)</button>
+                <button type="button" class="param-tag" data-ibu-range="bitter">&gt; 50 IBU (Охмеленное)</button>
+              </div>
+            </div>
+
+            <button type="button" id="reset-all-filters-btn" class="btn-reset-filters">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-inline"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path><path d="M3 3v5h5"></path></svg>
+              <span>Сбросить фильтры</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Active Filter Indicator / Counter -->
+        <div class="tap-results-counter">
+          Найдено сортов: <strong id="visible-taps-count">12</strong> из 12 представленных
+        </div>
+
+        <!-- Tap Grid -->
+        <div class="tap-grid" id="tap-list-container">
+          <!-- Populated dynamically by script.js from TAP_LIST_DATA -->
+        </div>
+
+        <!-- Empty Results Message -->
+        <div class="tap-empty-state" id="tap-empty-state" style="display: none;">
+          <div class="empty-state-icon">🍺</div>
+          <h3 class="empty-state-title">Сортов по вашему запросу не найдено</h3>
+          <p class="empty-state-text">Попробуйте смягчить фильтры или сбросить поисковую фразу.</p>
+          <button type="button" class="btn btn--amber btn--sm" id="empty-state-reset-btn">Сбросить все параметры</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Beer Flight Builder -->
+    <section class="section flight-section" id="flight-builder">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-kicker">ИНТЕРАКТИВНЫЙ КОНСТРУКТОР</div>
+          <h2 class="section-title">СОБЕРИТЕ ДЕГУСТАЦИОННЫЙ СЕТ</h2>
+          <div class="section-divider"></div>
+          <p class="section-subtitle">
+            Не можете выбрать один сорт? Попробуйте сразу 4 крафтовых стиля в дегустационных бокалах по 150 мл на фирменной дубовой доске. Добавляйте любые сорта из кран-листа выше или выберите один из наших готовых сетов!
+          </p>
+        </div>
+
+        <div class="flight-builder-container">
+          <!-- Preset buttons -->
+          <div class="flight-presets">
+            <span class="flight-presets__label">Готовые сеты от пивовара:</span>
+            <div class="flight-presets__buttons">
+              <button type="button" class="preset-btn" data-preset="hop">💥 Хмелевой удар (IPA Set)</button>
+              <button type="button" class="preset-btn" data-preset="dark">🍫 Темный бархат (Stouts)</button>
+              <button type="button" class="preset-btn" data-preset="europe">👑 Классика Европы (Lagers &amp; Wheat)</button>
+              <button type="button" class="preset-btn" data-preset="sour">🍒 Ягодно-фруктовый фреш</button>
+            </div>
+          </div>
+
+          <!-- Flight Wooden Paddle Representation -->
+          <div class="flight-paddle">
+            <div class="flight-paddle__handle">
+              <span class="paddle-brand">HOP &amp; BARREL</span>
+            </div>
+            
+            <div class="flight-slots-grid" id="flight-slots">
+              <!-- Slot 1 -->
+              <div class="flight-slot" data-slot-index="0">
+                <div class="flight-slot__number">1</div>
+                <div class="flight-slot__content">
+                  <div class="flight-slot__empty">
+                    <span class="plus-icon">+</span>
+                    <span class="empty-text">Выберите сорт из кран-листа</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slot 2 -->
+              <div class="flight-slot" data-slot-index="1">
+                <div class="flight-slot__number">2</div>
+                <div class="flight-slot__content">
+                  <div class="flight-slot__empty">
+                    <span class="plus-icon">+</span>
+                    <span class="empty-text">Выберите сорт из кран-листа</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slot 3 -->
+              <div class="flight-slot" data-slot-index="2">
+                <div class="flight-slot__number">3</div>
+                <div class="flight-slot__content">
+                  <div class="flight-slot__empty">
+                    <span class="plus-icon">+</span>
+                    <span class="empty-text">Выберите сорт из кран-листа</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slot 4 -->
+              <div class="flight-slot" data-slot-index="3">
+                <div class="flight-slot__number">4</div>
+                <div class="flight-slot__content">
+                  <div class="flight-slot__empty">
+                    <span class="plus-icon">+</span>
+                    <span class="empty-text">Выберите сорт из кран-листа</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Flight Summary & Action Bar -->
+          <div class="flight-summary-bar">
+            <div class="flight-summary-info">
+              <div class="flight-summary-title">Ваш дегустационный сет (4 × 150 мл)</div>
+              <div class="flight-summary-status" id="flight-status-text">Собрано 0 из 4 сортов. Добавьте сорта из списка выше.</div>
+            </div>
+
+            <div class="flight-summary-price">
+              <span class="price-value">890 ₽</span>
+              <span class="price-note">за 4 дегустационных бокала</span>
+            </div>
+
+            <div class="flight-summary-actions">
+              <button type="button" id="clear-flight-btn" class="btn btn--outline-danger btn--sm" disabled>Очистить сет</button>
+              <button type="button" id="order-flight-btn" class="btn btn--amber" disabled>
+                <span>Заказать сет к столу</span>
+                <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kitchen & Smoker Menu -->
+    <section class="section kitchen-section" id="kitchen">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-kicker">ТЕХАССКИЙ СМОКЕР &amp; КУХНЯ</div>
+          <h2 class="section-title">МЕНЮ ГАСТРОПАБА</h2>
+          <div class="section-divider"></div>
+          <p class="section-subtitle">
+            Мы не подаем полуфабрикаты. Все мясные деликатесы коптятся на дубе и яблоне прямо у нас, соусы варятся на основе нашего стаута и IPA, а бургеры собираются из выдержанной мраморной говядины Black Angus.
+          </p>
+        </div>
+
+        <!-- Food Category Tabs -->
+        <div class="food-tabs" id="food-tabs-container">
+          <button type="button" class="food-tab active" data-food-cat="smoker">🔥 Смокер Low &amp; Slow</button>
+          <button type="button" class="food-tab" data-food-cat="burgers">🍔 Крафтовые бургеры</button>
+          <button type="button" class="food-tab" data-food-cat="sausages">🌭 Гриль &amp; Колбаски</button>
+          <button type="button" class="food-tab" data-food-cat="snacks">🥨 Пивные закуски &amp; Снэки</button>
+        </div>
+
+        <!-- Food Menu Grid -->
+        <div class="food-grid" id="food-grid">
+          <!-- Smoker Category Items -->
+          <article class="food-card" data-category="smoker">
+            <div class="food-card__img-wrap">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/food-brisket.jpg -->
+              <img src="https://images.unsplash.com/photo-1555658636-6e4a36218be7?auto=format&fit=crop&w=600&q=80" alt="Брискет из смокера" class="food-card__img" loading="lazy">
+              <span class="food-badge food-badge--special">Хит смокера</span>
+            </div>
+            <div class="food-card__body">
+              <div class="food-card__header">
+                <h3 class="food-card__title">Техасский брискет 14-часового томления</h3>
+                <span class="food-card__price">940 ₽</span>
+              </div>
+              <p class="food-card__desc">
+                Сочнейшая говяжья грудинка Black Angus с фирменным дымным кольцом (smoke ring). Подается с хрустящими маринованными огурчиками, красным ялтинским луком и BBQ соусом на копченом стауте.
+              </p>
+              <div class="food-card__meta">
+                <span class="food-weight">320/50 г</span>
+                <span class="food-pairing">Идеально к: #03 Barrel Aged Tsar &amp; #05 Rauchbier</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="food-card" data-category="smoker">
+            <div class="food-card__img-wrap">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/food-ribs.jpg -->
+              <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80" alt="Свиные ребра в глазури" class="food-card__img" loading="lazy">
+              <span class="food-badge">Шеф-выбор</span>
+            </div>
+            <div class="food-card__body">
+              <div class="food-card__header">
+                <h3 class="food-card__title">Ребра St. Louis в глазури Bourbon Stout</h3>
+                <span class="food-card__price">880 ₽</span>
+              </div>
+              <p class="food-card__desc">
+                Мясные свиные ребра сухой засолки с копченой паприкой и тростниковым сахаром. Мясо само отходит от кости. Карамельная корочка глазируется сиропом из темного эля.
+              </p>
+              <div class="food-card__meta">
+                <span class="food-weight">400/40 г</span>
+                <span class="food-pairing">Идеально к: #02 Copper Foundry &amp; #09 Smoked Porter</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Burger Items -->
+          <article class="food-card" data-category="burgers">
+            <div class="food-card__img-wrap">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/food-burger.jpg -->
+              <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=600&q=80" alt="Крафтовый бургер Hop and Barrel" class="food-card__img" loading="lazy">
+              <span class="food-badge food-badge--special">Фирменный</span>
+            </div>
+            <div class="food-card__body">
+              <div class="food-card__header">
+                <h3 class="food-card__title">Бургер «Hop &amp; Barrel»</h3>
+                <span class="food-card__price">720 ₽</span>
+              </div>
+              <p class="food-card__desc">
+                Пышная бриошь, 180г сочной мраморной котлеты medium, двойной сыр Чеддер 12 месяцев выдержки, хрустящий бекон, луковый мармелад на IPA и авторский копченый айоли.
+              </p>
+              <div class="food-card__meta">
+                <span class="food-weight">380 г + картофель фри</span>
+                <span class="food-pairing">Идеально к: #01 Moscow Dust &amp; #04 Urban Nomad</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="food-card" data-category="burgers">
+            <div class="food-card__img-wrap">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/food-pulled-pork.jpg -->
+              <img src="https://images.unsplash.com/photo-1555658636-6e4a36218be7?auto=format&fit=crop&w=600&q=80" alt="Бургер с рваной свининой" class="food-card__img" loading="lazy">
+            </div>
+            <div class="food-card__body">
+              <div class="food-card__header">
+                <h3 class="food-card__title">Smoked Pulled Pork Burger</h3>
+                <span class="food-card__price">660 ₽</span>
+              </div>
+              <p class="food-card__desc">
+                Копченая в течение 10 часов рваная свиная лопатка, сливочный салат Коул-Слоу, маринованные перчики халапеньо и горчично-медовый соус Carolina Gold.
+              </p>
+              <div class="food-card__meta">
+                <span class="food-weight">350 г + картофель фри</span>
+                <span class="food-pairing">Идеально к: #06 Nordic Blonde &amp; #11 Cider</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Sausages Category -->
+          <article class="food-card" data-category="sausages">
+            <div class="food-card__img-wrap">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/food-sausages.jpg -->
+              <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80" alt="Сет баварских колбасок" class="food-card__img" loading="lazy">
+              <span class="food-badge">На компанию</span>
+            </div>
+            <div class="food-card__body">
+              <div class="food-card__header">
+                <h3 class="food-card__title">Большой сет колбасок гриль</h3>
+                <span class="food-card__price">1 150 ₽</span>
+              </div>
+              <p class="food-card__desc">
+                Три вида домашних колбасок собственного цеха: классические баварские с майораном, пикантные чоризо с паприкой и улитка из баранины с розмарином. Подается с тушеной кислой капустой шукрут и бретцелем.
+              </p>
+              <div class="food-card__meta">
+                <span class="food-weight">550/150 г</span>
+                <span class="food-pairing">Идеально к: #06 Nordic Blonde &amp; #08 River Mist</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Snacks Category -->
+          <article class="food-card" data-category="snacks">
+            <div class="food-card__img-wrap">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/food-wings.jpg -->
+              <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=600&q=80" alt="Хрустящие крылья Buffalo" class="food-card__img" loading="lazy">
+            </div>
+            <div class="food-card__body">
+              <div class="food-card__header">
+                <h3 class="food-card__title">Крылья Buffalo в глазури Манго-Хабанеро</h3>
+                <span class="food-card__price">580 ₽</span>
+              </div>
+              <p class="food-card__desc">
+                Хрустящие куриные крылышки с яркой согревающей остротой мангового пюре и перца хабанеро. Подаются с палочками свежего сельдерея и авторским сырным соусом Blue Cheese.
+              </p>
+              <div class="food-card__meta">
+                <span class="food-weight">320/50 г</span>
+                <span class="food-pairing">Идеально к: #01 Moscow Dust &amp; #10 Electric Mango</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="food-card" data-category="snacks">
+            <div class="food-card__img-wrap">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/food-cheese.jpg -->
+              <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=600&q=80" alt="Плато пивных закусок" class="food-card__img" loading="lazy">
+              <span class="food-badge">К пиву</span>
+            </div>
+            <div class="food-card__body">
+              <div class="food-card__header">
+                <h3 class="food-card__title">Гранд-плато пивных закусок</h3>
+                <span class="food-card__price">1 290 ₽</span>
+              </div>
+              <p class="food-card__desc">
+                Вяленый говяжий суджук, сыровяленая оленина, копченый сыр Чечил в хмелевом маринаде, обжаренный соленый миндаль с розмарином, бородинские чесночные гренки и сырные палочки с халапеньо.
+              </p>
+              <div class="food-card__meta">
+                <span class="food-weight">480 г</span>
+                <span class="food-pairing">Универсально ко всем 24 кранам</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="kitchen-footer text-center">
+          <p class="kitchen-notice">
+            ⏰ Кухня принимает заказы ежедневно с 14:00 до 23:30 (по пятницам и субботам — до 01:00).
+          </p>
+          <button type="button" class="btn btn--amber open-reservation-btn" data-modal="modal-reservation">
+            Забронировать стол к ужину
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Brewery Tours & Events -->
+    <section class="section tours-section" id="tours">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-kicker">ЖИВОЕ ПРОИЗВОДСТВО</div>
+          <h2 class="section-title">ЭКСКУРСИИ &amp; ДЕГУСТАЦИИ С ПИВОВАРОМ</h2>
+          <div class="section-divider"></div>
+          <p class="section-subtitle">
+            Загляните за кулисы настоящего крафтового пивоварения. Мы покажем каждый этап рождения напитка — от помола солода до розлива под давлением.
+          </p>
+        </div>
+
+        <div class="tours-grid">
+          <!-- Tour 1 -->
+          <article class="tour-card">
+            <div class="tour-card__badge">Каждые выходные</div>
+            <h3 class="tour-card__title">Большая экскурсия по пивоварне с дегустацией</h3>
+            <p class="tour-card__desc">
+              90 минут полного погружения. Шеф-пивовар проведет вас по варочному цеху, дрожжевому отделению и погребу бочковой выдержки. Вы попробуете 6 сортов прямо из ферментационных танков еще до розлива на кран.
+            </p>
+            <ul class="tour-card__features">
+              <li>✓ Продолжительность: 1.5 часа</li>
+              <li>✓ Дегустация 6 образцов прямо из ЦКТ (по 100 мл)</li>
+              <li>✓ Сенсорный разбор 8 видов солода и 6 сортов хмеля</li>
+              <li>✓ Подарочный бокал Hop &amp; Barrel каждому гостю</li>
+            </ul>
+            <div class="tour-card__footer">
+              <div class="tour-card__price-box">
+                <span class="tour-price">1 800 ₽</span>
+                <span class="tour-price-note">за персону</span>
+              </div>
+              <button type="button" class="btn btn--amber open-tour-modal-btn" data-modal="modal-tour" data-tour-name="Большая экскурсия по пивоварне">
+                Записаться на экскурсию
+              </button>
+            </div>
+          </article>
+
+          <!-- Tour 2 -->
+          <article class="tour-card tour-card--featured">
+            <div class="tour-card__badge tour-card__badge--gold">Каждый четверг 19:30</div>
+            <h3 class="tour-card__title">Гастроужин: Крафтовый фудпейринг со смокером</h3>
+            <p class="tour-card__desc">
+              Специальный вечер вкусовых сочетаний. Шеф-повар и бирсомелье презентуют 5 перемен авторских блюд из смокера в сочетании с редкими сортами бочковой выдержки и дикими кислыми элями.
+            </p>
+            <ul class="tour-card__features">
+              <li>✓ 5 эксклюзивных курсов мясных блюд и десертов</li>
+              <li>✓ 5 пейринговых бокалов редких релизов (Sour, RIS, Barleywine)</li>
+              <li>✓ Лекция бирсомелье о сочетании кислотности, горечи и дыма</li>
+              <li>✓ Камерная группа — строго до 16 гостей</li>
+            </ul>
+            <div class="tour-card__footer">
+              <div class="tour-card__price-box">
+                <span class="tour-price">3 400 ₽</span>
+                <span class="tour-price-note">за персону (все включено)</span>
+              </div>
+              <button type="button" class="btn btn--amber open-tour-modal-btn" data-modal="modal-tour" data-tour-name="Гастроужин: Крафтовый фудпейринг">
+                Забронировать участие
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Photo Gallery & Atmosphere -->
+    <section class="section gallery-section" id="gallery">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-kicker">ФОТОГАЛЕРЕЯ</div>
+          <h2 class="section-title">АТМОСФЕРА КРАФТА &amp; ИНДУСТРИАЛЬНЫЙ ЛОФТ</h2>
+          <div class="section-divider"></div>
+          <p class="section-subtitle">
+            Красный кирпич конца XIX века, теплая латунь, массив мореного дуба и мягкий свет ламп Эдисона. Место, где варят с душой и отдыхают со вкусом.
+          </p>
+        </div>
+
+        <div class="gallery-grid">
+          <!-- Item 1 -->
+          <div class="gallery-item gallery-item--large">
+            <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/gallery-beer-pour.jpg -->
+            <img src="https://images.unsplash.com/photo-1575037614876-c38a4d44f5b8?auto=format&fit=crop&w=1000&q=80" alt="Свежий налив крафтового пива с плотной шапкой пены" class="gallery-img" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-caption">Свежий налив с плотной сливочной шапкой</span>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="gallery-item">
+            <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/gallery-taps.jpg -->
+            <img src="https://images.unsplash.com/photo-1571613316887-6f8d5cbf7ef7?auto=format&fit=crop&w=600&q=80" alt="Стена с 24 поворотными кранами" class="gallery-img" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-caption">Стена из 24 поворотных кранов</span>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="gallery-item">
+            <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/gallery-pub-interior.jpg -->
+            <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=600&q=80" alt="Интерьер паба с кирпичными сводами" class="gallery-img" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-caption">Кирпичные своды и теплая медь</span>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="gallery-item">
+            <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/gallery-brewery-vessels.jpg -->
+            <img src="https://images.unsplash.com/photo-1584225064785-c62a8b43d148?auto=format&fit=crop&w=600&q=80" alt="Варочные емкости пивоварни" class="gallery-img" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-caption">Собственный варочный порядок</span>
+            </div>
+          </div>
+
+          <!-- Item 5 -->
+          <div class="gallery-item">
+            <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/gallery-cheers.jpg -->
+            <img src="https://images.unsplash.com/photo-1574096079513-d8259312b785?auto=format&fit=crop&w=600&q=80" alt="Гости паба дегустируют сеты" class="gallery-img" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-caption">Дегустационные вечера в хорошей компании</span>
+            </div>
+          </div>
+
+          <!-- Item 6 -->
+          <div class="gallery-item gallery-item--wide">
+            <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/gallery-meat-smoker.jpg -->
+            <img src="https://images.unsplash.com/photo-1555658636-6e4a36218be7?auto=format&fit=crop&w=1000&q=80" alt="Готовый сочный брискет из смокера" class="gallery-img" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-caption">Настоящий техасский брискет Low &amp; Slow</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Guest Reviews & Untappd Ratings -->
+    <section class="section reviews-section" id="reviews">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-kicker">ОЦЕНКА БИРГИКОВ И ГОСТЕЙ</div>
+          <h2 class="section-title">ОТЗЫВЫ &amp; РЕЙТИНГИ</h2>
+          <div class="section-divider"></div>
+          <p class="section-subtitle">
+            Мы гордимся доверием как искушенных ценителей редких сортов с Untappd, так и гостей, которые приходят к нам за сочным брискетом и душевной атмосферой.
+          </p>
+        </div>
+
+        <!-- Rating Badges Row -->
+        <div class="rating-badges-row">
+          <div class="rating-badge-card">
+            <div class="rating-badge-logo">🍺 Untappd</div>
+            <div class="rating-badge-score">4.18 / 5.0</div>
+            <div class="rating-badge-note">Verified Venue • 8 400+ чекинов</div>
+          </div>
+          <div class="rating-badge-card">
+            <div class="rating-badge-logo">⭐ Яндекс Карты</div>
+            <div class="rating-badge-score">4.9 / 5.0</div>
+            <div class="rating-badge-note">«Хорошее место» 2024–2025</div>
+          </div>
+          <div class="rating-badge-card">
+            <div class="rating-badge-logo">📍 2ГИС</div>
+            <div class="rating-badge-score">4.9 / 5.0</div>
+            <div class="rating-badge-note">Победитель Премии в категории «Крафт»</div>
+          </div>
+        </div>
+
+        <!-- Reviews Grid -->
+        <div class="reviews-grid">
+          <!-- Review 1 -->
+          <article class="review-card">
+            <div class="review-card__header">
+              <div class="reviewer-avatar">АВ</div>
+              <div class="reviewer-meta">
+                <div class="reviewer-name">Алексей Воронов</div>
+                <div class="reviewer-badge">Untappd Level 72 Beer Connoisseur</div>
+              </div>
+              <div class="review-stars">★★★★★</div>
+            </div>
+            <p class="review-card__text">
+              «Hazy DIPA Moscow Dust на кране #1 — это эталон стиля! Мутный, сливочный, никакой горелой спиртуозности, хотя честные 8.2%. А бочковой имперец просто разрыв. Очень круто, что в Москве есть крафтовое место с собственным смокером такого уровня.»
+            </p>
+            <div class="review-card__footer">
+              <span class="review-tag">Любимый сорт: Moscow Dust DIPA</span>
+              <span class="review-date">3 дня назад</span>
+            </div>
+          </article>
+
+          <!-- Review 2 -->
+          <article class="review-card">
+            <div class="review-card__header">
+              <div class="reviewer-avatar">ЕС</div>
+              <div class="reviewer-meta">
+                <div class="reviewer-name">Елена Смирнова</div>
+                <div class="reviewer-badge">Знаток города 8 уровня (Яндекс)</div>
+              </div>
+              <div class="review-stars">★★★★★</div>
+            </div>
+            <p class="review-card__text">
+              «Праздновали здесь день рождения мужа. Брали дегустационный сет из 4 сортов и большой сет ребер с брискетом. Официанты и бармены прекрасно ориентируются в сортах — подобрали даже мне, хотя я обычно пиво не пью (вишневый Flanders Red просто восторг!). Обязательно вернемся.»
+            </p>
+            <div class="review-card__footer">
+              <span class="review-tag">Любимый сорт: Cherry Cellar &amp; Брискет</span>
+              <span class="review-date">Неделю назад</span>
+            </div>
+          </article>
+
+          <!-- Review 3 -->
+          <article class="review-card">
+            <div class="review-card__header">
+              <div class="reviewer-avatar">ДМ</div>
+              <div class="reviewer-meta">
+                <div class="reviewer-name">Денис Михайлов</div>
+                <div class="reviewer-badge">Постоянный гость с 2021</div>
+              </div>
+              <div class="review-stars">★★★★★</div>
+            </div>
+            <p class="review-card__text">
+              «Был на субботней экскурсии с главным пивоваром. Это просто восторг: попробовать пиво прямо из танка до карбонизации и понять, как работает сухое охмеление! Паб держит марку уже несколько лет. Чистейшие пивные линии без запаха застоя.»
+            </p>
+            <div class="review-card__footer">
+              <span class="review-tag">Участник экскурсии на производство</span>
+              <span class="review-date">2 недели назад</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Accordion Section -->
+    <section class="section faq-section" id="faq">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-kicker">ОТВЕТЫ НА ВОПРОСЫ</div>
+          <h2 class="section-title">ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ</h2>
+          <div class="section-divider"></div>
+          <p class="section-subtitle">
+            Всё, что нужно знать перед визитом: бронирование, розлив с собой, парковка и организация праздников.
+          </p>
+        </div>
+
+        <div class="faq-accordion" id="faq-accordion">
+          <!-- FAQ 1 -->
+          <div class="faq-item active">
+            <button type="button" class="faq-trigger" aria-expanded="true">
+              <span class="faq-question">Нужно ли бронировать стол заранее?</span>
+              <span class="faq-chevron"></span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                С воскресенья по четверг в пабе обычно есть свободные места, но в пятницу, субботу и праздничные вечера посадка достигает 100%. Мы настоятельно рекомендуем забронировать столик заранее через форму на сайте или по телефону <strong data-config="phone">+7 (495) 890-42-13</strong>. Бронь стола бесплатна и держится 15 минут от указанного времени.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false">
+              <span class="faq-question">Можно ли купить пиво с собой в гроулерах или банках?</span>
+              <span class="faq-chevron"></span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Да! Любой из 24 сортов с крана мы разливаем с собой с помощью системы противодавления Pegas, что сохраняет свежесть и карбонизацию до 14 дней в холодильнике. Вы можете прийти со своим стеклянным гроулером или приобрести наш фирменный литровый гроулер с бугельной пробкой. На все пиво с собой действует скидка 20% от барного прайса.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false">
+              <span class="faq-question">Есть ли безалкогольные напитки и сухие сидры?</span>
+              <span class="faq-chevron"></span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Конечно! На кране #11 всегда стоит натуральный яблочный сидр холодного охмеления без добавления сахара. Также в холодильнике представлен отличный крафтовый безалкогольный IPA (0.5% ABV) с цитрусовым охмелением, натуральный хмелевой лимонад собственной варки и кофе на зерне свежей обжарки.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false">
+              <span class="faq-question">Как записаться на экскурсию на производство?</span>
+              <span class="faq-chevron"></span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Экскурсии с главным пивоваром проходят по субботам и воскресеньям в 16:00. Группы камерные — до 12 человек, чтобы каждый гость мог комфортно задать вопросы и продегустировать образцы из танков. Оставьте заявку через форму «Записаться на экскурсию» на сайте, и наш менеджер подтвердит наличие мест на ближайшую дату.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false">
+              <span class="faq-question">Можно ли провести корпоратив или день рождения?</span>
+              <span class="faq-chevron"></span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Да, у нас есть изолированный «Бочковой зал» на 25–35 персон, а также возможность полного закрытия основного зала до 90 гостей. Мы разработаем персональное смокер-меню, проведем слепую дегустацию сортов в формате бир-квиза и подключим аудиосистему для вашей музыки.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 6 -->
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false">
+              <span class="faq-question">Как добраться и где припарковать автомобиль?</span>
+              <span class="faq-chevron"></span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Мы находимся по адресу: <strong data-config="address">Москва, ул. Самотёчная, 13</strong>, в 5 минутах пешком от станций метро «Достоевская» и «Цветной бульвар». Рядом расположена городская платная парковка (зона 380 ₽/час), а по воскресеньям и праздникам городская парковка бесплатна.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Location, Contacts & Yandex Maps -->
+    <section class="section contacts-section" id="contacts">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-kicker">ЖДЕМ ВАС В ГОСТИ</div>
+          <h2 class="section-title">КОНТАКТЫ &amp; КАК ДОБРАТЬСЯ</h2>
+          <div class="section-divider"></div>
+          <p class="section-subtitle">
+            Уютный крафтовый уголок в историческом районе Москвы. Свежий розлив, живой дым смокера и правильная музыка ждут вас каждый день.
+          </p>
+        </div>
+
+        <div class="contacts-wrapper">
+          <!-- Contacts Info Card -->
+          <div class="contacts-info-card">
+            <div class="contacts-info-card__brand">
+              <h3 class="contacts-brand-title">HOP &amp; BARREL</h3>
+              <p class="contacts-brand-sub">Крафтовая пивоварня и гастропаб</p>
+            </div>
+
+            <div class="contacts-list">
+              <div class="contact-item">
+                <div class="contact-icon">📍</div>
+                <div class="contact-detail">
+                  <span class="contact-label">Адрес:</span>
+                  <span class="contact-val" data-config="address">Москва, ул. Самотёчная, 13</span>
+                  <span class="contact-sub" data-config="metro">м. Достоевская (5 мин) / м. Цветной бульвар</span>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon">🕒</div>
+                <div class="contact-detail">
+                  <span class="contact-label">Режим работы:</span>
+                  <span class="contact-val" data-config="scheduleWeekdays">Вс — Чт: 14:00 — 00:00</span>
+                  <span class="contact-val" data-config="scheduleWeekends">Пт — Сб: 14:00 — 02:00</span>
+                  <span class="contact-sub">Кухня принимает заказы до 23:30 (Пт-Сб до 01:00)</span>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon">📞</div>
+                <div class="contact-detail">
+                  <span class="contact-label">Бронь столов и вопросы:</span>
+                  <a href="tel:+74958904213" class="contact-link" data-config-href="phoneClean" data-config="phone">+7 (495) 890-42-13</a>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon">✉️</div>
+                <div class="contact-detail">
+                  <span class="contact-label">Электронная почта:</span>
+                  <a href="mailto:info@hopbarrel.ru" class="contact-link" data-config-href="email" data-config="email">info@hopbarrel.ru</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Social Links -->
+            <div class="contacts-socials">
+              <span class="socials-label">Мы в соцсетях:</span>
+              <div class="social-links-row">
+                <a href="https://t.me/hopbarrel_brewery" target="_blank" rel="noopener noreferrer" class="social-btn" data-config-href="socialTg">
+                  <span>Telegram</span>
+                </a>
+                <a href="https://vk.com/hopbarrel_pub" target="_blank" rel="noopener noreferrer" class="social-btn" data-config-href="socialVk">
+                  <span>ВКонтакте</span>
+                </a>
+                <a href="https://untappd.com/v/hop-and-barrel-brewery/9924810" target="_blank" rel="noopener noreferrer" class="social-btn social-btn--untappd" data-config-href="socialUntappd">
+                  <span>Untappd</span>
+                </a>
+              </div>
+            </div>
+
+            <button type="button" class="btn btn--amber btn--full open-reservation-btn" data-modal="modal-reservation">
+              Забронировать столик онлайн
+            </button>
+          </div>
+
+          <!-- Yandex Map Container -->
+          <div class="contacts-map-card">
+            <div id="yandex-map" class="map-embed">
+              <!-- If Yandex Maps loads, JS injects the interactive map here -->
+            </div>
+            
+            <!-- Fallback card in case of script blocking or offline -->
+            <div class="map-fallback" id="map-fallback">
+              <div class="map-fallback-content">
+                <span class="fallback-icon">🗺️</span>
+                <h4>Яндекс Карты</h4>
+                <p>Москва, ул. Самотёчная, 13 (координаты: 55.772314, 37.618992)</p>
+                <a href="https://yandex.ru/maps/?pt=37.618992,55.772314&z=17&l=map" target="_blank" rel="noopener noreferrer" class="btn btn--amber btn--sm" id="map-fallback-link">
+                  Открыть маршрут в Яндекс Картах
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <div class="footer-top">
+        <div class="footer-col footer-col--brand">
+          <div class="brand-logo brand-logo--footer">
+            <span class="brand-logo__title">HOP &amp; BARREL</span>
+            <span class="brand-logo__subtitle">КРАФТОВАЯ ПИВОВАРНЯ &amp; ГАСТРОПАБ</span>
+          </div>
+          <p class="footer-brand-desc">
+            Независимая московская пивоварня и ресторан с техасским смокером. Варим крафтовое пиво с честным подходом и бескомпромиссным качеством с 2018 года.
+          </p>
+          <div class="alcohol-warning-badge">
+            <span>18+</span> ЧРЕЗМЕРНОЕ УПОТРЕБЛЕНИЕ АЛКОГОЛЯ ВРЕДИТ ВАШЕМУ ЗДОРОВЬЮ
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Навигация</h4>
+          <ul class="footer-links">
+            <li><a href="#about">О пивоварне</a></li>
+            <li><a href="#tap-list">Кран-лист (24 сорта)</a></li>
+            <li><a href="#flight-builder">Дегустационные сеты</a></li>
+            <li><a href="#kitchen">Смокер &amp; Меню кухни</a></li>
+            <li><a href="#tours">Экскурсии к пивовару</a></li>
+            <li><a href="#gallery">Фотогалерея</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Связь &amp; Режим</h4>
+          <ul class="footer-contact-list">
+            <li><strong data-config="address">Москва, ул. Самотёчная, 13</strong></li>
+            <li><a href="tel:+74958904213" data-config-href="phoneClean" data-config="phone">+7 (495) 890-42-13</a></li>
+            <li><a href="mailto:info@hopbarrel.ru" data-config-href="email" data-config="email">info@hopbarrel.ru</a></li>
+            <li>Вс — Чт: 14:00 — 00:00</li>
+            <li>Пт — Сб: 14:00 — 02:00</li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Бронирование</h4>
+          <p class="footer-cta-text">Зарезервируйте столик на удобное время и выберите зал заранее.</p>
+          <button type="button" class="btn btn--amber btn--full open-reservation-btn" data-modal="modal-reservation">
+            Забронировать стол
+          </button>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-copy">
+          © <span id="current-year">2026</span> HOP &amp; BARREL Brewery. Все права защищены.
+        </div>
+        <div class="footer-meta-links">
+          <span>Политика конфиденциальности</span>
+          <span>•</span>
+          <span>Правила посещения</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL 1: Table Reservation Modal -->
+  <div class="modal-dialog-backdrop" id="modal-reservation" aria-hidden="true" role="dialog" aria-labelledby="modal-reservation-title">
+    <div class="modal-dialog-panel">
+      <button type="button" class="modal-close-btn" aria-label="Закрыть окно">&times;</button>
+      
+      <div class="modal-dialog-header">
+        <span class="modal-kicker">ОНЛАЙН БРОНИРОВАНИЕ</span>
+        <h3 class="modal-title" id="modal-reservation-title">ЗАБРОНИРОВАТЬ СТОЛ</h3>
+        <p class="modal-subtitle">Подтверждение придет в SMS в течение 3 минут. Бронь бесплатна.</p>
+      </div>
+
+      <!-- Reservation Form -->
+      <form id="reservation-form" class="modal-form" novalidate>
+        <div class="form-row form-row--two">
+          <div class="form-group">
+            <label for="res-date" class="form-label">Дата визита *</label>
+            <input type="date" id="res-date" name="date" class="form-input" required>
+            <span class="form-error-msg" id="res-date-error">Выберите дату визита</span>
+          </div>
+
+          <div class="form-group">
+            <label for="res-time" class="form-label">Время *</label>
+            <select id="res-time" name="time" class="form-select" required>
+              <option value="">Выберите время</option>
+              <option value="14:00">14:00</option>
+              <option value="15:00">15:00</option>
+              <option value="16:00">16:00</option>
+              <option value="17:00">17:00</option>
+              <option value="18:00">18:00</option>
+              <option value="19:00">19:00</option>
+              <option value="19:30">19:30</option>
+              <option value="20:00">20:00</option>
+              <option value="20:30">20:30</option>
+              <option value="21:00">21:00</option>
+              <option value="22:00">22:00</option>
+            </select>
+            <span class="form-error-msg" id="res-time-error">Выберите время</span>
+          </div>
+        </div>
+
+        <div class="form-row form-row--two">
+          <div class="form-group">
+            <label for="res-guests" class="form-label">Количество гостей *</label>
+            <select id="res-guests" name="guests" class="form-select" required>
+              <option value="1">1 персона (у барной стойки)</option>
+              <option value="2" selected>2 персоны</option>
+              <option value="3">3 персоны</option>
+              <option value="4">4 персоны</option>
+              <option value="5">5 персон</option>
+              <option value="6">6 персон</option>
+              <option value="7-10">7–10 персон (большой стол)</option>
+              <option value="10+">Более 10 персон (банкет)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="res-zone" class="form-label">Предпочтение по залу</label>
+            <select id="res-zone" name="zone" class="form-select">
+              <option value="main">Основной зал (вид на пивоварню)</option>
+              <option value="bar">Контактная барная стойка</option>
+              <option value="barrel">Уютный бочковой зал (тихий)</option>
+              <option value="any">Любой свободный столик</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row form-row--two">
+          <div class="form-group">
+            <label for="res-name" class="form-label">Ваше имя *</label>
+            <input type="text" id="res-name" name="name" class="form-input" placeholder="Иван Иванов" required minlength="2" autocomplete="name">
+            <span class="form-error-msg" id="res-name-error">Укажите ваше имя</span>
+          </div>
+
+          <div class="form-group">
+            <label for="res-phone" class="form-label">Номер телефона *</label>
+            <input type="tel" id="res-phone" name="phone" class="form-input" placeholder="+7 (___) ___-__-__" required autocomplete="tel">
+            <span class="form-error-msg" id="res-phone-error">Введите корректный номер телефона</span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="res-comment" class="form-label">Пожелания / Предзаказ дегустационного сета</label>
+          <textarea id="res-comment" name="comment" class="form-textarea" rows="2" placeholder="Например: день рождения, тихий столик или предварительный заказ сета..."></textarea>
+        </div>
+
+        <div class="form-agreement">
+          <label class="checkbox-label">
+            <input type="checkbox" id="res-agree" name="agree" checked required>
+            <span>Согласен на обработку персональных данных и получение подтверждения брони</span>
+          </label>
+        </div>
+
+        <button type="submit" class="btn btn--amber btn--full btn--submit" id="res-submit-btn">
+          <span>Подтвердить бронирование</span>
+          <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+        </button>
+      </form>
+
+      <!-- Success State -->
+      <div class="modal-success-state" id="res-success-state" style="display: none;">
+        <div class="success-stamp">
+          <div class="success-stamp__circle">✓</div>
+          <h3 class="success-stamp__title">СТОЛ УСПЕШНО ЗАБРОНИРОВАН!</h3>
+          <p class="success-stamp__order-id" id="res-order-id">Бронь № HB-8492</p>
+        </div>
+        <div class="success-details" id="res-success-details">
+          <!-- Dynamically filled with date, time, guests, etc. -->
+        </div>
+        <p class="success-note">
+          Мы отправили SMS с деталями брони. Если ваши планы изменятся, пожалуйста, предупредите нас звонком по номеру <a href="tel:+74958904213" data-config-href="phoneClean" data-config="phone">+7 (495) 890-42-13</a>.
+        </p>
+        <button type="button" class="btn btn--amber btn--full modal-done-btn">Отлично, спасибо!</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 2: Brewery Tour Registration Modal -->
+  <div class="modal-dialog-backdrop" id="modal-tour" aria-hidden="true" role="dialog" aria-labelledby="modal-tour-title">
+    <div class="modal-dialog-panel">
+      <button type="button" class="modal-close-btn" aria-label="Закрыть окно">&times;</button>
+      
+      <div class="modal-dialog-header">
+        <span class="modal-kicker">ЗАПИСЬ НА МЕРОПРИЯТИЕ</span>
+        <h3 class="modal-title" id="modal-tour-title">ЭКСКУРСИЯ НА ПИВОВАРНЮ</h3>
+        <p class="modal-subtitle">Погружение в технологию, дегустация из танков и рассказ пивовара.</p>
+      </div>
+
+      <form id="tour-form" class="modal-form" novalidate>
+        <input type="hidden" id="tour-type" name="tourType" value="Большая экскурсия по пивоварне">
+
+        <div class="form-group">
+          <label for="tour-select-event" class="form-label">Программа *</label>
+          <select id="tour-select-event" name="eventProgram" class="form-select" required>
+            <option value="Большая экскурсия по пивоварне (Сб/Вс 16:00, 1800 ₽)">Большая экскурсия по пивоварне (Сб/Вс 16:00, 1800 ₽)</option>
+            <option value="Гастроужин: Крафтовый фудпейринг со смокером (Чт 19:30, 3400 ₽)">Гастроужин: Крафтовый фудпейринг со смокером (Чт 19:30, 3400 ₽)</option>
+          </select>
+        </div>
+
+        <div class="form-row form-row--two">
+          <div class="form-group">
+            <label for="tour-date" class="form-label">Предпочтительная дата *</label>
+            <input type="date" id="tour-date" name="date" class="form-input" required>
+            <span class="form-error-msg" id="tour-date-error">Укажите желаемую дату</span>
+          </div>
+
+          <div class="form-group">
+            <label for="tour-people" class="form-label">Билетов (гостей) *</label>
+            <select id="tour-people" name="people" class="form-select" required>
+              <option value="1">1 билет</option>
+              <option value="2" selected>2 билета</option>
+              <option value="3">3 билета</option>
+              <option value="4">4 билета</option>
+              <option value="5+">5 и более (группа)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row form-row--two">
+          <div class="form-group">
+            <label for="tour-name" class="form-label">Ваше имя *</label>
+            <input type="text" id="tour-name" name="name" class="form-input" placeholder="Иван Иванов" required minlength="2" autocomplete="name">
+            <span class="form-error-msg" id="tour-name-error">Укажите ваше имя</span>
+          </div>
+
+          <div class="form-group">
+            <label for="tour-phone" class="form-label">Номер телефона *</label>
+            <input type="tel" id="tour-phone" name="phone" class="form-input" placeholder="+7 (___) ___-__-__" required autocomplete="tel">
+            <span class="form-error-msg" id="tour-phone-error">Введите номер телефона</span>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn--amber btn--full btn--submit" id="tour-submit-btn">
+          <span>Забронировать участие</span>
+          <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+        </button>
+      </form>
+
+      <div class="modal-success-state" id="tour-success-state" style="display: none;">
+        <div class="success-stamp">
+          <div class="success-stamp__circle">✓</div>
+          <h3 class="success-stamp__title">ЗАЯВКА НА ЭКСКУРСИЮ ПРИНЯТА!</h3>
+        </div>
+        <p class="success-note">
+          Наш координатор свяжется с вами в течение 15 минут для подтверждения брони мест и ответит на все вопросы. Ждем вас на пивоварне!
+        </p>
+        <button type="button" class="btn btn--amber btn--full modal-done-btn">Отлично</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Beer Flight Dock (appears when beers are added to flight) -->
+  <div class="floating-flight-dock" id="floating-flight-dock" style="display: none;">
+    <div class="floating-flight-dock__inner">
+      <div class="floating-flight-dock__badge">
+        <span class="flight-dock-count" id="dock-flight-count">0</span>/4
+      </div>
+      <div class="floating-flight-dock__info">
+        <span class="dock-title">Дегустационный сет (4 × 150 мл)</span>
+        <span class="dock-names" id="dock-beer-names">Выберите сорта на кранах</span>
+      </div>
+      <div class="floating-flight-dock__actions">
+        <a href="#flight-builder" class="btn btn--copper-outline btn--sm">К сету (890 ₽)</a>
+        <button type="button" class="btn btn--amber btn--sm" id="dock-quick-order-btn">Заказать к столу</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Container -->
+  <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>

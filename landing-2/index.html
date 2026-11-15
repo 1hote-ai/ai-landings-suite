@@ -1,0 +1,1543 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VORTEX Athletic Club — Премиальный атлетический клуб в Москве</title>
+  <meta name="description" content="VORTEX Athletic Club — 2500 м² высокотехнологичного тренировочного пространства: олимпийская тяжелая атлетика, Hyrox, боксерская арена, Recovery Lab и персональный тренинг в центре Москвы.">
+  <meta name="keywords" content="фитнес клуб москва, vortex athletic club, hyrox москва, кроссфит полянка, тяжелая атлетика, тренажерный зал премиум, recovery сауна">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230E0F12'/><polygon points='20,15 45,85 58,85 33,15' fill='%23D4FF00'/><polygon points='48,15 73,85 86,85 61,15' fill='%23FFFFFF'/></svg>">
+
+  <!-- Google Fonts: Syne & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-dark">
+
+  <!-- ========================================================
+       TOP NOTIFICATION BAR (LIVE STATUS & PROMO)
+  ======================================================== -->
+  <div class="top-bar">
+    <div class="container top-bar__container">
+      <div class="top-bar__status">
+        <span class="status-dot status-dot--pulse" id="top-status-dot"></span>
+        <span class="top-bar__status-text" id="top-status-text">Проверка статуса клуба...</span>
+      </div>
+      <div class="top-bar__schedule-preview" id="top-schedule-text">
+        Пн — Пт: 06:30 – 23:30 | Сб — Вс: 08:00 – 22:00
+      </div>
+      <div class="top-bar__actions">
+        <a href="tel:+74958294010" class="top-bar__phone" data-bind="phone">+7 (495) 829-40-10</a>
+        <a href="#booking" class="top-bar__cta-mini open-modal-btn" data-modal-target="trial">Гостевой визит</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       HEADER / NAVIGATION
+  ======================================================== -->
+  <header class="header" id="header">
+    <div class="container header__container">
+      
+      <!-- Brand Logo -->
+      <a href="#" class="brand-logo" aria-label="VORTEX Athletic Club">
+        <span class="brand-logo__symbol">
+          <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 4L14 28H19L9 4H4Z" fill="#D4FF00"/>
+            <path d="M15 4L25 28H30L20 4H15Z" fill="#FFFFFF"/>
+          </svg>
+        </span>
+        <span class="brand-logo__text">
+          <span class="brand-logo__name">VORTEX</span>
+          <span class="brand-logo__badge">ATHLETIC CLUB</span>
+        </span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="nav-desktop" aria-label="Основное меню">
+        <ul class="nav-desktop__list">
+          <li><a href="#philosophy" class="nav-desktop__link">О клубе</a></li>
+          <li><a href="#directions" class="nav-desktop__link">Направления</a></li>
+          <li><a href="#schedule" class="nav-desktop__link">Расписание</a></li>
+          <li><a href="#zones" class="nav-desktop__link">Зоны клуба</a></li>
+          <li><a href="#coaches" class="nav-desktop__link">Тренеры</a></li>
+          <li><a href="#memberships" class="nav-desktop__link">Членство</a></li>
+          <li><a href="#faq" class="nav-desktop__link">FAQ</a></li>
+          <li><a href="#contacts" class="nav-desktop__link">Локация</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header CTA & Mobile Toggle -->
+      <div class="header__right">
+        <button type="button" class="btn btn--volt header__cta open-modal-btn" data-modal-target="trial">
+          <span class="btn__text">Пробная тренировка</span>
+          <span class="btn__icon">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor">
+              <path d="M1 8h12M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+        </button>
+
+        <button type="button" class="burger-btn" id="burger-toggle" aria-label="Открыть мобильное меню" aria-expanded="false">
+          <span class="burger-btn__line"></span>
+          <span class="burger-btn__line"></span>
+          <span class="burger-btn__line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================
+       MOBILE DRAWER NAVIGATION
+  ======================================================== -->
+  <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+    <div class="mobile-drawer__overlay" id="drawer-overlay"></div>
+    <div class="mobile-drawer__panel">
+      <div class="mobile-drawer__head">
+        <div class="brand-logo">
+          <span class="brand-logo__symbol">
+            <svg width="24" height="24" viewBox="0 0 32 32" fill="none">
+              <path d="M4 4L14 28H19L9 4H4Z" fill="#D4FF00"/>
+              <path d="M15 4L25 28H30L20 4H15Z" fill="#FFFFFF"/>
+            </svg>
+          </span>
+          <span class="brand-logo__text">
+            <span class="brand-logo__name">VORTEX</span>
+            <span class="brand-logo__badge">ATHLETIC</span>
+          </span>
+        </div>
+        <button type="button" class="drawer-close-btn" id="drawer-close" aria-label="Закрыть меню">&times;</button>
+      </div>
+
+      <div class="mobile-drawer__status">
+        <span class="status-dot" id="drawer-status-dot"></span>
+        <span id="drawer-status-text">Проверка расписания...</span>
+      </div>
+
+      <nav class="mobile-drawer__nav">
+        <ul class="mobile-drawer__list">
+          <li><a href="#philosophy" class="drawer-nav-link">О клубе</a></li>
+          <li><a href="#directions" class="drawer-nav-link">Направления</a></li>
+          <li><a href="#schedule" class="drawer-nav-link">Расписание</a></li>
+          <li><a href="#zones" class="drawer-nav-link">Зоны клуба</a></li>
+          <li><a href="#coaches" class="drawer-nav-link">Тренеры</a></li>
+          <li><a href="#memberships" class="drawer-nav-link">Членство</a></li>
+          <li><a href="#faq" class="drawer-nav-link">FAQ</a></li>
+          <li><a href="#contacts" class="drawer-nav-link">Локация</a></li>
+        </ul>
+      </nav>
+
+      <div class="mobile-drawer__footer">
+        <button type="button" class="btn btn--volt btn--full open-modal-btn" data-modal-target="trial">
+          Записаться на тренировку
+        </button>
+        <div class="mobile-drawer__contacts">
+          <a href="tel:+74958294010" class="drawer-contact-item" data-bind="phone">+7 (495) 829-40-10</a>
+          <span class="drawer-contact-sub" data-bind="address">Москва, ул. Большая Полянка, д. 28, стр. 1</span>
+        </div>
+        <div class="mobile-drawer__socials">
+          <a href="https://t.me/vortex_athletic" target="_blank" rel="noopener" class="drawer-soc-link" aria-label="Telegram">TG</a>
+          <a href="https://wa.me/74958294010" target="_blank" rel="noopener" class="drawer-soc-link" aria-label="WhatsApp">WA</a>
+          <a href="https://vk.com/vortex_athletic" target="_blank" rel="noopener" class="drawer-soc-link" aria-label="VKontakte">VK</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- ========================================================
+         HERO SECTION
+    ======================================================== -->
+    <section class="hero" id="hero">
+      <div class="hero__bg-media">
+        <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/hero.jpg -->
+        <img 
+          src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=1920&q=80" 
+          alt="Атлет на тренировке в VORTEX Athletic Club" 
+          class="hero__bg-img"
+          loading="eager"
+        >
+        <div class="hero__overlay"></div>
+        <div class="hero__glow-grid"></div>
+      </div>
+
+      <div class="container hero__container">
+        <div class="hero__badge-wrap">
+          <span class="brutal-badge">
+            <span class="brutal-badge__glow"></span>
+            MOSCOW PERFORMANCE HUB // 2 500 М²
+          </span>
+          <span class="hero__badge-slash">///</span>
+          <span class="hero__badge-tech">ELEIKO CERTIFIED TRAINING CENTER</span>
+        </div>
+
+        <h1 class="hero__title">
+          <span class="hero__title-line hero__title-line--dim">ФОРМУЛА</span>
+          <span class="hero__title-line hero__title-line--volt">ВАШЕГО ПИКА</span>
+          <span class="hero__title-line">БЕЗ КОМПРОМИССОВ</span>
+        </h1>
+
+        <p class="hero__lead">
+          Премиальный тренировочный хаб для тех, кто строит тело атлета: соревновательный помост Eleiko, 
+          официальная база подготовки Hyrox, олимпийские тяжелоатлетические помосты, боксерский ринг 
+          и лабораторное восстановление в Recovery Lounge.
+        </p>
+
+        <div class="hero__cta-group">
+          <button type="button" class="btn btn--volt btn--lg open-modal-btn" data-modal-target="trial">
+            <span class="btn__text">Забронировать визит</span>
+            <span class="btn__arrow">&rarr;</span>
+          </button>
+          <a href="#schedule" class="btn btn--outline btn--lg">
+            <span>Интерактивное расписание</span>
+          </a>
+        </div>
+
+        <!-- Metrics Ribbon -->
+        <div class="hero__metrics">
+          <div class="metric-card">
+            <div class="metric-card__num">2 500<span class="metric-card__unit">м²</span></div>
+            <div class="metric-card__label">Функционального пространства с потолками 6.5 м</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-card__num">100%</div>
+            <div class="metric-card__label">Оригинальное оборудование Eleiko & Hammer Strength</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-card__num">28</div>
+            <div class="metric-card__label">Элитных тренеров (МС, МСМК, Crossfit L2, CSCS)</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-card__num">-110<span class="metric-card__unit">°C</span></div>
+            <div class="metric-card__label">Криокапсула и протоколы спортивной регенерации</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Marquee Ticker -->
+      <div class="hero-ticker" aria-hidden="true">
+        <div class="hero-ticker__track">
+          <span>HYROX OFFICIAL AFFILIATE</span>
+          <span class="ticker-dot">•</span>
+          <span>ELEIKO STRENGTH SANCTUARY</span>
+          <span class="ticker-dot">•</span>
+          <span>OLYMPIC WEIGHTLIFTING</span>
+          <span class="ticker-dot">•</span>
+          <span>BOXING & COMBAT ARENA</span>
+          <span class="ticker-dot">•</span>
+          <span>RECOVERY CRYOSPA & SAUNA</span>
+          <span class="ticker-dot">•</span>
+          <span>BIOMECHANICAL SCREENING</span>
+          <span class="ticker-dot">•</span>
+          <span>HYROX OFFICIAL AFFILIATE</span>
+          <span class="ticker-dot">•</span>
+          <span>ELEIKO STRENGTH SANCTUARY</span>
+          <span class="ticker-dot">•</span>
+          <span>OLYMPIC WEIGHTLIFTING</span>
+          <span class="ticker-dot">•</span>
+          <span>BOXING & COMBAT ARENA</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         PHILOSOPHY & TECHNOLOGY BENTO GRID
+    ======================================================== -->
+    <section class="section philosophy" id="philosophy">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-tag">01 // ФИЛОСОФИЯ VORTEX</div>
+          <h2 class="section-title">МЫ УБРАЛИ ЛИШНЕЕ. <span class="text-volt">ОСТАВИЛИ РЕЗУЛЬТАТ.</span></h2>
+          <p class="section-desc">
+            Обычные фитнес-клубы продают карты и надеются, что вы не придете. 
+            VORTEX создан по соревновательным стандартам профессионального спорта: 
+            здесь нет очередей к снарядам, а каждый элемент зала спроектирован для бескомпромиссного прогресса.
+          </p>
+        </div>
+
+        <div class="bento-grid">
+          <!-- Card 1: Screening -->
+          <div class="bento-card bento-card--accent">
+            <div class="bento-card__icon-wrap">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#D4FF00" stroke-width="2">
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+              </svg>
+            </div>
+            <span class="bento-card__step">СТАРТОВЫЙ ПРОТОКОЛ // 01</span>
+            <h3 class="bento-card__title">3D-Скрининг биомеханики & InBody 770</h3>
+            <p class="bento-card__text">
+              Никаких тренировок вслепую. На вводном тестировании спортивный врач оценивает мобильность суставов, 
+              мышечные дисбалансы, состав тела и определяет ваши индивидуальные ЧСС-пульсовые зоны.
+            </p>
+            <div class="bento-card__meta">
+              <span class="tag-pill">Точность 98.4%</span>
+              <span class="tag-pill">Включено в клубную карту</span>
+            </div>
+          </div>
+
+          <!-- Card 2: Equipment -->
+          <div class="bento-card">
+            <div class="bento-card__icon-wrap">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#D4FF00" stroke-width="2">
+                <path d="M6 5v14M18 5v14M2 9h4M18 9h4M2 15h4M18 15h4M6 12h12"/>
+              </svg>
+            </div>
+            <span class="bento-card__step">ОБОРУДОВАНИЕ // 02</span>
+            <h3 class="bento-card__title">Eleiko & Hammer Strength соревновательного класса</h3>
+            <p class="bento-card__text">
+              Сертифицированные грифы IWF/IPF с идеальной насечкой, калиброванные блины, 
+              монолитные стойки и блочные тренажеры с выверенной биомеханической траекторией движения.
+            </p>
+            <div class="bento-card__meta">
+              <span class="tag-pill">IWF Certified</span>
+              <span class="tag-pill">Только оригинал Швеция/США</span>
+            </div>
+          </div>
+
+          <!-- Card 3: Air & Atmosphere -->
+          <div class="bento-card">
+            <div class="bento-card__icon-wrap">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#D4FF00" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M8 12s1.5-2 4-2 4 2 4 2-1.5 2-4 2-4-2-4-2z"/>
+              </svg>
+            </div>
+            <span class="bento-card__step">МИКРОКЛИМАТ // 03</span>
+            <h3 class="bento-card__title">Климат-контроль с обогащением кислородом</h3>
+            <p class="bento-card__text">
+              Четырехкратный воздухообмен в час и фильтрация медицинского стандарта HEPA H14. 
+              Никакой духоты даже при пиковой нагрузке в зоне Hyrox и тяжелой атлетики.
+            </p>
+            <div class="bento-card__meta">
+              <span class="tag-pill">CO2 &lt; 500 ppm</span>
+              <span class="tag-pill">Температура 18.5°C</span>
+            </div>
+          </div>
+
+          <!-- Card 4: Community -->
+          <div class="bento-card bento-card--accent-subtle">
+            <div class="bento-card__icon-wrap">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#D4FF00" stroke-width="2">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+            <span class="bento-card__step">КОМЬЮНИТИ // 04</span>
+            <h3 class="bento-card__title">Закрытое сообщество атлетов и лидеров</h3>
+            <p class="bento-card__text">
+              Лимитированное количество резидентов. Ежемесячные внутренние турниры, 
+              выезды на международные старты Hyrox, спарринг-сессии и закрытые лекции от спортивных врачей.
+            </p>
+            <div class="bento-card__meta">
+              <span class="tag-pill">Строгий лимит карт</span>
+              <span class="tag-pill">Клубные кемпы</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         TRAINING DIRECTIONS
+    ======================================================== -->
+    <section class="section directions" id="directions">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-tag">02 // НАПРАВЛЕНИЯ ТРЕНИРОВОК</div>
+          <h2 class="section-title">ДИСЦИПЛИНЫ <span class="text-volt">ВЫСОКИХ ДОСТИЖЕНИЙ</span></h2>
+          <p class="section-desc">
+            Каждое направление базируется на научном планировании периодизации, 
+            контроле восстановления и индивидуальной биомеханике атлета.
+          </p>
+        </div>
+
+        <div class="directions-grid">
+          <!-- Direction 1: HYROX -->
+          <article class="direction-card">
+            <div class="direction-card__image-box">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/hyrox.jpg -->
+              <img 
+                src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?auto=format&fit=crop&w=800&q=80" 
+                alt="Hyrox & Functional Conditioning в VORTEX" 
+                class="direction-card__img"
+                loading="lazy"
+              >
+              <div class="direction-card__badges">
+                <span class="badge-volt">HYROX AFFILIATE</span>
+                <span class="badge-intensity">Интенсивность: ⚡⚡⚡⚡⚡</span>
+              </div>
+            </div>
+            <div class="direction-card__body">
+              <h3 class="direction-card__title">HYROX & Functional Fitness</h3>
+              <p class="direction-card__desc">
+                Специализированная подготовка к гонкам Hyrox: лыжные тренажеры SkiErg, 
+                гребля Concept2, выпады со штангой, толкание и тяга саней по профессиональному 40-метровому газону.
+              </p>
+              <ul class="direction-card__features">
+                <li>Расход: 700–950 ккал / 60 мин</li>
+                <li>Развитие МПК и аэробного порога</li>
+                <li>Группы до 12 человек под контролем сертифицированного тренера</li>
+              </ul>
+              <div class="direction-card__foot">
+                <button type="button" class="btn btn--outline-volt btn--sm open-modal-btn" data-modal-target="trial" data-preset-direction="HYROX & Functional Fitness">
+                  Записаться в группу
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Direction 2: Heavy Lifting -->
+          <article class="direction-card">
+            <div class="direction-card__image-box">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/lifting.jpg -->
+              <img 
+                src="https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?auto=format&fit=crop&w=800&q=80" 
+                alt="Olympic Weightlifting & Heavy Lifting" 
+                class="direction-card__img"
+                loading="lazy"
+              >
+              <div class="direction-card__badges">
+                <span class="badge-volt">ELEIKO ARENA</span>
+                <span class="badge-intensity">Интенсивность: ⚡⚡⚡⚡</span>
+              </div>
+            </div>
+            <div class="direction-card__body">
+              <h3 class="direction-card__title">Olympic Weightlifting & Strength</h3>
+              <p class="direction-card__desc">
+                Постановка чистой техники рывка и толчка, пауэрлифтинг и развитие предельной мощности. 
+                Тренировки на профессиональных помостах под руководством мастеров спорта международного класса.
+              </p>
+              <ul class="direction-card__features">
+                <li>Индивидуальный видеоанализ траектории штанги</li>
+                <li>Калиброванные диски и олимпийские грифы Eleiko</li>
+                <li>Проработка стабильности плечевого и тазового пояса</li>
+              </ul>
+              <div class="direction-card__foot">
+                <button type="button" class="btn btn--outline-volt btn--sm open-modal-btn" data-modal-target="trial" data-preset-direction="Olympic Weightlifting & Strength">
+                  Записаться на помост
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Direction 3: Combat Boxing -->
+          <article class="direction-card">
+            <div class="direction-card__image-box">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/boxing.jpg -->
+              <img 
+                src="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?auto=format&fit=crop&w=800&q=80" 
+                alt="Combat & Boxing Arena" 
+                class="direction-card__img"
+                loading="lazy"
+              >
+              <div class="direction-card__badges">
+                <span class="badge-volt">RING & BAGS</span>
+                <span class="badge-intensity">Интенсивность: ⚡⚡⚡⚡⚡</span>
+              </div>
+            </div>
+            <div class="direction-card__body">
+              <h3 class="direction-card__title">Boxing & Striking Conditioning</h3>
+              <p class="direction-card__desc">
+                Классический бокс, работа на снарядах с гидронаполнением Aqua Bag, 
+                отработка ударов на лапах и тактические спарринги в соревновательном ринге с мягким настилом.
+              </p>
+              <ul class="direction-card__features">
+                <li>Постановка нокаутирующего удара и тайминга</li>
+                <li>Взрывная реакция и психологическая стойкость</li>
+                <li>Группы начального, продвинутого и соревновательного уровней</li>
+              </ul>
+              <div class="direction-card__foot">
+                <button type="button" class="btn btn--outline-volt btn--sm open-modal-btn" data-modal-target="trial" data-preset-direction="Boxing & Striking Conditioning">
+                  Выйти в ринг
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Direction 4: Performance Cycling -->
+          <article class="direction-card">
+            <div class="direction-card__image-box">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/cycling.jpg -->
+              <img 
+                src="https://images.unsplash.com/photo-1538805060514-97d9cc17730c?auto=format&fit=crop&w=800&q=80" 
+                alt="Wattbike Cycling Lab" 
+                class="direction-card__img"
+                loading="lazy"
+              >
+              <div class="direction-card__badges">
+                <span class="badge-volt">WATTBIKE LAB</span>
+                <span class="badge-intensity">Интенсивность: ⚡⚡⚡⚡</span>
+              </div>
+            </div>
+            <div class="direction-card__body">
+              <h3 class="direction-card__title">High-Performance Wattbike Cycling</h3>
+              <p class="direction-card__desc">
+                Интеллектуальный сайклинг на smart-тренажерах Wattbike Atom с анализом симметрии педалирования (PES) 
+                и тренировками по точным ваттам мощности в синхронизации с мониторами ЧСС.
+              </p>
+              <ul class="direction-card__features">
+                <li>Персональный расчет функционального порога мощности (FTP)</li>
+                <li>Сжигание жира без ударной нагрузки на колени и позвоночник</li>
+                <li>Динамическая мультимедийная трасса с видеопроекцией</li>
+              </ul>
+              <div class="direction-card__foot">
+                <button type="button" class="btn btn--outline-volt btn--sm open-modal-btn" data-modal-target="trial" data-preset-direction="High-Performance Wattbike Cycling">
+                  Записаться на заезд
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Direction 5: Mobility & Rehab -->
+          <article class="direction-card">
+            <div class="direction-card__image-box">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/mobility.jpg -->
+              <img 
+                src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=800&q=80" 
+                alt="Athletic Mobility & Spine Rehab" 
+                class="direction-card__img"
+                loading="lazy"
+              >
+              <div class="direction-card__badges">
+                <span class="badge-volt">REHAB & MOBILITY</span>
+                <span class="badge-intensity">Интенсивность: ⚡⚡</span>
+              </div>
+            </div>
+            <div class="direction-card__body">
+              <h3 class="direction-card__title">Athletic Mobility & Deep Core</h3>
+              <p class="direction-card__desc">
+                Восстановление амплитуды суставов, снятие фасциальных зажимов, 
+                миофасциальный релиз (МФР) и укрепление глубоких стабилизаторов корпуса для безопасных силовых рекордов.
+              </p>
+              <ul class="direction-card__features">
+                <li>Профилактика травм и снятие боли в пояснице/шее</li>
+                <li>Методология FRC (Functional Range Conditioning)</li>
+                <li>Идеально как дополнение к тяжелому силовому тренингу</li>
+              </ul>
+              <div class="direction-card__foot">
+                <button type="button" class="btn btn--outline-volt btn--sm open-modal-btn" data-modal-target="trial" data-preset-direction="Athletic Mobility & Deep Core">
+                  Записаться на сессию
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Direction 6: 1-on-1 Coaching -->
+          <article class="direction-card">
+            <div class="direction-card__image-box">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/coaching.jpg -->
+              <img 
+                src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=800&q=80" 
+                alt="Персональный тренинг в VORTEX" 
+                class="direction-card__img"
+                loading="lazy"
+              >
+              <div class="direction-card__badges">
+                <span class="badge-volt">1-ON-1 COACHING</span>
+                <span class="badge-intensity">Интенсивность: Адаптивная</span>
+              </div>
+            </div>
+            <div class="direction-card__body">
+              <h3 class="direction-card__title">Personal Elite Coaching</h3>
+              <p class="direction-card__desc">
+                Индивидуальная стратегия достижения вашей цели: персональное расписание, 
+                нутрициологическое сопровождение, постоянная коррекция плана тренировок и поддержка наставника 24/7.
+              </p>
+              <ul class="direction-card__features">
+                <li>Индивидуальный план в закрытом приложении клуба</li>
+                <li>Контроль анализов и биомаркеров крови со спортивным врачом</li>
+                <li>Гарантия безопасного и прогнозируемого результата</li>
+              </ul>
+              <div class="direction-card__foot">
+                <button type="button" class="btn btn--outline-volt btn--sm open-modal-btn" data-modal-target="trial" data-preset-direction="Personal Elite Coaching">
+                  Подобрать тренера
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         INTERACTIVE SCHEDULE & TIMETABLE
+    ======================================================== -->
+    <section class="section schedule-section" id="schedule">
+      <div class="container">
+        <div class="section-head section-head--flex">
+          <div>
+            <div class="section-tag">03 // РАСПИСАНИЕ ТРЕНИРОВОК</div>
+            <h2 class="section-title">ИНТЕРАКТИВНЫЙ <span class="text-volt">ТАЙМТЕЙБЛ КЛУБА</span></h2>
+            <p class="section-desc">
+              Выберите день недели и интересующее направление. Бронируйте место в мини-группе в один клик.
+            </p>
+          </div>
+          <div class="schedule-head__legend">
+            <span class="legend-item"><span class="legend-dot legend-dot--lime"></span>Свободные места</span>
+            <span class="legend-item"><span class="legend-dot legend-dot--amber"></span>Осталось &lt; 3 мест</span>
+          </div>
+        </div>
+
+        <!-- Timetable Filter Controls -->
+        <div class="schedule-controls">
+          <!-- Weekday Switcher -->
+          <div class="weekday-tabs" role="tablist" id="weekday-tabs" aria-label="Дни недели">
+            <button type="button" class="weekday-tab active" data-day="mon" role="tab" aria-selected="true">
+              <span class="weekday-tab__short">ПН</span>
+              <span class="weekday-tab__full">Понедельник</span>
+            </button>
+            <button type="button" class="weekday-tab" data-day="tue" role="tab" aria-selected="false">
+              <span class="weekday-tab__short">ВТ</span>
+              <span class="weekday-tab__full">Вторник</span>
+            </button>
+            <button type="button" class="weekday-tab" data-day="wed" role="tab" aria-selected="false">
+              <span class="weekday-tab__short">СР</span>
+              <span class="weekday-tab__full">Среда</span>
+            </button>
+            <button type="button" class="weekday-tab" data-day="thu" role="tab" aria-selected="false">
+              <span class="weekday-tab__short">ЧТ</span>
+              <span class="weekday-tab__full">Четверг</span>
+            </button>
+            <button type="button" class="weekday-tab" data-day="fri" role="tab" aria-selected="false">
+              <span class="weekday-tab__short">ПТ</span>
+              <span class="weekday-tab__full">Пятница</span>
+            </button>
+            <button type="button" class="weekday-tab" data-day="sat" role="tab" aria-selected="false">
+              <span class="weekday-tab__short">СБ</span>
+              <span class="weekday-tab__full">Суббота</span>
+            </button>
+            <button type="button" class="weekday-tab" data-day="sun" role="tab" aria-selected="false">
+              <span class="weekday-tab__short">ВС</span>
+              <span class="weekday-tab__full">Воскресенье</span>
+            </button>
+          </div>
+
+          <!-- Category Tags Filter -->
+          <div class="category-filters" id="category-filters">
+            <button type="button" class="cat-chip active" data-category="all">Все дисциплины</button>
+            <button type="button" class="cat-chip" data-category="hyrox">HYROX & Cross</button>
+            <button type="button" class="cat-chip" data-category="strength">Сила & Heavy Iron</button>
+            <button type="button" class="cat-chip" data-category="combat">Бокс & Ринг</button>
+            <button type="button" class="cat-chip" data-category="recovery">Mobility & Rehab</button>
+            <button type="button" class="cat-chip" data-category="cycling">Wattbike Cycling</button>
+          </div>
+        </div>
+
+        <!-- Schedule Slots List Container (Rendered via script.js from dataset) -->
+        <div class="schedule-grid" id="schedule-grid" aria-live="polite">
+          <!-- Populated dynamically by script.js -->
+        </div>
+
+        <div class="schedule-banner">
+          <div class="schedule-banner__content">
+            <h4 class="schedule-banner__title">Хотите персональное время вне сетки расписания?</h4>
+            <p class="schedule-banner__text">
+              Мастер-тренеры VORTEX доступны для индивидуальных тренировок в любое удобное время работы клуба.
+            </p>
+          </div>
+          <button type="button" class="btn btn--volt open-modal-btn" data-modal-target="trial" data-preset-direction="Индивидуальное время">
+            Подобрать время с тренером
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         CLUB ZONES & EQUIPMENT GALLERY
+    ======================================================== -->
+    <section class="section zones" id="zones">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-tag">04 // ПРОСТРАНСТВО КЛУБА</div>
+          <h2 class="section-title">2 500 М² ЧИСТОЙ ЭНЕРГИИ <span class="text-volt">& ТЕХНОЛОГИЙ</span></h2>
+          <p class="section-desc">
+            Пространство зонировано с учетом биомеханики потоков атлетов: 
+            от сверхмощных силовых помостов до тихих купелей Recovery Lounge.
+          </p>
+        </div>
+
+        <div class="zones-gallery">
+          <!-- Zone 1 -->
+          <div class="zone-card zone-card--large">
+            <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/zone-eleiko.jpg -->
+            <img 
+              src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&q=80" 
+              alt="Eleiko Olympic & Heavy Strength Zone" 
+              class="zone-card__img"
+              loading="lazy"
+            >
+            <div class="zone-card__overlay">
+              <span class="zone-card__tag">ЗОНА 01 // 650 М²</span>
+              <h3 class="zone-card__title">Eleiko Heavy Iron Sanctuary</h3>
+              <p class="zone-card__desc">
+                8 олимпийских тяжелоатлетических помостов, соревновательные грифы с подшипниками шведского производства, 
+                силовые рамы Hammer Strength HD Elite, гантельный ряд до 70 кг.
+              </p>
+            </div>
+          </div>
+
+          <!-- Zone 2 -->
+          <div class="zone-card">
+            <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/zone-turf.jpg -->
+            <img 
+              src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=1200&q=80" 
+              alt="Hyrox & Functional Turf" 
+              class="zone-card__img"
+              loading="lazy"
+            >
+            <div class="zone-card__overlay">
+              <span class="zone-card__tag">ЗОНА 02 // 500 М²</span>
+              <h3 class="zone-card__title">Hyrox Arena & Sled Turf</h3>
+              <p class="zone-card__desc">
+                40 метров соревновательного спринтерского покрытия для саней, гребные и лыжные тренажеры Concept2, 
+                штурмовые эйрбайки Assault AirBike Pro.
+              </p>
+            </div>
+          </div>
+
+          <!-- Zone 3 -->
+          <div class="zone-card">
+            <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/zone-boxing.jpg -->
+            <img 
+              src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1200&q=80" 
+              alt="Combat & Ring Arena" 
+              class="zone-card__img"
+              loading="lazy"
+            >
+            <div class="zone-card__overlay">
+              <span class="zone-card__tag">ЗОНА 03 // 350 М²</span>
+              <h3 class="zone-card__title">Combat Ring & Boxing Bag Line</h3>
+              <p class="zone-card__desc">
+                Полноразмерный боксерский ринг 6х6 м на металлическом подиуме, 14 тяжелых кожаных мешков Fairtex, 
+                пневматические груши и зона работы на лапах.
+              </p>
+            </div>
+          </div>
+
+          <!-- Zone 4 -->
+          <div class="zone-card">
+            <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/zone-recovery.jpg -->
+            <img 
+              src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=1200&q=80" 
+              alt="Recovery Spa & Cryotherapy" 
+              class="zone-card__img"
+              loading="lazy"
+            >
+            <div class="zone-card__overlay">
+              <span class="zone-card__tag">ЗОНА 04 // 400 М²</span>
+              <h3 class="zone-card__title">Recovery Lab & Cryo Lounge</h3>
+              <p class="zone-card__desc">
+                Криосауна -110°C, финская кедровая сауна, ледяные контрастные купели 6°C, 
+                компрессионные лимфодренажные системы Normatec 3.
+              </p>
+            </div>
+          </div>
+
+          <!-- Zone 5 -->
+          <div class="zone-card">
+            <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/zone-bar.jpg -->
+            <img 
+              src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=1200&q=80" 
+              alt="Vortex Fuel Bar & Lounge" 
+              class="zone-card__img"
+              loading="lazy"
+            >
+            <div class="zone-card__overlay">
+              <span class="zone-card__tag">ЗОНА 05 // 250 М²</span>
+              <h3 class="zone-card__title">VORTEX Fuel & Nutrition Bar</h3>
+              <p class="zone-card__desc">
+                Протеиновые смузи на растительном молоке, BCAA-коктейли, свежевыжатые соки, 
+                спешелти-кофе и сбалансированные боулы от нашего шеф-нутрициолога.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         MASTER COACHES
+    ======================================================== -->
+    <section class="section coaches" id="coaches">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-tag">05 // ТРЕНЕРСКИЙ ШТАБ</div>
+          <h2 class="section-title">АТЛЕТЫ С МИРОВЫМ <span class="text-volt">ОПЫТОМ</span></h2>
+          <p class="section-desc">
+            В нашем штате нет случайных инструкторов. Каждый тренер — действующий или экс-спортсмен высших достижений 
+            с профильным медицинским или спортивным образованием и международными сертификатами.
+          </p>
+        </div>
+
+        <div class="coaches-grid">
+          <!-- Coach 1 -->
+          <div class="coach-card">
+            <div class="coach-card__img-wrap">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/coach-1.jpg -->
+              <img 
+                src="https://images.unsplash.com/photo-1567013127542-490d757e51fc?auto=format&fit=crop&w=600&q=80" 
+                alt="Алексей Беркутов — Главный тренер по тяжелой атлетике" 
+                class="coach-card__img"
+                loading="lazy"
+              >
+              <div class="coach-card__exp-badge">Опыт 12 лет</div>
+            </div>
+            <div class="coach-card__info">
+              <div class="coach-card__spec">HEAD OF STRENGTH & ELEIKO</div>
+              <h3 class="coach-card__name">Алексей Беркутов</h3>
+              <p class="coach-card__bio">
+                Мастер спорта международного класса по тяжелой атлетике. Призер чемпионатов Европы. 
+                Эксперт биомеханики подъема штанги и подготовки пауэрлифтеров соревновательного уровня.
+              </p>
+              <div class="coach-card__tags">
+                <span>IWF Level 2</span>
+                <span>Тяжелая атлетика</span>
+                <span>Powerbuilding</span>
+              </div>
+              <button type="button" class="btn btn--ghost-volt btn--sm open-modal-btn" data-modal-target="trial" data-preset-coach="Алексей Беркутов">
+                Записаться к тренеру
+              </button>
+            </div>
+          </div>
+
+          <!-- Coach 2 -->
+          <div class="coach-card">
+            <div class="coach-card__img-wrap">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/coach-2.jpg -->
+              <img 
+                src="https://images.unsplash.com/photo-1594381898411-846e7d193883?auto=format&fit=crop&w=600&q=80" 
+                alt="Елена Волкова — Старший тренер Hyrox" 
+                class="coach-card__img"
+                loading="lazy"
+              >
+              <div class="coach-card__exp-badge">Опыт 9 лет</div>
+            </div>
+            <div class="coach-card__info">
+              <div class="coach-card__spec">HYROX MASTER COACH & CONDITIONING</div>
+              <h3 class="coach-card__name">Елена Волкова</h3>
+              <p class="coach-card__bio">
+                Топ-5 атлет мирового зачета Hyrox Pro в своей возрастной категории. 
+                Сертифицированный тренер CrossFit Level 2. Специалист по развитию максимального потребления кислорода (VO2 max).
+              </p>
+              <div class="coach-card__tags">
+                <span>Hyrox Pro</span>
+                <span>Crossfit L2</span>
+                <span>Функционал</span>
+              </div>
+              <button type="button" class="btn btn--ghost-volt btn--sm open-modal-btn" data-modal-target="trial" data-preset-coach="Елена Волкова">
+                Записаться к тренеру
+              </button>
+            </div>
+          </div>
+
+          <!-- Coach 3 -->
+          <div class="coach-card">
+            <div class="coach-card__img-wrap">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/coach-3.jpg -->
+              <img 
+                src="https://images.unsplash.com/photo-1507398941214-572c25f4b1dc?auto=format&fit=crop&w=600&q=80" 
+                alt="Тимур Саркисов — Главный тренер по боксу" 
+                class="coach-card__img"
+                loading="lazy"
+              >
+              <div class="coach-card__exp-badge">Опыт 14 лет</div>
+            </div>
+            <div class="coach-card__info">
+              <div class="coach-card__spec">HEAD OF COMBAT & BOXING</div>
+              <h3 class="coach-card__name">Тимур Саркисов</h3>
+              <p class="coach-card__bio">
+                Мастер спорта по боксу, победитель всероссийских турниров класса «А». 
+                Тренер профессиональных бойцов лиг кулачных боев и ММА. Филигранная техника защиты и тайминга удара.
+              </p>
+              <div class="coach-card__tags">
+                <span>МС по боксу</span>
+                <span>Спарринги</span>
+                <span>Постановка удара</span>
+              </div>
+              <button type="button" class="btn btn--ghost-volt btn--sm open-modal-btn" data-modal-target="trial" data-preset-coach="Тимур Саркисов">
+                Записаться к тренеру
+              </button>
+            </div>
+          </div>
+
+          <!-- Coach 4 -->
+          <div class="coach-card">
+            <div class="coach-card__img-wrap">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/coach-4.jpg -->
+              <img 
+                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80" 
+                alt="Мария Дронова — Реабилитолог и специалист по мобильности" 
+                class="coach-card__img"
+                loading="lazy"
+              >
+              <div class="coach-card__exp-badge">Опыт 10 лет</div>
+            </div>
+            <div class="coach-card__info">
+              <div class="coach-card__spec">ATHLETIC REHAB & MOBILITY LEAD</div>
+              <h3 class="coach-card__name">Мария Дронова</h3>
+              <p class="coach-card__bio">
+                Спортивный врач-реабилитолог, специалист FRC (Functional Range Conditioning). 
+                Работала с олимпийской сборной по плаванию. Специализируется на безоперационном восстановлении суставов и позвоночника.
+              </p>
+              <div class="coach-card__tags">
+                <span>Спортивная медицина</span>
+                <span>FRC Specialist</span>
+                <span>МФР & Пилатес</span>
+              </div>
+              <button type="button" class="btn btn--ghost-volt btn--sm open-modal-btn" data-modal-target="trial" data-preset-coach="Мария Дронова">
+                Записаться к тренеру
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         MEMBERSHIPS & PRICING
+    ======================================================== -->
+    <section class="section memberships" id="memberships">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <div class="section-tag">06 // КЛУБНЫЕ КАРТЫ</div>
+          <h2 class="section-title">ИНВЕСТИЦИЯ В ВАШУ <span class="text-volt">СВЕРХФОРМУ</span></h2>
+          <p class="section-desc">
+            Прозрачные тарифы без скрытых доплат. Каждая карта включает стартовое медицинское тестирование 
+            и доступ ко всей инфраструктуре премиум-класса.
+          </p>
+
+          <!-- Duration Period Switcher -->
+          <div class="pricing-period-switcher" id="pricing-switcher">
+            <button type="button" class="period-btn active" data-period="1">1 месяц</button>
+            <button type="button" class="period-btn" data-period="6">6 месяцев <span class="period-discount">-15%</span></button>
+            <button type="button" class="period-btn" data-period="12">12 месяцев <span class="period-discount">-25%</span></button>
+          </div>
+        </div>
+
+        <div class="pricing-grid">
+          <!-- Tier 1: BASE -->
+          <div class="pricing-card" data-card-tier="base">
+            <div class="pricing-card__header">
+              <div class="pricing-card__tier-name">VORTEX BASE</div>
+              <p class="pricing-card__tier-desc">Для уверенного старта и самостоятельных тренировок в топовых условиях</p>
+              <div class="pricing-card__price-box">
+                <span class="pricing-card__currency">₽</span>
+                <span class="pricing-card__amount" data-price-1="18000" data-price-6="91800" data-price-12="162000">18 000</span>
+                <span class="pricing-card__cycle" data-cycle-text="/ мес">/ месяц</span>
+              </div>
+              <div class="pricing-card__monthly-equiv" data-equiv="">Оплата за 1 месяц</div>
+            </div>
+
+            <ul class="pricing-card__features">
+              <li><span class="check-icon">✓</span> Доступ в клуб с 07:00 до 17:00 ежедневно</li>
+              <li><span class="check-icon">✓</span> Зона Eleiko Heavy Iron & Кардио-галерея</li>
+              <li><span class="check-icon">✓</span> Стартовый 3D-скрининг и InBody анализ</li>
+              <li><span class="check-icon">✓</span> Финская сауна и полотенца на каждом визите</li>
+              <li><span class="check-icon">✓</span> Мобильное приложение для отслеживания тренировок</li>
+              <li class="disabled"><span class="cross-icon">✕</span> Безлимитный Recovery Spa & Криосауна</li>
+              <li class="disabled"><span class="cross-icon">✕</span> Персональный шкаф в VIP-раздевалке</li>
+            </ul>
+
+            <div class="pricing-card__action">
+              <button type="button" class="btn btn--outline btn--full open-modal-btn" data-modal-target="trial" data-preset-membership="VORTEX BASE">
+                Выбрать тариф BASE
+              </button>
+            </div>
+          </div>
+
+          <!-- Tier 2: ALL-IN (Featured) -->
+          <div class="pricing-card pricing-card--featured" data-card-tier="all-in">
+            <div class="pricing-card__ribbon">ВЫБОР 85% АТЛЕТОВ</div>
+            <div class="pricing-card__header">
+              <div class="pricing-card__tier-name">VORTEX ALL-IN</div>
+              <p class="pricing-card__tier-desc">Полный безлимитный доступ ко всем зонам, групповым классам и Recovery</p>
+              <div class="pricing-card__price-box">
+                <span class="pricing-card__currency">₽</span>
+                <span class="pricing-card__amount" data-price-1="28000" data-price-6="142800" data-price-12="252000">28 000</span>
+                <span class="pricing-card__cycle" data-cycle-text="/ мес">/ месяц</span>
+              </div>
+              <div class="pricing-card__monthly-equiv" data-equiv="">Оплата за 1 месяц</div>
+            </div>
+
+            <ul class="pricing-card__features">
+              <li><span class="check-icon">✓</span> <strong>Полный безлимит 24/7</strong> в любые часы работы</li>
+              <li><span class="check-icon">✓</span> Доступ ко всем зонам: Eleiko, Hyrox Turf, Боксерский ринг</li>
+              <li><span class="check-icon">✓</span> <strong>Все групповые программы</strong> (Hyrox, Boxing, Cycling, Mobility)</li>
+              <li><span class="check-icon">✓</span> Зона Recovery Lab: сауна, ледяные купели, компрессия Normatec</li>
+              <li><span class="check-icon">✓</span> 3 гостевых визита в месяц для ваших партнеров</li>
+              <li><span class="check-icon">✓</span> Заморозка карты до 45 дней без штрафов</li>
+              <li><span class="check-icon">✓</span> Бесплатный подземный паркинг на 3 часа</li>
+            </ul>
+
+            <div class="pricing-card__action">
+              <button type="button" class="btn btn--volt btn--full open-modal-btn" data-modal-target="trial" data-preset-membership="VORTEX ALL-IN">
+                Оформить ALL-IN
+              </button>
+            </div>
+          </div>
+
+          <!-- Tier 3: BLACK ELITE -->
+          <div class="pricing-card" data-card-tier="elite">
+            <div class="pricing-card__header">
+              <div class="pricing-card__tier-name">VORTEX BLACK ELITE</div>
+              <p class="pricing-card__tier-desc">Максимальный закрытый VIP-пакет с персональным наставничеством и сервисом</p>
+              <div class="pricing-card__price-box">
+                <span class="pricing-card__currency">₽</span>
+                <span class="pricing-card__amount" data-price-1="55000" data-price-6="280500" data-price-12="495000">55 000</span>
+                <span class="pricing-card__cycle" data-cycle-text="/ мес">/ месяц</span>
+              </div>
+              <div class="pricing-card__monthly-equiv" data-equiv="">Оплата за 1 месяц</div>
+            </div>
+
+            <ul class="pricing-card__features">
+              <li><span class="check-icon">✓</span> Все привилегии тарифа ALL-IN без ограничений</li>
+              <li><span class="check-icon">✓</span> <strong>8 персональных тренировок</strong> в месяц с мастером спорта</li>
+              <li><span class="check-icon">✓</span> <strong>Безлимитная криосауна</strong> (-110°C) и протоколы биохакинга</li>
+              <li><span class="check-icon">✓</span> Именной шкаф в закрытой VIP-раздевалке и прачечная формы</li>
+              <li><span class="check-icon">✓</span> Персональный нутрициолог и ежемесячный чекап анализов</li>
+              <li><span class="check-icon">✓</span> Безлимитный бесплатный охраняемый паркинг</li>
+              <li><span class="check-icon">✓</span> Депозит 10 000 ₽ / мес в VORTEX Fuel Bar</li>
+            </ul>
+
+            <div class="pricing-card__action">
+              <button type="button" class="btn btn--outline btn--full open-modal-btn" data-modal-target="trial" data-preset-membership="VORTEX BLACK ELITE">
+                Запросить BLACK ELITE
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         ATHLETE REVIEWS & SOCIAL PROOF
+    ======================================================== -->
+    <section class="section reviews" id="reviews">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-tag">07 // РЕЗУЛЬТАТЫ РЕЗИДЕНТОВ</div>
+          <h2 class="section-title">ОТЗЫВЫ ТЕХ, КТО <span class="text-volt">ВЫБРАЛ СИЛУ</span></h2>
+          <p class="section-desc">
+            Настоящие истории предпринимателей, топ-менеджеров и атлетов, которые тренируются в VORTEX каждый день.
+          </p>
+        </div>
+
+        <div class="reviews-grid">
+          <article class="review-card">
+            <div class="review-card__stars">★★★★★</div>
+            <p class="review-card__text">
+              «Занимаюсь тяжелой атлетикой 6 лет. В Москве найти зал с оригинальными помостами и грифами Eleiko, 
+              где можно ронять штангу без шиканья администраторов — почти нереально. VORTEX — это храм силы. 
+              За 4 месяца с Алексеем Беркутовым прибавил 17.5 кг в рывке!»
+            </p>
+            <div class="review-card__author">
+              <div class="review-card__avatar">МК</div>
+              <div class="review-card__meta">
+                <div class="review-card__name">Михаил Ковалев</div>
+                <div class="review-card__role">Основатель IT-компании, КМС по тяжелой атлетике</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="review-card">
+            <div class="review-card__stars">★★★★★</div>
+            <p class="review-card__text">
+              «Готовилась здесь к своему первому Hyrox в Вене. Тренировочный газон с санками и ряды Concept2 
+              дали невероятную выносливость. Елена Волкова построила подготовку так грамотно, что на старте 
+              я вошла в топ-15 своей возрастной группы без травм и перетренированности!»
+            </p>
+            <div class="review-card__author">
+              <div class="review-card__avatar">ДВ</div>
+              <div class="review-card__meta">
+                <div class="review-card__name">Дарья Воронина</div>
+                <div class="review-card__role">Финансовый директор, финишер Hyrox Pro Women</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="review-card">
+            <div class="review-card__stars">★★★★★</div>
+            <p class="review-card__text">
+              «Уровень сервиса и оборудования — космос. После спаррингов в ринге сразу спускаешься в купель 
+              и криосауну, а через 20 минут голова снова кристально ясная для деловых переговоров. 
+              Шкафчик в VIP-раздевалке и паркинг в 3 минутах от Садового кольца экономят массу времени.»
+            </p>
+            <div class="review-card__author">
+              <div class="review-card__avatar">АР</div>
+              <div class="review-card__meta">
+                <div class="review-card__name">Артем Романов</div>
+                <div class="review-card__role">Инвестор, резидент тарифа Black Elite</div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         FAQ ACCORDION
+    ======================================================== -->
+    <section class="section faq" id="faq">
+      <div class="container container--narrow">
+        <div class="section-head section-head--center">
+          <div class="section-tag">08 // ВОПРОСЫ И ОТВЕТЫ</div>
+          <h2 class="section-title">ЧАСТО ЗАДАВАЕМЫЕ <span class="text-volt">ВОПРОСЫ</span></h2>
+          <p class="section-desc">
+            Все детали о первом визите, правилах клуба, экипировке и сервисе.
+          </p>
+        </div>
+
+        <div class="accordion" id="faq-accordion">
+          <!-- Item 1 -->
+          <div class="accordion__item">
+            <button type="button" class="accordion__header" aria-expanded="false">
+              <span class="accordion__title">Как проходит первая пробная тренировка?</span>
+              <span class="accordion__icon">+</span>
+            </button>
+            <div class="accordion__collapse" hidden>
+              <div class="accordion__body">
+                Вы оставляете заявку на сайте или по телефону. Координатор связывается с вами, уточняет спортивный опыт и цели. 
+                В день визита вам выдают комплект премиальных полотенец, персональный шкафчик и проводят 30-минутное 
+                тестирование на аппарате InBody 770. После этого вы тренируетесь самостоятельно или с дежурным тренером в выбранной зоне.
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="accordion__item">
+            <button type="button" class="accordion__header" aria-expanded="false">
+              <span class="accordion__title">Что необходимо взять с собой на тренировку?</span>
+              <span class="accordion__icon">+</span>
+            </button>
+            <div class="accordion__collapse" hidden>
+              <div class="accordion__body">
+                Только удобную спортивную форму и сменную обувь (для помостов рекомендуем штангетки или кеды на плоской подошве, 
+                для Hyrox — кроссовки с хорошим сцеплением). Полотенца, банные халаты, шампуни и гели премиальных брендов, 
+                фены Dyson и питьевая артезианская вода предоставляются клубом бесплатно.
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="accordion__item">
+            <button type="button" class="accordion__header" aria-expanded="false">
+              <span class="accordion__title">Можно ли заморозить клубную карту на время отпуска или командировки?</span>
+              <span class="accordion__icon">+</span>
+            </button>
+            <div class="accordion__collapse" hidden>
+              <div class="accordion__body">
+                Да. В картах на 6 месяцев предусмотрено 30 дней заморозки, в годовых картах — 45 дней. 
+                Заморозку можно разбивать на любые интервалы от 5 дней и активировать самостоятельно через личный кабинет 
+                или через вашего персонального консьержа в Telegram.
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="accordion__item">
+            <button type="button" class="accordion__header" aria-expanded="false">
+              <span class="accordion__title">Подходит ли клуб новичкам без спортивного прошлого?</span>
+              <span class="accordion__icon">+</span>
+            </button>
+            <div class="accordion__collapse" hidden>
+              <div class="accordion__body">
+                Безусловно. Около 40% наших резидентов пришли в VORTEX с нулевым опытом в силовых видах спорта. 
+                Благодаря обязательной вводной диагностике опорно-двигательного аппарата и адаптивным программам 
+                наши тренеры ставят безупречную биомеханику движений с минимальными весами, исключая риск травм.
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 5 -->
+          <div class="accordion__item">
+            <button type="button" class="accordion__header" aria-expanded="false">
+              <span class="accordion__title">Где оставить автомобиль и есть ли парковка?</span>
+              <span class="accordion__icon">+</span>
+            </button>
+            <div class="accordion__collapse" hidden>
+              <div class="accordion__body">
+                Для всех резидентов клуба работает подземный отапливаемый паркинг бизнес-центра на 60 машиномест. 
+                Въезд по автоматическому считыванию госномера, указанного в вашем профиле. 
+                Для карт ALL-IN парковка бесплатна на первые 3 часа визита, для карт BLACK ELITE — безлимитно.
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 6 -->
+          <div class="accordion__item">
+            <button type="button" class="accordion__header" aria-expanded="false">
+              <span class="accordion__title">Как работает Recovery Lounge и криосауна?</span>
+              <span class="accordion__icon">+</span>
+            </button>
+            <div class="accordion__collapse" hidden>
+              <div class="accordion__body">
+                Recovery Lounge открыт в течение всего времени работы клуба. Финская кедровая сауна и купели с ледяной водой 
+                доступны свободно. Сеансы криокапсулы (-110°C) и компрессионного массажа Normatec 3 бронируются за 10 минут 
+                у администратора или через приложение для соблюдения оптимального протокола охлаждения.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         CONTACTS & INTERACTIVE YANDEX MAP
+    ======================================================== -->
+    <section class="section contacts" id="contacts">
+      <div class="container">
+        <div class="contacts-wrapper">
+          <!-- Info Column -->
+          <div class="contacts-info">
+            <div class="section-tag">09 // ЛОКАЦИЯ & ВИЗИТ</div>
+            <h2 class="section-title">ЖДЕМ ВАС В <span class="text-volt">VORTEX</span></h2>
+            <p class="contacts-lead">
+              Мы расположены в историческом центре Москвы, в 3 минутах пешком от метро Полянка. 
+              Приезжайте, чтобы увидеть зал своими глазами и почувствовать атмосферу соревновательной мощи.
+            </p>
+
+            <div class="contact-details">
+              <!-- Live Working Hours Status -->
+              <div class="contact-card">
+                <div class="contact-card__icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D4FF00" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <polyline points="12 6 12 12 16 14"/>
+                  </svg>
+                </div>
+                <div class="contact-card__body">
+                  <div class="contact-card__status-line">
+                    <span class="status-dot" id="contact-status-dot"></span>
+                    <strong id="contact-status-text">Проверка статуса...</strong>
+                  </div>
+                  <div class="contact-card__schedule" id="contact-schedule-text">
+                    <div>Пн — Пт: 06:30 – 23:30</div>
+                    <div>Сб — Вс: 08:00 – 22:00</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Address -->
+              <div class="contact-card">
+                <div class="contact-card__icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D4FF00" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                    <circle cx="12" cy="10" r="3"/>
+                  </svg>
+                </div>
+                <div class="contact-card__body">
+                  <span class="contact-card__label">Адрес клуба</span>
+                  <div class="contact-card__value" data-bind="address">Москва, ул. Большая Полянка, д. 28, стр. 1</div>
+                  <div class="contact-card__sub" data-bind="metro">м. Полянка / м. Третьяковская (3 мин пешком)</div>
+                  <div class="contact-card__sub" data-bind="parking">Собственный подземный паркинг на 60 мест</div>
+                </div>
+              </div>
+
+              <!-- Phone & Email -->
+              <div class="contact-card">
+                <div class="contact-card__icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D4FF00" stroke-width="2">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                  </svg>
+                </div>
+                <div class="contact-card__body">
+                  <span class="contact-card__label">Связь с отделом заботы</span>
+                  <div class="contact-card__value">
+                    <a href="tel:+74958294010" data-bind="phone">+7 (495) 829-40-10</a>
+                  </div>
+                  <div class="contact-card__sub">
+                    <a href="mailto:club@vortex-athletic.ru" data-bind="email">club@vortex-athletic.ru</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Social Messengers -->
+            <div class="contacts-socials">
+              <a href="https://t.me/vortex_athletic" target="_blank" rel="noopener" class="btn btn--outline btn--sm" data-bind="socials.telegram">
+                Telegram Консьерж
+              </a>
+              <a href="https://wa.me/74958294010" target="_blank" rel="noopener" class="btn btn--outline btn--sm" data-bind="socials.whatsapp">
+                WhatsApp Чат
+              </a>
+            </div>
+          </div>
+
+          <!-- Map Column -->
+          <div class="contacts-map-box">
+            <div id="yandex-map" class="map-container" aria-label="Интерактивная карта расположения клуба VORTEX">
+              <div class="map-loader" id="map-loader">
+                <span class="map-spinner"></span>
+                <span>Загрузка интерактивной карты...</span>
+              </div>
+            </div>
+            <div class="map-fallback-banner">
+              <span>Координаты: <strong>55.741556, 37.620028</strong></span>
+              <a 
+                href="https://yandex.ru/maps/?rtext=~55.741556,37.620028" 
+                target="_blank" 
+                rel="noopener" 
+                class="map-direct-link" 
+                id="map-external-link"
+              >
+                Открыть маршрут в Яндекс Картах &rarr;
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================
+       FOOTER
+  ======================================================== -->
+  <footer class="footer">
+    <div class="container footer__container">
+      <div class="footer__main">
+        <div class="footer__brand">
+          <a href="#" class="brand-logo">
+            <span class="brand-logo__symbol">
+              <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+                <path d="M4 4L14 28H19L9 4H4Z" fill="#D4FF00"/>
+                <path d="M15 4L25 28H30L20 4H15Z" fill="#FFFFFF"/>
+              </svg>
+            </span>
+            <span class="brand-logo__text">
+              <span class="brand-logo__name">VORTEX</span>
+              <span class="brand-logo__badge">ATHLETIC CLUB</span>
+            </span>
+          </a>
+          <p class="footer__tagline">
+            Элитный атлетический клуб нового поколения. 2 500 м² для ваших персональных рекордов. 
+            Тяжелая атлетика, Hyrox, бокс и научная регенерация.
+          </p>
+          <div class="footer__status-badge">
+            <span class="status-dot" id="footer-status-dot"></span>
+            <span id="footer-status-text">Проверка расписания...</span>
+          </div>
+        </div>
+
+        <div class="footer__nav-col">
+          <h4 class="footer__col-title">Навигация</h4>
+          <ul class="footer__list">
+            <li><a href="#philosophy">О клубе</a></li>
+            <li><a href="#directions">Направления</a></li>
+            <li><a href="#schedule">Расписание</a></li>
+            <li><a href="#zones">Зоны зала</a></li>
+            <li><a href="#coaches">Тренеры</a></li>
+            <li><a href="#memberships">Клубные карты</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__nav-col">
+          <h4 class="footer__col-title">Сервис & Инфо</h4>
+          <ul class="footer__list">
+            <li><a href="#faq">Частые вопросы</a></li>
+            <li><a href="#contacts">Парковка и схема проезда</a></li>
+            <li><a href="#" class="open-modal-btn" data-modal-target="trial">Гостевой визит</a></li>
+            <li><a href="#" class="open-modal-btn" data-modal-target="trial" data-preset-direction="Корпоративное членство">Корпоративным клиентам</a></li>
+            <li><a href="#">Правила посещения</a></li>
+            <li><a href="#">Политика конфиденциальности</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__nav-col footer__contacts-col">
+          <h4 class="footer__col-title">Контакты</h4>
+          <p class="footer__contact-line"><strong data-bind="phone">+7 (495) 829-40-10</strong></p>
+          <p class="footer__contact-line" data-bind="email">club@vortex-athletic.ru</p>
+          <p class="footer__contact-line" data-bind="address">Москва, ул. Большая Полянка, д. 28, стр. 1</p>
+          <div class="footer__social-links">
+            <a href="https://t.me/vortex_athletic" target="_blank" rel="noopener" class="social-icon-btn">Telegram</a>
+            <a href="https://wa.me/74958294010" target="_blank" rel="noopener" class="social-icon-btn">WhatsApp</a>
+            <a href="https://vk.com/vortex_athletic" target="_blank" rel="noopener" class="social-icon-btn">VKontakte</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <div class="footer__copy">
+          &copy; <span id="current-year">2026</span> VORTEX Athletic Club. Все права защищены. ОГРН 1187746982014, ИНН 7705128390.
+        </div>
+        <div class="footer__legal">
+          Информация на сайте не является публичной офертой (ст. 437 ГК РФ).
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================
+       STICKY MOBILE BOTTOM BAR
+  ======================================================== -->
+  <aside class="mobile-sticky-bar" aria-label="Быстрая запись">
+    <div class="mobile-sticky-bar__info">
+      <span class="mobile-sticky-bar__badge">ПРОБНЫЙ ВИЗИТ</span>
+      <span class="mobile-sticky-bar__sub">InBody 770 + Тренировка</span>
+    </div>
+    <button type="button" class="btn btn--volt btn--sm open-modal-btn" data-modal-target="trial">
+      Записаться &rarr;
+    </button>
+  </aside>
+
+  <!-- ========================================================
+       LEAD CAPTURE & BOOKING MODAL
+  ======================================================== -->
+  <div class="modal" id="booking-modal" aria-hidden="true" role="dialog" aria-labelledby="modal-title">
+    <div class="modal__overlay" id="modal-overlay"></div>
+    <div class="modal__dialog">
+      <button type="button" class="modal__close-btn" id="modal-close" aria-label="Закрыть окно">&times;</button>
+      
+      <!-- Modal Form State -->
+      <div class="modal__form-state" id="modal-form-view">
+        <div class="modal__header">
+          <span class="modal__tag">VORTEX PERFORMANCE // ВИЗИТ</span>
+          <h3 class="modal__title" id="modal-title">Запись на пробную тренировку</h3>
+          <p class="modal__desc">
+            Оставьте контакты для бронирования персонального слота. Наш координатор свяжется с вами в течение 10 минут.
+          </p>
+        </div>
+
+        <form class="modal__form" id="lead-form" novalidate>
+          <!-- Workout / Membership Preset Field -->
+          <div class="form-group">
+            <label for="form-direction" class="form-label">Интересующее направление или тариф</label>
+            <select id="form-direction" name="direction" class="form-select">
+              <option value="HYROX & Functional Fitness">HYROX & Functional Fitness</option>
+              <option value="Olympic Weightlifting & Strength">Olympic Weightlifting & Strength</option>
+              <option value="Boxing & Striking Conditioning">Boxing & Striking Conditioning</option>
+              <option value="High-Performance Wattbike Cycling">High-Performance Wattbike Cycling</option>
+              <option value="Athletic Mobility & Deep Core">Athletic Mobility & Deep Core</option>
+              <option value="Personal Elite Coaching">Personal Elite Coaching (1-on-1)</option>
+              <option value="VORTEX BASE (Клубная карта)">Тариф VORTEX BASE</option>
+              <option value="VORTEX ALL-IN (Клубная карта)">Тариф VORTEX ALL-IN (Безлимит)</option>
+              <option value="VORTEX BLACK ELITE (VIP-карта)">Тариф VORTEX BLACK ELITE (VIP)</option>
+              <option value="Общая консультация и экскурсия">Общая экскурсия по клубу</option>
+            </select>
+          </div>
+
+          <!-- Coach Selection (Optional) -->
+          <div class="form-group" id="form-coach-group">
+            <label for="form-coach" class="form-label">Тренер (по желанию)</label>
+            <select id="form-coach" name="coach" class="form-select">
+              <option value="">Любой свободный мастер-тренер</option>
+              <option value="Алексей Беркутов">Алексей Беркутов (Тяжелая атлетика / МСМК)</option>
+              <option value="Елена Волкова">Елена Волкова (Hyrox Master Coach / CF L2)</option>
+              <option value="Тимур Саркисов">Тимур Саркисов (Бокс & Combat / МС)</option>
+              <option value="Мария Дронова">Мария Дронова (Реабилитация & Мобильность)</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <!-- Name Input -->
+            <div class="form-group">
+              <label for="form-name" class="form-label">Ваше имя <span class="required">*</span></label>
+              <input 
+                type="text" 
+                id="form-name" 
+                name="name" 
+                class="form-input" 
+                placeholder="Иван Иванов" 
+                required 
+                autocomplete="name"
+              >
+              <span class="form-error" id="name-error">Пожалуйста, укажите ваше имя</span>
+            </div>
+
+            <!-- Phone Input with Mask -->
+            <div class="form-group">
+              <label for="form-phone" class="form-label">Телефон <span class="required">*</span></label>
+              <input 
+                type="tel" 
+                id="form-phone" 
+                name="phone" 
+                class="form-input" 
+                placeholder="+7 (___) ___-__-__" 
+                required 
+                autocomplete="tel"
+              >
+              <span class="form-error" id="phone-error">Введите корректный номер телефона</span>
+            </div>
+          </div>
+
+          <!-- Preferred Time -->
+          <div class="form-group">
+            <label for="form-time-pref" class="form-label">Удобное время для звонка или тренировки</label>
+            <select id="form-time-pref" name="time_preference" class="form-select">
+              <option value="Утром (07:00 - 12:00)">Утром (07:00 - 12:00)</option>
+              <option value="Днем (12:00 - 17:00)">Днем (12:00 - 17:00)</option>
+              <option value="Вечером (17:00 - 22:00)" selected>Вечером (17:00 - 22:00)</option>
+              <option value="Как можно скорее">Как можно скорее</option>
+            </select>
+          </div>
+
+          <!-- Privacy Consent -->
+          <div class="form-checkbox-group">
+            <label class="checkbox-label">
+              <input type="checkbox" id="form-consent" name="consent" checked required>
+              <span class="checkbox-custom"></span>
+              <span class="checkbox-text">
+                Согласен с обработкой персональных данных и условиями конфиденциальности
+              </span>
+            </label>
+            <span class="form-error" id="consent-error">Необходимо согласие на обработку данных</span>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="modal__actions">
+            <button type="submit" class="btn btn--volt btn--full" id="submit-btn">
+              <span class="btn__text">Подтвердить запись</span>
+              <span class="btn__spinner" id="submit-spinner" hidden></span>
+            </button>
+          </div>
+          <div class="modal__footnote">
+            🔒 Мы не передаем контакты третьим лицам и не рассылаем спам.
+          </div>
+        </form>
+      </div>
+
+      <!-- Modal Success View -->
+      <div class="modal__success-state" id="modal-success-view" hidden>
+        <div class="success-icon-box">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#D4FF00" stroke-width="2.5">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+            <polyline points="22 4 12 14.01 9 11.01"/>
+          </svg>
+        </div>
+        <h3 class="success-title">Заявка успешно принята!</h3>
+        <p class="success-desc">
+          Спасибо, <strong id="success-user-name">Атлет</strong>! Мы забронировали ваш слот. 
+          Координатор клуба свяжется с вами по номеру <strong id="success-user-phone">+7...</strong> 
+          в течение 10 минут для подтверждения времени и деталей визита.
+        </p>
+        <div class="success-details">
+          <div class="success-detail-row">
+            <span>Выбранное направление:</span>
+            <strong id="success-direction">HYROX & Functional Fitness</strong>
+          </div>
+          <div class="success-detail-row">
+            <span>Адрес:</span>
+            <span>Москва, ул. Большая Полянка, 28, стр. 1</span>
+          </div>
+        </div>
+        <button type="button" class="btn btn--volt btn--full modal-close-btn-action" id="success-close-btn">
+          Отлично, жду звонка
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>

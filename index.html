@@ -1,0 +1,1203 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEXUS WEB // Студия AI-разработки конверсионных лендингов</title>
+  <meta name="description" content="Создаю премиальные конверсионные лендинги и сайты с помощью искусственного интеллекта. Запуск за 24–48 часов. Чистый код, 100% адаптивность, Яндекс.Карты, интерактивные калькуляторы. Смотрите 15 живых демо.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="portfolio.css">
+</head>
+<body class="light-theme">
+
+  <!-- TOP ANNOUNCEMENT BAR -->
+  <div class="topbar">
+    <div class="topbar__inner">
+      <div class="topbar__status">
+        <span class="status-dot"></span>
+        <span>Принимаю заказы на разработку • Срок готовности от 24 часов</span>
+      </div>
+      <div class="topbar__contacts">
+        <a href="https://t.me/your_telegram" class="topbar__link" target="_blank" rel="noopener">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.52 2.77-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+          Telegram: @egor_developer
+        </a>
+        <a href="tel:+79990000000" class="topbar__link">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          +7 (999) 000-00-00
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVIGATION HEADER -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="#hero" class="brand">
+        <span class="brand__logo">N</span>
+        <div class="brand__text">
+          <span class="brand__name">NEXUS WEB</span>
+          <span class="brand__tag">AI PRODUCTION</span>
+        </div>
+      </a>
+
+      <nav class="nav" id="desktopNav">
+        <a href="#portfolio" class="nav__link">Портфолио (15 работ)</a>
+        <a href="#why-ai" class="nav__link">Преимущества ИИ</a>
+        <a href="#calculator" class="nav__link">Калькулятор</a>
+        <a href="#process" class="nav__link">Как работаем</a>
+        <a href="#reviews" class="nav__link">Отзывы</a>
+        <a href="#faq" class="nav__link">FAQ</a>
+      </nav>
+
+      <div class="header__actions">
+        <a href="#order" class="btn btn--primary btn--sm modal-trigger">Заказать лендинг</a>
+        <button class="burger" id="burgerBtn" aria-label="Открыть меню">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE DRAWER -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <div class="mobile-drawer__overlay" id="drawerOverlay"></div>
+    <div class="mobile-drawer__panel">
+      <div class="mobile-drawer__top">
+        <div class="brand">
+          <span class="brand__logo">N</span>
+          <div class="brand__text">
+            <span class="brand__name">NEXUS WEB</span>
+            <span class="brand__tag">AI PRODUCTION</span>
+          </div>
+        </div>
+        <button class="mobile-drawer__close" id="drawerClose" aria-label="Закрыть">×</button>
+      </div>
+      <nav class="mobile-drawer__nav">
+        <a href="#portfolio" class="mobile-drawer__link">Портфолио (15 работ)</a>
+        <a href="#why-ai" class="mobile-drawer__link">Преимущества ИИ</a>
+        <a href="#calculator" class="mobile-drawer__link">Калькулятор</a>
+        <a href="#process" class="mobile-drawer__link">Как работаем</a>
+        <a href="#reviews" class="mobile-drawer__link">Отзывы</a>
+        <a href="#faq" class="mobile-drawer__link">FAQ</a>
+      </nav>
+      <div class="mobile-drawer__footer">
+        <a href="#order" class="btn btn--primary btn--full modal-trigger">Заказать лендинг</a>
+        <div class="mobile-drawer__contact-box">
+          <p>Быстрая связь в Telegram:</p>
+          <a href="https://t.me/your_telegram" class="link-tg" target="_blank">@egor_developer</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero" id="hero">
+      <div class="hero__bg-glow"></div>
+      <div class="container hero__container">
+        <div class="hero__badge">
+          <span class="hero__badge-pulse"></span>
+          <span>Next-Gen Web Production • AI-Driven Efficiency</span>
+        </div>
+        <h1 class="hero__title">
+          Создаю премиальные лендинги нового поколения <span class="gradient-text">с помощью искусственного интеллекта</span>
+        </h1>
+        <p class="hero__subtitle">
+          В 5–10 раз быстрее традиционных агентств. Без срыва дедлайнов, без багов и без ежемесячной абонентской платы за конструкторы. Чистый код, 100% мобильная адаптивность, Яндекс.Карты и интерактивные калькуляторы.
+        </p>
+
+        <div class="hero__cta-group">
+          <a href="#portfolio" class="btn btn--primary btn--lg">
+            <span>Смотреть 15 живых работ</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#calculator" class="btn btn--secondary btn--lg">
+            <span>Рассчитать стоимость</span>
+          </a>
+        </div>
+
+        <!-- METRICS -->
+        <div class="hero__metrics">
+          <div class="metric-card">
+            <div class="metric-card__val">24–48 ч</div>
+            <div class="metric-card__label">Средний срок запуска сайта под ключ</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-card__val">15+</div>
+            <div class="metric-card__label">Готовых рабочих прототипов в портфолио</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-card__val">100%</div>
+            <div class="metric-card__label">Мобильная адаптивность без перекосов</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-card__val">0 ₽</div>
+            <div class="metric-card__label">Абонентских плат за Тильду и конструкторы</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY AI SECTION (COMPLEX COMPARISON) -->
+    <section class="section section--light" id="why-ai">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">ПОЧЕМУ ИИ ВЫИГРЫВАЕТ</span>
+          <h2 class="section-title">Почему заказчики переходят от агентств к AI-разработке</h2>
+          <p class="section-subtitle">
+            Искусственный интеллект исключает человеческую лень, забывчивость и ошибки. Я управляю передовыми AI-агентами, создавая за 1 день продукт, на который у веб-студий уходят недели.
+          </p>
+        </div>
+
+        <div class="comparison-grid">
+          <!-- OLD WAY -->
+          <div class="comp-card comp-card--old">
+            <div class="comp-card__badge">СТАРЫЙ ПОДХОД</div>
+            <h3 class="comp-card__title">Обычная веб-студия</h3>
+            <ul class="comp-list">
+              <li>
+                <span class="icon-cross">✕</span>
+                <div>
+                  <strong>3–6 недель разработки</strong>
+                  <p>Бесконечные созвоны, согласования правок и отпуска дизайнеров.</p>
+                </div>
+              </li>
+              <li>
+                <span class="icon-cross">✕</span>
+                <div>
+                  <strong>От 120 000 до 350 000 ₽</strong>
+                  <p>Вы оплачиваете зарплату менеджеров, аренду офиса и секретарей.</p>
+                </div>
+              </li>
+              <li>
+                <span class="icon-cross">✕</span>
+                <div>
+                  <strong>Зависимость от Tilda / конструкторов</strong>
+                  <p>Ежемесячные подписки 15 000–30 000 ₽/год, медленная скорость загрузки и ограничения блоков.</p>
+                </div>
+              </li>
+              <li>
+                <span class="icon-cross">✕</span>
+                <div>
+                  <strong>Человеческий фактор</strong>
+                  <p>Сорванные дедлайны, съехавшая верстка на смартфонах, «забыли прикрутить карту».</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- NEW WAY (AI) -->
+          <div class="comp-card comp-card--new">
+            <div class="comp-card__badge comp-card__badge--glow">НОВЫЙ AI-СТАНДАРТ</div>
+            <h3 class="comp-card__title">Разработка со мной + ИИ</h3>
+            <ul class="comp-list">
+              <li>
+                <span class="icon-check">✓</span>
+                <div>
+                  <strong>Готовность за 24–48 часов</strong>
+                  <p>ИИ генерирует и проверяет код за часы. Вы получаете результат мгновенно.</p>
+                </div>
+              </li>
+              <li>
+                <span class="icon-check">✓</span>
+                <div>
+                  <strong>Фиксированная честная стоимость</strong>
+                  <p>Никаких лишних ртов: вы платите только за реальную работу и результат.</p>
+                </div>
+              </li>
+              <li>
+                <span class="icon-check">✓</span>
+                <div>
+                  <strong>Чистый автономный код (HTML5 / CSS3 / JS)</strong>
+                  <p>Сайт работает вечно на любом бесплатном или дешевом хостинге без абонентской платы.</p>
+                </div>
+              </li>
+              <li>
+                <span class="icon-check">✓</span>
+                <div>
+                  <strong>Интеллектуальная надежность</strong>
+                  <p>Роботы не устают: каждый экран протестирован на 320px–4K, маски телефонов валидны, Яндекс.Карты встроены.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO SHOWCASE SECTION (15 LIVE DEMOS) -->
+    <section class="section" id="portfolio">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-header__left">
+            <span class="section-tag">ЖИВЫЕ КЕЙСЫ</span>
+            <h2 class="section-title">15 готовых авторских прототипов</h2>
+            <p class="section-subtitle">
+              Все 15 лендингов полностью запрограммированы, протестированы и открываются прямо сейчас. Нажмите «Открыть демо ↗», чтобы протестировать на ПК или телефоне.
+            </p>
+          </div>
+          <div class="portfolio-stats">
+            <div class="portfolio-stat-pill"><strong>15</strong> направлений</div>
+            <div class="portfolio-stat-pill"><strong>100%</strong> адаптив</div>
+            <div class="portfolio-stat-pill"><strong>API</strong> Яндекс.Карт</div>
+          </div>
+        </div>
+
+        <!-- FILTER TABS -->
+        <div class="filter-tabs" id="portfolioFilters">
+          <button class="filter-btn active" data-filter="all">Все проекты (15)</button>
+          <button class="filter-btn" data-filter="premium">Услуги & Премиум</button>
+          <button class="filter-btn" data-filter="horeca">Гастрономия & HoReCa</button>
+          <button class="filter-btn" data-filter="health">Спорт & Здоровье</button>
+          <button class="filter-btn" data-filter="retail">Авто & Ритейл</button>
+          <button class="filter-btn" data-filter="tech">IT & Образование</button>
+        </div>
+
+        <!-- CARDS GRID -->
+        <div class="portfolio-grid" id="portfolioGrid">
+
+          <!-- 1: Roastery -->
+          <article class="p-card" data-category="horeca">
+            <div class="p-card__top">
+              <span class="p-card__num">01</span>
+              <span class="p-card__cat">Гастрономия & Кофе</span>
+            </div>
+            <div class="p-card__content">
+              <h3 class="p-card__title">Эфиопия & Зерно</h3>
+              <p class="p-card__niche">Спешелти ростери, кофейня и школа слоу-бара</p>
+              <p class="p-card__desc">Теплая тактильная крафт-эстетика бумаги, эспрессо и терракоты. Селектор вкусовых нот зерен и калькулятор заваривания.</p>
+              
+              <div class="p-card__badges">
+                <span class="badge-pill">Яндекс.Карты v2.1</span>
+                <span class="badge-pill">Гид заваривания</span>
+                <span class="badge-pill">Статус часов</span>
+              </div>
+
+              <div class="p-card__palette">
+                <span class="palette-title">Гамма:</span>
+                <span class="swatch" style="background:#241915" title="Espresso"></span>
+                <span class="swatch" style="background:#F5EFEB" title="Oat milk"></span>
+                <span class="swatch" style="background:#C86D51" title="Terracotta"></span>
+                <span class="swatch" style="background:#E39D62" title="Amber"></span>
+              </div>
+            </div>
+            <div class="p-card__actions">
+              <a href="./landing-1/index.html" class="btn btn--primary btn--sm" target="_blank" rel="noopener">
+                Открыть демо ↗
+              </a>
+              <button class="btn btn--outline btn--sm select-niche-btn" data-niche="Эфиопия & Зерно (Кофейня / Ростери)">
+                Хочу такой
+              </button>
+            </div>
+          </article>
+
+          <!-- 2: Fitness Club -->
+          <article class="p-card" data-category="health">
+            <div class="p-card__top">
+              <span class="p-card__num">02</span>
+              <span class="p-card__cat">Спорт & Здоровье</span>
+            </div>
+            <div class="p-card__content">
+              <h3 class="p-card__title">VORTEX Athletic Club</h3>
+              <p class="p-card__niche">Премиальный фитнес-клуб и кроссфит-пространство</p>
+              <p class="p-card__desc">Кинетичный темный спортивный драйв, неоновый лайм (#D4FF00), брутальная типографика, фильтр расписания тренировок.</p>
+              
+              <div class="p-card__badges">
+                <span class="badge-pill">Яндекс.Карты v2.1</span>
+                <span class="badge-pill">Живое расписание</span>
+                <span class="badge-pill">Калькулятор карт</span>
+              </div>
+
+              <div class="p-card__palette">
+                <span class="palette-title">Гамма:</span>
+                <span class="swatch" style="background:#0E0F12" title="Charcoal"></span>
+                <span class="swatch" style="background:#D4FF00" title="Volt Lime"></span>
+                <span class="swatch" style="background:#1F2128" title="Graphite"></span>
+                <span class="swatch" style="background:#FFFFFF" title="White"></span>
+              </div>
+            </div>
+            <div class="p-card__actions">
+              <a href="./landing-2/index.html" class="btn btn--primary btn--sm" target="_blank" rel="noopener">
+                Открыть демо ↗
+              </a>
+              <button class="btn btn--outline btn--sm select-niche-btn" data-niche="VORTEX Athletic (Фитнес-клуб)">
+                Хочу такой
+              </button>
+            </div>
+          </article>
+
+          <!-- 3: Architecture -->
+          <article class="p-card" data-category="premium">
+            <div class="p-card__top">
+              <span class="p-card__num">03</span>
+              <span class="p-card__cat">Архитектура & Дизайн</span>
+            </div>
+            <div class="p-card__content">
+              <h3 class="p-card__title">MONOLITH Architecture</h3>
+              <p class="p-card__niche">Архитектурно-проектное бюро частных резиденций</p>
+              <p class="p-card__desc">Швейцарский минимализм, геометрия бетона и травертина. Интерактивный слайдер До/После и калькулятор проекта.</p>
+              
+              <div class="p-card__badges">
+                <span class="badge-pill">Яндекс.Карты v2.1</span>
+                <span class="badge-pill">Слайдер До/После</span>
+                <span class="badge-pill">Расчет проекта</span>
+              </div>
+
+              <div class="p-card__palette">
+                <span class="palette-title">Гамма:</span>
+                <span class="swatch" style="background:#18191B" title="Slate"></span>
+                <span class="swatch" style="background:#EFECE6" title="Gypsum"></span>
+                <span class="swatch" style="background:#8C8B88" title="Concrete"></span>
+                <span class="swatch" style="background:#D6CEC5" title="Travertine"></span>
+              </div>
+            </div>
+            <div class="p-card__actions">
+              <a href="./landing-3/index.html" class="btn btn--primary btn--sm" target="_blank" rel="noopener">
+                Открыть демо ↗
+              </a>
+              <button class="btn btn--outline btn--sm select-niche-btn" data-niche="MONOLITH (Архитектурное бюро)">
+                Хочу такой
+              </button>
+            </div>
+          </article>
+
+          <!-- 4: Dental Clinic -->
+          <article class="p-card" data-category="health">
+            <div class="p-card__top">
+              <span class="p-card__num">04</span>
+              <span class="p-card__cat">Медицина & Стоматология</span>
+            </div>
+            <div class="p-card__content">
+              <h3 class="p-card__title">Аура Дент (Aura Dental)</h3>
+              <p class="p-card__niche">Семейная премиум-стоматология и имплантология</p>
+              <p class="p-card__desc">Медицинский люкс, спокойствие и чистота. Интерактивный 4-шаговый квиз здоровья улыбки и онлайн-запись со слотами.</p>
+              
+              <div class="p-card__badges">
+                <span class="badge-pill">Яндекс.Карты v2.1</span>
+                <span class="badge-pill">Квиз улыбки</span>
+                <span class="badge-pill">Слоты записи</span>
+              </div>
+
+              <div class="p-card__palette">
+                <span class="palette-title">Гамма:</span>
+                <span class="swatch" style="background:#FFFFFF" title="White"></span>
+                <span class="swatch" style="background:#0B2545" title="Navy"></span>
+                <span class="swatch" style="background:#139A8C" title="Aqua"></span>
+                <span class="swatch" style="background:#EEF7F6" title="Seafoam"></span>
+              </div>
+            </div>
+            <div class="p-card__actions">
+              <a href="./landing-4/index.html" class="btn btn--primary btn--sm" target="_blank" rel="noopener">
+                Открыть демо ↗
+              </a>
+              <button class="btn btn--outline btn--sm select-niche-btn" data-niche="Аура Дент (Стоматологическая клиника)">
+                Хочу такой
+              </button>
+            </div>
+          </article>
+
+          <!-- 5: Bakery -->
+          <article class="p-card" data-category="horeca">
+            <div class="p-card__top">
+              <span class="p-card__num">05</span>
+              <span class="p-card__cat">Гастрономия & Пекарня</span>
+            </div>
+            <div class="p-card__content">
+              <h3 class="p-card__title">Хлеб & Масло</h3>
+              <p class="p-card__niche">Ремесленная пекарня на дикой закваске и кондитерская</p>
+              <p class="p-card__desc">Французский винтажный рустик, золотистая корочка, живой таймер выхода свежей выпечки и корзина предзаказа.</p>
+              
+              <div class="p-card__badges">
+                <span class="badge-pill">Яндекс.Карты v2.1</span>
+                <span class="badge-pill">Таймер партий</span>
+                <span class="badge-pill">Корзина блюд</span>
+              </div>
+
+              <div class="p-card__palette">
+                <span class="palette-title">Гамма:</span>
+                <span class="swatch" style="background:#FFFDF7" title="Cream"></span>
+                <span class="swatch" style="background:#C98A35" title="Amber Crust"></span>
+                <span class="swatch" style="background:#4A2E1B" title="Wood"></span>
+                <span class="swatch" style="background:#626B50" title="Olive"></span>
+              </div>
+            </div>
+            <div class="p-card__actions">
+              <a href="./landing-5/index.html" class="btn btn--primary btn--sm" target="_blank" rel="noopener">
+                Открыть демо ↗
+              </a>
+              <button class="btn btn--outline btn--sm select-niche-btn" data-niche="Хлеб & Масло (Пекарня / Ресторан)">
+                Хочу такой
+              </button>
+            </div>
+          </article>
+
+          <!-- 6: Cyber Coworking -->
+          <article class="p-card" data-category="tech">
+            <div class="p-card__top">
+              <span class="p-card__num">06</span>
+              <span class="p-card__cat">IT & Инновации</span>
+            </div>
+            <div class="p-card__content">
+              <h3 class="p-card__title">SYNAPSE Hub</h3>
+              <p class="p-card__niche">Киберпанк-коворкинг и хакерспейс для IT-команд</p>
+              <p class="p-card__desc">Нео-бруталистский кибер-тек, терминальная бездна, циан и маджента, интерактивный калькулятор резидентства.</p>
+              
+              <div class="p-card__badges">
+                <span class="badge-pill">Яндекс.Карты v2.1</span>
+                <span class="badge-pill">Выбор рабочих мест</span>
+                <span class="badge-pill">24/7 доступ</span>
+              </div>
+
+              <div class="p-card__palette">
+                <span class="palette-title">Гамма:</span>
+                <span class="swatch" style="background:#0A0A10" title="Abyss"></span>
+                <span class="swatch" style="background:#00F0FF" title="Cyan"></span>
+                <span class="swatch" style="background:#FF0055" title="Magenta"></span>
+                <span class="swatch" style="background:#A5B4FC" title="Silver"></span>
+              </div>
+            </div>
+            <div class="p-card__actions">
+              <a href="./landing-6/index.html" class="btn btn--primary btn--sm" target="_blank" rel="noopener">
+                Открыть демо ↗
+              </a>
+              <button class="btn btn--outline btn--sm select-niche-btn" data-niche="SYNAPSE Hub (Коворкинг / IT-пространство)">
+                Хочу такой
+              </button>
+            </div>
+          </article>
+
+          <!-- 7: Auto Detailing -->
+          <article class="p-card" data-category="retail">
+            <div class="p-card__top">
+              <span class="p-card__num">07</span>
+              <span class="p-card__cat">Авто & Премиум</span>
+            </div>
+            <div class="p-card__content">
+              <h3 class="p-card__title">APEX Detail Studio</h3>
+              <p class="p-card__niche">Студия детейлинга, полировки и керамической защиты</p>
+              <p class="p-card__desc">Автомобильный темный люкс, карбон, титан и гоночный алый. Интерактивный конфигуратор кузова с расчетом цены.</p>
+              
+              <div class="p-card__badges">
+                <span class="badge-pill">Яндекс.Карты v2.1</span>
+                <span class="badge-pill">Конфигуратор авто</span>
+                <span class="badge-pill">Расчет цены</span>
+              </div>
+
+              <div class="p-card__palette">
+                <span class="palette-title">Гамма:</span>
+                <span class="swatch" style="background:#111113" title="Obsidian"></span>
+                <span class="swatch" style="background:#E50914" title="Crimson"></span>
+                <span class="swatch" style="background:#9CA3AF" title="Titanium"></span>
+                <span class="swatch" style="background:#23252B" title="Gunmetal"></span>
+              </div>
+            </div>
+            <div class="p-card__actions">
+              <a href="./landing-7/index.html" class="btn btn--primary btn--sm" target="_blank" rel="noopener">
+                Открыть демо ↗
+              </a>
+              <button class="btn btn--outline btn--sm select-niche-btn" data-niche="APEX Detail Studio (Автодетейлинг)">
+                Хочу такой
+              </button>
+            </div>
+          </article>
+
+          <!-- 8: Flowers -->
+          <article class="p-card" data-category="retail">
+            <div class="p-card__top">
+              <span class="p-card__num">08</span>
+              <span class="p-card__cat">Цветы & Ритейл</span>
+            </div>
+            <div class="p-card__content">
+              <h3 class="p-card__title">FLEUR Botanical</h3>
+              <p class="p-card__niche">Ботаническое ателье и селективный цветочный бутик</p>
+              <p class="p-card__desc">Романтичный цветочный эдиториал, шалфей и пыльная роза. Интерактивный конструктор букета по настроению и доставке.</p>
+              
+              <div class="p-card__badges">
+                <span class="badge-pill">Яндекс.Карты v2.1</span>
+                <span class="badge-pill">Конструктор букета</span>
+                <span class="badge-pill">Календарь доставки</span>
+              </div>
+
+              <div class="p-card__palette">
+                <span class="palette-title">Гамма:</span>
+                <span class="swatch" style="background:#D8A49B" title="Dusty Rose"></span>
+                <span class="swatch" style="background:#5C6B5E" title="Sage"></span>
+                <span class="swatch" style="background:#FBF4F2" title="Blush"></span>
+                <span class="swatch" style="background:#27382B" title="Forest"></span>
+              </div>
+            </div>
+            <div class="p-card__actions">
+              <a href="./landing-8/index.html" class="btn btn--primary btn--sm" target="_blank" rel="noopener">
+                Открыть демо ↗
+              </a>
+              <button class="btn btn--outline btn--sm select-niche-btn" data-niche="FLEUR Botanical (Цветочный бутик)">
+                Хочу такой
+              </button>
+            </div>
+          </article>
+
+          <!-- 9: Kids Robotics -->
+          <article class="p-card" data-category="tech">
+            <div class="p-card__top">
+              <span class="p-card__num">09</span>
+              <span class="p-card__cat">Образование & Дети</span>
+            </div>
+            <div class="p-card__content">
+              <h3 class="p-card__title">ROBO-START Академия</h3>
+              <p class="p-card__niche">Детская академия робототехники, схемотехники и IT</p>
+              <p class="p-card__desc">Яркая доброжелательная геометрия, чистые цвета, интерактивный подбор курса по возрасту (5–7, 8–11, 12–16 лет).</p>
+              
+              <div class="p-card__badges">
+                <span class="badge-pill">Яндекс.Карты v2.1</span>
+                <span class="badge-pill">Квиз по возрасту</span>
+                <span class="badge-pill">Запись на демо</span>
+              </div>
+
+              <div class="p-card__palette">
+                <span class="palette-title">Гамма:</span>
+                <span class="swatch" style="background:#2563EB" title="Cobalt"></span>
+                <span class="swatch" style="background:#FBBF24" title="Mango"></span>
+                <span class="swatch" style="background:#F43F5E" title="Coral"></span>
+                <span class="swatch" style="background:#10B981" title="Mint"></span>
+              </div>
+            </div>
+            <div class="p-card__actions">
+              <a href="./landing-9/index.html" class="btn btn--primary btn--sm" target="_blank" rel="noopener">
+                Открыть демо ↗
+              </a>
+              <button class="btn btn--outline btn--sm select-niche-btn" data-niche="ROBO-START (Детский образовательный центр)">
+                Хочу такой
+              </button>
+            </div>
+          </article>
+
+          <!-- 10: Legal Firm -->
+          <article class="p-card" data-category="premium">
+            <div class="p-card__top">
+              <span class="p-card__num">10</span>
+              <span class="p-card__cat">Юриспруденция & Право</span>
+            </div>
+            <div class="p-card__content">
+              <h3 class="p-card__title">Аргумент & Партнеры</h3>
+              <p class="p-card__niche">Адвокатское бюро и корпоративный консалтинг</p>
+              <p class="p-card__desc">Британский темно-изумрудный, имперское золото, пергамент. Интерактивный экспресс-аудит правовых рисков бизнеса со скорингом.</p>
+              
+              <div class="p-card__badges">
+                <span class="badge-pill">Яндекс.Карты v2.1</span>
+                <span class="badge-pill">Скоринг рисков</span>
+                <span class="badge-pill">Швейцарский статус</span>
+              </div>
+
+              <div class="p-card__palette">
+                <span class="palette-title">Гамма:</span>
+                <span class="swatch" style="background:#0F281E" title="Forest Green"></span>
+                <span class="swatch" style="background:#C5A059" title="Gold"></span>
+                <span class="swatch" style="background:#F9F8F5" title="Parchment"></span>
+                <span class="swatch" style="background:#202421" title="Charcoal"></span>
+              </div>
+            </div>
+            <div class="p-card__actions">
+              <a href="./landing-10/index.html" class="btn btn--primary btn--sm" target="_blank" rel="noopener">
+                Открыть демо ↗
+              </a>
+              <button class="btn btn--outline btn--sm select-niche-btn" data-niche="Аргумент & Партнеры (Юридическая фирма)">
+                Хочу такой
+              </button>
+            </div>
+          </article>
+
+          <!-- 11: Japanese Restaurant -->
+          <article class="p-card" data-category="horeca">
+            <div class="p-card__top">
+              <span class="p-card__num">11</span>
+              <span class="p-card__cat">Гастрономия & Рестораны</span>
+            </div>
+            <div class="p-card__content">
+              <h3 class="p-card__title">KIZUNA / 絆</h3>
+              <p class="p-card__niche">Японский ресторан высокой кухни Кайсэки & Омакасе</p>
+              <p class="p-card__desc">Японский ваби-саби минимализм, чернила суми, бамбук, печать киновари. Интерактивное дегустационное меню и бронь стола.</p>
+              
+              <div class="p-card__badges">
+                <span class="badge-pill">Яндекс.Карты v2.1</span>
+                <span class="badge-pill">3 дегустационных сета</span>
+                <span class="badge-pill">Бронь стола</span>
+              </div>
+
+              <div class="p-card__palette">
+                <span class="palette-title">Гамма:</span>
+                <span class="swatch" style="background:#141416" title="Sumi"></span>
+                <span class="swatch" style="background:#E7DFD5" title="Bamboo"></span>
+                <span class="swatch" style="background:#C53030" title="Vermilion"></span>
+                <span class="swatch" style="background:#2D2E32" title="Slate"></span>
+              </div>
+            </div>
+            <div class="p-card__actions">
+              <a href="./landing-11/index.html" class="btn btn--primary btn--sm" target="_blank" rel="noopener">
+                Открыть демо ↗
+              </a>
+              <button class="btn btn--outline btn--sm select-niche-btn" data-niche="KIZUNA (Премиальный ресторан / Бар)">
+                Хочу такой
+              </button>
+            </div>
+          </article>
+
+          <!-- 12: SPA Sanctuary -->
+          <article class="p-card" data-category="health">
+            <div class="p-card__top">
+              <span class="p-card__num">12</span>
+              <span class="p-card__cat">Красота & Wellness</span>
+            </div>
+            <div class="p-card__content">
+              <h3 class="p-card__title">SILK & SOUL</h3>
+              <p class="p-card__niche">Санктуарий эстетики, холистического SPA и тишины</p>
+              <p class="p-card__desc">Slow-living велнес, мягкие песочные оттенки, терракота, эвкалипт. Селектор ритуалов и мастеров с календарем слотов на 14 дней.</p>
+              
+              <div class="p-card__badges">
+                <span class="badge-pill">Яндекс.Карты v2.1</span>
+                <span class="badge-pill">Календарь на 14 дней</span>
+                <span class="badge-pill">Выбор мастера</span>
+              </div>
+
+              <div class="p-card__palette">
+                <span class="palette-title">Гамма:</span>
+                <span class="swatch" style="background:#EADBCE" title="Sand"></span>
+                <span class="swatch" style="background:#BD7A63" title="Terracotta"></span>
+                <span class="swatch" style="background:#FAF6F0" title="Cream"></span>
+                <span class="swatch" style="background:#7D8C81" title="Eucalyptus"></span>
+              </div>
+            </div>
+            <div class="p-card__actions">
+              <a href="./landing-12/index.html" class="btn btn--primary btn--sm" target="_blank" rel="noopener">
+                Открыть демо ↗
+              </a>
+              <button class="btn btn--outline btn--sm select-niche-btn" data-niche="SILK & SOUL (SPA-салон / Косметология)">
+                Хочу такой
+              </button>
+            </div>
+          </article>
+
+          <!-- 13: Craft Brewery -->
+          <article class="p-card" data-category="horeca">
+            <div class="p-card__top">
+              <span class="p-card__num">13</span>
+              <span class="p-card__cat">Гастрономия & Паб</span>
+            </div>
+            <div class="p-card__content">
+              <h3 class="p-card__title">HOP & BARREL</h3>
+              <p class="p-card__niche">Крафтовая пивоварня, смокер & гастропаб</p>
+              <p class="p-card__desc">Индустриальный лофт, темная медь, янтарь, кирпичная кладка. Живой кран-лист 12 сортов и конструктор дегустационного сета 4x150мл.</p>
+              
+              <div class="p-card__badges">
+                <span class="badge-pill">Яндекс.Карты v2.1</span>
+                <span class="badge-pill">Живой кран-лист</span>
+                <span class="badge-pill">Конструктор сета</span>
+              </div>
+
+              <div class="p-card__palette">
+                <span class="palette-title">Гамма:</span>
+                <span class="swatch" style="background:#2B1B17" title="Copper"></span>
+                <span class="swatch" style="background:#D97706" title="Amber"></span>
+                <span class="swatch" style="background:#8A3324" title="Brick"></span>
+                <span class="swatch" style="background:#1E1E1E" title="Chalkboard"></span>
+              </div>
+            </div>
+            <div class="p-card__actions">
+              <a href="./landing-13/index.html" class="btn btn--primary btn--sm" target="_blank" rel="noopener">
+                Открыть демо ↗
+              </a>
+              <button class="btn btn--outline btn--sm select-niche-btn" data-niche="HOP & BARREL (Гастропаб / Бар)">
+                Хочу такой
+              </button>
+            </div>
+          </article>
+
+          <!-- 14: Vet Hospital -->
+          <article class="p-card" data-category="health">
+            <div class="p-card__top">
+              <span class="p-card__num">14</span>
+              <span class="p-card__cat">Ветеринария & Животные</span>
+            </div>
+            <div class="p-card__content">
+              <h3 class="p-card__title">Лапки & Хвостик</h3>
+              <p class="p-card__niche">Ветеринарный госпиталь и салон СПА-груминга</p>
+              <p class="p-card__desc">Заботливая Fear-Free атмосфера без стресса, пастель лаванды и персика. Экспресс-триаж симптомов питомца со светофором срочности.</p>
+              
+              <div class="p-card__badges">
+                <span class="badge-pill">Яндекс.Карты v2.1</span>
+                <span class="badge-pill">Экспресс-триаж</span>
+                <span class="badge-pill">Онлайн-запись</span>
+              </div>
+
+              <div class="p-card__palette">
+                <span class="palette-title">Гамма:</span>
+                <span class="swatch" style="background:#0284C7" title="Sky Teal"></span>
+                <span class="swatch" style="background:#FDBA74" title="Peach"></span>
+                <span class="swatch" style="background:#DDD6FE" title="Lavender"></span>
+                <span class="swatch" style="background:#334155" title="Slate"></span>
+              </div>
+            </div>
+            <div class="p-card__actions">
+              <a href="./landing-14/index.html" class="btn btn--primary btn--sm" target="_blank" rel="noopener">
+                Открыть демо ↗
+              </a>
+              <button class="btn btn--outline btn--sm select-niche-btn" data-niche="Лапки & Хвостик (Ветеринарная клиника / Груминг)">
+                Хочу такой
+              </button>
+            </div>
+          </article>
+
+          <!-- 15: Yacht Charter -->
+          <article class="p-card" data-category="premium">
+            <div class="p-card__top">
+              <span class="p-card__num">15</span>
+              <span class="p-card__cat">Премиум & Чартер</span>
+            </div>
+            <div class="p-card__content">
+              <h3 class="p-card__title">AZUR Nautica</h3>
+              <p class="p-card__niche">Аренда премиальных суперъяхт в Средиземном море</p>
+              <p class="p-card__desc">Средиземноморский ультрамарин и золото латуни. Интерактивный калькулятор маршрутов и подбор яхты со сменой валюты и услуг.</p>
+              
+              <div class="p-card__badges">
+                <span class="badge-pill">Яндекс.Карты v2.1</span>
+                <span class="badge-pill">Калькулятор чартера</span>
+                <span class="badge-pill">Смена валюты EUR/RUB</span>
+              </div>
+
+              <div class="p-card__palette">
+                <span class="palette-title">Гамма:</span>
+                <span class="swatch" style="background:#0A192F" title="Abyss"></span>
+                <span class="swatch" style="background:#E2B755" title="Gold"></span>
+                <span class="swatch" style="background:#38BDF8" title="Cyan"></span>
+                <span class="swatch" style="background:#FFFFFF" title="White"></span>
+              </div>
+            </div>
+            <div class="p-card__actions">
+              <a href="./landing-15/index.html" class="btn btn--primary btn--sm" target="_blank" rel="noopener">
+                Открыть демо ↗
+              </a>
+              <button class="btn btn--outline btn--sm select-niche-btn" data-niche="AZUR Nautica (Чартер яхт / Премиум услуги)">
+                Хочу такой
+              </button>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE CALCULATOR SECTION -->
+    <section class="section section--light" id="calculator">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">ОНЛАЙН-РАСЧЕТ</span>
+          <h2 class="section-title">Рассчитайте стоимость и срок вашего проекта</h2>
+          <p class="section-subtitle">
+            Прозрачное ценообразование без скрытых наценок. Выберите необходимые опции, чтобы увидеть предварительный расчет.
+          </p>
+        </div>
+
+        <div class="calc-box">
+          <div class="calc-box__controls">
+            <!-- 1: Project Type -->
+            <div class="calc-group">
+              <label class="calc-label">1. Тип проекта:</label>
+              <div class="calc-options" id="calcTypeGroup">
+                <button type="button" class="calc-opt-btn active" data-price="25000" data-hours="24">
+                  <strong>Экспресс-лендинг</strong>
+                  <span>1–3 экрана • Запуск за 24ч</span>
+                </button>
+                <button type="button" class="calc-opt-btn" data-price="45000" data-hours="48">
+                  <strong>Бизнес-лендинг под ключ</strong>
+                  <span>6–9 экранов • Запуск за 48ч</span>
+                </button>
+                <button type="button" class="calc-opt-btn" data-price="75000" data-hours="72">
+                  <strong>Премиум AI-кастом</strong>
+                  <span>Сложный интерактив & квизы</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- 2: Interactive Addons -->
+            <div class="calc-group">
+              <label class="calc-label">2. Необходимые интерактивные модули:</label>
+              <div class="calc-checks">
+                <label class="check-item">
+                  <input type="checkbox" id="checkMap" checked data-addon-price="5000">
+                  <span class="check-box"></span>
+                  <span class="check-text">
+                    <strong>Интеграция Яндекс.Карт v2.1</strong>
+                    <em>Стилизованная метка, балун с адресом и прямая навигация</em>
+                  </span>
+                </label>
+                <label class="check-item">
+                  <input type="checkbox" id="checkHours" checked data-addon-price="3000">
+                  <span class="check-box"></span>
+                  <span class="check-text">
+                    <strong>Живой статус графика работы</strong>
+                    <em>Автоматический расчет «Открыто/Закрыто» по реальному времени</em>
+                  </span>
+                </label>
+                <label class="check-item">
+                  <input type="checkbox" id="checkWidget" checked data-addon-price="10000">
+                  <span class="check-box"></span>
+                  <span class="check-text">
+                    <strong>Интерактивный квиз / калькулятор</strong>
+                    <em>Вовлекающий расчет стоимости или подбор продукта для клиента</em>
+                  </span>
+                </label>
+                <label class="check-item">
+                  <input type="checkbox" id="checkTelegram" checked data-addon-price="4000">
+                  <span class="check-box"></span>
+                  <span class="check-text">
+                    <strong>Уведомления в Telegram / CRM</strong>
+                    <em>Мгновенная доставка заявок в ваш мессенджер с номером заказа</em>
+                  </span>
+                </label>
+              </div>
+            </div>
+
+            <!-- 3: Urgency -->
+            <div class="calc-group">
+              <label class="calc-label">3. Срочность:</label>
+              <div class="calc-pills" id="calcUrgencyGroup">
+                <button type="button" class="pill-btn active" data-urgency-mult="1.0">
+                  Обычная (Стандартный срок)
+                </button>
+                <button type="button" class="pill-btn" data-urgency-mult="1.25">
+                  🔥 Экспресс 24 часа (+25%)
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Total summary card -->
+          <div class="calc-box__summary">
+            <div class="summary-card">
+              <div class="summary-card__top">
+                <span class="summary-tag">ПРЕДВАРИТЕЛЬНЫЙ ИТОГ</span>
+                <div class="summary-price" id="calcPriceDisplay">67 000 ₽</div>
+                <div class="summary-term" id="calcTermDisplay">Срок готовности: <strong>48 часов</strong></div>
+              </div>
+
+              <div class="summary-includes">
+                <p class="summary-includes__title">В стоимость уже включено:</p>
+                <ul>
+                  <li>✓ 100% мобильная адаптивность (iOS / Android)</li>
+                  <li>✓ Написание сильного конверсионного текста</li>
+                  <li>✓ Подбор лицензионных HD-фотографий</li>
+                  <li>✓ Валидация и маска телефона РФ</li>
+                  <li>✓ Бесплатный хостинг и привязка вашего домена</li>
+                  <li>✓ Передача всех исходников в вечное владение</li>
+                </ul>
+              </div>
+
+              <button class="btn btn--primary btn--full btn--lg modal-trigger" id="calcApplyBtn">
+                Зафиксировать стоимость и срок →
+              </button>
+              <p class="summary-guarantee">Гарантирую сдачу в срок по договору. Никаких доплат после согласования.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS WORKFLOW SECTION -->
+    <section class="section" id="process">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">ПРОЗРАЧНЫЙ ПРОЦЕСС</span>
+          <h2 class="section-title">Как строится работа от заявки до запуска</h2>
+          <p class="section-subtitle">
+            Минимум вашего времени. Никаких 50-страничных брифов и долгих совещаний.
+          </p>
+        </div>
+
+        <div class="steps-grid">
+          <div class="step-card">
+            <div class="step-card__num">01</div>
+            <h3 class="step-card__title">Короткий бриф (15 минут)</h3>
+            <p class="step-card__text">
+              Вы присылаете нишу, свои пожелания или выбираете понравившийся прототип из каталога. Мы согласуем оффер и задачи.
+            </p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-card__num">02</div>
+            <h3 class="step-card__title">AI-генерация структуры и смыслов</h3>
+            <p class="step-card__text">
+              ИИ анализирует конкурентов в вашей нише, формулирует убойные триггеры доверия и выстраивает архитектуру страниц.
+            </p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-card__num">03</div>
+            <h3 class="step-card__title">Программирование и интерактив</h3>
+            <p class="step-card__text">
+              Пишется чистый код: подключаются Яндекс.Карты v2.1, квизы, калькуляторы, маски телефонов и мобильная оптимизация.
+            </p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-card__num">04</div>
+            <h3 class="step-card__title">Запуск и передача сайта</h3>
+            <p class="step-card__text">
+              Размещаем сайт на сервере, подключаем ваш домен .ru / .com и привязываем уведомления в ваш Telegram.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REVIEWS / SOCIAL PROOF -->
+    <section class="section section--light" id="reviews">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">ОТЗЫВЫ КЛИЕНТОВ</span>
+          <h2 class="section-title">Что говорят предприниматели</h2>
+          <p class="section-subtitle">
+            Реальный опыт владельцев бизнеса, заказавших разработку с помощью ИИ.
+          </p>
+        </div>
+
+        <div class="reviews-grid">
+          <div class="review-card">
+            <div class="review-card__rating">★★★★★</div>
+            <p class="review-card__text">
+              «Студии выкатывали мне смету в 240 000 рублей и срок 4 недели на лендинг детейлинга. Егор сделал за 2 дня на базе AI-прототипа. Клиенты пищат от интерактивного калькулятора кузова. Окупился за первые выходные!»
+            </p>
+            <div class="review-card__author">
+              <div class="author-avatar" style="background:#E50914">МС</div>
+              <div>
+                <strong>Максим Селезнев</strong>
+                <span>Основатель детейлинг-студии</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-card__rating">★★★★★</div>
+            <p class="review-card__text">
+              «Для стоматологии критически важна мобильная версия: 87% трафика идет со смартфонов. Здесь ничего не плывет, карта открывается мгновенно, а квиз улыбки дает нам по 5–8 горячих лидов в сутки. Лучшее решение!»
+            </p>
+            <div class="review-card__author">
+              <div class="author-avatar" style="background:#139A8C">ЕВ</div>
+              <div>
+                <strong>Елена Васильева</strong>
+                <span>Главврач частной клиники</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-card__rating">★★★★★</div>
+            <p class="review-card__text">
+              «Главный кайф — нет подписки на Тильду! Сайт лежит на сервере, работает молниеносно, за 10 минут поменял телефон и адрес в одном месте конфига. Огромное спасибо за скорость и качество!»
+            </p>
+            <div class="review-card__author">
+              <div class="author-avatar" style="background:#241915">АГ</div>
+              <div>
+                <strong>Артем Григорьев</strong>
+                <span>Владелец сети спешелти-кофеен</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="section" id="faq">
+      <div class="container container--sm">
+        <div class="section-header text-center">
+          <span class="section-tag">ЧАСТЫЕ ВОПРОСЫ</span>
+          <h2 class="section-title">Ответы на популярные вопросы</h2>
+        </div>
+
+        <div class="faq-accordion" id="faqAccordion">
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>Почему разработка с помощью ИИ в разы надежнее и быстрее?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-panel">
+              <p>ИИ не болеет, не ленится и пишет чистый валидный код за минуты. Я использую искусственный интеллект как супер-инструмент: проектирую сценарии, слежу за логикой продаж, отсекаю лишнее и тестирую верстку. В итоге вы получаете качество премиальной студии за 24–48 часов.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>Нужно ли будет платить каждый месяц за конструкторы (Tilda/Wix)?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-panel">
+              <p>Нет! Все сайты написаны на чистом автономном коде (HTML5, современный CSS и чистый JavaScript). Вы можете разместить его на бесплатном хостинге (например GitHub Pages, Netlify, Vercel) или на вашем стандартном хостинге за 150 ₽/месяц. Никаких привязок к платформам.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>Как я смогу менять телефон, адрес и график работы?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-panel">
+              <p>В самом начале файла <code>script.js</code> каждого сайта вынесен понятный блок <code>LANDING_CONFIG</code>. Измените в нем одну строчку с телефоном или адресом — сайт автоматически обновит данные в шапке, футере, на карточках и на Яндекс.Картах!</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>Будет ли сайт идеально работать на смартфонах?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-panel">
+              <p>Да. Каждый сайт защищен специальным мобильным экраном (Mobile Perfection Shield). Мы тестируем каждую страницу на экранах от 320px до iPhone 15 Pro Max. Никакого бокового скролла, защита от автозума в Safari, крупные кликабельные кнопки.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>Как получить заявки от клиентов?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-panel">
+              <p>Форма сбора лидов на сайте снабжена маской телефона РФ <code>+7 (___) ___-__-__</code> и валидацией. Заявка может отправляться прямо в ваш личный Telegram-чат или канал через бесплатного бота за секунду.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ORDER / CONTACT SECTION -->
+    <section class="section section--light" id="order">
+      <div class="container container--sm">
+        <div class="order-box">
+          <div class="section-header text-center">
+            <span class="section-tag">СТАРТ ПРОЕКТА</span>
+            <h2 class="section-title">Оставьте заявку на персональный лендинг</h2>
+            <p class="section-subtitle">
+              Напишите, какой сайт вам нужен, или выберите прототип из каталога выше. Отвечу в течение 15 минут, пришлю предварительную структуру и зафиксирую срок запуска.
+            </p>
+          </div>
+
+          <form class="order-form" id="mainOrderForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="orderName">Ваше имя *</label>
+                <input type="text" id="orderName" name="name" class="form-input" placeholder="Александр" required>
+              </div>
+              <div class="form-group">
+                <label for="orderPhone">Телефон (для WhatsApp / звонка) *</label>
+                <input type="tel" id="orderPhone" name="phone" class="form-input" placeholder="+7 (___) ___-__-__" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="orderTelegram">Ваш Telegram (для быстрой связи)</label>
+                <input type="text" id="orderTelegram" name="telegram" class="form-input" placeholder="@username">
+              </div>
+              <div class="form-group">
+                <label for="orderNiche">Интересующая ниша / прототип</label>
+                <select id="orderNiche" name="niche" class="form-input">
+                  <option value="Не выбрано">Свой проект (опишу ниже)</option>
+                  <option value="01. Кофейня / Ростери">01. Кофейня / Ростери</option>
+                  <option value="02. Фитнес-клуб / Кроссфит">02. Фитнес-клуб / Кроссфит</option>
+                  <option value="03. Архитектурное бюро / Дизайн">03. Архитектурное бюро / Дизайн</option>
+                  <option value="04. Стоматологическая клиника">04. Стоматологическая клиника</option>
+                  <option value="05. Ремесленная пекарня / Кафе">05. Ремесленная пекарня / Кафе</option>
+                  <option value="06. Коворкинг / IT-пространство">06. Коворкинг / IT-пространство</option>
+                  <option value="07. Автодетейлинг / Тюнинг">07. Автодетейлинг / Тюнинг</option>
+                  <option value="08. Цветочный бутик / Ателье">08. Цветочный бутик / Ателье</option>
+                  <option value="09. Детский центр / Робототехника">09. Детский центр / Робототехника</option>
+                  <option value="10. Адвокатское бюро / Юристы">10. Адвокатское бюро / Юристы</option>
+                  <option value="11. Ресторан / Бар / Кайсэки">11. Ресторан / Бар / Кайсэки</option>
+                  <option value="12. SPA-салон / Бьюти-центр">12. SPA-салон / Бьюти-центр</option>
+                  <option value="13. Крафтовая пивоварня / Паб">13. Крафтовая пивоварня / Паб</option>
+                  <option value="14. Ветеринарная клиника / Груминг">14. Ветеринарная клиника / Груминг</option>
+                  <option value="15. Чартер суперъяхт / Премиум">15. Чартер суперъяхт / Премиум</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="orderComment">Комментарий или ссылка на текущий сайт (если есть)</label>
+              <textarea id="orderComment" name="comment" class="form-input form-textarea" rows="3" placeholder="Расскажите в двух словах о вашем бизнесе или пожеланиях к сайту..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn--primary btn--full btn--lg" id="submitBtn">
+              Отправить заявку и получить аудит →
+            </button>
+            <p class="form-privacy">
+              Нажимая кнопку, вы соглашаетесь на обработку персональных данных. Конфиденциальность гарантируется.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__container">
+      <div class="footer__brand">
+        <a href="#hero" class="brand">
+          <span class="brand__logo">N</span>
+          <div class="brand__text">
+            <span class="brand__name">NEXUS WEB</span>
+            <span class="brand__tag">AI PRODUCTION</span>
+          </div>
+        </a>
+        <p class="footer__desc">
+          Разработка премиальных конверсионных сайтов с использованием искусственного интеллекта. Запуск под ключ за 24–48 часов.
+        </p>
+      </div>
+
+      <div class="footer__links">
+        <div class="footer__col">
+          <span class="footer__col-title">Навигация</span>
+          <a href="#portfolio">Портфолио (15 работ)</a>
+          <a href="#why-ai">Преимущества ИИ</a>
+          <a href="#calculator">Калькулятор стоимости</a>
+          <a href="#process">Этапы работы</a>
+        </div>
+        <div class="footer__col">
+          <span class="footer__col-title">Контакты</span>
+          <a href="https://t.me/your_telegram" target="_blank">Telegram: @egor_developer</a>
+          <a href="https://wa.me/79990000000" target="_blank">WhatsApp чат</a>
+          <a href="tel:+79990000000">+7 (999) 000-00-00</a>
+          <a href="mailto:hello@nexus-web.ru">hello@nexus-web.ru</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <span>© 2026 NEXUS WEB. Все права защищены. Разработано с помощью ИИ.</span>
+        <a href="#hero" class="back-to-top">Наверх ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SUCCESS MODAL -->
+  <div class="modal" id="successModal">
+    <div class="modal__overlay" id="successOverlay"></div>
+    <div class="modal__dialog">
+      <button class="modal__close" id="successClose">✕</button>
+      <div class="modal__icon">✓</div>
+      <h3 class="modal__title">Заявка успешно принята!</h3>
+      <p class="modal__text">
+        Спасибо! Я свяжусь с вами в Telegram или по телефону в течение 15 минут для обсуждения деталей и отправки коммерческого предложения.
+      </p>
+      <div class="modal__ticket">
+        <span>Номер обращения:</span>
+        <strong id="ticketNum">#AI-2026-0814</strong>
+      </div>
+      <button class="btn btn--primary btn--full" id="successOkBtn">Отлично, жду связи</button>
+    </div>
+  </div>
+
+  <script src="portfolio.js"></script>
+</body>
+</html>

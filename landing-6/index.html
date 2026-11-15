@@ -1,0 +1,1292 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SYNAPSE Hub — Киберпанк-коворкинг и хакерспейс 24/7 в Москве</title>
+  <meta name="description" content="Круглосуточный автономный киберпанк-коворкинг и хакерспейс в Artplay. 10 Gbps оптоволокно, серверная стойка под ноды, паяльная лаборатория, капсулы сна и 350+ инженеров.">
+  <meta name="theme-color" content="#0A0A10">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230A0A10'/><path d='M25 50h50M50 25v50' stroke='%2300F0FF' stroke-width='10' stroke-linecap='round'/></svg>">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="SYNAPSE Hub — Киберпанк-коворкинг и хакерспейс 24/7">
+  <meta property="og:description" content="Автономный технологический хаб в центре Artplay. 10G оптика, Tier III питание, Hardware Lab и комьюнити сильных инженеров.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1200&q=80">
+
+  <!-- Google Fonts: Unbounded + Space Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Unbounded:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Yandex Maps API 2.1 -->
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+</head>
+<body class="cyber-body">
+
+  <!-- Scanline CRT Overlay Effect -->
+  <div class="crt-scanlines" aria-hidden="true"></div>
+
+  <!-- Ambient Cyber Glows -->
+  <div class="ambient-glow glow-cyan" aria-hidden="true"></div>
+  <div class="ambient-glow glow-magenta" aria-hidden="true"></div>
+
+  <!-- TOP TERMINAL RIBBON -->
+  <aside class="terminal-ribbon" aria-label="Системный статус">
+    <div class="container ribbon-inner">
+      <div class="ribbon-item">
+        <span class="status-dot green-pulse"></span>
+        <span class="mono-label">SYSTEM: <strong data-bind="status">ONLINE 24/7</strong></span>
+      </div>
+      <div class="ribbon-item hide-mobile">
+        <span class="mono-label">NODE: <span class="cyan-text">MSK-ARTPLAY-01</span></span>
+      </div>
+      <div class="ribbon-item hide-mobile">
+        <span class="mono-label">BACKBONE: <span class="magenta-text">10 Gbps DUAL BGP</span></span>
+      </div>
+      <div class="ribbon-item">
+        <span class="mono-label">MSK TIME: <span id="live-clock" class="silver-text">--:--:--</span></span>
+      </div>
+      <div class="ribbon-item hide-mobile">
+        <span class="mono-label">POWER: <span class="green-text">TIER III UPS 100%</span></span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN HEADER / NAVBAR -->
+  <header class="cyber-header" id="header">
+    <div class="container header-container">
+      <!-- LOGO -->
+      <a href="#hero" class="brand-logo" aria-label="SYNAPSE Hub на главную">
+        <span class="logo-bracket">[</span>
+        <span class="logo-name">SYNAPSE</span>
+        <span class="logo-slash">//</span>
+        <span class="logo-sub">HUB</span>
+        <span class="logo-bracket">]</span>
+        <span class="cursor-blink">_</span>
+      </a>
+
+      <!-- DESKTOP NAV -->
+      <nav class="desktop-nav" aria-label="Основная навигация">
+        <ul class="nav-list">
+          <li><a href="#about" class="nav-link">О хабе</a></li>
+          <li><a href="#zones" class="nav-link">Зоны</a></li>
+          <li><a href="#hardware" class="nav-link">Инфраструктура</a></li>
+          <li><a href="#calculator" class="nav-link">Калькулятор</a></li>
+          <li><a href="#pricing" class="nav-link">Тарифы</a></li>
+          <li><a href="#events" class="nav-link">Ивенты</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
+          <li><a href="#contacts" class="nav-link">Контакты</a></li>
+        </ul>
+      </nav>
+
+      <!-- HEADER ACTIONS -->
+      <div class="header-actions">
+        <a href="tel:+74951098824" class="header-phone hide-mobile" data-bind="phone-link">
+          <svg class="icon-svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+          <span data-bind="phone">+7 (495) 109-88-24</span>
+        </a>
+
+        <button type="button" class="btn btn-cyber-cyan btn-sm open-modal-btn" data-plan="Тест-день">
+          <span class="btn-text">ТЕСТ-ДЕНЬ 0 ₽</span>
+          <span class="btn-glitch" aria-hidden="true"></span>
+        </button>
+
+        <!-- MOBILE BURGER BUTTON -->
+        <button type="button" class="burger-btn" id="burger-toggle" aria-label="Открыть меню" aria-expanded="false">
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE NAV DRAWER -->
+  <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+    <div class="drawer-overlay" id="drawer-overlay"></div>
+    <div class="drawer-content">
+      <div class="drawer-header">
+        <span class="mono-chip">[ МЕНЮ ТЕРМИНАЛА ]</span>
+        <button type="button" class="drawer-close" id="drawer-close" aria-label="Закрыть меню">✕</button>
+      </div>
+
+      <nav class="drawer-nav">
+        <ul class="drawer-list">
+          <li><a href="#about" class="drawer-link">О хабе</a></li>
+          <li><a href="#zones" class="drawer-link">Зоны & Галерея</a></li>
+          <li><a href="#hardware" class="drawer-link">Инфраструктура</a></li>
+          <li><a href="#calculator" class="drawer-link">Калькулятор тарифа</a></li>
+          <li><a href="#pricing" class="drawer-link">Тарифные планы</a></li>
+          <li><a href="#events" class="drawer-link">Ивенты & Митапы</a></li>
+          <li><a href="#faq" class="drawer-link">Вопросы и ответы</a></li>
+          <li><a href="#contacts" class="drawer-link">Локация и контакты</a></li>
+        </ul>
+      </nav>
+
+      <div class="drawer-footer">
+        <div class="drawer-contacts">
+          <p class="drawer-phone"><a href="tel:+74951098824" data-bind="phone-link"><span data-bind="phone">+7 (495) 109-88-24</span></a></p>
+          <p class="drawer-addr" data-bind="address">Москва, ул. Нижняя Сыромятническая, д. 10, стр. 2</p>
+        </div>
+        <button type="button" class="btn btn-cyber-cyan btn-block open-modal-btn" data-plan="Тест-день">
+          [ ЗАБРОНИРОВАТЬ ТЕСТ-ДЕНЬ ]
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-container">
+        
+        <!-- PROMPT BADGE -->
+        <div class="hero-prompt-chip">
+          <span class="terminal-prefix">&gt; root@synapse:~#</span>
+          <span class="terminal-cmd">connect --mesh --bandwidth=10G --auth=faceid</span>
+          <span class="chip-status">[STABLE]</span>
+        </div>
+
+        <h1 class="hero-title">
+          КИБЕРПАНК-ХАБ <br>
+          <span class="gradient-cyber">ДЛЯ ТЕХ, КТО КОДИТ</span> <br>
+          БУДУЩЕЕ
+        </h1>
+
+        <p class="hero-subtitle">
+          Первый в Москве автономный 24/7 коворкинг и хакерспейс в центре Artplay. Двойной 10 Gbps оптоволоконный канал, серверная стойка под ваши ноды, паяльная лаборатория, капсулы сна и комьюнити из 350+ хардкорных инженеров.
+        </p>
+
+        <!-- HERO BUTTONS -->
+        <div class="hero-cta-group">
+          <button type="button" class="btn btn-cyber-magenta btn-lg open-modal-btn" data-plan="Бесплатный тест-день">
+            <span class="btn-text">ЗАБРОНИРОВАТЬ ТЕСТ-ДЕНЬ</span>
+            <span class="btn-corner tl"></span>
+            <span class="btn-corner br"></span>
+          </button>
+          
+          <a href="#calculator" class="btn btn-cyber-outline btn-lg">
+            <span class="btn-text">РАССЧИТАТЬ СТОИМОСТЬ</span>
+          </a>
+        </div>
+
+        <!-- HERO METRIC CHIPS -->
+        <div class="hero-metrics-grid">
+          <div class="metric-card">
+            <div class="metric-val cyan-text">10 Gbps</div>
+            <div class="metric-title">Сетевой бэкбон</div>
+            <div class="metric-desc">Два независимых оптических ввода (RETN + Orange), BGP failover &lt; 3мс</div>
+          </div>
+
+          <div class="metric-card">
+            <div class="metric-val magenta-text">24 / 7 / 365</div>
+            <div class="metric-title">Автономный доступ</div>
+            <div class="metric-desc">СКУД по биометрии FaceID и аппаратным NFC-ключам без вахтеров</div>
+          </div>
+
+          <div class="metric-card">
+            <div class="metric-val silver-text">100 kW</div>
+            <div class="metric-title">Бесперебойное питание</div>
+            <div class="metric-desc">Промышленный ИБП Eaton Tier III + автоматический дизель-генератор</div>
+          </div>
+
+          <div class="metric-card">
+            <div class="metric-val green-text">0 ms</div>
+            <div class="metric-title">Задержка отдыха</div>
+            <div class="metric-desc">Капсулы сна с циркадным светом, спешелти-кофе, душ и хакерспейс</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- LIVE TELEMETRY STATUS BAR -->
+    <section class="telemetry-bar" id="about">
+      <div class="container">
+        <div class="section-tag-wrap">
+          <span class="section-tag">[ TELEMETRY // REALTIME ]</span>
+          <h2 class="section-heading">ЖИВОЙ ПУЛЬС ХАБА</h2>
+        </div>
+
+        <div class="telemetry-grid">
+          <div class="telemetry-item">
+            <div class="telemetry-header">
+              <span class="dot-indicator green-pulse"></span>
+              <span class="telemetry-label">ЗАГРУЗКА КАНАЛА</span>
+            </div>
+            <div class="telemetry-data">
+              <span class="data-num" id="traffic-num">2.4</span>
+              <span class="data-unit">/ 10 Gbps</span>
+            </div>
+            <div class="telemetry-bar-line">
+              <div class="telemetry-bar-fill" style="width: 24%;"></div>
+            </div>
+            <span class="telemetry-meta">Ping до MSK-IX: 1.1 ms</span>
+          </div>
+
+          <div class="telemetry-item">
+            <div class="telemetry-header">
+              <span class="dot-indicator cyan-pulse"></span>
+              <span class="telemetry-label">СВОБОДНЫЕ СЛОТЫ</span>
+            </div>
+            <div class="telemetry-data">
+              <span class="data-num" id="free-slots-num">14</span>
+              <span class="data-unit">/ 120 мест</span>
+            </div>
+            <div class="telemetry-bar-line">
+              <div class="telemetry-bar-fill cyan-fill" style="width: 88%;"></div>
+            </div>
+            <span class="telemetry-meta">Опенспейс: 8 • Смарт-офисы: 1</span>
+          </div>
+
+          <div class="telemetry-item">
+            <div class="telemetry-header">
+              <span class="dot-indicator blue-pulse"></span>
+              <span class="telemetry-label">ТЕМПЕРАТУРА В СТОЙКАХ</span>
+            </div>
+            <div class="telemetry-data">
+              <span class="data-num">20.4</span>
+              <span class="data-unit">°C</span>
+            </div>
+            <div class="telemetry-bar-line">
+              <div class="telemetry-bar-fill blue-fill" style="width: 45%;"></div>
+            </div>
+            <span class="telemetry-meta">Прецизионное охлаждение Stulz</span>
+          </div>
+
+          <div class="telemetry-item">
+            <div class="telemetry-header">
+              <span class="dot-indicator magenta-pulse"></span>
+              <span class="telemetry-label">ЛАБОРАТОРИЯ ХАКЕРОВ</span>
+            </div>
+            <div class="telemetry-data">
+              <span class="data-num green-text">ACTIVE</span>
+            </div>
+            <div class="telemetry-bar-line">
+              <div class="telemetry-bar-fill magenta-fill" style="width: 70%;"></div>
+            </div>
+            <span class="telemetry-meta">3D-печать: 1 в очереди • Пайка: свободно</span>
+          </div>
+        </div>
+
+        <!-- MANIFESTO -->
+        <div class="manifesto-box">
+          <div class="manifesto-badge">[ MANIFESTO ]</div>
+          <p class="manifesto-text">
+            Мы спроектировали SYNAPSE Hub, потому что устали от стерильных пространств с нестабильным Wi-Fi, запретом на шум кулеров и закрытием дверей в 22:00. Здесь твой сервер гудит в экранированной гермозоне, деплой защищен промышленным дизелем, а в 03:30 ночи за соседним столом обучают локальные LLM и компилируют код ядра.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ZONES & GALLERY SECTION -->
+    <section class="zones-section" id="zones">
+      <div class="container">
+        <div class="section-tag-wrap">
+          <span class="section-tag">[ WORKSPACE // ARCHITECTURE ]</span>
+          <h2 class="section-heading">МОДУЛИ ПРОСТРАНСТВА</h2>
+          <p class="section-sub">1 400 м² кибернетической инфраструктуры, спроектированной под глубокий инженерный фокус и круглосуточную разработку.</p>
+        </div>
+
+        <!-- FILTER BUTTONS -->
+        <div class="gallery-filters" role="tablist" aria-label="Фильтры зон">
+          <button type="button" class="filter-btn active" data-filter="all">Все зоны [6]</button>
+          <button type="button" class="filter-btn" data-filter="desks">Опенспейс</button>
+          <button type="button" class="filter-btn" data-filter="offices">Смарт-офисы</button>
+          <button type="button" class="filter-btn" data-filter="hardware">Hardware Lab</button>
+          <button type="button" class="filter-btn" data-filter="lounge">Слип-поды & Chill</button>
+        </div>
+
+        <!-- GALLERY GRID -->
+        <div class="zones-grid">
+          
+          <!-- Card 1: Open Matrix Desks -->
+          <article class="zone-card" data-category="desks">
+            <div class="zone-media">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/open-space.jpg -->
+              <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1200&q=80" 
+                   alt="Эргономичный опенспейс SYNAPSE Hub" 
+                   class="zone-img" 
+                   loading="lazy">
+              <div class="zone-badge cyan-badge">OPEN MATRIX // 120 МЕСТ</div>
+            </div>
+            <div class="zone-info">
+              <h3 class="zone-title">Эргономичные рабочие станции</h3>
+              <p class="zone-desc">Широкие столы 160×80 см с электроприводом регулировки высоты (sit-stand), анатомические кресла Herman Miller Mirra 2 и мониторы Dell UltraSharp 4K 144Hz с USB-C хабом на 90W питания.</p>
+              <ul class="zone-specs">
+                <li><span class="mono-code">[NET]</span> Выделенный 1 Gbps Ethernet в каждое кресло</li>
+                <li><span class="mono-code">[LIGHT]</span> Персональный свет с CRI&gt;95 без мерцания</li>
+                <li><span class="mono-code">[PWR]</span> 4 евророзетки + 2x Type-C 100W PD на стол</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Card 2: Team Cyber Suites -->
+          <article class="zone-card" data-category="offices">
+            <div class="zone-media">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/team-office.jpg -->
+              <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80" 
+                   alt="Приватные смарт-офисы SYNAPSE Hub" 
+                   class="zone-img" 
+                   loading="lazy">
+              <div class="zone-badge magenta-badge">CYBER SUITES // 4–12 МЕСТ</div>
+            </div>
+            <div class="zone-info">
+              <h3 class="zone-title">Приватные смарт-офисы для команд</h3>
+              <p class="zone-desc">Изолированные стеклянные блоки с затемнением smart-glass, акустической защитой 46dB, собственной биометрической СКУД и выделенным VLAN для защиты корпоративного периметра.</p>
+              <ul class="zone-specs">
+                <li><span class="mono-code">[LAN]</span> Изолированный сегмент сети и VPN-шлюз</li>
+                <li><span class="mono-code">[MEET]</span> Встроенная мини-переговорка с 4K экраном</li>
+                <li><span class="mono-code">[CLIMATE]</span> Индивидуальный климат-контроль Daikin</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Card 3: Hardware & Maker Lab -->
+          <article class="zone-card" data-category="hardware">
+            <div class="zone-media">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/maker-lab.jpg -->
+              <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=80" 
+                   alt="Хакерспейс и паяльная лаборатория SYNAPSE Hub" 
+                   class="zone-img" 
+                   loading="lazy">
+              <div class="zone-badge green-badge">HARDWARE LAB // PROTOTYPING</div>
+            </div>
+            <div class="zone-info">
+              <h3 class="zone-title">Лаборатория пайки и прототипирования</h3>
+              <p class="zone-desc">Полноценный хакерспейс для инженеров-электронщиков, IoT-разработчиков и мейкеров. Паяльные станции Weller, осциллографы, логические анализаторы и высокоскоростная 3D-печать.</p>
+              <ul class="zone-specs">
+                <li><span class="mono-code">[EQUIP]</span> Weller WX2020 + термовоздушные фены</li>
+                <li><span class="mono-code">[3D]</span> 2x Bambu Lab X1-Carbon (карбон, PETG, ABS)</li>
+                <li><span class="mono-code">[TEST]</span> Rigol 100MHz 4-канальный осциллограф + ЛБП</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Card 4: Colocation & Server Room -->
+          <article class="zone-card" data-category="hardware">
+            <div class="zone-media">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/server-room.jpg -->
+              <img src="https://images.unsplash.com/photo-1597733336794-12d05021d510?auto=format&fit=crop&w=1200&q=80" 
+                   alt="Серверная стойка и колокейшн нод SYNAPSE Hub" 
+                   class="zone-img" 
+                   loading="lazy">
+              <div class="zone-badge cyan-badge">COLOCATION // RACK SPACE</div>
+            </div>
+            <div class="zone-info">
+              <h3 class="zone-title">Серверная стойка для нод резидентов</h3>
+              <p class="zone-desc">Размещайте собственные вычислительные ноды, валидаторы блокчейн-сетей, GPU-серверы и системы бэкапа прямо в хабе в экранированной стойке APC с гарантированным каналом.</p>
+              <ul class="zone-specs">
+                <li><span class="mono-code">[RACK]</span> 42U APC NetShelter с замками по отпечатку</li>
+                <li><span class="mono-code">[POWER]</span> Два независимых фидера от ИБП + ATS</li>
+                <li><span class="mono-code">[IP]</span> Статические IPv4 /29 и нативная IPv6 сеть</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Card 5: Zoom Pods & Stream Booths -->
+          <article class="zone-card" data-category="desks">
+            <div class="zone-media">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/zoom-pods.jpg -->
+              <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1200&q=80" 
+                   alt="Звукоизолированные капсулы для звонков" 
+                   class="zone-img" 
+                   loading="lazy">
+              <div class="zone-badge silver-badge">ZOOM PODS // SILENCE 48dB</div>
+            </div>
+            <div class="zone-info">
+              <h3 class="zone-title">Акустические Zoom-капсулы</h3>
+              <p class="zone-desc">8 индивидуальных звукоизолированных кабин Framery для конфиденциальных созвонов, питчей инвесторам и записи подкастов. Вас не слышно снаружи, а шум хаба не попадает в микрофон.</p>
+              <ul class="zone-specs">
+                <li><span class="mono-code">[AUDIO]</span> Студийный микрофон Shure MV7 USB/XLR</li>
+                <li><span class="mono-code">[VIDEO]</span> Камера 4K с автофокусом и кольцевой свет</li>
+                <li><span class="mono-code">[AIR]</span> Бесшумная приточная вентиляция 65 м³/ч</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Card 6: Sleep Capsules & Bio-Hacking -->
+          <article class="zone-card" data-category="lounge">
+            <div class="zone-media">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/sleep-pod.jpg -->
+              <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1200&q=80" 
+                   alt="Капсулы сна и зона отдыха SYNAPSE Hub" 
+                   class="zone-img" 
+                   loading="lazy">
+              <div class="zone-badge magenta-badge">BIO-HACKING // 24/7 SLEEP</div>
+            </div>
+            <div class="zone-info">
+              <h3 class="zone-title">Капсулы сна и зона биохакинга</h3>
+              <p class="zone-desc">Перезагрузите мозг во время тяжелого ночного спринта. Индивидуальные капсулы сна с ортопедическими матрасами, циркадными лампами, свежим бельем, чистым душем и полотенцами.</p>
+              <ul class="zone-specs">
+                <li><span class="mono-code">[REST]</span> 6 капсул глубокого сна с вентиляцией</li>
+                <li><span class="mono-code">[SHOWER]</span> 4 душевые комнаты с косметикой и фенами</li>
+                <li><span class="mono-code">[COFFEE]</span> La Marzocco + свежая арабика 100% free</li>
+              </ul>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- HARDWARE & NETWORK SPECS -->
+    <section class="hardware-section" id="hardware">
+      <div class="container">
+        <div class="section-tag-wrap">
+          <span class="section-tag">[ INFRASTRUCTURE // NO COMPROMISE ]</span>
+          <h2 class="section-heading">ИНФРАСТРУКТУРА ДЛЯ ХАРДКОРНОГО ДЕВА</h2>
+          <p class="section-sub">Мы убрали все узкие места. Никаких дропов соединения, просадок напряжения и перегрева оборудования.</p>
+        </div>
+
+        <div class="hardware-grid">
+          
+          <div class="hw-item">
+            <div class="hw-icon-box">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--cyber-cyan)" stroke-width="2">
+                <rect x="2" y="2" width="20" height="8" rx="2" ry="2"/>
+                <rect x="2" y="14" width="20" height="8" rx="2" ry="2"/>
+                <line x1="6" y1="6" x2="6.01" y2="6"/>
+                <line x1="6" y1="18" x2="6.01" y2="18"/>
+              </svg>
+            </div>
+            <h3 class="hw-title">Два ввода 10 Gbps + MSK-IX</h3>
+            <p class="hw-text">Прямой оптический линк до М9 и М10. Маршрутизация BGP между RETN и Orange Business. Пинг до Франкфурта — 28мс, до Амстердама — 31мс.</p>
+            <div class="hw-tag mono-code">[DUAL_FIBER_BGP]</div>
+          </div>
+
+          <div class="hw-item">
+            <div class="hw-icon-box">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--hot-magenta)" stroke-width="2">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+              </svg>
+            </div>
+            <h3 class="hw-title">Автономия по стандарту Tier III</h3>
+            <p class="hw-text">Онлайн-ИБП Eaton 93PM с двойным преобразованием сглаживает скачки напряжения. Резервный дизель-генератор Artplay стартует за 8 секунд при блэкауте.</p>
+            <div class="hw-tag mono-code">[UPS_EATON_100KW]</div>
+          </div>
+
+          <div class="hw-item">
+            <div class="hw-icon-box">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--tech-silver)" stroke-width="2">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+              </svg>
+            </div>
+            <h3 class="hw-title">Zero-Trust СКУД & Биометрия</h3>
+            <p class="hw-text">Бесшовный круглосуточный вход по 3D-сканированию лица или FIDO2-токенам. Никаких пластиковых карточек, забытых пропусков и очередей.</p>
+            <div class="hw-tag mono-code">[FACE_ID_3D_SEC]</div>
+          </div>
+
+          <div class="hw-item">
+            <div class="hw-icon-box">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--cyber-cyan)" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="2" y1="12" x2="22" y2="12"/>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+              </svg>
+            </div>
+            <h3 class="hw-title">Wi-Fi 6E (6 GHz) + 1 Gbps LAN</h3>
+            <p class="hw-text">Точки доступа Cisco Catalyst с поддержкой диапазона 6 ГГц без радиопомех. В каждой рабочей станции — экранированная витая пара Cat.6a с PoE.</p>
+            <div class="hw-tag mono-code">[WIFI_6E_6GHZ]</div>
+          </div>
+
+          <div class="hw-item">
+            <div class="hw-icon-box">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--hot-magenta)" stroke-width="2">
+                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+              </svg>
+            </div>
+            <h3 class="hw-title">Мейкерспейс и станки 3D-печати</h3>
+            <p class="hw-text">Быстрое прототипирование корпусов на Bambu Lab X1C (CF, PA, TPU). Пайка SMD-компонентов 0402, монтаж BGA, микроскопы с выводом на 4K монитор.</p>
+            <div class="hw-tag mono-code">[HARDWARE_LAB]</div>
+          </div>
+
+          <div class="hw-item">
+            <div class="hw-icon-box">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--green-status)" stroke-width="2">
+                <path d="M18 8h1a4 4 0 0 1 0 8h-1"/>
+                <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/>
+                <line x1="6" y1="1" x2="6" y2="4"/>
+                <line x1="10" y1="1" x2="10" y2="4"/>
+                <line x1="14" y1="1" x2="14" y2="4"/>
+              </svg>
+            </div>
+            <h3 class="hw-title">Безлимитный спешелти-кофе</h3>
+            <p class="hw-text">Итальянская леверная кофемашина, свежая обжарка от Submarine и Восход, альтернативное молоко, фильтр-кофе батчами каждые 2 часа и краны с мате.</p>
+            <div class="hw-tag mono-code">[CAFFEINE_STACK]</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE CALCULATOR SECTION -->
+    <section class="calculator-section" id="calculator">
+      <div class="container">
+        <div class="section-tag-wrap">
+          <span class="section-tag">[ INTERACTIVE // CONFIGURATOR ]</span>
+          <h2 class="section-heading">КАЛЬКУЛЯТОР ТАРИФА & ДОСТУПА</h2>
+          <p class="section-sub">Соберите персональную конфигурацию рабочего пространства и зафиксируйте слот по спецтарифу.</p>
+        </div>
+
+        <div class="calc-wrapper">
+          <div class="calc-controls">
+            
+            <!-- Step 1: Select Plan Format -->
+            <div class="calc-group">
+              <div class="calc-label">
+                <span class="step-num">01.</span> ВЫБЕРИТЕ ФОРМАТ РАБОЧЕГО МЕСТА
+              </div>
+              <div class="plan-selector-grid">
+                
+                <label class="plan-radio-card active">
+                  <input type="radio" name="calc-plan" value="hotdesk" aria-label="Тариф Hot Desk 24/7" checked>
+                  <div class="card-radio-body">
+                    <span class="plan-radio-title">Hot Desk 24/7</span>
+                    <span class="plan-radio-desc">Плавающее место в опенспейсе, доступ 24/7, 10G Wi-Fi, кофе, переговорки 5ч</span>
+                    <span class="plan-radio-price">18 000 ₽ <small>/ мес</small></span>
+                  </div>
+                </label>
+
+                <label class="plan-radio-card">
+                  <input type="radio" name="calc-plan" value="dedicated" aria-label="Тариф Dedicated Cyber">
+                  <div class="card-radio-body">
+                    <span class="plan-radio-badge">ХИТ</span>
+                    <span class="plan-radio-title">Dedicated Cyber</span>
+                    <span class="plan-radio-desc">Закрепленный стол sit-stand, 2x 4K Dell монитора, тумба, 1U в серверной, 15ч митингов</span>
+                    <span class="plan-radio-price">28 000 ₽ <small>/ мес</small></span>
+                  </div>
+                </label>
+
+                <label class="plan-radio-card">
+                  <input type="radio" name="calc-plan" value="office" aria-label="Тариф Team Cyber Suite">
+                  <div class="card-radio-body">
+                    <span class="plan-radio-title">Team Cyber Suite</span>
+                    <span class="plan-radio-desc">Смарт-офис на 4-12 инженеров, отдельная СКУД, свой VLAN, безлимит переговорок</span>
+                    <span class="plan-radio-price">95 000 ₽ <small>/ мес</small></span>
+                  </div>
+                </label>
+
+                <label class="plan-radio-card">
+                  <input type="radio" name="calc-plan" value="daypass" aria-label="Тариф Hacker Day Pass">
+                  <div class="card-radio-body">
+                    <span class="plan-radio-title">Hacker Day Pass</span>
+                    <span class="plan-radio-desc">Разовый суточный доступ 24 часа. Идеально для хакатонов и спринтов деплоя</span>
+                    <span class="plan-radio-price">2 000 ₽ <small>/ сутки</small></span>
+                  </div>
+                </label>
+
+              </div>
+            </div>
+
+            <!-- Step 2: Duration Period -->
+            <div class="calc-group" id="period-group">
+              <div class="calc-label">
+                <span class="step-num">02.</span> СРОК РЕЗИДЕНТСТВА
+              </div>
+              <div class="period-pills">
+                <button type="button" class="period-pill active" data-period="1" data-discount="0">1 месяц (0%)</button>
+                <button type="button" class="period-pill" data-period="3" data-discount="10">3 месяца (-10%)</button>
+                <button type="button" class="period-pill" data-period="6" data-discount="15">6 месяцев (-15%)</button>
+                <button type="button" class="period-pill" data-period="12" data-discount="20">1 год (-20%)</button>
+              </div>
+            </div>
+
+            <!-- Step 3: Hardware & Perks Addons -->
+            <div class="calc-group">
+              <div class="calc-label">
+                <span class="step-num">03.</span> ДОПОЛНИТЕЛЬНЫЕ КИБЕР-МОДУЛИ
+              </div>
+              <div class="addons-grid">
+                
+                <label class="addon-checkbox" for="addon-server">
+                  <input type="checkbox" id="addon-server" value="4500" data-name="Полка 1U в серверной стойке">
+                  <div class="checkbox-custom"></div>
+                  <div class="addon-text">
+                    <span class="addon-name">Полка 1U в серверной стойке APC</span>
+                    <span class="addon-sub">Питание от ИБП, выделенный 1G порт, белый IPv4</span>
+                  </div>
+                  <span class="addon-price">+4 500 ₽/мес</span>
+                </label>
+
+                <label class="addon-checkbox" for="addon-lab">
+                  <input type="checkbox" id="addon-lab" value="3500" data-name="Доступ в Hardware Lab">
+                  <div class="checkbox-custom"></div>
+                  <div class="addon-text">
+                    <span class="addon-name">Hardware & 3D Maker Lab</span>
+                    <span class="addon-sub">Безлимит на паяльные станции, осциллографы и 3D-печать</span>
+                  </div>
+                  <span class="addon-price">+3 500 ₽/мес</span>
+                </label>
+
+                <label class="addon-checkbox" for="addon-sleep">
+                  <input type="checkbox" id="addon-sleep" value="3000" data-name="Капсулы сна и душ 24/7">
+                  <div class="checkbox-custom"></div>
+                  <div class="addon-text">
+                    <span class="addon-name">Капсулы сна + шкафчик со смарт-замком</span>
+                    <span class="addon-sub">Персональный локер с зарядкой, доступ к капсулам и душу</span>
+                  </div>
+                  <span class="addon-price">+3 000 ₽/мес</span>
+                </label>
+
+                <label class="addon-checkbox" for="addon-ip">
+                  <input type="checkbox" id="addon-ip" value="1500" data-name="Статический белый IP-адрес">
+                  <div class="checkbox-custom"></div>
+                  <div class="addon-text">
+                    <span class="addon-name">Выделенный статический IPv4 / IPv6</span>
+                    <span class="addon-sub">Для SSH-туннелей, VPN-серверов и удаленного продакшена</span>
+                  </div>
+                  <span class="addon-price">+1 500 ₽/мес</span>
+                </label>
+
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Total Summary Sticky Column -->
+          <div class="calc-summary">
+            <div class="summary-header">
+              <span class="mono-chip cyan-chip">[ СВОДКА КОНФИГУРАЦИИ ]</span>
+              <span class="summary-node">NODE: SYN-CFG-LIVE</span>
+            </div>
+
+            <div class="summary-body">
+              <div class="summary-row">
+                <span class="sum-title">Выбранный слот:</span>
+                <span class="sum-val mono-code" id="sum-plan-name">Hot Desk 24/7</span>
+              </div>
+              <div class="summary-row">
+                <span class="sum-title">Период:</span>
+                <span class="sum-val mono-code" id="sum-period-name">1 месяц</span>
+              </div>
+              <div class="summary-row">
+                <span class="sum-title">Скидка за срок:</span>
+                <span class="sum-val mono-code green-text" id="sum-discount-name">0% (0 ₽)</span>
+              </div>
+              <div class="summary-row" id="sum-addons-row">
+                <span class="sum-title">Модули:</span>
+                <span class="sum-val mono-code" id="sum-addons-count">Не выбрано</span>
+              </div>
+
+              <div class="summary-divider"></div>
+
+              <div class="summary-total-box">
+                <div class="total-caption">ИТОГО К ОПЛАТЕ:</div>
+                <div class="total-number" id="calc-total-price">18 000 ₽</div>
+                <div class="total-sub" id="calc-per-month">18 000 ₽ в месяц</div>
+              </div>
+
+              <div class="slot-availability-alert">
+                <span class="status-dot green-pulse"></span>
+                <span class="avail-text" id="avail-slots-text">Осталось 8 свободных слотов на этот формат</span>
+              </div>
+
+              <button type="button" class="btn btn-cyber-magenta btn-block" id="calc-submit-btn">
+                <span class="btn-text">ЗАБРОНИРОВАТЬ ЭТОТ СЛОТ</span>
+              </button>
+
+              <p class="summary-guarantee">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                </svg>
+                Бесплатная отмена за 24 часа. Оплата для юрлиц и физлиц.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING TABLE SECTION -->
+    <section class="pricing-section" id="pricing">
+      <div class="container">
+        <div class="section-tag-wrap">
+          <span class="section-tag">[ PRICING // PACKAGES ]</span>
+          <h2 class="section-heading">ТАРИФНЫЕ ПЛАНЫ</h2>
+          <p class="section-sub">Прозрачные условия без скрытых доплат. Все тарифы включают доступ 24/7 и полный кофейный безлимит.</p>
+        </div>
+
+        <div class="pricing-cards-grid">
+          
+          <!-- Card 1: HOT DESK -->
+          <div class="pricing-card">
+            <div class="pricing-header">
+              <span class="plan-tag cyan-tag">FLEXIBLE // RESIDENT</span>
+              <h3 class="plan-name">HOT DESK 24/7</h3>
+              <p class="plan-target">Для независимых разработчиков, фрилансеров и соло-фаундеров.</p>
+              <div class="plan-price-block">
+                <div class="price-val">18 000 ₽</div>
+                <div class="price-period">в месяц (или 2 000 ₽ / сутки)</div>
+              </div>
+            </div>
+
+            <div class="pricing-divider"></div>
+
+            <ul class="plan-features-list">
+              <li><span class="chk-icon">✔</span> Доступ 24/7/365 по биометрии FaceID</li>
+              <li><span class="chk-icon">✔</span> Любое свободное эргономичное место</li>
+              <li><span class="chk-icon">✔</span> Скоростной 10 Gbps Wi-Fi 6E + Ethernet 1G</li>
+              <li><span class="chk-icon">✔</span> 5 часов переговорных комнат в месяц</li>
+              <li><span class="chk-icon">✔</span> Безлимитный спешелти-кофе, чай и снеки</li>
+              <li><span class="chk-icon">✔</span> Доступ к душевым и лаунж-зоне</li>
+            </ul>
+
+            <button type="button" class="btn btn-cyber-outline btn-block open-modal-btn" data-plan="Hot Desk 24/7">
+              ВЫБРАТЬ HOT DESK
+            </button>
+          </div>
+
+          <!-- Card 2: DEDICATED CYBER (FEATURED) -->
+          <div class="pricing-card featured-card">
+            <div class="featured-ribbon">ХИТ РЕЗИДЕНТОВ</div>
+            <div class="pricing-header">
+              <span class="plan-tag magenta-tag">DEDICATED // FIXED STATION</span>
+              <h3 class="plan-name">DEDICATED CYBER</h3>
+              <p class="plan-target">Для тех, кому нужен свой постоянный мощный сетап с мониторами.</p>
+              <div class="plan-price-block">
+                <div class="price-val magenta-text">28 000 ₽</div>
+                <div class="price-period">в месяц (при оплате за год — 22 400 ₽)</div>
+              </div>
+            </div>
+
+            <div class="pricing-divider"></div>
+
+            <ul class="plan-features-list">
+              <li><span class="chk-icon magenta-chk">✔</span> <strong>Свое закрепленное место 24/7</strong></li>
+              <li><span class="chk-icon magenta-chk">✔</span> <strong>2x 4K Dell монитора 27" на кронштейнах</strong></li>
+              <li><span class="chk-icon magenta-chk">✔</span> Стол с электроприводом sit-stand 160см</li>
+              <li><span class="chk-icon magenta-chk">✔</span> Тумба с замком по смарт-карте</li>
+              <li><span class="chk-icon magenta-chk">✔</span> 15 часов переговорных комнат в месяц</li>
+              <li><span class="chk-icon magenta-chk">✔</span> 1U в серверной стойке APC под ноду</li>
+              <li><span class="chk-icon magenta-chk">✔</span> Бесплатный доступ к Hardware Lab</li>
+              <li><span class="chk-icon magenta-chk">✔</span> Капсулы сна и душ без ограничений</li>
+            </ul>
+
+            <button type="button" class="btn btn-cyber-magenta btn-block open-modal-btn" data-plan="Dedicated Cyber">
+              ЗАКРЕПИТЬ СВОЙ СЕРИЙНИК
+            </button>
+          </div>
+
+          <!-- Card 3: TEAM CYBER SUITE -->
+          <div class="pricing-card">
+            <div class="pricing-header">
+              <span class="plan-tag silver-tag">ENTERPRISE // SMART OFFICE</span>
+              <h3 class="plan-name">TEAM CYBER SUITE</h3>
+              <p class="plan-target">Для распределенных стартапов, крипто-команд и ИИ-лабораторий (4–12 мест).</p>
+              <div class="plan-price-block">
+                <div class="price-val">от 95 000 ₽</div>
+                <div class="price-period">в месяц за изолированный офис</div>
+              </div>
+            </div>
+
+            <div class="pricing-divider"></div>
+
+            <ul class="plan-features-list">
+              <li><span class="chk-icon">✔</span> Изолированный офис со стеклом smart-glass</li>
+              <li><span class="chk-icon">✔</span> Собственная FaceID СКУД на вход</li>
+              <li><span class="chk-icon">✔</span> Выделенный изолированный VLAN и роутер</li>
+              <li><span class="chk-icon">✔</span> Безлимитное бронирование всех переговорок</li>
+              <li><span class="chk-icon">✔</span> До 4U в серверной стойке для оборудования</li>
+              <li><span class="chk-icon">✔</span> Брендинг офиса и юридический адрес</li>
+              <li><span class="chk-icon">✔</span> Персональный менеджер и клининг 2 раза в день</li>
+            </ul>
+
+            <button type="button" class="btn btn-cyber-outline btn-block open-modal-btn" data-plan="Team Cyber Suite">
+              ЗАПРОСИТЬ ПЛАН ОФИСА
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- EVENTS & COMMUNITY -->
+    <section class="events-section" id="events">
+      <div class="container">
+        <div class="section-tag-wrap">
+          <span class="section-tag">[ COMMUNITY // CALENDAR ]</span>
+          <h2 class="section-heading">ХАКАТОНЫ, DEMO DAYS & МИТАПЫ</h2>
+          <p class="section-sub">SYNAPSE Hub — это не просто столы и розетки. Это живая инженерная тусовка из 350+ фаундеров, DevOps, криптографов и AI-исследователей.</p>
+        </div>
+
+        <div class="events-grid">
+          
+          <article class="event-card">
+            <div class="event-date-col">
+              <span class="date-day">18</span>
+              <span class="date-month">НОЯ</span>
+              <span class="date-time">19:30 MSK</span>
+            </div>
+            <div class="event-content-col">
+              <div class="event-tags">
+                <span class="tag-item cyan-tag">AI & AGENTS</span>
+                <span class="tag-item">OFFLINE + STREAM</span>
+              </div>
+              <h3 class="event-title">Автономные агентные системы на Rust: локальный инференс без облаков</h3>
+              <p class="event-desc">Разбираем архитектуру мульти-агентных систем, векторные эмбеддинги на локальном железе и оптимизацию llama.cpp под Apple Silicon и CUDA.</p>
+              <div class="event-footer">
+                <span class="speaker-name">Спикер: Артем Волков (Lead AI Architect)</span>
+                <button type="button" class="btn btn-cyber-cyan btn-xs open-modal-btn" data-plan="Ивент: AI на Rust (18 ноября)">РЕГИСТРАЦИЯ</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="event-card">
+            <div class="event-date-col">
+              <span class="date-day">22</span>
+              <span class="date-month">НОЯ</span>
+              <span class="date-time">20:00 MSK</span>
+            </div>
+            <div class="event-content-col">
+              <div class="event-tags">
+                <span class="tag-item green-tag">HARDWARE NIGHT</span>
+                <span class="tag-item">MAKER LAB</span>
+              </div>
+              <h3 class="event-title">Reverse Engineering микроконтроллеров и сборка кастомных клавиатур</h3>
+              <p class="event-desc">Воркшоп в Hardware Lab: разводка двухслойных плат в KiCad, пайка hot-swap сокетов, прошивка кастомного контроллера QMK/ZMK.</p>
+              <div class="event-footer">
+                <span class="speaker-name">Спикер: Макс Кибер (Hardware Hacker)</span>
+                <button type="button" class="btn btn-cyber-cyan btn-xs open-modal-btn" data-plan="Ивент: Hardware Night (22 ноября)">РЕГИСТРАЦИЯ</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="event-card featured-event">
+            <div class="event-date-col">
+              <span class="date-day magenta-text">29</span>
+              <span class="date-month magenta-text">НОЯ</span>
+              <span class="date-time">48 ЧАСОВ</span>
+            </div>
+            <div class="event-content-col">
+              <div class="event-tags">
+                <span class="tag-item magenta-tag">HACKATHON 500 000 ₽</span>
+                <span class="tag-item">PRIZE POOL</span>
+              </div>
+              <h3 class="event-title">SYNAPSE CYBER-HACK 2026: Autonomous On-Chain Bots</h3>
+              <p class="event-desc">48-часовой хакатон без сна: создаем полностью автономных ИИ-агентов, взаимодействующих со смарт-контрактами и децентрализованными оракулами.</p>
+              <div class="event-footer">
+                <span class="speaker-name">Партнеры: Web3 Foundation, TON Ventures</span>
+                <button type="button" class="btn btn-cyber-magenta btn-xs open-modal-btn" data-plan="Хакатон: SYNAPSE CYBER-HACK">ПОДАТЬ ЗАЯВКУ</button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ ACCORDION SECTION -->
+    <section class="faq-section" id="faq">
+      <div class="container">
+        <div class="section-tag-wrap">
+          <span class="section-tag">[ FAQ // PROTOCOL ]</span>
+          <h2 class="section-heading">ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ</h2>
+          <p class="section-sub">Все технические, юридические и организационные детали резидентства.</p>
+        </div>
+
+        <div class="faq-accordion-container" id="faq-accordion">
+          
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span class="faq-q-title">Как организован круглосуточный доступ 24/7 в ночное время?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Хаб работает полностью автономно без выходных и праздников. При первом оформлении вы проходите 3D-сканирование лица в нашей СКУД и получаете резервный NFC-ключ в смартфон (Apple Wallet / Google Wallet). Вход в Artplay через КПП 1 или 2 по кодовому пропуску, далее в корпус 2 и на 3 этаж. Ночью доступно абсолютно всё: рабочие станции, серверная стойка, капсулы сна, душ и кофемашина.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span class="faq-q-title">Можно ли привезти свой сервер, майнинг-ноду или рабочую станцию?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Да! В тарифе Dedicated Cyber включено 1U в нашей серверной стойке APC (глубина 1070 мм, питание 230V через ИБП Eaton, порт 1 Gbps, белый статический IP). Для более крупных конфигураций (2U–4U или GPU-кластеров) доступна аренда юнитов через конфигуратор. Шумные серверы не разрешается ставить прямо на рабочем столе — они комфортно размещаются в охлаждаемой гермозоне.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span class="faq-q-title">Какая реальная скорость интернета и что происходит при аварии провайдера?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                К хабу подведены два независимых физических оптических ввода по разным кабельным трассам от магистральных провайдеров (RETN и Orange Business) с суммарной пропускной способностью 10 Gbps. Мы держим собственную автономную систему (AS) и маршрутизируем трафик по протоколу BGP. При обрыве одного из кабелей переключение на резерв происходит прозрачно менее чем за 3 миллисекунды без разрыва SSH/WebSocket-сессий.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span class="faq-q-title">Как работает бесплатный тест-день и что в него входит?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Тест-день абсолютно бесплатный и ни к чему вас не обязывает. Оставьте заявку на сайте, выберите удобный день и приходите с ноутбуком в любое время. Вам проведут экскурсию по хабу, подключат к Wi-Fi 6E, выдадут гостевой доступ в СКУД, покажут капсулы сна, аппаратную лабораторию и угостят спешелти-кофе. Вы сможете работать целый день, чтобы лично оценить скорость сети, тишину и эргономику.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span class="faq-q-title">Работаете ли вы с юридическими лицами и ИП? Предоставляется ли ЭДО?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Да, более 60% наших резидентов оплачивают услуги по безналичному расчету от юрлиц (ООО / АО) или ИП. Мы работаем по договору аренды рабочего места / смарт-офиса, выставляем счета без скрытых комиссий, работаем с НДС и без НДС, подписываем закрывающие акты ежемесячно через Диадок (Контур) или СБИС. Для команд от 4 человек предоставляем юридический адрес в Москве (ЦАО, ИФНС №9).
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span class="faq-q-title">Можно ли приводить гостей, клиентов или партнеров на встречи?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Да. Резиденты тарифов Hot Desk и Dedicated Cyber могут бесплатно приглашать гостей на встречи в переговорных комнатах (гостевой визит до 2 часов без доплат). Администратор на ресепшн встретит вашего гостя, предложит напитки и проводит в забронированную комнату переговоров.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span class="faq-q-title">Что входит в стоимость, а за что нужно доплачивать?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                В стоимость любого тарифа УЖЕ включено: электроэнергия, 10G интернет, пользование душевыми и лаунжем, неограниченный кофе/чай/фильтрованная вода, базовая печать документов (до 50 листов в день), шкафчики гардероба и клининг. Дополнительно оплачивается только размещение крупных серверов свыше 1U, расходные материалы для 3D-печати (нить) и покупка персональных радиодеталей из склада хакерспейса.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- LOCATION & YANDEX MAPS SECTION -->
+    <section class="contacts-section" id="contacts">
+      <div class="container">
+        <div class="section-tag-wrap">
+          <span class="section-tag">[ LOCATION // COORDS ]</span>
+          <h2 class="section-heading">ТОЧКА ВХОДА В МАТРИЦУ</h2>
+          <p class="section-sub">Мы находимся в самом сердце творческого и технологического кластера Artplay.</p>
+        </div>
+
+        <div class="contacts-grid">
+          
+          <!-- Contacts Info Card -->
+          <div class="contacts-card">
+            <div class="card-top-header">
+              <span class="status-dot green-pulse"></span>
+              <span class="mono-code">STATUS: GATE OPEN 24/7</span>
+            </div>
+
+            <div class="contact-block">
+              <div class="contact-lbl">АДРЕС ХАБА:</div>
+              <div class="contact-val" data-bind="address">Москва, ул. Нижняя Сыромятническая, д. 10, стр. 2</div>
+              <div class="contact-sub">Центр дизайна Artplay, Корпус 2, Вход B, 3 этаж</div>
+            </div>
+
+            <div class="contact-block">
+              <div class="contact-lbl">БЛИЖАЙШЕЕ МЕТРО:</div>
+              <div class="contact-val" data-bind="metro">Курская / Чкаловская (8 минут пешком)</div>
+              <div class="contact-sub">Живописный пешеходный маршрут вдоль набережной реки Яузы</div>
+            </div>
+
+            <div class="contact-block">
+              <div class="contact-lbl">РЕЖИМ РАБОТЫ:</div>
+              <div class="contact-val green-text" data-bind="schedule">Круглосуточно 24/7/365</div>
+              <div class="contact-sub">Администраторы на ресепшн: ежедневно с 09:00 до 22:00. Ночью — автономная биометрия.</div>
+            </div>
+
+            <div class="contact-block">
+              <div class="contact-lbl">ПРЯМАЯ СВЯЗЬ:</div>
+              <div class="contact-links">
+                <a href="tel:+74951098824" class="contact-link" data-bind="phone-link">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                  </svg>
+                  <span data-bind="phone">+7 (495) 109-88-24</span>
+                </a>
+                <a href="mailto:access@synapse-hub.tech" class="contact-link" data-bind="email-link">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                    <polyline points="22,6 12,13 2,6"/>
+                  </svg>
+                  <span data-bind="email">access@synapse-hub.tech</span>
+                </a>
+                <a href="https://t.me/synapse_hub_msk" target="_blank" rel="noopener noreferrer" class="contact-link" data-bind="tg-link">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/>
+                  </svg>
+                  <span>Telegram: @synapse_hub_msk</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="map-direct-links">
+              <a href="https://yandex.ru/maps/?rtext=~55.758836,37.653421" target="_blank" rel="noopener noreferrer" class="btn btn-cyber-cyan btn-sm btn-block">
+                ПОСТРОИТЬ МАРШРУТ В ЯНДЕКС КАРТАХ
+              </a>
+            </div>
+          </div>
+
+          <!-- Yandex Maps Box -->
+          <div class="map-wrapper">
+            <div class="map-terminal-header">
+              <span class="mono-code">[ YANDEX_MAPS_API_2.1 // COORDS: 55.758836, 37.653421 ]</span>
+              <span class="status-dot green-pulse"></span>
+            </div>
+            
+            <div id="yandex-map" class="map-canvas">
+              <!-- Fallback placeholder if maps script fails to load -->
+              <div class="map-fallback" id="map-fallback">
+                <div class="fallback-content">
+                  <div class="fallback-spinner"></div>
+                  <p class="fallback-title">Инициализация навигационного терминала...</p>
+                  <p class="fallback-coords">GPS: 55.758836, 37.653421 (Artplay)</p>
+                  <a href="https://yandex.ru/maps/?pt=37.653421,55.758836&z=17&l=map" target="_blank" rel="noopener noreferrer" class="btn btn-cyber-outline btn-xs">
+                    ОТКРЫТЬ НАПРЯМУЮ В ЯНДЕКС КАРТАХ
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="map-instructions-box">
+              <div class="inst-icon">ℹ</div>
+              <div class="inst-text">
+                <strong>Как пройти от КПП:</strong> Проходите через главный шлагбаум Artplay (КПП 1 со стороны ул. Нижняя Сыромятническая), идите прямо 60 метров до корпуса 2. Вход B, 3 этаж, терминал биометрии SYNAPSE Hub.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="cyber-footer">
+    <div class="container footer-container">
+      
+      <div class="footer-col brand-col">
+        <a href="#hero" class="brand-logo footer-logo">
+          <span class="logo-bracket">[</span>
+          <span class="logo-name">SYNAPSE</span>
+          <span class="logo-slash">//</span>
+          <span class="logo-sub">HUB</span>
+          <span class="logo-bracket">]</span>
+        </a>
+        <p class="footer-tagline">
+          Автономный киберпанк-коворкинг и хакерспейс для инженеров, крипто-разработчиков, AI-исследователей и команд, меняющих цифровой мир.
+        </p>
+        <div class="footer-system-status">
+          <span class="status-dot green-pulse"></span>
+          <span class="mono-code">NODE_UPTIME: 99.98% // 24/7/365</span>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-col-title">НАВИГАЦИЯ</h4>
+        <ul class="footer-links">
+          <li><a href="#about">О пространстве</a></li>
+          <li><a href="#zones">Зоны и модули</a></li>
+          <li><a href="#hardware">Инфраструктура</a></li>
+          <li><a href="#calculator">Калькулятор тарифа</a></li>
+          <li><a href="#pricing">Тарифные планы</a></li>
+          <li><a href="#events">Ивенты и хакатоны</a></li>
+          <li><a href="#faq">Вопросы и ответы</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-col-title">ТАРИФЫ</h4>
+        <ul class="footer-links">
+          <li><a href="#pricing">Hot Desk 24/7 (18 000 ₽)</a></li>
+          <li><a href="#pricing">Dedicated Cyber (28 000 ₽)</a></li>
+          <li><a href="#pricing">Team Cyber Suite (от 95 000 ₽)</a></li>
+          <li><a href="#pricing">Hacker Day Pass (2 000 ₽)</a></li>
+          <li><a href="#calculator">Колокейшн в серверной стойке</a></li>
+          <li><a href="#calculator">Hardware Lab & 3D-печать</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-col-title">СВЯЗЬ & СОЦСЕТИ</h4>
+        <ul class="footer-links">
+          <li><a href="tel:+74951098824" data-bind="phone-link"><span data-bind="phone">+7 (495) 109-88-24</span></a></li>
+          <li><a href="mailto:access@synapse-hub.tech" data-bind="email-link"><span data-bind="email">access@synapse-hub.tech</span></a></li>
+          <li><a href="https://t.me/synapse_hub_msk" target="_blank" rel="noopener noreferrer">Telegram Channel</a></li>
+          <li><a href="https://github.com/synapse-hub" target="_blank" rel="noopener noreferrer">GitHub Organisation</a></li>
+          <li><a href="https://discord.gg/synapse-hub" target="_blank" rel="noopener noreferrer">Discord Server</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- BOTTOM BAR -->
+    <div class="footer-bottom-bar">
+      <div class="container bottom-inner">
+        <p class="copy-text">© 2026 SYNAPSE Hub. Все права защищены. ООО «СИНАПС ТЕХНОЛОДЖИС» ОГРН 1247700189421.</p>
+        <div class="legal-links">
+          <a href="#privacy" id="privacy-link">Политика конфиденциальности</a>
+          <span class="sep">•</span>
+          <a href="#rules" id="rules-link">Правила хакерспейса</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- LEAD CAPTURE MODAL -->
+  <div class="modal" id="lead-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-backdrop" id="modal-backdrop"></div>
+    <div class="modal-dialog">
+      
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <span class="mono-code cyan-text">[ TERMINAL_AUTH_GATE // ACCESS_REQUEST ]</span>
+          <h3 class="modal-title" id="modal-title">ЗАБРОНИРОВАТЬ СЛОТ // ТЕСТ-ДЕНЬ</h3>
+        </div>
+        <button type="button" class="modal-close-btn" id="modal-close" aria-label="Закрыть окно">✕</button>
+      </div>
+
+      <!-- Modal Body (Form state) -->
+      <div class="modal-body" id="modal-form-view">
+        <div class="modal-plan-badge" id="modal-selected-badge">
+          <span class="badge-lbl">ВЫБРАННЫЙ ТАРИФ:</span>
+          <span class="badge-val" id="modal-plan-display">Бесплатный тест-день (0 ₽)</span>
+        </div>
+
+        <form id="lead-form" class="cyber-form" novalidate>
+          <input type="hidden" id="form-plan-input" name="plan" value="Бесплатный тест-день">
+          <input type="hidden" id="form-total-input" name="total" value="0 ₽">
+
+          <div class="form-group">
+            <label for="lead-name" class="form-label">ВАШЕ ИМЯ ИЛИ ПОЗЫВНОЙ <span class="req">*</span></label>
+            <div class="input-wrap">
+              <span class="input-icon">&gt;</span>
+              <input type="text" id="lead-name" name="name" class="cyber-input" placeholder="Алексей / root_dev" required autocomplete="name">
+            </div>
+            <span class="field-error" id="name-error">Пожалуйста, укажите имя</span>
+          </div>
+
+          <div class="form-group">
+            <label for="lead-phone" class="form-label">НОМЕР ТЕЛЕФОНА <span class="req">*</span></label>
+            <div class="input-wrap">
+              <span class="input-icon">☎</span>
+              <input type="tel" id="lead-phone" name="phone" class="cyber-input" placeholder="+7 (___) ___-__-__" required autocomplete="tel">
+            </div>
+            <span class="field-error" id="phone-error">Введите полный номер телефона</span>
+          </div>
+
+          <div class="form-group">
+            <label for="lead-telegram" class="form-label">TELEGRAM НИКНЕЙМ (@username)</label>
+            <div class="input-wrap">
+              <span class="input-icon">@</span>
+              <input type="text" id="lead-telegram" name="telegram" class="cyber-input" placeholder="username" autocomplete="off">
+            </div>
+            <span class="field-hint">Для мгновенной отправки пропуска и кода СКУД</span>
+          </div>
+
+          <div class="form-group">
+            <label for="lead-date" class="form-label">ЖЕЛАЕМАЯ ДАТА ВИЗИТА</label>
+            <div class="input-wrap">
+              <span class="input-icon">📅</span>
+              <input type="date" id="lead-date" name="visit_date" class="cyber-input">
+            </div>
+          </div>
+
+          <div class="form-agreement">
+            <label class="agreement-label" for="lead-agree">
+              <input type="checkbox" id="lead-agree" checked required>
+              <span class="checkbox-custom"></span>
+              <span class="agreement-text">
+                Согласен с <a href="#privacy" class="cyan-link">политикой обработки персональных данных</a> и правилами киберпространства.
+              </span>
+            </label>
+            <span class="field-error" id="agree-error">Необходимо согласие для доступа</span>
+          </div>
+
+          <div class="modal-form-actions">
+            <button type="submit" class="btn btn-cyber-magenta btn-lg btn-block" id="lead-submit-btn">
+              <span class="btn-text">[ ИНИЦИИРОВАТЬ ДОСТУП ]</span>
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Modal Success View (Revealed after submission) -->
+      <div class="modal-body modal-success-view hidden" id="modal-success-view">
+        <div class="success-matrix-icon">
+          <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="var(--green-status)" stroke-width="2">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+            <polyline points="22 4 12 14.01 9 11.01"/>
+          </svg>
+        </div>
+
+        <h4 class="success-title">ДОСТУП УСПЕШНО АВТОРИЗОВАН</h4>
+        
+        <div class="success-terminal-log">
+          <div class="log-line"><span class="cyan-text">&gt;</span> AUTH_STATUS: <strong>GRANTED</strong></div>
+          <div class="log-line"><span class="cyan-text">&gt;</span> BOOKING_HASH: <span class="magenta-text" id="succ-hash">#SYN-9481-BGP</span></div>
+          <div class="log-line"><span class="cyan-text">&gt;</span> TARIFF_SLOT: <span id="succ-plan">Hot Desk 24/7</span></div>
+          <div class="log-line"><span class="cyan-text">&gt;</span> PASS_STATUS: Отправлен в Telegram и SMS</div>
+        </div>
+
+        <p class="success-desc">
+          Спасибо! Мы зарезервировали слот за вашим контактом. Дежурный администратор свяжется с вами в течение 10 минут, ответит на вопросы и отправит код прохода на территорию Artplay.
+        </p>
+
+        <button type="button" class="btn btn-cyber-cyan btn-block" id="success-close-btn">
+          [ ВЕРНУТЬСЯ В ТЕРМИНАЛ ]
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- PRIVACY POLICY MODAL -->
+  <div class="modal" id="privacy-modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-backdrop" id="privacy-backdrop"></div>
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <span class="mono-code cyan-text">[ PRIVACY_POLICY // DATA_SECURITY ]</span>
+        <button type="button" class="modal-close-btn" id="privacy-close">✕</button>
+      </div>
+      <div class="modal-body legal-text-body">
+        <h4>Политика конфиденциальности SYNAPSE Hub</h4>
+        <p>1. Общие положения. Настоящая политика определяет порядок обработки и защиты персональных данных пользователей сайта synapse-hub.tech и резидентов пространства SYNAPSE Hub (ООО «СИНАПС ТЕХНОЛОДЖИС»).</p>
+        <p>2. Сбор данных. Мы собираем только те данные, которые необходимы для организации доступа в пространство: имя, телефон, контактный Telegram и параметры бронирования.</p>
+        <p>3. Безопасность. Все данные передаются по защищенному протоколу TLS 1.3 с шифрованием AES-256 и не передаются третьим лицам за исключением случаев, предусмотренных законодательством РФ.</p>
+        <p>4. Отзыв согласия. Резидент вправе в любой момент отозвать согласие на обработку данных, направив письмо на access@synapse-hub.tech.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCRIPT -->
+  <script src="script.js"></script>
+</body>
+</html>

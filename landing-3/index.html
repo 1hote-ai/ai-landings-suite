@@ -1,0 +1,1478 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <title>MONOLITH — Архитектурное бюро | Современная архитектура и интерьеры</title>
+  <meta name="description" content="Архитектурное бюро MONOLITH. Проектирование частных загородных вилл, современных резиденций и премиальных интерьеров. Швейцарская тектоника, чистая геометрия и бескомпромиссное качество.">
+  <meta name="keywords" content="архитектурное бюро, проектирование вилл, дизайн интерьера премиум, современная архитектура, авторский надзор, монолитные дома">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="MONOLITH — Архитектурное бюро">
+  <meta property="og:description" content="Архитектура чистой формы и тектоники. Проектирование частных загородных резиденций и премиальных пространств.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80">
+  <meta property="og:locale" content="ru_RU">
+
+  <!-- Google Fonts: Space Grotesk & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Yandex Maps API 2.1 -->
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+</head>
+<body class="theme-arch">
+
+  <!-- ==================== TOP TICKER BAR ==================== -->
+  <aside class="top-bar" aria-label="Информационная полоса">
+    <div class="container top-bar__inner">
+      <div class="top-bar__status" id="workStatusIndicator">
+        <span class="status-pulse" aria-hidden="true"></span>
+        <span class="status-text" data-bind="statusText">Проверяем статус студии...</span>
+      </div>
+      <div class="top-bar__location">
+        <span class="top-bar__coord">55°45'14.4"N 37°37'19.5"E</span>
+        <span class="top-bar__divider" aria-hidden="true">|</span>
+        <span data-bind="cityAddress">Москва, ул. Варварка, 14 / БЦ «Тектоника»</span>
+      </div>
+      <div class="top-bar__actions">
+        <a href="tel:+74958923412" class="top-bar__link" data-bind="phoneLink">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span data-bind="phoneFormatted">+7 (495) 892-34-12</span>
+        </a>
+        <a href="mailto:project@monolith-arch.ru" class="top-bar__link top-bar__email" data-bind="emailLink">
+          <span data-bind="email">project@monolith-arch.ru</span>
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ==================== HEADER & NAVIGATION ==================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container site-header__inner">
+      <!-- Architectural Brand Identity -->
+      <a href="#hero" class="brand-logo" aria-label="MONOLITH Архитектурное бюро на главную">
+        <div class="brand-logo__mark">
+          <span class="brand-logo__glyph">M</span>
+        </div>
+        <div class="brand-logo__text">
+          <span class="brand-logo__title">MONOLITH</span>
+          <span class="brand-logo__tagline">ARCHITECTURAL STUDIO</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="main-nav" aria-label="Основное меню">
+        <ul class="main-nav__list">
+          <li class="main-nav__item"><a href="#projects" class="main-nav__link">Проекты</a></li>
+          <li class="main-nav__item"><a href="#manifesto" class="main-nav__link">Манифест</a></li>
+          <li class="main-nav__item"><a href="#before-after" class="main-nav__link">До / После</a></li>
+          <li class="main-nav__item"><a href="#services" class="main-nav__link">Услуги</a></li>
+          <li class="main-nav__item"><a href="#calculator" class="main-nav__link">Калькулятор</a></li>
+          <li class="main-nav__item"><a href="#process" class="main-nav__link">Процесс</a></li>
+          <li class="main-nav__item"><a href="#contacts" class="main-nav__link">Контакты</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Action & Mobile Toggle -->
+      <div class="site-header__cta">
+        <button type="button" class="btn btn--outline btn--sm open-modal-btn" data-modal-target="consultationModal">
+          <span class="btn__text">Обсудить проект</span>
+          <span class="btn__arrow">→</span>
+        </button>
+        <button type="button" class="burger-btn" id="burgerBtn" aria-label="Открыть мобильное меню" aria-expanded="false" aria-controls="mobileDrawer">
+          <span class="burger-btn__line"></span>
+          <span class="burger-btn__line"></span>
+          <span class="burger-btn__line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== MOBILE DRAWER MENU ==================== -->
+  <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <div class="mobile-drawer__backdrop" id="drawerBackdrop"></div>
+    <div class="mobile-drawer__panel">
+      <div class="mobile-drawer__header">
+        <div class="brand-logo">
+          <span class="brand-logo__title">MONOLITH</span>
+        </div>
+        <button type="button" class="drawer-close-btn" id="drawerCloseBtn" aria-label="Закрыть меню">✕</button>
+      </div>
+
+      <nav class="mobile-drawer__nav">
+        <ul class="mobile-drawer__list">
+          <li><a href="#projects" class="mobile-drawer__link">01. Избранные проекты</a></li>
+          <li><a href="#manifesto" class="mobile-drawer__link">02. Манифест бюро</a></li>
+          <li><a href="#before-after" class="mobile-drawer__link">03. Трансформация До / После</a></li>
+          <li><a href="#services" class="mobile-drawer__link">04. Услуги и цены</a></li>
+          <li><a href="#calculator" class="mobile-drawer__link">05. Калькулятор бюджета</a></li>
+          <li><a href="#process" class="mobile-drawer__link">06. Тектоника работы</a></li>
+          <li><a href="#team" class="mobile-drawer__link">07. Команда</a></li>
+          <li><a href="#faq" class="mobile-drawer__link">08. Вопросы и ответы</a></li>
+          <li><a href="#contacts" class="mobile-drawer__link">09. Контакты и локация</a></li>
+        </ul>
+      </nav>
+
+      <div class="mobile-drawer__footer">
+        <div class="mobile-drawer__contacts">
+          <a href="tel:+74958923412" class="mobile-drawer__phone" data-bind="phoneFormatted">+7 (495) 892-34-12</a>
+          <span class="mobile-drawer__hours" data-bind="scheduleFull">Пн–Пт: 10:00–19:00</span>
+        </div>
+        <button type="button" class="btn btn--primary btn--full open-modal-btn" data-modal-target="consultationModal">
+          Назначить встречу в бюро
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <main id="mainContent">
+
+    <!-- ==================== SECTION: HERO ==================== -->
+    <section class="hero-section" id="hero">
+      <div class="hero-section__bg-grid" aria-hidden="true">
+        <div class="grid-line"></div>
+        <div class="grid-line"></div>
+        <div class="grid-line"></div>
+        <div class="grid-line"></div>
+      </div>
+
+      <div class="container hero-section__content">
+        <div class="hero-section__top-meta">
+          <span class="hero-badge">ШВЕЙЦАРСКАЯ АРХИТЕКТУРНАЯ ШКОЛА</span>
+          <span class="hero-index">EST. 2012 / БЮРО ЧАСТНОЙ АРХИТЕКТУРЫ</span>
+        </div>
+
+        <h1 class="hero-title">
+          Архитектура <br>
+          <span class="hero-title--light">чистой формы</span> <br>
+          и тектоники.
+        </h1>
+
+        <p class="hero-description">
+          Проектируем частные загородные резиденции, минималистичные виллы и монументальные интерьеры. Соединяем честность сырого бетона, теплоту травертина и выверенные пространственные сценарии в единое жилое полотно.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#calculator" class="btn btn--primary">
+            <span class="btn__text">Рассчитать стоимость проекта</span>
+            <span class="btn__arrow">→</span>
+          </a>
+          <a href="#projects" class="btn btn--ghost">
+            <span class="btn__text">Смотреть портфолио</span>
+            <span class="btn__arrow">↓</span>
+          </a>
+        </div>
+
+        <!-- Architectural Key Stats Bar -->
+        <div class="hero-stats">
+          <div class="stat-card">
+            <div class="stat-card__num">12 <span class="stat-card__unit">лет</span></div>
+            <div class="stat-card__label">непрерывной практики в элитном сегменте</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card__num">84</div>
+            <div class="stat-card__label">реализованных объекта в Москве, Сочи и Дубае</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card__num">14</div>
+            <div class="stat-card__label">профессиональных наград и публикаций в AD & Salon</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card__num">100%</div>
+            <div class="stat-card__label">авторское сопровождение до сдачи ключей</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Featured Media Frame -->
+      <div class="container hero-media">
+        <div class="hero-media__frame">
+          <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/hero-villa.jpg -->
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=85" 
+               alt="Современная загородная резиденция MONOLITH из бетона и травертина" 
+               class="hero-media__img" 
+               loading="eager"
+               width="1920" 
+               height="1080">
+          <div class="hero-media__caption">
+            <div class="caption-tag">РЕЗИДЕНЦИЯ «TETRIS» / НИКОЛИНА ГОРА</div>
+            <div class="caption-details">860 м² • Монолитный железобетон, стекло, термоясень • 2024</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION: MANIFESTO ==================== -->
+    <section class="section manifesto-section" id="manifesto">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">ФИЛОСОФИЯ И ПОДХОД</div>
+          <h2 class="section-title">Манифест пространства: <br>Честность материала и свет</h2>
+          <p class="section-lead">
+            Мы не маскируем конструктив декором. Мы превращаем сам несущий монолит, фактурный камень и естественное освещение в главный визуальный язык здания.
+          </p>
+        </div>
+
+        <div class="manifesto-grid">
+          <article class="manifesto-card">
+            <div class="manifesto-card__num">01 / ТЕКТОНИКА</div>
+            <h3 class="manifesto-card__title">Контекст и рельеф</h3>
+            <p class="manifesto-card__text">
+              Каждое здание интегрируется в окружающий ландшафт с учетом движения солнца, розы ветров и перепада высот. Мы не ломаем участок бульдозером — мы вписываем объемы в геометрию природы.
+            </p>
+            <ul class="manifesto-card__specs">
+              <li>Панорамная инсоляция жилых зон</li>
+              <li>Интеграция вековых сосен и перепадов склона</li>
+              <li>Приватность без глухих двухметровых заборов</li>
+            </ul>
+          </article>
+
+          <article class="manifesto-card">
+            <div class="manifesto-card__num">02 / МАТЕРИАЛЫ</div>
+            <h3 class="manifesto-card__title">Нестареющая материя</h3>
+            <p class="manifesto-card__text">
+              Работаем с подлинными фактурами: шлифованный архитектурный бетон, известняк, травертин, черненая сталь и натуральное дерево. Эти материалы красиво стареют, приобретая благородную патину через десятилетия.
+            </p>
+            <ul class="manifesto-card__specs">
+              <li>Отсутствие пластиковых имитаций</li>
+              <li>Специальные гидрофобные защитные составы</li>
+              <li>Тактильное богатство каждой поверхности</li>
+            </ul>
+          </article>
+
+          <article class="manifesto-card">
+            <div class="manifesto-card__num">03 / ИНЖЕНЕРИЯ</div>
+            <h3 class="manifesto-card__title">Невидимый комфорт</h3>
+            <p class="manifesto-card__text">
+              Скрытые конвекторы, канальная приточно-вытяжная вентиляция с рекуперацией и очисткой воздуха, архитектурное щелевое освещение без свисающих проводов. Вся инженерия спроектирована в едином BIM-пространстве.
+            </p>
+            <ul class="manifesto-card__specs">
+              <li>BIM-проектирование уровня LOD 400</li>
+              <li>Умный дом с интуитивным сценарием света</li>
+              <li>Шумоизоляция премиального акустического класса</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION: BEFORE / AFTER SLIDER ==================== -->
+    <section class="section before-after-section" id="before-after">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">ИНТЕРАКТИВНАЯ ТРАНСФОРМАЦИЯ</div>
+          <h2 class="section-title">От бетона к архитектурному шедевру</h2>
+          <p class="section-lead">
+            Потяните за ползунок, чтобы увидеть эволюцию проекта: от черновой коробки и конструктивного скелета до завершенной резиденции с полной финишной отделкой и архитектурным светом.
+          </p>
+        </div>
+
+        <div class="ba-slider-wrapper">
+          <div class="ba-slider" id="baSlider" role="region" aria-label="Сравнение до и после реконструкции">
+            <!-- Background Image: AFTER (Завершенный объект) -->
+            <div class="ba-slider__after">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/after-villa.jpg -->
+              <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1920&q=85" 
+                   alt="Реализованная вилла MONOLITH с отделкой" 
+                   class="ba-slider__img"
+                   loading="lazy">
+              <span class="ba-slider__label ba-slider__label--after">ПОСЛЕ: Реализация под ключ</span>
+            </div>
+
+            <!-- Foreground Clipped Image: BEFORE (Черновой бетон / стройка) -->
+            <div class="ba-slider__before" id="baBeforeContainer">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/before-villa.jpg -->
+              <img src="https://images.unsplash.com/photo-1541888946425-d0fbb186156a?auto=format&fit=crop&w=1920&q=85" 
+                   alt="Черновой бетонный каркас до архитектурной реновации" 
+                   class="ba-slider__img" 
+                   id="baBeforeImg"
+                   loading="lazy">
+              <span class="ba-slider__label ba-slider__label--before">ДО: Конструктив и черновой объем</span>
+            </div>
+
+            <!-- Draggable Divider Handle -->
+            <div class="ba-slider__handle" id="baHandle" style="left: 50%;">
+              <div class="ba-slider__handle-line"></div>
+              <div class="ba-slider__handle-button" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="15 18 9 12 15 6"></polyline>
+                  <polyline points="9 18 3 12 9 6" transform="translate(12, 0) scale(-1, 1) translate(-12, 0)"></polyline>
+                </svg>
+              </div>
+            </div>
+
+            <!-- Accessible Native Range Control for Screen Readers / Keyboard -->
+            <input type="range" 
+                   min="0" 
+                   max="100" 
+                   value="50" 
+                   class="ba-slider__range-fallback" 
+                   id="baRangeInput" 
+                   aria-label="Процент показа до и после">
+          </div>
+
+          <!-- Project Specs Meta Under Slider -->
+          <div class="ba-meta">
+            <div class="ba-meta__item">
+              <span class="ba-meta__label">ОБЪЕКТ:</span>
+              <span class="ba-meta__value">Резиденция «Монолит-18», Барвиха</span>
+            </div>
+            <div class="ba-meta__item">
+              <span class="ba-meta__label">ПЛОЩАДЬ:</span>
+              <span class="ba-meta__value">740 м² жилой + 210 м² эксплуатируемой кровли</span>
+            </div>
+            <div class="ba-meta__item">
+              <span class="ba-meta__label">СРОК РЕАЛИЗАЦИИ:</span>
+              <span class="ba-meta__value">14 месяцев (полный цикл до заселения)</span>
+            </div>
+            <div class="ba-meta__item">
+              <span class="ba-meta__label">ОСОБЕННОСТИ:</span>
+              <span class="ba-meta__value">Бесшовный травертин, скрытые стеклопакеты Schüco</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION: PORTFOLIO ==================== -->
+    <section class="section portfolio-section" id="projects">
+      <div class="container">
+        <div class="portfolio-header">
+          <div class="section-header">
+            <div class="section-tag">ИЗБРАННОЕ ПОРТФОЛИО</div>
+            <h2 class="section-title">Реализованная архитектура</h2>
+          </div>
+
+          <!-- Filter Navigation -->
+          <div class="portfolio-filters" role="tablist" aria-label="Фильтр категорий проектов">
+            <button type="button" class="filter-btn active" data-filter="all" role="tab" aria-selected="true">Все объекты (6)</button>
+            <button type="button" class="filter-btn" data-filter="residences" role="tab" aria-selected="false">Загородные виллы</button>
+            <button type="button" class="filter-btn" data-filter="interiors" role="tab" aria-selected="false">Интерьеры пентхаусов</button>
+            <button type="button" class="filter-btn" data-filter="concepts" role="tab" aria-selected="false">Концепты & BIM</button>
+          </div>
+        </div>
+
+        <!-- Project Grid -->
+        <div class="projects-grid" id="projectsGrid">
+
+          <!-- Project Item 1 -->
+          <article class="project-card" data-category="residences">
+            <div class="project-card__media">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/project-1.jpg -->
+              <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80" 
+                   alt="Вилла KONTUR на Николиной Горе" 
+                   class="project-card__img" 
+                   loading="lazy">
+              <div class="project-card__badge">2024 / РЕАЛИЗОВАН</div>
+            </div>
+            <div class="project-card__info">
+              <div class="project-card__header">
+                <span class="project-card__num">01</span>
+                <span class="project-card__location">Николина Гора, МО</span>
+              </div>
+              <h3 class="project-card__title">Вилла KONTUR</h3>
+              <p class="project-card__desc">
+                Монументальный жилой ансамбль со спа-комплексом и каскадными террасами. Фасад облицован португальским известняком и черненым металлом.
+              </p>
+              <div class="project-card__footer">
+                <span class="project-spec">820 м²</span>
+                <span class="project-spec">Участок 45 соток</span>
+                <button type="button" class="project-card__link open-modal-btn" data-modal-target="consultationModal" data-project-ref="Вилла KONTUR">
+                  Запросить кейс →
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project Item 2 -->
+          <article class="project-card" data-category="interiors">
+            <div class="project-card__media">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/project-2.jpg -->
+              <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80" 
+                   alt="Пентхаус SKYLINE в Хамовниках" 
+                   class="project-card__img" 
+                   loading="lazy">
+              <div class="project-card__badge">2024 / РЕАЛИЗОВАН</div>
+            </div>
+            <div class="project-card__info">
+              <div class="project-card__header">
+                <span class="project-card__num">02</span>
+                <span class="project-card__location">Москва, Хамовники</span>
+              </div>
+              <h3 class="project-card__title">Пентхаус SKYLINE</h3>
+              <p class="project-card__desc">
+                Двухуровневый пентхаус с круговым остеклением и приватной террасой. В отделке применен римский травертин и массив копченого дуба.
+              </p>
+              <div class="project-card__footer">
+                <span class="project-spec">340 м²</span>
+                <span class="project-spec">Высота потолков 4.2 м</span>
+                <button type="button" class="project-card__link open-modal-btn" data-modal-target="consultationModal" data-project-ref="Пентхаус SKYLINE">
+                  Запросить кейс →
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project Item 3 -->
+          <article class="project-card" data-category="residences">
+            <div class="project-card__media">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/project-3.jpg -->
+              <img src="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1200&q=80" 
+                   alt="Дом BRUTALIS в Репино" 
+                   class="project-card__img" 
+                   loading="lazy">
+              <div class="project-card__badge">2023 / НАГРАДА АРХИWOOD</div>
+            </div>
+            <div class="project-card__info">
+              <div class="project-card__header">
+                <span class="project-card__num">03</span>
+                <span class="project-card__location">Репино, Санкт-Петербург</span>
+              </div>
+              <h3 class="project-card__title">Резиденция BRUTALIS</h3>
+              <p class="project-card__desc">
+                Архитектура диалога с северной природой. Консольные выносы крыши, защищающие панорамные окна от осадков, и открытый каминный зал.
+              </p>
+              <div class="project-card__footer">
+                <span class="project-spec">650 м²</span>
+                <span class="project-spec">Берег Финского залива</span>
+                <button type="button" class="project-card__link open-modal-btn" data-modal-target="consultationModal" data-project-ref="Резиденция BRUTALIS">
+                  Запросить кейс →
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project Item 4 -->
+          <article class="project-card" data-category="interiors">
+            <div class="project-card__media">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/project-4.jpg -->
+              <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80" 
+                   alt="Апартаменты GYPSUM в ЖК Рассвет" 
+                   class="project-card__img" 
+                   loading="lazy">
+              <div class="project-card__badge">2023 / ПУБЛИКАЦИЯ В AD</div>
+            </div>
+            <div class="project-card__info">
+              <div class="project-card__header">
+                <span class="project-card__num">04</span>
+                <span class="project-card__location">Москва, Пресня</span>
+              </div>
+              <h3 class="project-card__title">Апартаменты GYPSUM</h3>
+              <p class="project-card__desc">
+                Монохромная эстетика гипсовых поверхностей, скрытые межкомнатные двери в потолок и кастомная встроенная мебель по эскизам бюро.
+              </p>
+              <div class="project-card__footer">
+                <span class="project-spec">210 м²</span>
+                <span class="project-spec">Лофт-квартал</span>
+                <button type="button" class="project-card__link open-modal-btn" data-modal-target="consultationModal" data-project-ref="Апартаменты GYPSUM">
+                  Запросить кейс →
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project Item 5 -->
+          <article class="project-card" data-category="concepts">
+            <div class="project-card__media">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/project-5.jpg -->
+              <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=80" 
+                   alt="Концептуальная вилла CLIFF DWELLING" 
+                   class="project-card__img" 
+                   loading="lazy">
+              <div class="project-card__badge">В РАЗРАБОТКЕ / BIM</div>
+            </div>
+            <div class="project-card__info">
+              <div class="project-card__header">
+                <span class="project-card__num">05</span>
+                <span class="project-card__location">Красная Поляна, Сочи</span>
+              </div>
+              <h3 class="project-card__title">Вилла CLIFF DWELLING</h3>
+              <p class="project-card__desc">
+                Сложная консольная посадка на крутом горном склоне. Интегрированный бассейн инфинити с видом на кавказские хребты.
+              </p>
+              <div class="project-card__footer">
+                <span class="project-spec">1 150 м²</span>
+                <span class="project-spec">Уклон 32 градуса</span>
+                <button type="button" class="project-card__link open-modal-btn" data-modal-target="consultationModal" data-project-ref="Вилла CLIFF DWELLING">
+                  Запросить кейс →
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project Item 6 -->
+          <article class="project-card" data-category="residences">
+            <div class="project-card__media">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/project-6.jpg -->
+              <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80" 
+                   alt="Резиденция STONE & LIGHT" 
+                   class="project-card__img" 
+                   loading="lazy">
+              <div class="project-card__badge">2022 / РЕАЛИЗОВАН</div>
+            </div>
+            <div class="project-card__info">
+              <div class="project-card__header">
+                <span class="project-card__num">06</span>
+                <span class="project-card__location">Новорижское шоссе</span>
+              </div>
+              <h3 class="project-card__title">Резиденция STONE & LIGHT</h3>
+              <p class="project-card__desc">
+                Одноэтажная архитектура с внутренним патио и японским садом мхов. Длинные горизонтальные линии и полное слияние с сосновым бором.
+              </p>
+              <div class="project-card__footer">
+                <span class="project-spec">590 м²</span>
+                <span class="project-spec">Внутренний двор 120 м²</span>
+                <button type="button" class="project-card__link open-modal-btn" data-modal-target="consultationModal" data-project-ref="Резиденция STONE & LIGHT">
+                  Запросить кейс →
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION: SERVICES & PACKAGES ==================== -->
+    <section class="section services-section" id="services">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">ФОРМАТЫ СОТРУДНИЧЕСТВА</div>
+          <h2 class="section-title">Комплекс услуг бюро</h2>
+          <p class="section-lead">
+            От первых эскизов и геологических изысканий до генерального строительного подряда и подбора предметов искусства.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Service Card 1 -->
+          <div class="service-card">
+            <div class="service-card__badge">АРХИТЕКТУРА</div>
+            <h3 class="service-card__title">Архитектурный проект виллы</h3>
+            <div class="service-card__price">
+              <span class="price-val">от 4 500 ₽</span>
+              <span class="price-unit">/ м² площади</span>
+            </div>
+            <p class="service-card__desc">
+              Полный комплект проектных решений для возведения загородного дома премиум-класса с посадкой на рельеф.
+            </p>
+            <ul class="service-card__list">
+              <li>Предпроектный анализ участка и инсоляции</li>
+              <li>Эскизный проект и объемные 3D-модели (3 концепции)</li>
+              <li>Архитектурные решения (раздел АР)</li>
+              <li>Конструктивные и железобетонные решения (раздел КР)</li>
+              <li>Спецификация фасадных материалов и остекления</li>
+            </ul>
+            <div class="service-card__timeline">Срок: от 2.5 месяцев</div>
+            <button type="button" class="btn btn--outline btn--full open-modal-btn" data-modal-target="consultationModal" data-service-ref="Архитектурный проект виллы">
+              Заказать расчет
+            </button>
+          </div>
+
+          <!-- Service Card 2 -->
+          <div class="service-card">
+            <div class="service-card__badge">ИНТЕРЬЕРЫ</div>
+            <h3 class="service-card__title">Премиальный дизайн интерьера</h3>
+            <div class="service-card__price">
+              <span class="price-val">от 5 500 ₽</span>
+              <span class="price-unit">/ м² площади</span>
+            </div>
+            <p class="service-card__desc">
+              Интерьерная тектоника для квартир, пентхаусов и загородных резиденций с авторскими мебельными узлами.
+            </p>
+            <ul class="service-card__list">
+              <li>Планировочные сценарии с эргономикой (до 4 вариантов)</li>
+              <li>Фотореалистичные 3D-визуализации всех помещений</li>
+              <li>Полный рабочий комплект чертежей (электрика, ОВиК, сантехника)</li>
+              <li>Развертки стен со сложными стыками и узлами примыкания</li>
+              <li>Спецификация мебели, сантехники и светильников</li>
+            </ul>
+            <div class="service-card__timeline">Срок: от 2 месяцев</div>
+            <button type="button" class="btn btn--outline btn--full open-modal-btn" data-modal-target="consultationModal" data-service-ref="Премиальный дизайн интерьера">
+              Заказать расчет
+            </button>
+          </div>
+
+          <!-- Service Card 3 (Featured) -->
+          <div class="service-card service-card--featured">
+            <div class="service-card__flag">РЕКОМЕНДУЕМ</div>
+            <div class="service-card__badge">ПОЛНЫЙ ЦИКЛ ПОД КЛЮЧ</div>
+            <h3 class="service-card__title">Комплексный проект «Архитектура + Интерьер + Ландшафт»</h3>
+            <div class="service-card__price">
+              <span class="price-val">от 8 000 ₽</span>
+              <span class="price-unit">/ м² площади</span>
+            </div>
+            <p class="service-card__desc">
+              Бесшовная синергия экстерьера и интерьера. Единая философия, сквозные материалы и продуманный ландшафт.
+            </p>
+            <ul class="service-card__list">
+              <li>Все разделы АР + КР + Интерьерный проект</li>
+              <li>Генеральный план и проект благоустройства ландшафта</li>
+              <li>Полный расчет инженерных сетей (ОВиК, ЭОМ, ВК, Слаботочка)</li>
+              <li>VR-тур и архитектурная видео-анимация объекта</li>
+              <li>Прямые скидки от фабрик-партнеров на материалы до 25%</li>
+            </ul>
+            <div class="service-card__timeline">Срок: от 4 месяцев</div>
+            <button type="button" class="btn btn--primary btn--full open-modal-btn" data-modal-target="consultationModal" data-service-ref="Комплексный проект под ключ">
+              Выбрать флагманский формат
+            </button>
+          </div>
+
+          <!-- Service Card 4 -->
+          <div class="service-card">
+            <div class="service-card__badge">РЕАЛИЗАЦИЯ</div>
+            <h3 class="service-card__title">Авторский надзор и комплектация</h3>
+            <div class="service-card__price">
+              <span class="price-val">от 120 000 ₽</span>
+              <span class="price-unit">/ месяц сопровождения</span>
+            </div>
+            <p class="service-card__desc">
+              Личный контроль главного архитектора за строителями, соблюдением узлов, графиком поставок и чистотой геометрии.
+            </p>
+            <ul class="service-card__list">
+              <li>Регулярные выезды автора проекта на объект (до 3 раз в неделю)</li>
+              <li>Контроль геометрии опалубки, армирования и скрытых работ</li>
+              <li>Координация подрядчиков и решение вопросов в режиме 24/7</li>
+              <li>Управление поставками отделочных материалов из Европы и Азии</li>
+              <li>Фотоотчеты и журнал ведения авторского надзора</li>
+            </ul>
+            <div class="service-card__timeline">На весь период строительства</div>
+            <button type="button" class="btn btn--outline btn--full open-modal-btn" data-modal-target="consultationModal" data-service-ref="Авторский надзор">
+              Заказать надзор
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION: INTERACTIVE COST CALCULATOR ==================== -->
+    <section class="section calculator-section" id="calculator">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">ОНЛАЙН-ОЦЕНКА БЮДЖЕТА</div>
+          <h2 class="section-title">Калькулятор стоимости проекта</h2>
+          <p class="section-lead">
+            Выберите тип объекта, укажите предполагаемую площадь и отметьте необходимые разделы проектирования. Калькулятор моментально рассчитает ориентировочный бюджет и сроки разработки.
+          </p>
+        </div>
+
+        <div class="calc-box">
+          <div class="calc-grid">
+            
+            <!-- Controls Column -->
+            <div class="calc-controls">
+              
+              <!-- 1. Service Type Selector -->
+              <div class="calc-group">
+                <label class="calc-label">1. Направление проектирования</label>
+                <div class="calc-type-selector" id="calcServiceTypes" role="radiogroup" aria-label="Выбор типа проекта">
+                  <button type="button" class="calc-type-btn active" data-rate="4500" data-service-name="Архитектурное проектирование виллы" role="radio" aria-checked="true">
+                    <span class="calc-type-btn__title">Архитектура виллы</span>
+                    <span class="calc-type-btn__rate">4 500 ₽/м²</span>
+                  </button>
+                  <button type="button" class="calc-type-btn" data-rate="5500" data-service-name="Премиальный дизайн интерьера" role="radio" aria-checked="false">
+                    <span class="calc-type-btn__title">Дизайн интерьера</span>
+                    <span class="calc-type-btn__rate">5 500 ₽/м²</span>
+                  </button>
+                  <button type="button" class="calc-type-btn" data-rate="8000" data-service-name="Комплексный проект (Архитектура + Интерьер + Ландшафт)" role="radio" aria-checked="false">
+                    <span class="calc-type-btn__title">Комплексный проект</span>
+                    <span class="calc-type-btn__rate">8 000 ₽/м²</span>
+                  </button>
+                  <button type="button" class="calc-type-btn" data-rate="6000" data-service-name="Редевелопмент и реконструкция" role="radio" aria-checked="false">
+                    <span class="calc-type-btn__title">Реконструкция / Редевелопмент</span>
+                    <span class="calc-type-btn__rate">6 000 ₽/м²</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- 2. Area Slider + Input -->
+              <div class="calc-group">
+                <div class="calc-area-header">
+                  <label for="calcAreaRange" class="calc-label">2. Общая площадь объекта (м²)</label>
+                  <div class="calc-area-input-wrapper">
+                    <input type="number" id="calcAreaInput" min="50" max="2500" step="10" value="350" class="calc-area-input" aria-label="Площадь в квадратных метрах">
+                    <span class="calc-area-suffix">м²</span>
+                  </div>
+                </div>
+                <input type="range" id="calcAreaRange" min="50" max="1500" step="10" value="350" class="calc-range-slider" aria-label="Ползунок площади объекта">
+                <div class="calc-range-ticks">
+                  <span>50 м²</span>
+                  <span>350 м²</span>
+                  <span>750 м²</span>
+                  <span>1 500+ м²</span>
+                </div>
+              </div>
+
+              <!-- 3. Additional Add-on Options -->
+              <div class="calc-group">
+                <label class="calc-label">3. Дополнительные инженерные и сервисные опции</label>
+                <div class="calc-options-list">
+                  
+                  <label class="calc-checkbox-label">
+                    <input type="checkbox" id="optSupervision" class="calc-checkbox" checked data-percent="15">
+                    <span class="calc-checkbox-custom"></span>
+                    <span class="calc-checkbox-text">
+                      <strong>Авторский надзор за строительством (+15%)</strong>
+                      <small>Выезды автора проекта, контроль геометрических допусков, журнал надзора</small>
+                    </span>
+                  </label>
+
+                  <label class="calc-checkbox-label">
+                    <input type="checkbox" id="optEngineering" class="calc-checkbox" checked data-percent="20">
+                    <span class="calc-checkbox-custom"></span>
+                    <span class="calc-checkbox-text">
+                      <strong>Инженерные разделы BIM: ОВиК, ЭОМ, ВК, Слаботочка (+20%)</strong>
+                      <small>Полная трехмерная увязка коммуникаций без коллизий и занижения потолков</small>
+                    </span>
+                  </label>
+
+                  <label class="calc-checkbox-label">
+                    <input type="checkbox" id="optAnimation" class="calc-checkbox" data-fixed="120000">
+                    <span class="calc-checkbox-custom"></span>
+                    <span class="calc-checkbox-text">
+                      <strong>Кинематографичная 3D-анимация и VR-визуализация (+120 000 ₽)</strong>
+                      <small>Видеоролик 4K с пролетом дрона и эффектной сменой времени суток</small>
+                    </span>
+                  </label>
+
+                  <label class="calc-checkbox-label">
+                    <input type="checkbox" id="optProcurement" class="calc-checkbox" data-percent="10">
+                    <span class="calc-checkbox-custom"></span>
+                    <span class="calc-checkbox-text">
+                      <strong>Комплектация и прямые контракты с фабриками (+10%)</strong>
+                      <small>Логистика камня, заказ нестандартных столярных изделий и света со скидками до 25%</small>
+                    </span>
+                  </label>
+
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Dynamic Summary Results Column -->
+            <div class="calc-summary">
+              <div class="calc-summary__card">
+                <div class="calc-summary__header">
+                  <span class="calc-summary__badge">ИТОГОВЫЙ РАСЧЕТ</span>
+                  <div class="calc-summary__date">Актуально на 2024–2025 г.</div>
+                </div>
+
+                <div class="calc-summary__total-block">
+                  <span class="calc-summary__caption">Ориентировочный бюджет проекта:</span>
+                  <div class="calc-summary__price" id="calcTotalPrice">2 122 500 ₽</div>
+                  <div class="calc-summary__rate-info" id="calcPricePerMeter">≈ 6 064 ₽ / м²</div>
+                </div>
+
+                <div class="calc-summary__details">
+                  <div class="summary-detail-row">
+                    <span class="detail-label">Выбранная услуга:</span>
+                    <span class="detail-val" id="calcSelectedService">Архитектурное проектирование виллы</span>
+                  </div>
+                  <div class="summary-detail-row">
+                    <span class="detail-label">Расчетная площадь:</span>
+                    <span class="detail-val" id="calcSummaryArea">350 м²</span>
+                  </div>
+                  <div class="summary-detail-row">
+                    <span class="detail-label">Срок проектирования:</span>
+                    <span class="detail-val" id="calcEstimatedTime">3.5 – 4.5 месяца</span>
+                  </div>
+                  <div class="summary-detail-row">
+                    <span class="detail-label">Объем документации:</span>
+                    <span class="detail-val" id="calcDocVolume">≈ 120–160 листов чертежей</span>
+                  </div>
+                </div>
+
+                <div class="calc-summary__deliverables">
+                  <span class="deliverables-title">Что входит в стоимость:</span>
+                  <ul class="deliverables-list" id="calcDeliverablesList">
+                    <li>✓ 3D-концепция и фасадные решения</li>
+                    <li>✓ Архитектурный раздел (АР) и конструктивы (КР)</li>
+                    <li>✓ Подробная ведомость и смета материалов</li>
+                    <li>✓ Инженерные сети BIM LOD 400</li>
+                    <li>✓ Сопровождение и выезды автора проекта</li>
+                  </ul>
+                </div>
+
+                <button type="button" class="btn btn--primary btn--full calc-summary__cta" id="calcSubmitBtn">
+                  <span class="btn__text">Зафиксировать смету и получить КП</span>
+                  <span class="btn__arrow">→</span>
+                </button>
+
+                <p class="calc-summary__disclaimer">
+                  * Точная стоимость формируется после выезда архитектора на участок и заполнения подробного технического задания.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION: ARCHITECTURAL PROCESS ==================== -->
+    <section class="section process-section" id="process">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">МЕТОДОЛОГИЯ БЮРО</div>
+          <h2 class="section-title">Тектоника создания объекта: 6 этапов</h2>
+          <p class="section-lead">
+            Отлаженный за 12 лет алгоритм, гарантирующий абсолютную точность воплощения без переделок на стройплощадке и выхода за рамки согласованной сметы.
+          </p>
+        </div>
+
+        <div class="process-steps">
+          <!-- Step 1 -->
+          <div class="process-step">
+            <div class="process-step__col-left">
+              <span class="step-num">01 / ЭТАП</span>
+              <span class="step-duration">Срок: 10–14 дней</span>
+            </div>
+            <div class="process-step__col-right">
+              <h3 class="step-title">Глубокое интервью, анализ участка и геология</h3>
+              <p class="step-desc">
+                Проводим анкетирование по 60+ жизненным сценариям семьи. Анализируем инсоляцию, розу ветров, уклон рельефа и видовые точки. Выполняем геодезическую съемку и геологические изыскания грунта.
+              </p>
+              <div class="step-result">Результат: Согласованное детальное техническое задание и градостроительный паспорт участка.</div>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="process-step">
+            <div class="process-step__col-left">
+              <span class="step-num">02 / ЭТАП</span>
+              <span class="step-duration">Срок: 3–4 недели</span>
+            </div>
+            <div class="process-step__col-right">
+              <h3 class="step-title">Объемно-пространственная концепция (3 варианта)</h3>
+              <p class="step-desc">
+                Разрабатываем 3 принципиально разных объемно-планировочных сценария посадки здания на участок. Моделируем освещенность в разные сезоны, прорабатываем зонирование и переходы между внутренними и внешними пространствами.
+              </p>
+              <div class="step-result">Результат: Выбранный и утвержденный концепт с четким функциональным планировочным решением.</div>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="process-step">
+            <div class="process-step__col-left">
+              <span class="step-num">03 / ЭТАП</span>
+              <span class="step-duration">Срок: 3 недели</span>
+            </div>
+            <div class="process-step__col-right">
+              <h3 class="step-title">Фотореалистичные визуализации и колористика</h3>
+              <p class="step-desc">
+                Создаем серию детальных рендеров здания в дневном, закатном и ночном архитектурном освещении. Подбираем точные артикулы натурального камня, дерева, металлических ламелей и крупноформатного остекления.
+              </p>
+              <div class="step-result">Результат: Фотореалистичный альбом экстерьера и интерьера, неотличимый от будущей фотографии готового дома.</div>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="process-step">
+            <div class="process-step__col-left">
+              <span class="step-num">04 / ЭТАП</span>
+              <span class="step-duration">Срок: 4–6 недель</span>
+            </div>
+            <div class="process-step__col-right">
+              <h3 class="step-title">Рабочая документация (разделы АР и КР)</h3>
+              <p class="step-desc">
+                Разработка полного комплекта чертежей для строителей: кладочные планы, узлы примыканий, армирование монолитных фундаментов и плит перекрытий, расчет нагрузок на грунт и ветровых воздействий.
+              </p>
+              <div class="step-result">Результат: Рабочий альбом чертежей LOD 400 со 100% детализацией каждого архитектурного узла.</div>
+            </div>
+          </div>
+
+          <!-- Step 5 -->
+          <div class="process-step">
+            <div class="process-step__col-left">
+              <span class="step-num">05 / ЭТАП</span>
+              <span class="step-duration">Срок: 3 недели</span>
+            </div>
+            <div class="process-step__col-right">
+              <h3 class="step-title">Инженерные сети BIM и спецификация материалов</h3>
+              <p class="step-desc">
+                Проектирование систем отопления, вентиляции, кондиционирования (ОВиК), водоснабжения, канализации и автоматизации «Умный дом». Составляем точную спецификацию объемов бетона, металла и отделочных покрытий.
+              </p>
+              <div class="step-result">Результат: Единая цифровая модель без пространственных коллизий труб и балок + прозрачная смета.</div>
+            </div>
+          </div>
+
+          <!-- Step 6 -->
+          <div class="process-step">
+            <div class="process-step__col-left">
+              <span class="step-num">06 / ЭТАП</span>
+              <span class="step-duration">Весь период стройки</span>
+            </div>
+            <div class="process-step__col-right">
+              <h3 class="step-title">Авторский надзор, поставки и сдача объекта</h3>
+              <p class="step-desc">
+                Регулярные выезды главного архитектора и конструктора на объект, приемка ответственных конструкций (армирование, гидроизоляция), проверка качества бетонирования и монтажа фасадных плит. Комплектация материалами под ключ.
+              </p>
+              <div class="step-result">Результат: Дом сдан в идеальном соответствии с проектной документацией и без скрытых строительных дефектов.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION: TEAM ==================== -->
+    <section class="section team-section" id="team">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">РУКОВОДСТВО И АРХИТЕКТОРЫ</div>
+          <h2 class="section-title">Команда бюро MONOLITH</h2>
+          <p class="section-lead">
+            Архитекторы швейцарской и миланской школ, ведущие конструкторы и инженеры высшей квалификации.
+          </p>
+        </div>
+
+        <div class="team-grid">
+          <!-- Member 1 -->
+          <div class="team-card">
+            <div class="team-card__photo">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/team-1.jpg -->
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80" 
+                   alt="Елена Верещагина — Основатель и главный архитектор" 
+                   class="team-card__img" 
+                   loading="lazy">
+              <div class="team-card__role">ОСНОВАТЕЛЬ / ГЛАВНЫЙ АРХИТЕКТОР</div>
+            </div>
+            <div class="team-card__info">
+              <h3 class="team-card__name">Елена Верещагина</h3>
+              <p class="team-card__bio">
+                Выпускница МАРХИ и ETH Zürich. Более 14 лет создает авторскую архитектуру. Член Союза архитекторов России, номинант WAF.
+              </p>
+            </div>
+          </div>
+
+          <!-- Member 2 -->
+          <div class="team-card">
+            <div class="team-card__photo">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/team-2.jpg -->
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80" 
+                   alt="Михаил Громов — Ведущий архитектор загородных резиденций" 
+                   class="team-card__img" 
+                   loading="lazy">
+              <div class="team-card__role">ВЕДУЩИЙ АРХИТЕКТОР РЕЗИДЕНЦИЙ</div>
+            </div>
+            <div class="team-card__info">
+              <h3 class="team-card__name">Михаил Громов</h3>
+              <p class="team-card__bio">
+                Специализируется на сложной монолитной тектонике и консольных конструкциях. Руководил реализацией 40+ частных вилл.
+              </p>
+            </div>
+          </div>
+
+          <!-- Member 3 -->
+          <div class="team-card">
+            <div class="team-card__photo">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/team-3.jpg -->
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" 
+                   alt="Анна Бергман — Руководитель направления интерьеров" 
+                   class="team-card__img" 
+                   loading="lazy">
+              <div class="team-card__role">ДИРЕКТОР ПО ИНТЕРЬЕРАМ</div>
+            </div>
+            <div class="team-card__info">
+              <h3 class="team-card__name">Анна Бергман</h3>
+              <p class="team-card__bio">
+                Магистр дизайна среды (Politecnico di Milano). Эксперт по тактильным монохромным фактурам, светодизайну и кастомной мебели.
+              </p>
+            </div>
+          </div>
+
+          <!-- Member 4 -->
+          <div class="team-card">
+            <div class="team-card__photo">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/team-4.jpg -->
+              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=800&q=80" 
+                   alt="Сергей Данилов — Главный инженер проектов (ГИП)" 
+                   class="team-card__img" 
+                   loading="lazy">
+              <div class="team-card__role">ГЛАВНЫЙ ИНЖЕНЕР ПРОЕКТОВ (ГИП)</div>
+            </div>
+            <div class="team-card__info">
+              <h3 class="team-card__name">Сергей Данилов</h3>
+              <p class="team-card__bio">
+                20 лет стажа в расчетах уникальных конструктивных схем, большепролетных перекрытий и интеграции систем энергоэффективности.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION: AWARDS & PRESS ==================== -->
+    <section class="section awards-section">
+      <div class="container">
+        <div class="awards-bar">
+          <div class="awards-bar__title">ПРИЗНАНИЕ И ПУБЛИКАЦИИ</div>
+          <div class="awards-bar__logos">
+            <div class="award-item">
+              <span class="award-item__name">AD MAGAZINE</span>
+              <span class="award-item__sub">Лучшие дома России 2023</span>
+            </div>
+            <div class="award-item">
+              <span class="award-item__name">ARCHIWOOD</span>
+              <span class="award-item__sub">Победитель в номинации «Загородный дом»</span>
+            </div>
+            <div class="award-item">
+              <span class="award-item__name">SALON INTERIOR</span>
+              <span class="award-item__sub">Топ-100 бюро частной архитектуры</span>
+            </div>
+            <div class="award-item">
+              <span class="award-item__name">WAF SHORTLIST</span>
+              <span class="award-item__sub">World Architecture Festival Nominee</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION: REVIEWS ==================== -->
+    <section class="section reviews-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">ОПЫТ ВЛАДЕЛЬЦЕВ</div>
+          <h2 class="section-title">Слово заказчикам</h2>
+          <p class="section-lead">
+            Многие клиенты доверяют нам проектирование вторых и третьих объектов, рекомендуя бюро своему окружению.
+          </p>
+        </div>
+
+        <div class="reviews-grid">
+          <article class="review-card">
+            <div class="review-card__stars">★★★★★</div>
+            <blockquote class="review-card__quote">
+              «Искал архитекторов, которые умеют работать с сырым бетоном и панорамным остеклением без ухода в холодный офисный стиль. Елена и ее команда создали дом, в котором удивительно легко дышится. Продумана каждая розетка, каждый узел стыковки камня и стекла. Строители не задали ни одного лишнего вопроса — чертежи были безупречны.»
+            </blockquote>
+            <div class="review-card__author">
+              <span class="author-name">Александр Воронов</span>
+              <span class="author-obj">Вилла на Рублёво-Успенском шоссе, 780 м²</span>
+            </div>
+          </article>
+
+          <article class="review-card">
+            <div class="review-card__stars">★★★★★</div>
+            <blockquote class="review-card__quote">
+              «В MONOLITH нас поразила честность и пунктуальность. Впервые смета на этапе эскиза совпала с итоговыми затратами с погрешностью меньше 4%. Авторский надзор снял с меня абсолютно всю головную боль по координации итальянских поставщиков и строительной бригады. Спасибо за настоящее произведение искусства!»
+            </blockquote>
+            <div class="review-card__author">
+              <span class="author-name">Виктория и Роман Левины</span>
+              <span class="author-obj">Пентхаус в ЖК «Кутузовский XII», 290 м²</span>
+            </div>
+          </article>
+
+          <article class="review-card">
+            <div class="review-card__stars">★★★★★</div>
+            <blockquote class="review-card__quote">
+              «У нас был сложнейший участок с перепадом высоты 8 метров в сосновом лесу. Другие архитекторы предлагали срезать склон и ставить подпорные стены. MONOLITH посадили дом каскадом, сохранив все сосны. Получилась фантастическая вилла, буквально парящая над лесом.»
+            </blockquote>
+            <div class="review-card__author">
+              <span class="author-name">Константин Смирнов</span>
+              <span class="author-obj">Загородный дом в Репино, 620 м²</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION: FAQ ACCORDION ==================== -->
+    <section class="section faq-section" id="faq">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">ОТВЕТЫ НА ВОПРОСЫ</div>
+          <h2 class="section-title">Часто задаваемые вопросы</h2>
+          <p class="section-lead">
+            Все, что необходимо знать перед началом совместной работы над проектированием вашего объекта.
+          </p>
+        </div>
+
+        <div class="faq-accordion" id="faqAccordion">
+
+          <!-- FAQ 1 -->
+          <div class="faq-item">
+            <button type="button" class="faq-item__trigger" aria-expanded="false" aria-controls="faq-ans-1">
+              <span class="faq-item__question">Сколько времени занимает разработка индивидуального архитектурного проекта?</span>
+              <span class="faq-item__icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-item__panel" id="faq-ans-1" hidden>
+              <div class="faq-item__content">
+                <p>
+                  Полный цикл проектирования загородной резиденции площадью 400–800 м² (включая эскизный проект, 3D-визуализацию, разделы АР, КР и инженерные сети) занимает в среднем от <strong>3 до 4.5 месяцев</strong>. Если требуется ускоренный старт строительных работ, мы можем выдать документацию поэтапно: сначала нулевой цикл и фундаментная плита, пока идет доработка инженерных систем.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-item">
+            <button type="button" class="faq-item__trigger" aria-expanded="false" aria-controls="faq-ans-2">
+              <span class="faq-item__question">Работаете ли вы с объектами за пределами Москвы и за рубежом?</span>
+              <span class="faq-item__icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-item__panel" id="faq-ans-2" hidden>
+              <div class="faq-item__content">
+                <p>
+                  Да, география нашего бюро включает Санкт-Петербург, Сочи, Казань, Горный Алтай, а также ОАЭ (Дубай) и Кипр. Главный архитектор выезжает на участок для съемки и инсоляционного анализа лично. Все дальнейшие согласования могут проходить как в гибридном формате (видеоконференции с демонстрацией BIM-модели в реальном времени), так и на очных встречах в нашем московском бюро.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-item">
+            <button type="button" class="faq-item__trigger" aria-expanded="false" aria-controls="faq-ans-3">
+              <span class="faq-item__question">В чем принципиальная разница между типовым проектом и авторской архитектурой MONOLITH?</span>
+              <span class="faq-item__icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-item__panel" id="faq-ans-3" hidden>
+              <div class="faq-item__content">
+                <p>
+                  Типовой проект никогда не учитывает специфику вашего участка: угол падения солнечных лучей, соседей, состав грунта и индивидуальные сценарии жизни семьи. В авторском проекте MONOLITH каждая линия обоснована: гардеробные спроектированы под ваш объем вещей, мастер-спальня ориентирована на рассветную сторону, а гостиная защищена от перегрева летом продуманными консольными выносами кровли. Это обеспечивает максимальную ликвидность недвижимости на вторичном рынке.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-item">
+            <button type="button" class="faq-item__trigger" aria-expanded="false" aria-controls="faq-ans-4">
+              <span class="faq-item__question">Что включает в себя услуга авторского надзора и обязательна ли она?</span>
+              <span class="faq-item__icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-item__panel" id="faq-ans-4" hidden>
+              <div class="faq-item__content">
+                <p>
+                  Авторский надзор — это гарантия того, что построенный дом будет точной копией согласованного 3D-проекта. Архитектор регулярно выезжает на площадку, проверяет геометрическую точность опалубки, приемку скрытых арматурных каркасов, качество заливки монолита и стыковку фасадных панелей. Без авторского надзора строительные бригады нередко упрощают сложные узлы ради собственной экономии времени.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="faq-item">
+            <button type="button" class="faq-item__trigger" aria-expanded="false" aria-controls="faq-ans-5">
+              <span class="faq-item__question">Помогаете ли вы с выбором надежного генерального подрядчика?</span>
+              <span class="faq-item__icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-item__panel" id="faq-ans-5" hidden>
+              <div class="faq-item__content">
+                <p>
+                  Да. Мы организуем закрытый тендер среди проверенных генподрядных организаций, имеющих опыт возведения сложного монолита и монтажа крупноформатного остекления. Мы проводим независимый аудит смет подрядчиков, отсекая скрытые наценки и необоснованные допработы.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 6 -->
+          <div class="faq-item">
+            <button type="button" class="faq-item__trigger" aria-expanded="false" aria-controls="faq-ans-6">
+              <span class="faq-item__question">Как зафиксировать стоимость проектирования и начать работу?</span>
+              <span class="faq-item__icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-item__panel" id="faq-ans-6" hidden>
+              <div class="faq-item__content">
+                <p>
+                  Первый шаг — встреча в нашем бюро или на вашем участке. Мы обсуждаем пожелания, формируем предварительное ТЗ и подписываем официальный договор с поэтапной оплатой (обычно 4 этапа: аванс за эскиз, оплата за 3D-визуализацию, оплата за рабочие чертежи и финальный расчет). Стоимость в договоре является твердой и не меняется в процессе работы.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION: CONTACTS & YANDEX MAP ==================== -->
+    <section class="section contacts-section" id="contacts">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">ЛОКАЦИЯ И ОФИС</div>
+          <h2 class="section-title">Приглашаем в наше бюро в центре Москвы</h2>
+          <p class="section-lead">
+            Приглашаем вас на чашку эспрессо для обсуждения концепции вашей будущей резиденции. В студии представлены образцы натурального камня, бетона и дерева.
+          </p>
+        </div>
+
+        <div class="contacts-grid">
+          <!-- Info Column -->
+          <div class="contacts-info">
+            
+            <div class="contacts-card">
+              <div class="contacts-card__header">
+                <span class="contacts-card__title">ШТАБ-КВАРТИРА БЮРО</span>
+                <div class="live-pill" id="contactsLivePill">
+                  <span class="status-pulse"></span>
+                  <span data-bind="statusShort">Открыто сейчас</span>
+                </div>
+              </div>
+
+              <div class="contacts-detail">
+                <span class="contacts-label">АДРЕС СТУДИИ:</span>
+                <span class="contacts-val" data-bind="fullAddress">109012, г. Москва, ул. Варварка, дом 14, Деловой центр «Тектоника», 4 этаж</span>
+              </div>
+
+              <div class="contacts-detail">
+                <span class="contacts-label">ГРАФИК ПРИЕМА ГОСТЕЙ:</span>
+                <span class="contacts-val" data-bind="scheduleFull">Пн–Пт: 10:00–19:00 | Сб: 11:00–17:00 (по предварительной записи) | Вс: выходной</span>
+              </div>
+
+              <div class="contacts-detail">
+                <span class="contacts-label">ПРЯМАЯ СВЯЗЬ:</span>
+                <div class="contacts-links-col">
+                  <a href="tel:+74958923412" class="contacts-main-phone" data-bind="phoneLink">
+                    <span data-bind="phoneFormatted">+7 (495) 892-34-12</span>
+                  </a>
+                  <a href="mailto:project@monolith-arch.ru" class="contacts-main-email" data-bind="emailLink">
+                    <span data-bind="email">project@monolith-arch.ru</span>
+                  </a>
+                </div>
+              </div>
+
+              <div class="contacts-detail">
+                <span class="contacts-label">МЕССЕНДЖЕРЫ:</span>
+                <div class="contacts-messengers">
+                  <a href="https://t.me/monolith_arch" target="_blank" rel="noopener noreferrer" class="messenger-tag" data-bind="telegramLink">
+                    Telegram @monolith_arch
+                  </a>
+                  <a href="https://wa.me/74958923412" target="_blank" rel="noopener noreferrer" class="messenger-tag" data-bind="whatsappLink">
+                    WhatsApp
+                  </a>
+                  <a href="https://behance.net/monolith-arch" target="_blank" rel="noopener noreferrer" class="messenger-tag" data-bind="behanceLink">
+                    Behance
+                  </a>
+                </div>
+              </div>
+
+              <div class="contacts-parking-note">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 17V7h4a3 3 0 0 1 0 6H9"/></svg>
+                <span>Для гостей бюро предусмотрен подземный охраняемый паркинг. Пожалуйста, сообщите номер автомобиля заранее для оформления пропуска.</span>
+              </div>
+
+              <button type="button" class="btn btn--primary btn--full open-modal-btn" data-modal-target="consultationModal">
+                Забронировать визит к архитектору
+              </button>
+            </div>
+
+          </div>
+
+          <!-- Map Column -->
+          <div class="contacts-map-wrapper">
+            <div class="map-container" id="yandexMap" aria-label="Интерактивная карта расположения бюро MONOLITH">
+              <!-- Fallback UI if Yandex Maps script is blocked or offline -->
+              <div class="map-fallback" id="mapFallback">
+                <div class="map-fallback__content">
+                  <div class="map-fallback__title">MONOLITH Architecture</div>
+                  <div class="map-fallback__address">Москва, ул. Варварка, 14</div>
+                  <div class="map-fallback__coords">Координаты: 55.753994, 37.622093</div>
+                  <a href="https://yandex.ru/maps/?pt=37.622093,55.753994&z=16&l=map" 
+                     target="_blank" 
+                     rel="noopener noreferrer" 
+                     class="btn btn--outline btn--sm" 
+                     id="mapFallbackLink"
+                     data-bind="yandexMapsExternalLink">
+                    Открыть в приложении Яндекс Карты ↗
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="map-status-bar">
+              <span class="map-status-bar__coords">Координаты входа: 55.753994, 37.622093</span>
+              <a href="https://yandex.ru/maps/?pt=37.622093,55.753994&z=16&l=map" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 class="map-status-bar__link" 
+                 data-bind="yandexMapsExternalLink">
+                Построить маршрут в Яндекс Картах ↗
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <div class="site-footer__grid">
+        
+        <!-- Col 1: Brand & Bio -->
+        <div class="footer-col footer-col--brand">
+          <div class="brand-logo brand-logo--light">
+            <span class="brand-logo__glyph">M</span>
+            <div class="brand-logo__text">
+              <span class="brand-logo__title">MONOLITH</span>
+              <span class="brand-logo__tagline">ARCHITECTURAL STUDIO</span>
+            </div>
+          </div>
+          <p class="footer-col__desc">
+            Проектирование авторской архитектуры, загородных резиденций и монументальных пространств с 2012 года.
+          </p>
+          <div class="footer-col__license">
+            СРО № СРО-П-142-26032015 • Лицензия на проектирование
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation -->
+        <div class="footer-col">
+          <div class="footer-col__title">НАВИГАЦИЯ</div>
+          <ul class="footer-nav-list">
+            <li><a href="#projects">Избранные объекты</a></li>
+            <li><a href="#manifesto">Философия бюро</a></li>
+            <li><a href="#before-after">Трансформация До / После</a></li>
+            <li><a href="#services">Услуги и стоимость</a></li>
+            <li><a href="#calculator">Калькулятор проекта</a></li>
+            <li><a href="#process">Этапы работы</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Services -->
+        <div class="footer-col">
+          <div class="footer-col__title">ПРАКТИКА</div>
+          <ul class="footer-nav-list">
+            <li><a href="#services">Загородные виллы</a></li>
+            <li><a href="#services">Пентхаусы и апартаменты</a></li>
+            <li><a href="#services">Ландшафтная тектоника</a></li>
+            <li><a href="#services">BIM-моделирование LOD 400</a></li>
+            <li><a href="#services">Авторский надзор</a></li>
+            <li><a href="#faq">Консультация архитектора</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contacts -->
+        <div class="footer-col footer-col--contact">
+          <div class="footer-col__title">КОНТАКТЫ</div>
+          <p class="footer-contact-item" data-bind="cityAddress">Москва, ул. Варварка, 14</p>
+          <a href="tel:+74958923412" class="footer-contact-item footer-phone" data-bind="phoneFormatted">+7 (495) 892-34-12</a>
+          <a href="mailto:project@monolith-arch.ru" class="footer-contact-item footer-email" data-bind="email">project@monolith-arch.ru</a>
+          <div class="footer-social-links">
+            <a href="https://t.me/monolith_arch" target="_blank" rel="noopener noreferrer" data-bind="telegramLink">Telegram</a>
+            <a href="https://wa.me/74958923412" target="_blank" rel="noopener noreferrer" data-bind="whatsappLink">WhatsApp</a>
+            <a href="https://behance.net/monolith-arch" target="_blank" rel="noopener noreferrer" data-bind="behanceLink">Behance</a>
+            <a href="https://pinterest.com/monolith_arch" target="_blank" rel="noopener noreferrer" data-bind="pinterestLink">Pinterest</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="site-footer__bottom">
+        <div class="site-footer__copy">
+          © 2012–2025 MONOLITH Architectural Studio. Все права защищены. Все чертежи и фотоматериалы являются интеллектуальной собственностью бюро.
+        </div>
+        <div class="site-footer__policy">
+          <a href="#privacy" id="privacyLink">Политика конфиденциальности</a>
+          <a href="#terms" id="termsLink">Условия проектирования</a>
+          <a href="#hero" class="back-to-top" aria-label="Вернуться наверх">В начало ↑</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== MODAL: LEAD CAPTURE & CONSULTATION ==================== -->
+  <div class="modal" id="consultationModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal__backdrop" id="modalBackdrop"></div>
+    <div class="modal__dialog">
+      <button type="button" class="modal__close-btn" id="modalCloseBtn" aria-label="Закрыть окно">✕</button>
+      
+      <div class="modal__content" id="modalFormContainer">
+        <div class="modal__header">
+          <span class="modal__tag">АРХИТЕКТУРНОЕ БЮРО MONOLITH</span>
+          <h2 class="modal__title" id="modalTitle">Обсудить проект с главным архитектором</h2>
+          <p class="modal__desc" id="modalSubtitle">
+            Оставьте контакты для конфиденциального звонка. Мы ответим в течение 30 минут, ответим на инженерные вопросы и забронируем встречу в студии.
+          </p>
+        </div>
+
+        <form class="modal-form" id="leadForm" novalidate>
+          <!-- Hidden inputs for calculated parameters -->
+          <input type="hidden" name="calc_service" id="formCalcService" value="">
+          <input type="hidden" name="calc_area" id="formCalcArea" value="">
+          <input type="hidden" name="calc_price" id="formCalcPrice" value="">
+          <input type="hidden" name="project_ref" id="formProjectRef" value="">
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="leadName" class="form-label">Ваше имя *</label>
+              <input type="text" id="leadName" name="name" class="form-input" placeholder="Александр" required autocomplete="name">
+              <span class="form-error" id="nameError">Пожалуйста, введите ваше имя</span>
+            </div>
+            
+            <div class="form-group">
+              <label for="leadPhone" class="form-label">Номер телефона *</label>
+              <input type="tel" id="leadPhone" name="phone" class="form-input phone-mask-input" placeholder="+7 (___) ___-__-__" required autocomplete="tel">
+              <span class="form-error" id="phoneError">Введите корректный номер телефона</span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="leadEmail" class="form-label">Электронная почта</label>
+              <input type="email" id="leadEmail" name="email" class="form-input" placeholder="client@example.com" autocomplete="email">
+              <span class="form-error" id="emailError">Некорректный email адрес</span>
+            </div>
+
+            <div class="form-group">
+              <label for="leadObjectType" class="form-label">Тип и назначение объекта</label>
+              <select id="leadObjectType" name="object_type" class="form-select">
+                <option value="Загородная вилла / Резиденция">Загородная вилла / Резиденция</option>
+                <option value="Пентхаус / Городские апартаменты">Пентхаус / Городские апартаменты</option>
+                <option value="Редевелопмент / Реконструкция">Редевелопмент / Реконструкция</option>
+                <option value="Общественное пространство / Офис">Общественное пространство / Офис</option>
+                <option value="Другое">Другое</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="leadMessage" class="form-label">Комментарии или ссылка на участок</label>
+            <textarea id="leadMessage" name="message" class="form-textarea" rows="3" placeholder="Участок 30 соток на Новой Риге, сложный рельеф, планируем дом 500-600 м²..."></textarea>
+          </div>
+
+          <div class="form-group form-group--checkbox">
+            <label class="form-consent">
+              <input type="checkbox" id="leadConsent" required checked>
+              <span class="form-consent__box"></span>
+              <span class="form-consent__text">
+                Согласен на обработку персональных данных и конфиденциальное хранение в соответствии с политикой студии.
+              </span>
+            </label>
+            <span class="form-error" id="consentError">Требуется согласие на обработку данных</span>
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--full modal-submit-btn" id="leadSubmitBtn">
+            <span class="btn__text">Отправить заявку архитектору</span>
+            <span class="btn__arrow">→</span>
+          </button>
+        </form>
+      </div>
+
+      <!-- Success Screen in Modal -->
+      <div class="modal__success" id="modalSuccessContainer" hidden>
+        <div class="modal-success__icon">✓</div>
+        <span class="modal__tag">ЗАЯВКА УСПЕШНО ПРИНЯТА</span>
+        <h3 class="modal-success__title">Благодарим за обращение в MONOLITH</h3>
+        <p class="modal-success__text">
+          Ваш запрос зарегистрирован под номером <strong id="successTicketNum">#M-482</strong>. Главный архитектор проекта уже ознакомился с параметрами и свяжется с вами в течение 30 минут в рабочее время студии.
+        </p>
+        <div class="modal-success__details" id="successDetailsBox"></div>
+        <button type="button" class="btn btn--outline btn--full modal-success__close-btn" id="modalSuccessCloseBtn">
+          Вернуться на сайт
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- JavaScript Application Bundle -->
+  <script src="script.js"></script>
+</body>
+</html>

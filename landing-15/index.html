@@ -1,0 +1,1604 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <title>AZUR Nautica — Аренда премиальных суперяхт в Средиземном море | Чартер 2026/2027</title>
+  <meta name="description" content="Чартер суперяхт и катамаранов на Лазурном берегу Франции, в Монако, на Амальфитанском побережье Италии и Греческих островах. Персональный экипаж, мишленовский шеф, индивидуальные маршруты.">
+  <meta name="keywords" content="аренда яхт Средиземное море, чартер суперяхт Монако, аренда яхты Лазурный берег, чартер катамарана Греция, аренда яхты с экипажем">
+  
+  <!-- Favicon (SVG nautical compass) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%230A192F' stroke='%23E2B755' stroke-width='2'/%3E%3Cpolygon points='16,4 19,13 28,16 19,19 16,28 13,19 4,16 13,13' fill='%23E2B755'/%3E%3Ccircle cx='16' cy='16' r='3' fill='%2338BDF8'/%3E%3C/svg%3E">
+  
+  <!-- Google Fonts: Tenor Sans + Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Tenor+Sans&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons (Free CDN for luxury navigation & features) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Yandex Maps 2.1 API -->
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+</head>
+<body>
+
+  <!-- =========================================================================
+       TOP NOTIFICATION BAR (Live Working Status, Quick Contacts)
+       ========================================================================= -->
+  <aside class="top-bar" aria-label="Верхняя информационная панель">
+    <div class="container top-bar__inner">
+      <div class="top-bar__status">
+        <span class="status-pulse" id="status-pulse-indicator"></span>
+        <span id="live-working-status" class="status-text">Проверка рабочего времени...</span>
+        <span class="status-separator">|</span>
+        <span class="status-note">Заявки на чартер принимаются 24/7</span>
+      </div>
+      
+      <div class="top-bar__contacts">
+        <a href="#" class="top-bar__link" id="top-bar-address-link" title="Офис в Москве">
+          <i class="fa-solid fa-location-dot"></i>
+          <span id="top-bar-address">Москва, Пресненская наб., 12</span>
+        </a>
+        <a href="mailto:charter@azur-nautica.com" class="top-bar__link" id="top-bar-email" title="Написать на почту">
+          <i class="fa-regular fa-envelope"></i>
+          <span id="top-bar-email-text">charter@azur-nautica.com</span>
+        </a>
+        <div class="top-bar__socials">
+          <a href="https://t.me/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Telegram" id="top-telegram-link">
+            <i class="fa-brands fa-telegram"></i>
+          </a>
+          <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="WhatsApp" id="top-whatsapp-link">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- =========================================================================
+       STICKY HEADER & NAVIGATION
+       ========================================================================= -->
+  <header class="site-header" id="site-header">
+    <div class="container site-header__inner">
+      <!-- Brand Logo -->
+      <a href="#hero" class="brand-logo" aria-label="AZUR Nautica Главная">
+        <div class="brand-logo__crest">
+          <svg viewBox="0 0 40 40" width="36" height="36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="20" cy="20" r="18" stroke="#E2B755" stroke-width="1.5" stroke-dasharray="2 3"/>
+            <path d="M20 5 L23 16 L35 20 L23 24 L20 35 L17 24 L5 20 L17 16 Z" fill="#E2B755"/>
+            <circle cx="20" cy="20" r="3.5" fill="#38BDF8"/>
+          </svg>
+        </div>
+        <div class="brand-logo__text">
+          <span class="brand-name" id="brand-name-display">AZUR NAUTICA</span>
+          <span class="brand-tagline">Mediterranean Yacht Charter</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="desktop-nav" aria-label="Основное меню">
+        <ul class="nav-menu">
+          <li><a href="#about" class="nav-link">О компании</a></li>
+          <li><a href="#fleet" class="nav-link">Наш флот</a></li>
+          <li><a href="#calculator" class="nav-link nav-link--highlight">Калькулятор чартера</a></li>
+          <li><a href="#routes" class="nav-link">Маршруты</a></li>
+          <li><a href="#service" class="nav-link">Сервис & Экипаж</a></li>
+          <li><a href="#gallery" class="nav-link">Галерея</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
+          <li><a href="#contacts" class="nav-link">Контакты</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <a href="tel:+74958224570" class="header-phone" id="header-phone-link">
+          <i class="fa-solid fa-phone-volume"></i>
+          <span id="header-phone-text">+7 (495) 822-45-70</span>
+        </a>
+        <button type="button" class="btn btn--gold-outline header-cta" id="header-cta-btn">
+          <span>Подобрать яхту</span>
+          <i class="fa-solid fa-compass"></i>
+        </button>
+        <!-- Mobile Hamburger Toggle -->
+        <button type="button" class="drawer-toggle" id="drawer-toggle-btn" aria-label="Открыть мобильное меню" aria-expanded="false" aria-controls="mobile-drawer">
+          <span class="drawer-toggle__bar"></span>
+          <span class="drawer-toggle__bar"></span>
+          <span class="drawer-toggle__bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu & Overlay -->
+  <div class="drawer-overlay" id="drawer-overlay"></div>
+  <aside class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+    <div class="mobile-drawer__header">
+      <div class="brand-logo">
+        <div class="brand-logo__crest">
+          <svg viewBox="0 0 40 40" width="30" height="30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="20" cy="20" r="18" stroke="#E2B755" stroke-width="1.5"/>
+            <path d="M20 5 L23 16 L35 20 L23 24 L20 35 L17 24 L5 20 L17 16 Z" fill="#E2B755"/>
+            <circle cx="20" cy="20" r="3.5" fill="#38BDF8"/>
+          </svg>
+        </div>
+        <div class="brand-logo__text">
+          <span class="brand-name">AZUR NAUTICA</span>
+        </div>
+      </div>
+      <button type="button" class="drawer-close" id="drawer-close-btn" aria-label="Закрыть меню">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <div class="mobile-drawer__body">
+      <ul class="mobile-nav-list">
+        <li><a href="#about" class="mobile-nav-link">О компании</a></li>
+        <li><a href="#fleet" class="mobile-nav-link">Наш флот яхт</a></li>
+        <li><a href="#calculator" class="mobile-nav-link mobile-nav-link--accent">Калькулятор чартера</a></li>
+        <li><a href="#routes" class="mobile-nav-link">Маршруты круизов</a></li>
+        <li><a href="#service" class="mobile-nav-link">Сервис & Экипаж</a></li>
+        <li><a href="#gallery" class="mobile-nav-link">Галерея атмосферы</a></li>
+        <li><a href="#testimonials" class="mobile-nav-link">Отзывы клиентов</a></li>
+        <li><a href="#faq" class="mobile-nav-link">Вопросы и ответы</a></li>
+        <li><a href="#contacts" class="mobile-nav-link">Контакты & Офисы</a></li>
+      </ul>
+
+      <div class="mobile-drawer__contacts">
+        <div class="drawer-contact-item">
+          <i class="fa-solid fa-phone"></i>
+          <a href="tel:+74958224570" id="drawer-phone">+7 (495) 822-45-70</a>
+        </div>
+        <div class="drawer-contact-item">
+          <i class="fa-regular fa-envelope"></i>
+          <a href="mailto:charter@azur-nautica.com" id="drawer-email">charter@azur-nautica.com</a>
+        </div>
+        <div class="drawer-contact-item">
+          <i class="fa-solid fa-clock"></i>
+          <span id="drawer-schedule">Ежедневно: 09:00 — 21:00 (МСК)</span>
+        </div>
+      </div>
+
+      <div class="mobile-drawer__socials">
+        <a href="https://t.me/" target="_blank" rel="noopener noreferrer" class="social-circle" aria-label="Telegram">
+          <i class="fa-brands fa-telegram"></i>
+        </a>
+        <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" class="social-circle" aria-label="WhatsApp">
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" class="social-circle" aria-label="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+      </div>
+
+      <button type="button" class="btn btn--gold btn--full drawer-action-btn" id="drawer-action-btn">
+        <span>Запросить подбор яхты</span>
+      </button>
+    </div>
+  </aside>
+
+  <main id="main-content">
+
+    <!-- =========================================================================
+         1. HERO SECTION (Atmospheric Mediterranean Luxury)
+         ========================================================================= -->
+    <section class="hero-section" id="hero">
+      <div class="hero-bg-wrapper">
+        <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/hero-yacht.jpg -->
+        <img 
+          src="https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?auto=format&fit=crop&w=2000&q=85" 
+          alt="Роскошная суперяхта AZUR Nautica в лазурных водах Средиземного моря" 
+          class="hero-bg-img"
+          loading="eager"
+        >
+        <div class="hero-overlay"></div>
+      </div>
+
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="hero-badge fade-in-up">
+            <span class="badge-dot"></span>
+            <span class="badge-text">Mediterranean Luxury Yacht Charter • Сезон 2026/2027</span>
+          </div>
+
+          <h1 class="hero-title fade-in-up">
+            Аренда премиальных <br>
+            <span class="text-gold">суперяхт</span> в Средиземном море
+          </h1>
+
+          <p class="hero-subtitle fade-in-up">
+            Эксклюзивный чартер яхт от 24 до 65 метров на Лазурном берегу, в Монако, на Амальфитанском побережье Италии и Греческих островах. Мишленовская гастрономия, офицерский экипаж и полная приватность.
+          </p>
+
+          <div class="hero-actions fade-in-up">
+            <a href="#calculator" class="btn btn--gold">
+              <span>Рассчитать стоимость чартера</span>
+              <i class="fa-solid fa-calculator"></i>
+            </a>
+            <a href="#fleet" class="btn btn--glass">
+              <span>Смотреть каталог флота</span>
+              <i class="fa-solid fa-arrow-down"></i>
+            </a>
+          </div>
+
+          <!-- Quick Metrics Bar -->
+          <div class="hero-stats-grid fade-in-up">
+            <div class="hero-stat-card">
+              <span class="stat-number">48+</span>
+              <span class="stat-label">Люксовых яхт в прямом управлении</span>
+            </div>
+            <div class="hero-stat-card">
+              <span class="stat-number">12</span>
+              <span class="stat-label">Лет безупречного морского опыта</span>
+            </div>
+            <div class="hero-stat-card">
+              <span class="stat-number">100%</span>
+              <span class="stat-label">Строгий NDA и конфиденциальность</span>
+            </div>
+            <div class="hero-stat-card">
+              <span class="stat-number">24/7</span>
+              <span class="stat-label">Персональный консьерж-сервис</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll Down Indicator -->
+      <a href="#about" class="hero-scroll-btn" aria-label="Прокрутить к описанию компании">
+        <span class="hero-scroll-mouse"></span>
+        <span class="hero-scroll-text">Листайте вниз</span>
+      </a>
+    </section>
+
+    <!-- =========================================================================
+         2. ABOUT & PHILOSOPHY SECTION
+         ========================================================================= -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-media">
+            <div class="about-image-card">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/about-yacht-deck.jpg -->
+              <img 
+                src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80" 
+                alt="Лаунж на палубе моторной яхты в Средиземном море" 
+                class="about-img-main"
+                loading="lazy"
+              >
+              <div class="about-floating-card">
+                <i class="fa-solid fa-shield-halved floating-icon"></i>
+                <div class="floating-text">
+                  <strong>MYBA Certified</strong>
+                  <span>Международные стандарты морского брокеража</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-content">
+            <div class="section-label">Искусство морских путешествий</div>
+            <h2 class="section-title">Совершенство каждой мили вашего круиза</h2>
+            <p class="section-lead">
+              AZUR Nautica — ведущий бутик морского чартера для тех, кто ценит абсолютную свободу, безупречную эстетику и высочайший уровень безопасности на воде.
+            </p>
+            <p class="about-desc">
+              Мы не просто сдаем яхты в аренду — мы создаем персонализированную морскую экспедицию. От подачи редких винтажных шампанских вин и блюд от приглашенных шеф-поваров до швартовки в закрытых бухтах Капри и приватных клубах Сен-Тропе. Все суда нашего флота проходят регулярный технический аудит Lloyd’s Register и укомплектованы офицерским экипажем высшей квалификации.
+            </p>
+
+            <div class="about-features-list">
+              <div class="feature-item">
+                <div class="feature-icon"><i class="fa-solid fa-anchor"></i></div>
+                <div class="feature-body">
+                  <h4>Флот нового поколения</h4>
+                  <p>Суперяхты Benetti, Sunseeker, Sanlorenzo, Riva и Princess не старше 2021–2025 годов выпуска в безукоризненном состоянии.</p>
+                </div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon"><i class="fa-solid fa-utensils"></i></div>
+                <div class="feature-body">
+                  <h4>Гастрономия Haute Cuisine</h4>
+                  <p>Индивидуальное меню от шефов с опытом в ресторанах Michelin с учетом всех вкусовых предпочтений гостей.</p>
+                </div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon"><i class="fa-solid fa-user-shield"></i></div>
+                <div class="feature-body">
+                  <h4>Приватность и безопасность</h4>
+                  <p>Охраняемые стоянки, защищенный спутниковый интернет Starlink Maritime и работа по строгим соглашениям о конфиденциальности.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="about-cta-row">
+              <button type="button" class="btn btn--gold open-modal-trigger" data-yacht="Консультация по флоту">
+                <span>Забронировать консультацию</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+              <div class="about-sign">
+                <span class="sign-name">Александр де Валуа</span>
+                <span class="sign-title">Управляющий партнер AZUR Nautica</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         3. OUR FLEET SECTION (Filterable Catalog)
+         ========================================================================= -->
+    <section class="section fleet-section" id="fleet">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-label">Эксклюзивная флотилия</div>
+          <h2 class="section-title">Флагманские яхты для вашего круиза</h2>
+          <p class="section-subtitle">
+            Выберите судно, соответствующее масштабу вашего отдыха: от маневренных скоростных яхт до величественных 50-метровых мегаяхт с вертолетными площадками.
+          </p>
+        </div>
+
+        <!-- Fleet Category Filter Buttons -->
+        <div class="fleet-filters" role="tablist" aria-label="Фильтры флота">
+          <button type="button" class="filter-btn active" data-filter="all" role="tab" aria-selected="true">Все яхты (6)</button>
+          <button type="button" class="filter-btn" data-filter="motor" role="tab" aria-selected="false">Моторные суперяхты</button>
+          <button type="button" class="filter-btn" data-filter="mega" role="tab" aria-selected="false">Мегаяхты 40м+</button>
+          <button type="button" class="filter-btn" data-filter="catamaran" role="tab" aria-selected="false">Парусные & Катамараны</button>
+        </div>
+
+        <!-- Fleet Grid -->
+        <div class="fleet-grid">
+          
+          <!-- Card 1: Motor Superyacht 28m -->
+          <article class="yacht-card" data-category="motor">
+            <div class="yacht-card__badge">Лазурный берег</div>
+            <div class="yacht-card__image-box">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/yacht-azur-88.jpg -->
+              <img 
+                src="https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?auto=format&fit=crop&w=900&q=80" 
+                alt="Моторная суперяхта Azur 88 Riviera" 
+                class="yacht-card__img"
+                loading="lazy"
+              >
+              <div class="yacht-card__hover-overlay">
+                <button type="button" class="btn btn--gold-small book-yacht-trigger" data-yacht="Azur 88 Riviera" data-baseprice="4500">
+                  <i class="fa-solid fa-calendar-check"></i> Забронировать
+                </button>
+              </div>
+            </div>
+            <div class="yacht-card__body">
+              <div class="yacht-card__header">
+                <h3 class="yacht-card__title">Azur 88 Riviera</h3>
+                <div class="yacht-card__price">от €4 500 <span class="per-day">/ день</span></div>
+              </div>
+              <p class="yacht-card__desc">
+                Стильный итальянский флайбридж с открытой террасой, джакузи и панорамным мастер-сьютом. Идеальна для переходов Монако — Сен-Тропе.
+              </p>
+              <div class="yacht-specs">
+                <div class="spec-col"><i class="fa-solid fa-arrows-left-right"></i><span>27.0 м</span></div>
+                <div class="spec-col"><i class="fa-solid fa-users"></i><span>до 10 гостей</span></div>
+                <div class="spec-col"><i class="fa-solid fa-bed"></i><span>4 каюты</span></div>
+                <div class="spec-col"><i class="fa-solid fa-gauge-high"></i><span>28 узлов</span></div>
+              </div>
+              <div class="yacht-card__footer">
+                <span class="yacht-port"><i class="fa-solid fa-location-dot"></i> База: Порт Эркюль, Монако</span>
+                <button type="button" class="btn-text calculate-with-yacht" data-yacht-id="azur88">
+                  В калькулятор <i class="fa-solid fa-chevron-right"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2: Sovereign 115 Superyacht -->
+          <article class="yacht-card" data-category="motor">
+            <div class="yacht-card__badge yacht-card__badge--gold">Хит сезона</div>
+            <div class="yacht-card__image-box">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/yacht-monaco-115.jpg -->
+              <img 
+                src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=900&q=80" 
+                alt="Суперяхта Monaco Sovereign 115" 
+                class="yacht-card__img"
+                loading="lazy"
+              >
+              <div class="yacht-card__hover-overlay">
+                <button type="button" class="btn btn--gold-small book-yacht-trigger" data-yacht="Monaco Sovereign 115" data-baseprice="8900">
+                  <i class="fa-solid fa-calendar-check"></i> Забронировать
+                </button>
+              </div>
+            </div>
+            <div class="yacht-card__body">
+              <div class="yacht-card__header">
+                <h3 class="yacht-card__title">Monaco Sovereign 115</h3>
+                <div class="yacht-card__price">от €8 900 <span class="per-day">/ день</span></div>
+              </div>
+              <p class="yacht-card__desc">
+                Трехпалубная океанская яхта с пляжным клубом на транце, сауной и полным арсеналом Seabob, hydrofoil и гидроциклов.
+              </p>
+              <div class="yacht-specs">
+                <div class="spec-col"><i class="fa-solid fa-arrows-left-right"></i><span>35.2 м</span></div>
+                <div class="spec-col"><i class="fa-solid fa-users"></i><span>до 12 гостей</span></div>
+                <div class="spec-col"><i class="fa-solid fa-bed"></i><span>5 кают</span></div>
+                <div class="spec-col"><i class="fa-solid fa-gauge-high"></i><span>24 узла</span></div>
+              </div>
+              <div class="yacht-card__footer">
+                <span class="yacht-port"><i class="fa-solid fa-location-dot"></i> База: Антиб, Франция</span>
+                <button type="button" class="btn-text calculate-with-yacht" data-yacht-id="sovereign115">
+                  В калькулятор <i class="fa-solid fa-chevron-right"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3: Megayacht Aegean Grand 140 -->
+          <article class="yacht-card" data-category="mega">
+            <div class="yacht-card__badge yacht-card__badge--cyan">Премиум Mega 43м</div>
+            <div class="yacht-card__image-box">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/yacht-aegean-140.jpg -->
+              <img 
+                src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=900&q=80" 
+                alt="Мегаяхта Aegean Grand 140" 
+                class="yacht-card__img"
+                loading="lazy"
+              >
+              <div class="yacht-card__hover-overlay">
+                <button type="button" class="btn btn--gold-small book-yacht-trigger" data-yacht="Aegean Grand 140" data-baseprice="15500">
+                  <i class="fa-solid fa-calendar-check"></i> Забронировать
+                </button>
+              </div>
+            </div>
+            <div class="yacht-card__body">
+              <div class="yacht-card__header">
+                <h3 class="yacht-card__title">Aegean Grand 140</h3>
+                <div class="yacht-card__price">от €15 500 <span class="per-day">/ день</span></div>
+              </div>
+              <p class="yacht-card__desc">
+                Монументальная мегаяхта кастомного дизайна. Включает кинотеатр под открытым небом, спа-комплекс и экипаж из 9 профессионалов.
+              </p>
+              <div class="yacht-specs">
+                <div class="spec-col"><i class="fa-solid fa-arrows-left-right"></i><span>42.8 м</span></div>
+                <div class="spec-col"><i class="fa-solid fa-users"></i><span>до 14 гостей</span></div>
+                <div class="spec-col"><i class="fa-solid fa-bed"></i><span>6 кают</span></div>
+                <div class="spec-col"><i class="fa-solid fa-gauge-high"></i><span>21 узел</span></div>
+              </div>
+              <div class="yacht-card__footer">
+                <span class="yacht-port"><i class="fa-solid fa-location-dot"></i> База: Афины / Миконос, Греция</span>
+                <button type="button" class="btn-text calculate-with-yacht" data-yacht-id="aegean140">
+                  В калькулятор <i class="fa-solid fa-chevron-right"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4: Amalfi Bella 95 -->
+          <article class="yacht-card" data-category="motor">
+            <div class="yacht-card__badge">Италия & Капри</div>
+            <div class="yacht-card__image-box">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/yacht-amalfi-95.jpg -->
+              <img 
+                src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=900&q=80" 
+                alt="Моторная яхта Amalfi Bella 95" 
+                class="yacht-card__img"
+                loading="lazy"
+              >
+              <div class="yacht-card__hover-overlay">
+                <button type="button" class="btn btn--gold-small book-yacht-trigger" data-yacht="Amalfi Bella 95" data-baseprice="6200">
+                  <i class="fa-solid fa-calendar-check"></i> Забронировать
+                </button>
+              </div>
+            </div>
+            <div class="yacht-card__body">
+              <div class="yacht-card__header">
+                <h3 class="yacht-card__title">Amalfi Bella 95</h3>
+                <div class="yacht-card__price">от €6 200 <span class="per-day">/ день</span></div>
+              </div>
+              <p class="yacht-card__desc">
+                Итальянский шарм, просторные открытые зоны для загара и ужинов при свечах. Непревзойденная маневренность вдоль скал Позитано.
+              </p>
+              <div class="yacht-specs">
+                <div class="spec-col"><i class="fa-solid fa-arrows-left-right"></i><span>29.1 м</span></div>
+                <div class="spec-col"><i class="fa-solid fa-users"></i><span>до 10 гостей</span></div>
+                <div class="spec-col"><i class="fa-solid fa-bed"></i><span>4 каюты</span></div>
+                <div class="spec-col"><i class="fa-solid fa-gauge-high"></i><span>26 узлов</span></div>
+              </div>
+              <div class="yacht-card__footer">
+                <span class="yacht-port"><i class="fa-solid fa-location-dot"></i> База: Марина Гранде, Капри</span>
+                <button type="button" class="btn-text calculate-with-yacht" data-yacht-id="amalfi95">
+                  В калькулятор <i class="fa-solid fa-chevron-right"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 5: Catamaran Ibiza Pearl 78 -->
+          <article class="yacht-card" data-category="catamaran">
+            <div class="yacht-card__badge yacht-card__badge--cyan">Катамаран Люкс</div>
+            <div class="yacht-card__image-box">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/yacht-ibiza-pearl.jpg -->
+              <img 
+                src="https://images.unsplash.com/photo-1569263979104-865ab7cd8d17?auto=format&fit=crop&w=900&q=80" 
+                alt="Люксовый парусный катамаран Ibiza Pearl 78" 
+                class="yacht-card__img"
+                loading="lazy"
+              >
+              <div class="yacht-card__hover-overlay">
+                <button type="button" class="btn btn--gold-small book-yacht-trigger" data-yacht="Ibiza Pearl 78" data-baseprice="5100">
+                  <i class="fa-solid fa-calendar-check"></i> Забронировать
+                </button>
+              </div>
+            </div>
+            <div class="yacht-card__body">
+              <div class="yacht-card__header">
+                <h3 class="yacht-card__title">Ibiza Pearl 78</h3>
+                <div class="yacht-card__price">от €5 100 <span class="per-day">/ день</span></div>
+              </div>
+              <p class="yacht-card__desc">
+                Ультра-стабильный двухкорпусный круизер с гигантской носовой сеткой для релакса и флайбриджем. Лучший выбор для Балеарских островов.
+              </p>
+              <div class="yacht-specs">
+                <div class="spec-col"><i class="fa-solid fa-arrows-left-right"></i><span>23.8 м</span></div>
+                <div class="spec-col"><i class="fa-solid fa-users"></i><span>до 12 гостей</span></div>
+                <div class="spec-col"><i class="fa-solid fa-bed"></i><span>5 кают</span></div>
+                <div class="spec-col"><i class="fa-solid fa-gauge-high"></i><span>17 узлов</span></div>
+              </div>
+              <div class="yacht-card__footer">
+                <span class="yacht-port"><i class="fa-solid fa-location-dot"></i> База: Марина Ботафоч, Ибица</span>
+                <button type="button" class="btn-text calculate-with-yacht" data-yacht-id="ibizapearl78">
+                  В калькулятор <i class="fa-solid fa-chevron-right"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 6: Flagship Oceanic 165 -->
+          <article class="yacht-card" data-category="mega">
+            <div class="yacht-card__badge yacht-card__badge--gold">Флагман 50м</div>
+            <div class="yacht-card__image-box">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/yacht-oceanic-165.jpg -->
+              <img 
+                src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=900&q=80" 
+                alt="Флагманская мегаяхта Sirena Oceanic 165" 
+                class="yacht-card__img"
+                loading="lazy"
+              >
+              <div class="yacht-card__hover-overlay">
+                <button type="button" class="btn btn--gold-small book-yacht-trigger" data-yacht="Sirena Oceanic 165" data-baseprice="28000">
+                  <i class="fa-solid fa-calendar-check"></i> Забронировать
+                </button>
+              </div>
+            </div>
+            <div class="yacht-card__body">
+              <div class="yacht-card__header">
+                <h3 class="yacht-card__title">Sirena Oceanic 165</h3>
+                <div class="yacht-card__price">от €28 000 <span class="per-day">/ день</span></div>
+              </div>
+              <p class="yacht-card__desc">
+                Вершина морской роскоши: 50 метров чистого престижа. Вертолетная площадка, лифт, 8-метровый бассейн с пресной водой и винный погреб.
+              </p>
+              <div class="yacht-specs">
+                <div class="spec-col"><i class="fa-solid fa-arrows-left-right"></i><span>50.3 м</span></div>
+                <div class="spec-col"><i class="fa-solid fa-users"></i><span>до 16 гостей</span></div>
+                <div class="spec-col"><i class="fa-solid fa-bed"></i><span>7 кают</span></div>
+                <div class="spec-col"><i class="fa-solid fa-gauge-high"></i><span>19 узлов</span></div>
+              </div>
+              <div class="yacht-card__footer">
+                <span class="yacht-port"><i class="fa-solid fa-location-dot"></i> База: Порт Сен-Тропе / Порто-Черво</span>
+                <button type="button" class="btn-text calculate-with-yacht" data-yacht-id="oceanic165">
+                  В калькулятор <i class="fa-solid fa-chevron-right"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         4. INTERACTIVE CHARTER ROUTE & COST CALCULATOR
+         ========================================================================= -->
+    <section class="section calculator-section" id="calculator">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-label">Прозрачный расчет онлайн</div>
+          <h2 class="section-title">Калькулятор стоимости чартера</h2>
+          <p class="section-subtitle">
+            Сконфигурируйте параметры идеального круиза: выберите судно, регион плавания, длительность и эксклюзивные сервисы для моментального точного расчета.
+          </p>
+        </div>
+
+        <div class="calculator-box">
+          <form id="charter-calc-form" class="calc-form" onsubmit="return false;">
+            
+            <div class="calc-grid">
+              
+              <!-- Left Column: Parameters Selection -->
+              <div class="calc-settings">
+                
+                <!-- Step 1: Yacht Selection -->
+                <div class="calc-group">
+                  <label class="calc-label" for="calc-yacht-select">
+                    <span class="step-num">1</span> Выберите яхту или класс судна:
+                  </label>
+                  <div class="custom-select-wrapper">
+                    <select id="calc-yacht-select" class="calc-select" aria-label="Выбор яхты">
+                      <option value="azur88" data-daily="4500" data-name="Azur 88 Riviera (27м)">Azur 88 Riviera (27м) — от €4 500 / сутки</option>
+                      <option value="sovereign115" data-daily="8900" data-name="Monaco Sovereign 115 (35м)" selected>Monaco Sovereign 115 (35м) — от €8 900 / сутки (Рекомендуем)</option>
+                      <option value="aegean140" data-daily="15500" data-name="Aegean Grand 140 (43м)">Aegean Grand 140 (43м) — от €15 500 / сутки</option>
+                      <option value="amalfi95" data-daily="6200" data-name="Amalfi Bella 95 (29м)">Amalfi Bella 95 (29м) — от €6 200 / сутки</option>
+                      <option value="ibizapearl78" data-daily="5100" data-name="Ibiza Pearl 78 (24м Катамаран)">Ibiza Pearl 78 (24м Катамаран) — от €5 100 / сутки</option>
+                      <option value="oceanic165" data-daily="28000" data-name="Sirena Oceanic 165 (50м Мегаяхта)">Sirena Oceanic 165 (50м Мегаяхта) — от €28 000 / сутки</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- Step 2: Route / Destination Selection -->
+                <div class="calc-group">
+                  <label class="calc-label" for="calc-route-select">
+                    <span class="step-num">2</span> Регион и маршрут круиза:
+                  </label>
+                  <div class="custom-select-wrapper">
+                    <select id="calc-route-select" class="calc-select" aria-label="Маршрут круиза">
+                      <option value="riviera" data-markup="1.0" data-name="Лазурный берег (Ницца — Монако — Сен-Тропе)" selected>
+                        Лазурный берег (Ницца — Монако — Сен-Тропе)
+                      </option>
+                      <option value="amalfi" data-markup="1.05" data-name="Амальфитанское побережье и Капри">
+                        Амальфитанское побережье и Капри (Италия)
+                      </option>
+                      <option value="cyclades" data-markup="1.08" data-name="Греческие острова Киклады (Миконос — Санторини)">
+                        Греческие острова Киклады (Миконос — Санторини)
+                      </option>
+                      <option value="balearics" data-markup="1.04" data-name="Балеарские острова (Ибица — Форментера — Майорка)">
+                        Балеарские острова (Ибица — Форментера — Майорка)
+                      </option>
+                      <option value="sardinia" data-markup="1.10" data-name="Сардиния и Корсика (Порто-Черво — Бонифачо)">
+                        Сардиния и Корсика (Порто-Черво — Бонифачо)
+                      </option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- Step 3: Charter Duration -->
+                <div class="calc-group">
+                  <label class="calc-label">
+                    <span class="step-num">3</span> Длительность чартера:
+                  </label>
+                  <div class="duration-buttons-grid" role="group" aria-label="Выбор длительности">
+                    <button type="button" class="duration-btn" data-days="1">1 день (Day Charter)</button>
+                    <button type="button" class="duration-btn" data-days="3">3 дня (Long Weekend)</button>
+                    <button type="button" class="duration-btn active" data-days="7">7 дней (1 неделя)</button>
+                    <button type="button" class="duration-btn" data-days="14">14 дней (2 недели)</button>
+                  </div>
+                  <input type="hidden" id="calc-duration-days" value="7">
+                </div>
+
+                <!-- Step 4: Premium VIP Options -->
+                <div class="calc-group">
+                  <label class="calc-label">
+                    <span class="step-num">4</span> Дополнительные VIP-сервисы:
+                  </label>
+                  <div class="vip-options-list">
+                    <label class="vip-option-card">
+                      <input type="checkbox" class="calc-vip-checkbox" data-cost="900" data-name="Шеф-повар со звездой Michelin" checked>
+                      <span class="option-check-indicator"></span>
+                      <div class="option-content">
+                        <span class="option-title">Персональный шеф-повар Michelin</span>
+                        <span class="option-price">+€900 / день</span>
+                      </div>
+                    </label>
+
+                    <label class="vip-option-card">
+                      <input type="checkbox" class="calc-vip-checkbox" data-cost="600" data-name="Пакет водных игрушек (2x Seabob F5S + eFoil)" checked>
+                      <span class="option-check-indicator"></span>
+                      <div class="option-content">
+                        <span class="option-title">Water Toys Pack (2x Seabob F5S + Fliteboard eFoil)</span>
+                        <span class="option-price">+€600 / день</span>
+                      </div>
+                    </label>
+
+                    <label class="vip-option-card">
+                      <input type="checkbox" class="calc-vip-checkbox" data-cost="2800" data-name="Вертолетный трансфер из Ниццы/Неаполя">
+                      <span class="option-check-indicator"></span>
+                      <div class="option-content">
+                        <span class="option-title">Вертолетный трансфер (Аэропорт → Марина)</span>
+                        <span class="option-price">+€2 800 (фикс)</span>
+                      </div>
+                    </label>
+
+                    <label class="vip-option-card">
+                      <input type="checkbox" class="calc-vip-checkbox" data-cost="750" data-name="Премиум-сомелье и винная коллекция">
+                      <span class="option-check-indicator"></span>
+                      <div class="option-content">
+                        <span class="option-title">Личный сомелье и дегустационный винный бар</span>
+                        <span class="option-price">+€750 / день</span>
+                      </div>
+                    </label>
+
+                    <label class="vip-option-card">
+                      <input type="checkbox" class="calc-vip-checkbox" data-cost="1500" data-name="Профессиональная аэросъемка 4K">
+                      <span class="option-check-indicator"></span>
+                      <div class="option-content">
+                        <span class="option-title">Оператор с дроном (памятный фильм 4K)</span>
+                        <span class="option-price">+€1 500 (фикс)</span>
+                      </div>
+                    </label>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Right Column: Live Price Summary & Breakdown -->
+              <div class="calc-summary">
+                <div class="summary-card">
+                  <div class="summary-card__header">
+                    <h3 class="summary-card__title">Детализация расчета</h3>
+                    <span class="currency-toggle-badge" id="rate-badge">Курс: 1 € ≈ 102 ₽</span>
+                  </div>
+
+                  <div class="summary-spec-list">
+                    <div class="summary-row">
+                      <span class="summary-label">Судно:</span>
+                      <span class="summary-value" id="summary-yacht-name">Monaco Sovereign 115</span>
+                    </div>
+                    <div class="summary-row">
+                      <span class="summary-label">Маршрут:</span>
+                      <span class="summary-value" id="summary-route-name">Лазурный берег</span>
+                    </div>
+                    <div class="summary-row">
+                      <span class="summary-label">Срок аренды:</span>
+                      <span class="summary-value" id="summary-duration-text">7 дней</span>
+                    </div>
+                    <div class="summary-row">
+                      <span class="summary-label">Базовая аренда яхты:</span>
+                      <span class="summary-value" id="summary-base-price">€62 300</span>
+                    </div>
+                    <div class="summary-row">
+                      <span class="summary-label">VIP-сервисы и опции:</span>
+                      <span class="summary-value" id="summary-options-price">€10 500</span>
+                    </div>
+                    <div class="summary-row">
+                      <span class="summary-label">Депозит APA (топливо, марины ~30%):</span>
+                      <span class="summary-value" id="summary-apa-deposit">€21 840</span>
+                    </div>
+                  </div>
+
+                  <hr class="summary-divider">
+
+                  <div class="summary-total-block">
+                    <div class="total-label">Итоговая стоимость чартера:</div>
+                    <div class="total-amount-eur" id="summary-total-eur">€94 640</div>
+                    <div class="total-amount-rub" id="summary-total-rub">≈ 9 653 280 ₽</div>
+                    <div class="total-note">*Включает полный экипаж, страховку Lloyd's, консьерж-сервис и НДС.</div>
+                  </div>
+
+                  <button type="button" class="btn btn--gold btn--full calc-booking-btn" id="calc-booking-btn">
+                    <span>Забронировать эту конфигурацию</span>
+                    <i class="fa-solid fa-file-signature"></i>
+                  </button>
+
+                  <div class="calc-guarantees">
+                    <div class="guarantee-item">
+                      <i class="fa-solid fa-lock"></i>
+                      <span>Фиксация цены в договоре MYBA</span>
+                    </div>
+                    <div class="guarantee-item">
+                      <i class="fa-solid fa-handshake"></i>
+                      <span>Оплата в рублях или евро, безналичный расчет</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         5. MEDITERRANEAN ROUTES SECTION
+         ========================================================================= -->
+    <section class="section routes-section" id="routes">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-label">Легендарные акватории</div>
+          <h2 class="section-title">Авторские маршруты круизов</h2>
+          <p class="section-subtitle">
+            Каждый маршрут составляется капитаном с учетом розы ветров, уединенных якорных стоянок и лучших прибрежных ресторанов Средиземноморья.
+          </p>
+        </div>
+
+        <div class="routes-grid">
+          
+          <!-- Route 1 -->
+          <article class="route-card">
+            <div class="route-card__img-box">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/route-riviera.jpg -->
+              <img 
+                src="https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=800&q=80" 
+                alt="Лазурный берег Монако Сен-Тропе" 
+                class="route-card__img"
+                loading="lazy"
+              >
+              <div class="route-tag">7 или 14 дней</div>
+            </div>
+            <div class="route-card__content">
+              <span class="route-country">Франция & Монако</span>
+              <h3 class="route-name">Французская Ривьера: Монако — Сен-Тропе</h3>
+              <p class="route-desc">
+                Порт Эркюль, стоянка у мыса Кап-д'Ай, легендарный залив Вильфранш, Каннские острова Лерин и пляжные вечеринки пляжа Пампелон.
+              </p>
+              <ul class="route-stops">
+                <li><i class="fa-solid fa-location-crosshairs"></i> Монако → Больё-сюр-Мер → Сен-Жан-Кап-Ферра → Канны → Сен-Тропе</li>
+              </ul>
+              <button type="button" class="btn btn--outline-gold route-order-btn" data-route="Лазурный берег (Французская Ривьера)">
+                Выбрать маршрут
+              </button>
+            </div>
+          </article>
+
+          <!-- Route 2 -->
+          <article class="route-card">
+            <div class="route-card__img-box">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/route-amalfi.jpg -->
+              <img 
+                src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=800&q=80" 
+                alt="Амальфитанское побережье и Капри" 
+                class="route-card__img"
+                loading="lazy"
+              >
+              <div class="route-tag">7 дней</div>
+            </div>
+            <div class="route-card__content">
+              <span class="route-country">Италия</span>
+              <h3 class="route-name">Амальфитана и Капри: Дольче Вита</h3>
+              <p class="route-desc">
+                Знаменитые скалы Фаральони, изумрудный грот, террасные сады Равелло, колоритный Неаполитанский залив и термы острова Искья.
+              </p>
+              <ul class="route-stops">
+                <li><i class="fa-solid fa-location-crosshairs"></i> Неаполь → Искья → Капри → Позитано → Амальфи → Равелло</li>
+              </ul>
+              <button type="button" class="btn btn--outline-gold route-order-btn" data-route="Амальфитанское побережье и Капри">
+                Выбрать маршрут
+              </button>
+            </div>
+          </article>
+
+          <!-- Route 3 -->
+          <article class="route-card">
+            <div class="route-card__img-box">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/route-cyclades.jpg -->
+              <img 
+                src="https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=800&q=80" 
+                alt="Греческие острова Киклады Санторини Миконос" 
+                class="route-card__img"
+                loading="lazy"
+              >
+              <div class="route-tag">7 или 10 дней</div>
+            </div>
+            <div class="route-card__content">
+              <span class="route-country">Греция</span>
+              <h3 class="route-name">Магия Эгеиды: Киклады и Санторини</h3>
+              <p class="route-desc">
+                Круиз среди беленых деревушек, закаты в кальдере Санторини, приватные пляжи Пароса и яркая ночная жизнь Миконоса.
+              </p>
+              <ul class="route-stops">
+                <li><i class="fa-solid fa-location-crosshairs"></i> Афины → Китнос → Миконос → Делос → Парос → Санторини</li>
+              </ul>
+              <button type="button" class="btn btn--outline-gold route-order-btn" data-route="Греческие острова Киклады">
+                Выбрать маршрут
+              </button>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         6. SERVICE, CREW & VIP STANDARDS
+         ========================================================================= -->
+    <section class="section service-section" id="service">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-label">Безупречность в деталях</div>
+          <h2 class="section-title">Сервис семизвездочного отеля на волнах</h2>
+          <p class="section-subtitle">
+            Каждая секунда на борту подчинена вашим желаниям. Наш экипаж предугадывает потребности, оставаясь абсолютно ненавязчивым.
+          </p>
+        </div>
+
+        <div class="service-cards-grid">
+          
+          <div class="service-pillar-card">
+            <div class="pillar-icon-box"><i class="fa-solid fa-champagne-glasses"></i></div>
+            <h3 class="pillar-title">Мишленовская гастрономия</h3>
+            <p class="pillar-text">
+              За 2 недели до отплытия мы формируем индивидуальный гастрономический бриф: предпочтения по диете, винная карта Grand Cru, поставка свежайших устриц и трюфелей в каждый порт.
+            </p>
+          </div>
+
+          <div class="service-pillar-card">
+            <div class="pillar-icon-box"><i class="fa-solid fa-user-tie"></i></div>
+            <h3 class="pillar-title">Офицерский экипаж MCA</h3>
+            <p class="pillar-text">
+              Все капитаны, старпомы и стюарды сертифицированы британским морским агентством MCA и STCW. Экипаж говорит на русском, английском и французском языках.
+            </p>
+          </div>
+
+          <div class="service-pillar-card">
+            <div class="pillar-icon-box"><i class="fa-solid fa-key"></i></div>
+            <h3 class="pillar-title">Абсолютная приватность</h3>
+            <p class="pillar-text">
+              Строгие соглашения о неразглашении (NDA). Никаких фото в соцсетях экипажа. Закрытые бухты без посторонних взглядов и доступ к эксклюзивным закрытым клубам.
+            </p>
+          </div>
+
+          <div class="service-pillar-card">
+            <div class="pillar-icon-box"><i class="fa-solid fa-water"></i></div>
+            <h3 class="pillar-title">Водные развлечения Water Toys</h3>
+            <p class="pillar-text">
+              На борту каждой яхты: Seabob F5S, Fliteboard eFoil, мощные гидроциклы Yamaha/Sea-Doo, сапборды, оборудование для снорклинга и сертифицированный дайвинг-инструктор.
+            </p>
+          </div>
+
+          <div class="service-pillar-card">
+            <div class="pillar-icon-box"><i class="fa-solid fa-helicopter"></i></div>
+            <h3 class="pillar-title">VIP-логистика & Авиация</h3>
+            <p class="pillar-text">
+              Организация перелета на частных джетах до Ниццы, Ольбии или Афин. Вертолетная доставка гостей прямо на борт яхты или в ближайшую марину без пробок.
+            </p>
+          </div>
+
+          <div class="service-pillar-card">
+            <div class="pillar-icon-box"><i class="fa-solid fa-satellite-dish"></i></div>
+            <h3 class="pillar-title">Связь Starlink Maritime</h3>
+            <p class="pillar-text">
+              Высокоскоростной спутниковый интернет на протяжении всего круиза. Проводите видеоконференции в 4K и управляйте бизнесом из любой точки Средиземного моря.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         7. GALLERY OF ATMOSPHERE (Masonry High-Res Imagery)
+         ========================================================================= -->
+    <section class="section gallery-section" id="gallery">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-label">Фотохроника круизов</div>
+          <h2 class="section-title">Атмосфера Средиземноморской Ривьеры</h2>
+          <p class="section-subtitle">
+            Почувствуйте вкус морской соли, тепло золотого заката на сандеке и шум лазурного прибоя.
+          </p>
+        </div>
+
+        <div class="gallery-grid">
+          
+          <!-- Image 1: Big Feature (Sunset yacht) -->
+          <div class="gallery-item gallery-item--large">
+            <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/gallery-sunset-deck.jpg -->
+            <img 
+              src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=1200&q=80" 
+              alt="Закат на флайбридже яхты" 
+              class="gallery-img"
+              loading="lazy"
+            >
+            <div class="gallery-overlay">
+              <span class="gallery-tag">Сандек & Закат</span>
+              <h4 class="gallery-caption">Ужин при свечах в заливе Сен-Тропе</h4>
+            </div>
+          </div>
+
+          <!-- Image 2: Interior Stateroom -->
+          <div class="gallery-item">
+            <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/gallery-cabin.jpg -->
+            <img 
+              src="https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=800&q=80" 
+              alt="Мастер-каюта суперяхты" 
+              class="gallery-img"
+              loading="lazy"
+            >
+            <div class="gallery-overlay">
+              <span class="gallery-tag">Интерьер</span>
+              <h4 class="gallery-caption">Мастер-сьют с панорамным остеклением</h4>
+            </div>
+          </div>
+
+          <!-- Image 3: Sea & Water Sports -->
+          <div class="gallery-item">
+            <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/gallery-water-cove.jpg -->
+            <img 
+              src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=800&q=80" 
+              alt="Якорная стоянка в бирюзовой бухте" 
+              class="gallery-img"
+              loading="lazy"
+            >
+            <div class="gallery-overlay">
+              <span class="gallery-tag">Лагуны</span>
+              <h4 class="gallery-caption">Приватная бухта у берегов Форментеры</h4>
+            </div>
+          </div>
+
+          <!-- Image 4: Gastronomy -->
+          <div class="gallery-item">
+            <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/gallery-dining.jpg -->
+            <img 
+              src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" 
+              alt="Мишленовская сервировка стола на яхте" 
+              class="gallery-img"
+              loading="lazy"
+            >
+            <div class="gallery-overlay">
+              <span class="gallery-tag">Haute Cuisine</span>
+              <h4 class="gallery-caption">Средиземноморские морепродукты от шефа</h4>
+            </div>
+          </div>
+
+          <!-- Image 5: Relaxation & Spa -->
+          <div class="gallery-item gallery-item--wide">
+            <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/gallery-relaxation.jpg -->
+            <img 
+              src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=80" 
+              alt="Релаксация на яхтенном спа-лаунже" 
+              class="gallery-img"
+              loading="lazy"
+            >
+            <div class="gallery-overlay">
+              <span class="gallery-tag">Wellness</span>
+              <h4 class="gallery-caption">Утренняя йога на носовой палубе в открытом море</h4>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         8. TESTIMONIALS / CLIENT FEEDBACK
+         ========================================================================= -->
+    <section class="section testimonials-section" id="testimonials">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-label">Доверие первых лиц</div>
+          <h2 class="section-title">Истории гостей AZUR Nautica</h2>
+          <p class="section-subtitle">
+            Мы гордимся тем, что 82% наших гостей возвращаются к нам в следующем сезоне и рекомендуют AZUR Nautica своим партнерам.
+          </p>
+        </div>
+
+        <div class="testimonials-grid">
+          
+          <div class="testimonial-card">
+            <div class="testimonial-rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testimonial-quote">
+              «Бронировали Monaco Sovereign 115 на 10 дней для семейного круиза по Амальфитане и Капри. Уровень шеф-повара превзошел ожидания — каждый обед был шедевром. Капитан виртуозно швартовался в труднодоступных бухтах, где не было ни одной посторонней лодки. Исключительный сервис!»
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar"><i class="fa-solid fa-user"></i></div>
+              <div class="author-info">
+                <span class="author-name">Дмитрий В.</span>
+                <span class="author-meta">Владелец IT-холдинга • Чартер Monaco Sovereign 115</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testimonial-quote">
+              «Проводили стратегическую сессию совета директоров на мегаяхте Aegean Grand 140 в Греции. Спутниковый интернет работал безукоризненно даже на переходах между островами. Конфиденциальность, трансфер на вертолете из Афин — всё организовано без малейшей заминки.»
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar"><i class="fa-solid fa-user"></i></div>
+              <div class="author-info">
+                <span class="author-name">Елена Смирнова</span>
+                <span class="author-meta">Управляющий партнер фонда • Чартер Aegean Grand 140</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testimonial-quote">
+              «Отмечали годовщину свадьбы на катамаране Ibiza Pearl 78. Огромное спасибо команде за организацию салюта с воды и музыкального сопровождения на закате. Это был один из самых романтичных и ярких моментов в нашей жизни.»
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar"><i class="fa-solid fa-user"></i></div>
+              <div class="author-info">
+                <span class="author-name">Артем и Кристина</span>
+                <span class="author-meta">Предприниматели • Чартер Ibiza Pearl 78</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         9. FAQ SECTION (Accordion)
+         ========================================================================= -->
+    <section class="section faq-section" id="faq">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-label">Часто задаваемые вопросы</div>
+          <h2 class="section-title">Всё, что важно знать о чартере</h2>
+          <p class="section-subtitle">
+            Мы придерживаемся прозрачных международных правил аренды яхт по типовым контрактам MYBA (Mediterranean Yacht Brokers Association).
+          </p>
+        </div>
+
+        <div class="faq-accordion" id="faq-accordion" role="region" aria-label="FAQ список">
+          
+          <!-- Item 1 -->
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="true">
+              <span class="faq-question">Что входит в базовую стоимость чартера (Charter Rate)?</span>
+              <span class="faq-chevron"><i class="fa-solid fa-chevron-down"></i></span>
+            </button>
+            <div class="faq-panel show">
+              <div class="faq-panel__content">
+                В базовую стоимость аренды входит: аренда самой яхты со всем судовым оборудованием, услуги профессионального капитана и штатного экипажа (стюарды, матросы, шеф-повар), постельное белье и банные принадлежности премиальных брендов, полная морская страховка корпуса и гражданской ответственности (P&I Club), а также круглосуточная поддержка персонального чартерного менеджера. Топливо, питание и портовые сборы оплачиваются отдельно через депозит APA.
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false">
+              <span class="faq-question">Что такое депозит APA (Advance Provisioning Allowance) и как он рассчитывается?</span>
+              <span class="faq-chevron"><i class="fa-solid fa-chevron-down"></i></span>
+            </button>
+            <div class="faq-panel">
+              <div class="faq-panel__content">
+                APA (Advance Provisioning Allowance) — общепринятый в мировой морской индустрии депозит на текущие расходы во время круиза. Обычно он составляет от 25% до 35% от базовой стоимости чартера. Из этих средств капитан оплачивает топливо для яхты и тендеров, швартовку в маринах по маршруту, закупку продуктов и напитков по вашему гастрономическому брифу, а также спецзапросы (аренда спорткаров, билеты). В конце чартера капитан предоставляет подробный бухгалтерский отчет с чеками: неизрасходованный остаток возвращается вам в полном объеме наличными или на счет.
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false">
+              <span class="faq-question">Какие документы и визы необходимы для гостей?</span>
+              <span class="faq-chevron"><i class="fa-solid fa-chevron-down"></i></span>
+            </button>
+            <div class="faq-panel">
+              <div class="faq-panel__content">
+                Для круизов по Средиземному морю (Франция, Италия, Греция, Испания) всем гостям необходим действующий загранпаспорт со сроком действия не менее 3 месяцев после окончания поездки и действующая шенгенская виза (или ВНЖ/паспорт ЕС). Никаких специальных морских лицензий для гостей не требуется — управление судном полностью осуществляет лицензированный капитан. Мы также оказываем содействие в оформлении судовой роли (Crew List / Passenger Manifest) для ускоренного прохождения морской границы.
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false">
+              <span class="faq-question">Можно ли скорректировать маршрут прямо во время круиза?</span>
+              <span class="faq-chevron"><i class="fa-solid fa-chevron-down"></i></span>
+            </button>
+            <div class="faq-panel">
+              <div class="faq-panel__content">
+                Да, абсолютная гибкость — главное преимущество чартера. Если вам понравилась тихая бухта на Корсике или вы захотите остаться подольше на Сен-Тропе, капитан адаптирует план переходов. Единственными естественными ограничениями служат погодные условия (штормовые предупреждения в интересах вашей безопасности) и наличие свободных мест в топовых маринах в пик сезона (июль-август), о бронировании которых заботится наш консьерж.
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 5 -->
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false">
+              <span class="faq-question">За сколько месяцев необходимо бронировать яхту в высокий сезон?</span>
+              <span class="faq-chevron"><i class="fa-solid fa-chevron-down"></i></span>
+            </button>
+            <div class="faq-panel">
+              <div class="faq-panel__content">
+                Для круизов в пиковый сезон (с июня по сентябрь) мы настоятельно рекомендуем начинать подбор и бронирование за 3–6 месяцев. Лучшие суперяхты и удобные недели бронируются уже в январе-марте. Тем не менее, благодаря нашему партнерскому пулу и собственному флоту, мы регулярно находим эксклюзивные «горящие» слоты и для срочных спонтанных запросов за 7–10 дней до выхода в море.
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 6 -->
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false">
+              <span class="faq-question">Как обеспечивается конфиденциальность и безопасность пассажиров?</span>
+              <span class="faq-chevron"><i class="fa-solid fa-chevron-down"></i></span>
+            </button>
+            <div class="faq-panel">
+              <div class="faq-panel__content">
+                Мы неукоснительно соблюдаем режим конфиденциальности. Со всеми членами экипажа и брокерами подписывается жесткое соглашение NDA с крупными финансовыми штрафами за разглашение любой информации, списка гостей или съемку на борту. При необходимости предоставляется вооруженное морское сопровождение, защищенная спутниковая телефония и организация посадки через приватные терминалы аэропортов без взаимодействия с общей публикой.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         10. CONTACTS & YANDEX MAP SECTION
+         ========================================================================= -->
+    <section class="section contacts-section" id="contacts">
+      <div class="container">
+        <div class="contacts-grid">
+          
+          <!-- Left Column: Consultation & Lead Capture Form -->
+          <div class="contacts-form-box">
+            <div class="section-label">Свяжитесь с брокером</div>
+            <h2 class="section-title">Персональный подбор круиза</h2>
+            <p class="contacts-desc">
+              Оставьте заявку — наш ведущий чартерный консультант подготовит расширенное предложение с каталогом доступных яхт, расчетом APA и вариантами маршрутов в течение 30 минут.
+            </p>
+
+            <form id="lead-consultation-form" class="lead-form" novalidate>
+              <div class="form-group">
+                <label for="lead-name" class="form-label">Ваше имя *</label>
+                <div class="input-with-icon">
+                  <i class="fa-regular fa-user"></i>
+                  <input type="text" id="lead-name" name="name" class="form-input" placeholder="Константин" required autocomplete="name">
+                </div>
+                <div class="field-error" id="lead-name-error"></div>
+              </div>
+
+              <div class="form-group">
+                <label for="lead-phone" class="form-label">Контактный телефон *</label>
+                <div class="input-with-icon">
+                  <i class="fa-solid fa-phone"></i>
+                  <input type="tel" id="lead-phone" name="phone" class="form-input phone-mask-input" placeholder="+7 (___) ___-__-__" required autocomplete="tel">
+                </div>
+                <div class="field-error" id="lead-phone-error"></div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="lead-destination" class="form-label">Интересующий регион</label>
+                  <select id="lead-destination" name="destination" class="form-select">
+                    <option value="Французская Ривьера & Монако">Французская Ривьера & Монако</option>
+                    <option value="Амальфитанское побережье (Италия)">Амальфитана & Капри (Италия)</option>
+                    <option value="Греческие острова Киклады">Греческие острова Киклады</option>
+                    <option value="Балеарские острова (Ибица/Майорка)">Балеары (Ибица / Майорка)</option>
+                    <option value="Индивидуальный маршрут">Индивидуальный маршрут</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="lead-dates" class="form-label">Планируемый месяц / даты</label>
+                  <input type="text" id="lead-dates" name="dates" class="form-input" placeholder="Июль 2026, 7-10 дней">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="lead-comment" class="form-label">Пожелания по судну и составу гостей</label>
+                <textarea id="lead-comment" name="comment" class="form-textarea" rows="3" placeholder="Например: 8 гостей (из них 2 детей), интересна яхта от 30 метров с джакузи на сандеке и шеф-поваром..."></textarea>
+              </div>
+
+              <div class="form-agreement">
+                <label class="custom-checkbox-label">
+                  <input type="checkbox" id="lead-agreement" name="agreement" checked required>
+                  <span class="custom-checkbox"></span>
+                  <span class="checkbox-text">Я согласен на обработку персональных данных и соблюдение условий конфиденциальности.</span>
+                </label>
+                <div class="field-error" id="lead-agreement-error"></div>
+              </div>
+
+              <button type="submit" class="btn btn--gold btn--full form-submit-btn" id="lead-submit-btn">
+                <span class="btn-text-content">Получить персональное предложение</span>
+                <span class="btn-loading-spinner" style="display: none;"><i class="fa-solid fa-spinner fa-spin"></i> Отправка...</span>
+                <i class="fa-solid fa-paper-plane"></i>
+              </button>
+            </form>
+
+            <div class="form-success-message" id="form-success-banner" style="display: none;">
+              <div class="success-icon"><i class="fa-solid fa-circle-check"></i></div>
+              <h4 class="success-title">Заявка успешно принята!</h4>
+              <p class="success-desc">
+                Благодарим вас за обращение в AZUR Nautica. Наш старший чартерный брокер уже готовит персональный бриф и свяжется с вами по указанному номеру в течение 15 минут.
+              </p>
+            </div>
+          </div>
+
+          <!-- Right Column: Corporate Contacts & Yandex Map -->
+          <div class="contacts-info-box">
+            <div class="contacts-details-card">
+              <h3 class="contacts-card-title">Флагманский офис в Москве</h3>
+              
+              <ul class="contacts-list">
+                <li class="contacts-item">
+                  <div class="item-icon"><i class="fa-solid fa-building"></i></div>
+                  <div class="item-content">
+                    <span class="item-label">Адрес:</span>
+                    <span class="item-value" id="card-address">Москва, Пресненская наб., 12, Башня Федерация Восток, 38 этаж</span>
+                  </div>
+                </li>
+
+                <li class="contacts-item">
+                  <div class="item-icon"><i class="fa-solid fa-phone"></i></div>
+                  <div class="item-content">
+                    <span class="item-label">Телефон чартерного отдела:</span>
+                    <a href="tel:+74958224570" class="item-link" id="card-phone">+7 (495) 822-45-70</a>
+                  </div>
+                </li>
+
+                <li class="contacts-item">
+                  <div class="item-icon"><i class="fa-regular fa-envelope"></i></div>
+                  <div class="item-content">
+                    <span class="item-label">Электронная почта:</span>
+                    <a href="mailto:charter@azur-nautica.com" class="item-link" id="card-email">charter@azur-nautica.com</a>
+                  </div>
+                </li>
+
+                <li class="contacts-item">
+                  <div class="item-icon"><i class="fa-regular fa-clock"></i></div>
+                  <div class="item-content">
+                    <span class="item-label">Часы работы офиса:</span>
+                    <span class="item-value" id="card-schedule">Ежедневно: 09:00 — 21:00 (МСК)</span>
+                    <span class="item-sub">Служба круглосуточной консьерж-поддержки на воде: 24/7/365</span>
+                  </div>
+                </li>
+              </ul>
+
+              <div class="office-locations-chips">
+                <span class="location-chip"><i class="fa-solid fa-anchor"></i> Монако: Port Hercule</span>
+                <span class="location-chip"><i class="fa-solid fa-anchor"></i> Канны: Port Canto</span>
+                <span class="location-chip"><i class="fa-solid fa-anchor"></i> Афины: Flisvos Marina</span>
+              </div>
+            </div>
+
+            <!-- Interactive Yandex Map Container -->
+            <div class="map-wrapper">
+              <div class="map-header">
+                <span class="map-header__title"><i class="fa-solid fa-map-location-dot"></i> Интерактивная карта</span>
+                <a 
+                  href="https://yandex.ru/maps/?pt=37.538914,55.748312&z=16&l=map" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  class="map-external-link"
+                  id="map-fallback-link"
+                >
+                  Открыть в Яндекс.Картах <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
+              <div id="yandex-map" class="yandex-map-container" style="width: 100%; height: 320px;" aria-label="Яндекс Карта офиса AZUR Nautica">
+                <!-- Fallback container while map loads or if offline -->
+                <div class="map-fallback" id="map-fallback-box">
+                  <i class="fa-solid fa-compass fa-spin-pulse"></i>
+                  <p>Загрузка карты AZUR Nautica...</p>
+                  <small>Координаты: 55.748312, 37.538914 (Москва-Сити)</small>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================================
+       FOOTER
+       ========================================================= -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-top">
+        
+        <div class="footer-col footer-col--brand">
+          <a href="#hero" class="brand-logo footer-logo">
+            <div class="brand-logo__crest">
+              <svg viewBox="0 0 40 40" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="20" cy="20" r="18" stroke="#E2B755" stroke-width="1.5"/>
+                <path d="M20 5 L23 16 L35 20 L23 24 L20 35 L17 24 L5 20 L17 16 Z" fill="#E2B755"/>
+                <circle cx="20" cy="20" r="3.5" fill="#38BDF8"/>
+              </svg>
+            </div>
+            <div class="brand-logo__text">
+              <span class="brand-name">AZUR NAUTICA</span>
+              <span class="brand-tagline">Mediterranean Yacht Charter</span>
+            </div>
+          </a>
+          <p class="footer-desc">
+            Премиальный чартер моторных суперяхт и катамаранов на лучших средиземноморских побережьях. Международные стандарты MYBA, сертифицированный экипаж и консьерж-сервис 24/7.
+          </p>
+          <div class="footer-socials">
+            <a href="https://t.me/" target="_blank" rel="noopener noreferrer" class="social-circle" aria-label="Telegram" id="footer-tg-link">
+              <i class="fa-brands fa-telegram"></i>
+            </a>
+            <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" class="social-circle" aria-label="WhatsApp" id="footer-wa-link">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a href="https://youtube.com/" target="_blank" rel="noopener noreferrer" class="social-circle" aria-label="YouTube" id="footer-yt-link">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+            <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" class="social-circle" aria-label="Instagram" id="footer-inst-link">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Флот & Акватории</h4>
+          <ul class="footer-links">
+            <li><a href="#fleet">Моторные суперяхты</a></li>
+            <li><a href="#fleet">Мегаяхты от 40 метров</a></li>
+            <li><a href="#fleet">Парусные катамараны</a></li>
+            <li><a href="#routes">Лазурный берег Франции</a></li>
+            <li><a href="#routes">Амальфитана и Капри</a></li>
+            <li><a href="#routes">Греческие острова Киклады</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Информация</h4>
+          <ul class="footer-links">
+            <li><a href="#about">О компании AZUR Nautica</a></li>
+            <li><a href="#calculator">Калькулятор стоимости</a></li>
+            <li><a href="#service">Стандарты сервиса и экипажа</a></li>
+            <li><a href="#faq">Правила чартера и APA</a></li>
+            <li><a href="#testimonials">Отзывы клиентов</a></li>
+            <li><a href="#contacts">Контакты и марины</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col footer-col--contacts">
+          <h4 class="footer-heading">Связь с нами</h4>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <a href="tel:+74958224570" id="footer-phone">+7 (495) 822-45-70</a>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-regular fa-envelope"></i>
+            <a href="mailto:charter@azur-nautica.com" id="footer-email">charter@azur-nautica.com</a>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <span id="footer-address">Москва, Пресненская наб., 12, Башня Федерация</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-regular fa-clock"></i>
+            <span id="footer-schedule">09:00 — 21:00 (МСК)</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-copy">
+          &copy; <span id="current-year">2026</span> <strong id="footer-brand-copy">AZUR Nautica LLC</strong>. Все права защищены. Люксовый чартер суперяхт.
+        </div>
+        <div class="footer-legal">
+          <a href="#" class="legal-link" id="legal-privacy">Политика конфиденциальности</a>
+          <span class="legal-sep">•</span>
+          <a href="#" class="legal-link" id="legal-terms">Условия бронирования MYBA</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       MODAL: LEAD CAPTURE & BOOKING DIALOG
+       ========================================================================= -->
+  <div class="modal-backdrop" id="booking-modal-backdrop" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-dialog">
+      <button type="button" class="modal-close-btn" id="modal-close-btn" aria-label="Закрыть модальное окно">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="modal-header">
+        <div class="modal-crest">
+          <i class="fa-solid fa-anchor"></i>
+        </div>
+        <h3 class="modal-title" id="modal-title-text">Бронирование чартера</h3>
+        <p class="modal-subtitle" id="modal-subtitle-text">
+          Заполните форму, и наш персональный чартерный менеджер подготовит официальный контракт MYBA и забронирует судно.
+        </p>
+      </div>
+
+      <form id="modal-booking-form" class="modal-form" novalidate>
+        
+        <!-- Pre-selected yacht summary if triggered from card/calculator -->
+        <div class="modal-prefill-box" id="modal-prefill-box" style="display: none;">
+          <span class="prefill-label">Выбранное судно:</span>
+          <span class="prefill-value" id="modal-prefill-yacht">Monaco Sovereign 115</span>
+        </div>
+
+        <input type="hidden" id="modal-hidden-yacht" name="selected_yacht" value="">
+        <input type="hidden" id="modal-hidden-config" name="calc_config" value="">
+
+        <div class="form-group">
+          <label for="modal-name" class="form-label">Ваше имя и фамилия *</label>
+          <div class="input-with-icon">
+            <i class="fa-regular fa-user"></i>
+            <input type="text" id="modal-name" name="name" class="form-input" placeholder="Александр Романов" required autocomplete="name">
+          </div>
+          <div class="field-error" id="modal-name-error"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="modal-phone" class="form-label">Номер телефона *</label>
+          <div class="input-with-icon">
+            <i class="fa-solid fa-phone"></i>
+            <input type="tel" id="modal-phone" name="phone" class="form-input phone-mask-input" placeholder="+7 (___) ___-__-__" required autocomplete="tel">
+          </div>
+          <div class="field-error" id="modal-phone-error"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="modal-email" class="form-label">Email для отправки презентации и расчета *</label>
+          <div class="input-with-icon">
+            <i class="fa-regular fa-envelope"></i>
+            <input type="email" id="modal-email" name="email" class="form-input" placeholder="client@luxury.ru" required autocomplete="email">
+          </div>
+          <div class="field-error" id="modal-email-error"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="modal-dates" class="form-label">Желаемые даты чартера</label>
+          <input type="text" id="modal-dates" name="charter_dates" class="form-input" placeholder="Например: 15–22 июля 2026">
+        </div>
+
+        <div class="form-group">
+          <label for="modal-notes" class="form-label">Особые пожелания (кейтеринг, трансфер, гости)</label>
+          <textarea id="modal-notes" name="notes" class="form-textarea" rows="2" placeholder="Укажите количество гостей, маршрут или дополнительные опции..."></textarea>
+        </div>
+
+        <div class="form-agreement">
+          <label class="custom-checkbox-label">
+            <input type="checkbox" id="modal-agreement" name="agreement" checked required>
+            <span class="custom-checkbox"></span>
+            <span class="checkbox-text">Я согласен на обработку персональных данных и условия конфиденциальности.</span>
+          </label>
+          <div class="field-error" id="modal-agreement-error"></div>
+        </div>
+
+        <button type="submit" class="btn btn--gold btn--full modal-submit-btn" id="modal-submit-btn">
+          <span class="btn-text-content">Отправить запрос на бронирование</span>
+          <span class="btn-loading-spinner" style="display: none;"><i class="fa-solid fa-spinner fa-spin"></i> Обработка...</span>
+          <i class="fa-solid fa-check"></i>
+        </button>
+
+      </form>
+
+      <!-- Modal Success State -->
+      <div class="modal-success-box" id="modal-success-box" style="display: none;">
+        <div class="success-icon"><i class="fa-solid fa-circle-check"></i></div>
+        <h4 class="success-title">Запрос успешно отправлен!</h4>
+        <p class="success-desc">
+          Спасибо за выбор AZUR Nautica. Мы закрепили за вами выбранную конфигурацию чартера. Чартерный брокер свяжется с вами в течение 15 минут для подтверждения доступности яхты и согласования деталей контракта.
+        </p>
+        <button type="button" class="btn btn--gold-outline modal-close-success-btn" id="modal-close-success-btn">
+          Понятно, спасибо
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+  <!-- Main JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>

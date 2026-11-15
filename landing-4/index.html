@@ -1,0 +1,1906 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Аура Дент | Премиальная семейная стоматология и имплантация в Москве</title>
+  <meta name="description" content="Премиальная стоматология и цифровая имплантология в центре Москвы. Швейцарские протоколы Straumann и Nobel Biocare, лечение зубов во сне, микроскопы Carl Zeiss. Запишитесь на 3D-диагностику!">
+  <meta name="keywords" content="стоматология москва, имплантация зубов тверская, all-on-4 москва, виниры e-max, лечение зубов во сне, детская стоматология, аура дент">
+  
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Аура Дент | Стоматология и имплантология премиум-класса">
+  <meta property="og:description" content="Швейцарские протоколы имплантации, лечение во сне без боли и стресса. Бесплатная 3D-диагностика на первом приеме.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=80">
+
+  <!-- Favicon (SVG Aura Dental Emblem) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23139A8C' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 2C7 2 5 5 5 9c0 4 2 6 2 11 0 1.5 1 2 2 2s2-1 2-3c0-1.5 1-2 2-2s2 .5 2 2c0 2 1 3 2 3s2-.5 2-2c0-5 2-7 2-11 0-4-2-7-7-7z'%3E%3C/path%3E%3C/svg%3E">
+
+  <!-- Google Fonts: Lexend & Manrope -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Yandex Maps API v2.1 -->
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+</head>
+<body>
+
+  <!-- ========================================================================
+       TOP NOTIFICATION & STATUS BAR
+       ======================================================================== -->
+  <aside class="topbar" aria-label="Информационная полоса">
+    <div class="container topbar-content">
+      <div class="topbar-left">
+        <!-- Live Working Hours Status -->
+        <div class="live-status" id="live-hours-status" title="Статус работы клиники">
+          <span class="live-pulse" aria-hidden="true"></span>
+          <span class="live-status-text">Проверка статуса...</span>
+        </div>
+        <div class="topbar-item" title="Адрес клиники">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
+          <span data-config="address">г. Москва, Малый Гнездниковский пер., д. 9, стр. 2</span>
+        </div>
+        <div class="topbar-item" title="Ближайшая станция метро">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="2" y="4" width="20" height="14" rx="2"></rect>
+            <path d="M6 18h12"></path>
+            <path d="M8 22l2-4"></path>
+            <path d="M16 22l-2-4"></path>
+          </svg>
+          <span data-config="metro">м. Тверская / Пушкинская (3 мин)</span>
+        </div>
+      </div>
+      <div class="topbar-right">
+        <div class="topbar-item">
+          <span>Режим работы:</span>
+          <strong data-config="schedule-weekdays">Пн-Пт 09:00 - 21:00</strong>
+        </div>
+        <div class="social-links-small" aria-label="Мессенджеры клиники">
+          <a href="#" class="social-link-item" data-config="whatsapp" target="_blank" rel="noopener noreferrer" title="Написать в WhatsApp">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.669-.699c.968.54 1.838.82 2.791.82 3.185 0 5.771-2.587 5.772-5.766.001-3.187-2.575-5.77-5.772-5.77zm0 10.373c-.854 0-1.63-.25-2.279-.699l-.163-.109-1.579.414.421-1.539-.107-.171a4.675 4.675 0 0 1-.722-2.502c.001-2.584 2.103-4.686 4.687-4.686 2.586 0 4.689 2.102 4.689 4.686 0 2.587-2.102 4.687-4.689 4.687z"/>
+            </svg>
+          </a>
+          <a href="#" class="social-link-item" data-config="telegram" target="_blank" rel="noopener noreferrer" title="Написать в Telegram">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 0 0-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ========================================================================
+       STICKY HEADER & NAVIGATION
+       ======================================================================== -->
+  <header class="header">
+    <div class="container nav-container">
+      <!-- Logo -->
+      <a href="#" class="logo" title="Аура Дент — Главная">
+        <div class="logo-symbol" aria-hidden="true">
+          <!-- Stylized Medical Tooth SVG with Serene Aura Ring -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2C7 2 5 5 5 9c0 4 2 6 2 11 0 1.5 1 2 2 2s2-1 2-3c0-1.5 1-2 2-2s2 .5 2 2c0 2 1 3 2 3s2-.5 2-2c0-5 2-7 2-11 0-4-2-7-7-7z"></path>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span class="logo-title">АУРА <span>ДЕНТ</span></span>
+          <span class="logo-desc">Семейная стоматология & имплантация</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu" aria-label="Основная навигация">
+        <a href="#services" class="nav-link">Услуги</a>
+        <a href="#quiz" class="nav-link">Квиз-тест</a>
+        <a href="#booking" class="nav-link">Запись</a>
+        <a href="#cases" class="nav-link">До / После</a>
+        <a href="#doctors" class="nav-link">Врачи</a>
+        <a href="#pricing" class="nav-link">Цены</a>
+        <a href="#reviews" class="nav-link">Отзывы</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+        <a href="#contacts" class="nav-link">Контакты</a>
+      </nav>
+
+      <!-- Header Actions: Phone & Book Button -->
+      <div class="header-actions">
+        <a href="tel:+74958452140" class="header-phone" data-config="phone-link" title="Позвонить в клинику">
+          <span class="header-phone-number" data-config="phone">+7 (495) 845-21-40</span>
+          <span class="header-phone-label">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+            Звонок бесплатный
+          </span>
+        </a>
+        <button type="button" class="btn btn--primary btn--sm" data-open-modal data-service="Первичный прием и 3D-КТ">
+          <span>Записаться</span>
+          <svg class="btn-icon btn-icon--arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </button>
+        <!-- Mobile Burger Button -->
+        <button type="button" class="burger-btn" aria-label="Открыть мобильное меню">
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Drawer -->
+  <div class="drawer-overlay" aria-hidden="true"></div>
+  <aside class="mobile-drawer" aria-label="Мобильное меню">
+    <div class="drawer-nav">
+      <a href="#services" class="drawer-link">Услуги клиники</a>
+      <a href="#quiz" class="drawer-link">Экспресс-тест улыбки</a>
+      <a href="#booking" class="drawer-link">Онлайн-запись к врачу</a>
+      <a href="#cases" class="drawer-link">Результаты До / После</a>
+      <a href="#doctors" class="drawer-link">Наши врачи</a>
+      <a href="#pricing" class="drawer-link">Прайс-лист</a>
+      <a href="#reviews" class="drawer-link">Отзывы пациентов</a>
+      <a href="#faq" class="drawer-link">Вопросы и ответы</a>
+      <a href="#contacts" class="drawer-link">Контакты и проезд</a>
+    </div>
+    <div class="drawer-contacts">
+      <div class="live-status">
+        <span class="live-pulse" aria-hidden="true"></span>
+        <span class="live-status-text">Открыто сейчас</span>
+      </div>
+      <a href="tel:+74958452140" class="btn btn--navy btn--block" data-config="phone-link">
+        <span data-config="phone">+7 (495) 845-21-40</span>
+      </a>
+      <button type="button" class="btn btn--primary btn--block" data-open-modal>
+        Записаться на прием
+      </button>
+    </div>
+  </aside>
+
+  <main>
+    <!-- ======================================================================
+         HERO SECTION
+         ====================================================================== -->
+    <section class="hero" aria-label="Главный экран">
+      <div class="hero-bg-accent" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <!-- Hero Text Content -->
+        <div class="hero-content">
+          <div class="hero-badge-pill">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+            <span>Премиальная цифровая стоматология в центре Москвы</span>
+          </div>
+
+          <h1 class="hero-title">
+            Безупречная улыбка и <span class="accent-gradient">имплантация без боли</span> по швейцарским протоколам
+          </h1>
+
+          <p class="hero-description">
+            Восстановление зубов за 1 день по технологии All-on-4 и All-on-6 с пожизненной гарантией. Компьютерная 3D-томография и консультация главврача — в подарок при записи на этой неделе.
+          </p>
+
+          <div class="hero-actions">
+            <button type="button" class="btn btn--primary btn--lg" data-open-modal data-service="Первичный осмотр и 3D-КТ">
+              <span>Записаться на прием</span>
+              <svg class="btn-icon btn-icon--arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </button>
+            <a href="#quiz" class="btn btn--outline btn--lg">
+              <span>Рассчитать стоимость</span>
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="8" x2="12" y2="12"></line>
+                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Hero Key Statistics -->
+          <div class="hero-stats" role="region" aria-label="Ключевые показатели клиники">
+            <div class="hero-stat-item">
+              <div class="hero-stat-number">14<span>+</span></div>
+              <div class="hero-stat-label">лет безупречной клинической практики</div>
+            </div>
+            <div class="hero-stat-item">
+              <div class="hero-stat-number">18 500<span>+</span></div>
+              <div class="hero-stat-label">пациентов обрели здоровую улыбку</div>
+            </div>
+            <div class="hero-stat-item">
+              <div class="hero-stat-number">99.6<span>%</span></div>
+              <div class="hero-stat-label">приживаемость имплантов Straumann</div>
+            </div>
+            <div class="hero-stat-item">
+              <div class="hero-stat-number">4.9<span>★</span></div>
+              <div class="hero-stat-label">рейтинг на Яндекс и ПроДокторов</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual Image Frame with Glass Badges -->
+        <div class="hero-visual">
+          <div class="hero-image-wrapper">
+            <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/hero-clinic.jpg -->
+            <img 
+              src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=80" 
+              alt="Интерьер премиальной стоматологической клиники Аура Дент" 
+              class="hero-image"
+              loading="eager"
+            >
+          </div>
+
+          <!-- Floating Glass Badge 1: 3D Scanner -->
+          <div class="hero-floating-card hero-floating-card--top">
+            <div class="floating-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
+            </div>
+            <div class="floating-card-text">
+              <span class="floating-card-title">3D-сканер 3Shape</span>
+              <span class="floating-card-subtitle">Цифровые слепки без дискомфорта</span>
+            </div>
+          </div>
+
+          <!-- Floating Glass Badge 2: Sleep Treatment -->
+          <div class="hero-floating-card hero-floating-card--bottom">
+            <div class="floating-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+              </svg>
+            </div>
+            <div class="floating-card-text">
+              <span class="floating-card-title">Лечение во сне</span>
+              <span class="floating-card-subtitle">Безопасная седация без боли и страха</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         TRUST & PARTNERS TICKER BAR
+         ====================================================================== -->
+    <div class="trust-bar" aria-label="Наши стандарты качества">
+      <div class="container trust-grid">
+        <div class="trust-item">
+          <div class="trust-item-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
+          </div>
+          <div class="trust-item-content">
+            <span class="trust-item-title">Швейцарские протоколы</span>
+            <span class="trust-item-desc">Straumann & Nobel Biocare</span>
+          </div>
+        </div>
+
+        <div class="trust-item">
+          <div class="trust-item-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+            </svg>
+          </div>
+          <div class="trust-item-content">
+            <span class="trust-item-title">Фиксированная цена</span>
+            <span class="trust-item-desc">Прозрачный договор без доплат</span>
+          </div>
+        </div>
+
+        <div class="trust-item">
+          <div class="trust-item-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M12 6v6l4 2"></path>
+            </svg>
+          </div>
+          <div class="trust-item-content">
+            <span class="trust-item-title">Зубы за 1 день</span>
+            <span class="trust-item-desc">Немедленная нагрузка протезом</span>
+          </div>
+        </div>
+
+        <div class="trust-item">
+          <div class="trust-item-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+              <line x1="1" y1="10" x2="23" y2="10"></line>
+            </svg>
+          </div>
+          <div class="trust-item-content">
+            <span class="trust-item-title">Рассрочка 0%</span>
+            <span class="trust-item-desc">Без переплат до 24 месяцев</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======================================================================
+         FEATURES / ADVANTAGES SECTION
+         ====================================================================== -->
+    <section id="features" class="section section--alt">
+      <div class="container">
+        <header class="section-header">
+          <div class="section-badge">Преимущества клиники</div>
+          <h2 class="section-title">Почему для здоровья зубов выбирают <span class="highlight">«Аура Дент»</span></h2>
+          <p class="section-subtitle">
+            Мы объединили швейцарские стандарты хирургии, цифровые оптические микроскопы и искреннюю заботу, чтобы лечение было комфортным, безопасным и предсказуемым.
+          </p>
+        </header>
+
+        <div class="features-grid">
+          <!-- Feature 1 -->
+          <article class="feature-card">
+            <div class="feature-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+              </svg>
+            </div>
+            <h3 class="feature-title">Лечение во сне (Седация)</h3>
+            <p class="feature-text">
+              Любые процедуры — от лечения кариеса до сложной имплантации All-on-4 — можно пройти во сне. Безопасные препараты сверхкороткого действия под постоянным наблюдением штатного анестезиолога-реаниматолога.
+            </p>
+          </article>
+
+          <!-- Feature 2 -->
+          <article class="feature-card">
+            <div class="feature-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="3"></circle>
+                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+              </svg>
+            </div>
+            <h3 class="feature-title">Цифровой протокол DSD</h3>
+            <p class="feature-text">
+              Digital Smile Design позволяет увидеть вашу будущую безупречную улыбку на 3D-экране еще до начала лечения. Никаких неудобных гипсовых слепков — только сканирование 3Shape TRIOS за 3 минуты.
+            </p>
+          </article>
+
+          <!-- Feature 3 -->
+          <article class="feature-card">
+            <div class="feature-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+              </svg>
+            </div>
+            <h3 class="feature-title">Микроскопы Carl Zeiss</h3>
+            <p class="feature-text">
+              30-кратное оптическое увеличение операционного микроскопа Carl Zeiss позволяет спасать зубы с труднопроходимыми искривленными каналами и кистами, которые в других клиниках отправляют на удаление.
+            </p>
+          </article>
+
+          <!-- Feature 4 -->
+          <article class="feature-card">
+            <div class="feature-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+            </div>
+            <h3 class="feature-title">Пожизненная гарантия</h3>
+            <p class="feature-text">
+              Официальный сертифицированный партнер премиальных систем Straumann (Швейцария) и Nobel Biocare (Швеция). Вы получаете официальный паспорт изделия с индивидуальным серийным номером импланта.
+            </p>
+          </article>
+
+          <!-- Feature 5 -->
+          <article class="feature-card">
+            <div class="feature-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+              </svg>
+            </div>
+            <h3 class="feature-title">Томограф Vatech PaX-i 3D</h3>
+            <p class="feature-text">
+              Собственная сверхточная компьютерная 3D-диагностика на месте. Максимальное пространственное разрешение с дозой облучения в 10 раз ниже традиционных медицинских рентген-аппаратов.
+            </p>
+          </article>
+
+          <!-- Feature 6 -->
+          <article class="feature-card">
+            <div class="feature-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <h3 class="feature-title">Забота и персональный консьерж</h3>
+            <p class="feature-text">
+              Персональный медицинский координатор сопровождает вас на каждом этапе: от записи до полного завершения реабилитации. Бесплатный трансфер на бизнес-такси в день сложной хирургической операции.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SERVICES SECTION
+         ====================================================================== -->
+    <section id="services" class="section section--white">
+      <div class="container">
+        <header class="section-header">
+          <div class="section-badge">Направления клиники</div>
+          <h2 class="section-title">Комплексная стоматология для <span class="highlight">всей семьи</span></h2>
+          <p class="section-subtitle">
+            Используем передовые мировые протоколы доказательной стоматологии, биосовместимые материалы и бережный индивидуальный подход.
+          </p>
+        </header>
+
+        <div class="services-grid">
+          <!-- Service 1: Implantology -->
+          <article class="service-card">
+            <div class="service-card-media">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/service-implants.jpg -->
+              <img 
+                src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=800&q=80" 
+                alt="Цифровая имплантация зубов в Аура Дент" 
+                class="service-card-img"
+                loading="lazy"
+              >
+              <span class="service-card-tag service-card-tag--hot">Флагманское направление</span>
+            </div>
+            <div class="service-card-body">
+              <h3 class="service-card-title">Цифровая имплантация зубов</h3>
+              <p class="service-card-desc">
+                Восстановление одного зуба, нескольких или целого зубного ряда по протоколам All-on-4 и All-on-6 за 1 визит с немедленной нагрузкой.
+              </p>
+              <div class="service-card-features">
+                <div class="service-card-feature-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Швейцарские системы Straumann и Nobel</span>
+                </div>
+                <div class="service-card-feature-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Навигационные хирургические 3D-шаблоны</span>
+                </div>
+                <div class="service-card-feature-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Пожизненная гарантия на титановый корень</span>
+                </div>
+              </div>
+              <div class="service-card-footer">
+                <div class="service-price-block">
+                  <span class="service-price-label">Стоимость под ключ</span>
+                  <span class="service-price-val">от 42 000 ₽</span>
+                </div>
+                <button type="button" class="btn btn--primary btn--sm" data-open-modal data-service="Имплантация зубов">
+                  Записаться
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Service 2: Veneers & Aesthetics -->
+          <article class="service-card">
+            <div class="service-card-media">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/service-veneers.jpg -->
+              <img 
+                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" 
+                alt="Керамические виниры E-max" 
+                class="service-card-img"
+                loading="lazy"
+              >
+              <span class="service-card-tag">Эстетика</span>
+            </div>
+            <div class="service-card-body">
+              <h3 class="service-card-title">Керамические виниры E-max</h3>
+              <p class="service-card-desc">
+                Ультратонкие керамические микропротезы толщиной от 0.3 мм. Идеальная форма, цвет и естественная прозрачность эмали без глубокого препарирования.
+              </p>
+              <div class="service-card-features">
+                <div class="service-card-feature-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Примерка будущей улыбки Mock-Up</span>
+                </div>
+                <div class="service-card-feature-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Не темнеют от кофе, чая и не красятся</span>
+                </div>
+                <div class="service-card-feature-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Срок службы более 15-20 лет</span>
+                </div>
+              </div>
+              <div class="service-card-footer">
+                <div class="service-price-block">
+                  <span class="service-price-label">За 1 единицу</span>
+                  <span class="service-price-val">от 38 500 ₽</span>
+                </div>
+                <button type="button" class="btn btn--primary btn--sm" data-open-modal data-service="Установка виниров E-max">
+                  Записаться
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Service 3: Orthodontics & Aligners -->
+          <article class="service-card">
+            <div class="service-card-media">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/service-aligners.jpg -->
+              <img 
+                src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=800&q=80" 
+                alt="Исправление прикуса элайнерами и брекетами" 
+                class="service-card-img"
+                loading="lazy"
+              >
+              <span class="service-card-tag">Ортодонтия</span>
+            </div>
+            <div class="service-card-body">
+              <h3 class="service-card-title">Элайнеры и брекеты Damon</h3>
+              <p class="service-card-desc">
+                Исправление прикуса в любом возрасте. Невидимые прозрачные капы Invisalign и Spark или самолигирующие керамические брекеты премиум-класса.
+              </p>
+              <div class="service-card-features">
+                <div class="service-card-feature-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>3D-видеоролик перемещения зубов до старта</span>
+                </div>
+                <div class="service-card-feature-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Элайнеры незаметны на зубах с расстояния 20 см</span>
+                </div>
+                <div class="service-card-feature-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Без ограничений в любимой еде и спорте</span>
+                </div>
+              </div>
+              <div class="service-card-footer">
+                <div class="service-price-block">
+                  <span class="service-price-label">Курс лечения</span>
+                  <span class="service-price-val">от 120 000 ₽</span>
+                </div>
+                <button type="button" class="btn btn--primary btn--sm" data-open-modal data-service="Ортодонтия и элайнеры">
+                  Записаться
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Service 4: Therapy & Microscope -->
+          <article class="service-card">
+            <div class="service-card-media">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/service-therapy.jpg -->
+              <img 
+                src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=800&q=80" 
+                alt="Лечение зубов под микроскопом Carl Zeiss" 
+                class="service-card-img"
+                loading="lazy"
+              >
+              <span class="service-card-tag">Терапия</span>
+            </div>
+            <div class="service-card-body">
+              <h3 class="service-card-title">Лечение под микроскопом</h3>
+              <p class="service-card-desc">
+                Высокоточная эндодонтия и эстетическая реставрация. Лечение пульпита, периодонтита и кист под контролем немецкого микроскопа Carl Zeiss.
+              </p>
+              <div class="service-card-features">
+                <div class="service-card-feature-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>100% герметичная обработка каналов</span>
+                </div>
+                <div class="service-card-feature-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Сохранение максимального объема своих тканей</span>
+                </div>
+                <div class="service-card-feature-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Надежная изоляция системой коффердам</span>
+                </div>
+              </div>
+              <div class="service-card-footer">
+                <div class="service-price-block">
+                  <span class="service-price-label">Лечение кариеса</span>
+                  <span class="service-price-val">от 6 900 ₽</span>
+                </div>
+                <button type="button" class="btn btn--primary btn--sm" data-open-modal data-service="Лечение под микроскопом">
+                  Записаться
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Service 5: Hygiene & Whitening Zoom 4 -->
+          <article class="service-card">
+            <div class="service-card-media">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/service-hygiene.jpg -->
+              <img 
+                src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=800&q=80" 
+                alt="Профессиональная гигиена и отбеливание Zoom 4" 
+                class="service-card-img"
+                loading="lazy"
+              >
+              <span class="service-card-tag">Профгигиена</span>
+            </div>
+            <div class="service-card-body">
+              <h3 class="service-card-title">Гигиена GBT & Zoom 4</h3>
+              <p class="service-card-desc">
+                Швейцарский протокол бережной гигиены AirFlow Prophylaxis Master и холодное отбеливание Philips Zoom 4 WhiteSpeed до 8 тонов за 1 час.
+              </p>
+              <div class="service-card-features">
+                <div class="service-card-feature-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Теплая вода и мягкий порошок Plus без боли</span>
+                </div>
+                <div class="service-card-feature-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Глубокая реминерализация Relief ACP</span>
+                </div>
+                <div class="service-card-feature-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Осветление эмали без повышения чувствительности</span>
+                </div>
+              </div>
+              <div class="service-card-footer">
+                <div class="service-price-block">
+                  <span class="service-price-label">Комплекс GBT</span>
+                  <span class="service-price-val">от 9 500 ₽</span>
+                </div>
+                <button type="button" class="btn btn--primary btn--sm" data-open-modal data-service="Гигиена GBT и отбеливание Zoom 4">
+                  Записаться
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Service 6: Kids Dentistry -->
+          <article class="service-card">
+            <div class="service-card-media">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/service-kids.jpg -->
+              <img 
+                src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=800&q=80" 
+                alt="Детская стоматология без слез и боли" 
+                class="service-card-img"
+                loading="lazy"
+              >
+              <span class="service-card-tag">Детям</span>
+            </div>
+            <div class="service-card-body">
+              <h3 class="service-card-title">Детская стоматология без слез</h3>
+              <p class="service-card-desc">
+                Психологическая адаптация, лечение в игровой форме, любимые мультфильмы на потолочном экране и безопасная «веселящая» седация закисью азота.
+              </p>
+              <div class="service-card-features">
+                <div class="service-card-feature-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Врачи со знанием детской психологии</span>
+                </div>
+                <div class="service-card-feature-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Подарки и дипломы смелости каждому ребенку</span>
+                </div>
+                <div class="service-card-feature-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Безболезненная компьютерная анестезия STA</span>
+                </div>
+              </div>
+              <div class="service-card-footer">
+                <div class="service-price-block">
+                  <span class="service-price-label">Адаптационный прием</span>
+                  <span class="service-price-val">от 3 500 ₽</span>
+                </div>
+                <button type="button" class="btn btn--primary btn--sm" data-open-modal data-service="Детский стоматолог">
+                  Записаться
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         INTERACTIVE SMILE ASSESSMENT QUIZ
+         ====================================================================== -->
+    <section id="quiz" class="section quiz-section">
+      <div class="container">
+        <header class="section-header">
+          <div class="section-badge section-badge--navy">Интерактивный тест</div>
+          <h2 class="section-title section-title--light">Экспресс-подбор <span class="highlight">плана лечения</span> за 1 минуту</h2>
+          <p class="section-subtitle section-subtitle--light">
+            Ответьте на 4 простых вопроса и мгновенно получите расчет стоимости, варианты восстановления зубов и 3 подарка от клиники.
+          </p>
+        </header>
+
+        <!-- Quiz Main Box -->
+        <div class="quiz-container" id="smile-quiz">
+          <div class="quiz-header">
+            <div class="quiz-step-indicator">
+              Шаг <span class="current-step-num">1</span> из <span class="total-steps-num">4</span>
+            </div>
+            <div class="quiz-progress-bar-wrap" aria-label="Прогресс прохождения теста">
+              <div class="quiz-progress-bar"></div>
+            </div>
+          </div>
+
+          <div class="quiz-body">
+            <!-- Step 1: Goal -->
+            <div class="quiz-step active" data-question-key="goal">
+              <h3 class="quiz-question-title">Какая задача для вас сейчас самая главная?</h3>
+              <p class="quiz-question-desc">Выберите основной повод обращения в клинику</p>
+              
+              <div class="quiz-options-grid">
+                <div class="quiz-option-card selected" data-value="Имплантация и восстановление зубов">
+                  <div class="quiz-radio-circle"></div>
+                  <div class="quiz-option-label">
+                    <span class="quiz-option-text">Восстановить отсутствующие зубы</span>
+                    <span class="quiz-option-hint">Импланты, коронки, несъемные мосты</span>
+                  </div>
+                </div>
+
+                <div class="quiz-option-card" data-value="Эстетика и виниры">
+                  <div class="quiz-radio-circle"></div>
+                  <div class="quiz-option-label">
+                    <span class="quiz-option-text">Сделать зубы идеально ровными и белыми</span>
+                    <span class="quiz-option-hint">Керамические виниры E-max, отбеливание</span>
+                  </div>
+                </div>
+
+                <div class="quiz-option-card" data-value="Исправление прикуса">
+                  <div class="quiz-radio-circle"></div>
+                  <div class="quiz-option-label">
+                    <span class="quiz-option-text">Исправить прикус и положение зубов</span>
+                    <span class="quiz-option-hint">Прозрачные элайнеры или брекет-системы</span>
+                  </div>
+                </div>
+
+                <div class="quiz-option-card" data-value="Лечение кариеса и боли">
+                  <div class="quiz-radio-circle"></div>
+                  <div class="quiz-option-label">
+                    <span class="quiz-option-text">Вылечить больные зубы / кариес / каналы</span>
+                    <span class="quiz-option-hint">Спасение зубов под микроскопом без боли</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 2: Teeth count -->
+            <div class="quiz-step" data-question-key="count">
+              <h3 class="quiz-question-title">Сколько зубов требуют лечения или восстановления?</h3>
+              <p class="quiz-question-desc">Это поможет врачу оценить объем и подготовить варианты</p>
+
+              <div class="quiz-options-grid">
+                <div class="quiz-option-card selected" data-value="1-2 зуба">
+                  <div class="quiz-radio-circle"></div>
+                  <div class="quiz-option-label">
+                    <span class="quiz-option-text">1 – 2 зуба</span>
+                    <span class="quiz-option-hint">Точечное восстановление дефекта</span>
+                  </div>
+                </div>
+
+                <div class="quiz-option-card" data-value="Несколько зубов (3-5)">
+                  <div class="quiz-radio-circle"></div>
+                  <div class="quiz-option-label">
+                    <span class="quiz-option-text">3 – 5 зубов</span>
+                    <span class="quiz-option-hint">Сегмент зубного ряда / зона улыбки</span>
+                  </div>
+                </div>
+
+                <div class="quiz-option-card" data-value="Все зубы челюсти">
+                  <div class="quiz-radio-circle"></div>
+                  <div class="quiz-option-label">
+                    <span class="quiz-option-text">Полный зубной ряд / все зубы</span>
+                    <span class="quiz-option-hint">Тотальная реабилитация All-on-4 или All-on-6</span>
+                  </div>
+                </div>
+
+                <div class="quiz-option-card" data-value="Нужен комплексный чекап">
+                  <div class="quiz-radio-circle"></div>
+                  <div class="quiz-option-label">
+                    <span class="quiz-option-text">Точно не знаю, нужен полный чекап</span>
+                    <span class="quiz-option-hint">Компьютерная томография и осмотр всех зубов</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 3: Priority -->
+            <div class="quiz-step" data-question-key="priority">
+              <h3 class="quiz-question-title">Что для вас имеет решающее значение при лечении?</h3>
+              <p class="quiz-question-desc">Мы подберем протокол под ваши личные критерии</p>
+
+              <div class="quiz-options-grid">
+                <div class="quiz-option-card selected" data-value="Без боли и страха (во сне / седация)">
+                  <div class="quiz-radio-circle"></div>
+                  <div class="quiz-option-label">
+                    <span class="quiz-option-text">Лечение без боли и страха</span>
+                    <span class="quiz-option-hint">Возможность лечения во сне под седацией</span>
+                  </div>
+                </div>
+
+                <div class="quiz-option-card" data-value="Быстрый результат за 1 день">
+                  <div class="quiz-radio-circle"></div>
+                  <div class="quiz-option-label">
+                    <span class="quiz-option-text">Скорость: зубы за 1 день</span>
+                    <span class="quiz-option-hint">Немедленная нагрузка временными коронками</span>
+                  </div>
+                </div>
+
+                <div class="quiz-option-card" data-value="Премиум эстетика и надежность">
+                  <div class="quiz-radio-circle"></div>
+                  <div class="quiz-option-label">
+                    <span class="quiz-option-text">Максимальная эстетика и гарантия</span>
+                    <span class="quiz-option-hint">Швейцарские премиум импланты и E-max</span>
+                  </div>
+                </div>
+
+                <div class="quiz-option-card" data-value="Оптимальная цена и рассрочка 0%">
+                  <div class="quiz-radio-circle"></div>
+                  <div class="quiz-option-label">
+                    <span class="quiz-option-text">Комфортный бюджет и рассрочка</span>
+                    <span class="quiz-option-hint">Оплата частями 0% без первого взноса</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 4: Timeline -->
+            <div class="quiz-step" data-question-key="timeline">
+              <h3 class="quiz-question-title">Когда планируете приступить к лечению?</h3>
+              <p class="quiz-question-desc">Чтобы забронировать за вами подарки и спецпредложение</p>
+
+              <div class="quiz-options-grid">
+                <div class="quiz-option-card selected" data-value="В ближайшие 1-2 недели">
+                  <div class="quiz-radio-circle"></div>
+                  <div class="quiz-option-label">
+                    <span class="quiz-option-text">В ближайшие 1 – 2 недели</span>
+                    <span class="quiz-option-hint">Хочу начать лечение оперативно</span>
+                  </div>
+                </div>
+
+                <div class="quiz-option-card" data-value="В течение месяца">
+                  <div class="quiz-radio-circle"></div>
+                  <div class="quiz-option-label">
+                    <span class="quiz-option-text">В течение месяца</span>
+                    <span class="quiz-option-hint">Выбираю удобные даты и планирую график</span>
+                  </div>
+                </div>
+
+                <div class="quiz-option-card" data-value="Срочно, острая боль или дефект">
+                  <div class="quiz-radio-circle"></div>
+                  <div class="quiz-option-label">
+                    <span class="quiz-option-text">Срочно, как можно скорее</span>
+                    <span class="quiz-option-hint">Беспокоит боль или сломался зуб</span>
+                  </div>
+                </div>
+
+                <div class="quiz-option-card" data-value="Пока прицениваюсь">
+                  <div class="quiz-radio-circle"></div>
+                  <div class="quiz-option-label">
+                    <span class="quiz-option-text">Пока изучаю информацию и цены</span>
+                    <span class="quiz-option-hint">Хочу сравнить предложения клиник</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 5: Final Submission Form & Bonuses -->
+            <div class="quiz-step" data-question-key="contacts">
+              <div class="quiz-result-box">
+                <h3 class="quiz-question-title" style="margin-bottom: 6px;">Расчет сформирован! Ваши подарки забронированы</h3>
+                <p class="quiz-question-desc" style="margin-bottom: 12px;">
+                  Мы подготовили 3 варианта персонального плана лечения под ваш бюджет и клиническую ситуацию.
+                </p>
+                <div class="quiz-bonus-badges">
+                  <span class="quiz-bonus-badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    3D-томография челюсти (0 ₽ вместо 4 500 ₽)
+                  </span>
+                  <span class="quiz-bonus-badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    Консультация главврача в подарок
+                  </span>
+                  <span class="quiz-bonus-badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    Сертификат на 10 000 ₽ на лечение
+                  </span>
+                </div>
+              </div>
+
+              <form id="quiz-lead-form">
+                <div class="form-group">
+                  <label class="form-label" for="quiz-name">Ваше имя</label>
+                  <input type="text" id="quiz-name" name="quiz-name" class="form-input" placeholder="Например, Екатерина" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="quiz-phone">Номер телефона для получения расчета</label>
+                  <input type="tel" id="quiz-phone" name="quiz-phone" class="form-input" placeholder="+7 (___) ___-__-__" required>
+                  <span class="form-error-msg">Пожалуйста, введите корректный номер телефона</span>
+                </div>
+                <div class="form-checkbox-group">
+                  <input type="checkbox" id="quiz-consent" checked required>
+                  <label for="quiz-consent">Я соглашаюсь на обработку персональных данных согласно ФЗ-152 и получение расчета</label>
+                </div>
+                <button type="submit" class="btn btn--primary btn--block btn--lg">
+                  Получить расчет и подарки
+                </button>
+              </form>
+
+              <!-- Quiz Success View -->
+              <div class="quiz-success-view" style="display: none; text-align: center; padding: 20px 0;">
+                <div class="success-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </div>
+                <h4 style="font-family: var(--font-heading); font-size: 1.4rem; color: var(--color-navy); margin-bottom: 8px;">Спасибо! Ваш расчет готов</h4>
+                <p style="color: var(--color-slate); font-size: 0.95rem;">
+                  Медицинский куратор клиники «Аура Дент» уже анализирует ответы и вышлет расчет с персональной скидкой в WhatsApp / Telegram в течение 10 минут.
+                </p>
+              </div>
+            </div>
+
+            <!-- Quiz Controls -->
+            <div class="quiz-controls">
+              <button type="button" class="btn btn--outline btn--sm btn-quiz-prev" style="visibility: hidden;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 16px; height: 16px; transform: rotate(180deg);">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+                <span>Назад</span>
+              </button>
+
+              <button type="button" class="btn btn--primary btn-quiz-next">
+                <span>Далее</span>
+                <svg class="btn-icon btn-icon--arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         INTERACTIVE DOCTOR APPOINTMENT PICKER
+         ====================================================================== -->
+    <section id="booking" class="section section--white">
+      <div class="container">
+        <header class="section-header">
+          <div class="section-badge">Онлайн-бронирование</div>
+          <h2 class="section-title">Запись к врачу на <span class="highlight">удобное время</span></h2>
+          <p class="section-subtitle">
+            Выберите специалиста, необходимую услугу и удобное время визита без ожидания звонка оператора.
+          </p>
+        </header>
+
+        <div class="booking-card">
+          <div class="picker-grid">
+            <!-- Left Column: Choose Doctor & Service -->
+            <div class="picker-col">
+              <h3 class="picker-column-title">
+                <span class="step-num">1</span>
+                <span>Выберите врача клиники</span>
+              </h3>
+              
+              <div class="doctor-select-grid">
+                <!-- Doctor 1 -->
+                <div class="doctor-picker-item selected">
+                  <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/doctor-volkov.jpg -->
+                  <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=200&q=80" alt="Волков Александр Сергеевич" class="doctor-picker-avatar">
+                  <div class="doctor-picker-info">
+                    <div class="doctor-picker-name">Волков Александр Сергеевич</div>
+                    <div class="doctor-picker-role">Главврач, челюстно-лицевой хирург, имплантолог (стаж 18 лет)</div>
+                  </div>
+                </div>
+
+                <!-- Doctor 2 -->
+                <div class="doctor-picker-item">
+                  <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/doctor-smirnova.jpg -->
+                  <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=200&q=80" alt="Смирнова Елена Михайловна" class="doctor-picker-avatar">
+                  <div class="doctor-picker-info">
+                    <div class="doctor-picker-name">Смирнова Елена Михайловна</div>
+                    <div class="doctor-picker-role">Стоматолог-ортопед, гнатолог, эксперт по винирам (стаж 14 лет)</div>
+                  </div>
+                </div>
+
+                <!-- Doctor 3 -->
+                <div class="doctor-picker-item">
+                  <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/doctor-sokolova.jpg -->
+                  <img src="https://images.unsplash.com/photo-1651008376811-b90baee60c1f?auto=format&fit=crop&w=200&q=80" alt="Соколова Анна Дмитриевна" class="doctor-picker-avatar">
+                  <div class="doctor-picker-info">
+                    <div class="doctor-picker-name">Соколова Анна Дмитриевна</div>
+                    <div class="doctor-picker-role">Стоматолог-ортодонт, специалист Invisalign (стаж 11 лет)</div>
+                  </div>
+                </div>
+
+                <!-- Doctor 4 -->
+                <div class="doctor-picker-item">
+                  <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/doctor-vasiliev.jpg -->
+                  <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=200&q=80" alt="Васильев Дмитрий Игоревич" class="doctor-picker-avatar">
+                  <div class="doctor-picker-info">
+                    <div class="doctor-picker-name">Васильев Дмитрий Игоревич</div>
+                    <div class="doctor-picker-role">Терапевт-эндодонтист, микроскопист (стаж 12 лет)</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Service Selector -->
+              <div class="form-group">
+                <label class="form-label" for="booking-service-select">Причина обращения / Услуга</label>
+                <select id="booking-service-select" class="form-select">
+                  <option value="Первичная консультация и 3D-томография" selected>Первичная консультация и 3D-томография (Акция: 0 ₽)</option>
+                  <option value="Имплантация зубов (Straumann / Nobel)">Имплантация зубов (Straumann / Nobel Biocare)</option>
+                  <option value="Восстановление всех зубов All-on-4 / All-on-6">Восстановление всех зубов All-on-4 / All-on-6</option>
+                  <option value="Керамические виниры E-max">Керамические виниры E-max</option>
+                  <option value="Исправление прикуса (элайнеры или брекеты)">Исправление прикуса (элайнеры или брекеты)</option>
+                  <option value="Лечение кариеса под микроскопом">Лечение кариеса или пульпита под микроскопом</option>
+                  <option value="Профессиональная гигиена Air Flow GBT">Профессиональная гигиена Air Flow GBT</option>
+                  <option value="Лечение зубов во сне (седация)">Лечение зубов во сне (под седацией)</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Right Column: Date, Time & Confirmation -->
+            <div class="picker-col">
+              <h3 class="picker-column-title">
+                <span class="step-num">2</span>
+                <span>Выберите дату и время</span>
+              </h3>
+
+              <!-- Dynamic Date Chips (populated via JS) -->
+              <div class="date-chips-wrap" role="radiogroup" aria-label="Выбор даты приема"></div>
+
+              <!-- Time Slots Grid -->
+              <div class="time-slots-grid" role="radiogroup" aria-label="Выбор времени приема">
+                <button type="button" class="time-slot-btn">09:30</button>
+                <button type="button" class="time-slot-btn selected">11:00</button>
+                <button type="button" class="time-slot-btn">13:00</button>
+                <button type="button" class="time-slot-btn">15:00</button>
+                <button type="button" class="time-slot-btn">16:30</button>
+                <button type="button" class="time-slot-btn">18:00</button>
+                <button type="button" class="time-slot-btn">19:30</button>
+                <button type="button" class="time-slot-btn">20:15</button>
+              </div>
+
+              <!-- Booking Summary Box -->
+              <div class="booking-summary-box">
+                <div class="summary-row">
+                  <span class="summary-label">Специалист:</span>
+                  <span class="summary-value summary-doctor-val">Волков Александр Сергеевич</span>
+                </div>
+                <div class="summary-row">
+                  <span class="summary-label">Услуга:</span>
+                  <span class="summary-value summary-service-val">Первичная консультация и 3D-томография</span>
+                </div>
+                <div class="summary-row">
+                  <span class="summary-label">Дата и время:</span>
+                  <span class="summary-value summary-datetime-val">Сегодня в 11:00</span>
+                </div>
+              </div>
+
+              <!-- Inline Quick Confirmation Form -->
+              <form id="inline-booking-form" style="margin-top: 24px;">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px;">
+                  <input type="text" id="inline-booking-name" name="inline_name" class="form-input" placeholder="Ваше имя" required>
+                  <input type="tel" id="inline-booking-phone" name="inline_phone" class="form-input" placeholder="+7 (___) ___-__-__" required>
+                </div>
+                <button type="submit" class="btn btn--primary btn--block btn--lg">
+                  Подтвердить запись
+                </button>
+                <p style="font-size: 0.775rem; color: var(--color-slate-light); text-align: center; margin-top: 10px;">
+                  Нажимая кнопку, вы соглашаетесь с условиями обработки персональных данных
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         BEFORE & AFTER CLINICAL CASES
+         ====================================================================== -->
+    <section id="cases" class="section section--alt">
+      <div class="container">
+        <header class="section-header">
+          <div class="section-badge">Портфолио клиники</div>
+          <h2 class="section-title">Результаты лечения <span class="highlight">До и После</span></h2>
+          <p class="section-subtitle">
+            Реальные клинические случаи наших пациентов. Возвращаем уверенность в себе и возможность открыто улыбаться.
+          </p>
+        </header>
+
+        <div class="cases-grid">
+          <!-- Case 1: All-on-4 Total Rehab -->
+          <article class="case-card">
+            <div class="case-images-compare">
+              <div class="case-img-pane">
+                <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/case1-before.jpg -->
+                <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=600&q=80" alt="До: отсутствие зубов верхней челюсти">
+                <span class="case-badge-label">До лечения</span>
+              </div>
+              <div class="case-img-pane">
+                <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/case1-after.jpg -->
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80" alt="После: тотальная реабилитация All-on-4">
+                <span class="case-badge-label" style="background: var(--color-turquoise);">После лечения</span>
+              </div>
+            </div>
+            <div class="case-card-content">
+              <div class="case-category">Тотальная имплантация</div>
+              <h3 class="case-title">Полное восстановление челюсти по протоколу All-on-4</h3>
+              <div class="case-details-list">
+                <div class="case-detail-item"><strong>Пациент:</strong> Михаил, 48 лет</div>
+                <div class="case-detail-item"><strong>Диагноз:</strong> Генерализованный пародонтит, вторичная адентия верхней челюсти</div>
+                <div class="case-detail-item"><strong>Решение:</strong> Установка 4 имплантов Straumann, фиксация несъемного адаптационного протеза в день операции</div>
+                <div class="case-detail-item"><strong>Срок лечения:</strong> 1 день (хирургия и протезирование)</div>
+              </div>
+              <button type="button" class="btn btn--outline btn--sm" data-open-modal data-service="Имплантация All-on-4">
+                Хочу такой же результат
+              </button>
+            </div>
+          </article>
+
+          <!-- Case 2: E-max Veneers -->
+          <article class="case-card">
+            <div class="case-images-compare">
+              <div class="case-img-pane">
+                <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/case2-before.jpg -->
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" alt="До: дисколорит эмали, старые пломбы">
+                <span class="case-badge-label">До лечения</span>
+              </div>
+              <div class="case-img-pane">
+                <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/case2-after.jpg -->
+                <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=600&q=80" alt="После: 10 керамических виниров E-max">
+                <span class="case-badge-label" style="background: var(--color-turquoise);">После лечения</span>
+              </div>
+            </div>
+            <div class="case-card-content">
+              <div class="case-category">Эстетическая реставрация</div>
+              <h3 class="case-title">Преображение зоны улыбки 10 винирами E-max</h3>
+              <div class="case-details-list">
+                <div class="case-detail-item"><strong>Пациентка:</strong> Валерия, 31 год</div>
+                <div class="case-detail-item"><strong>Диагноз:</strong> Неудовлетворительная эстетика, множественные пигментированные пломбы, скол резца</div>
+                <div class="case-detail-item"><strong>Решение:</strong> Цифровой дизайн DSD, ультратонкие керамические виниры E-max оттенка BL2 без удаления нервов</div>
+                <div class="case-detail-item"><strong>Срок лечения:</strong> 2 визита (10 дней на изготовление)</div>
+              </div>
+              <button type="button" class="btn btn--outline btn--sm" data-open-modal data-service="Керамические виниры">
+                Хочу такой же результат
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         DOCTORS TEAM SECTION
+         ====================================================================== -->
+    <section id="doctors" class="section section--white">
+      <div class="container">
+        <header class="section-header">
+          <div class="section-badge">Врачи экспертного уровня</div>
+          <h2 class="section-title">Команда ведущих специалистов <span class="highlight">«Аура Дент»</span></h2>
+          <p class="section-subtitle">
+            Наши врачи регулярно стажируются в Швейцарии, Германии и Израиле, являются членами международных ассоциаций ITI и EAO.
+          </p>
+        </header>
+
+        <div class="doctors-grid">
+          <!-- Doctor 1 -->
+          <article class="doctor-card">
+            <div class="doctor-card-media">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/team-volkov.jpg -->
+              <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=600&q=80" alt="Волков Александр Сергеевич — Главврач" class="doctor-card-img" loading="lazy">
+              <span class="doctor-exp-pill">Стаж 18 лет</span>
+            </div>
+            <div class="doctor-card-body">
+              <h3 class="doctor-name">Волков Александр Сергеевич</h3>
+              <div class="doctor-specialty">Главный врач, хирург-имплантолог</div>
+              <p class="doctor-bio">
+                Кандидат медицинских наук, установил более 4 800 имплантов. Эксперт по сложнейшей навигационной хирургии All-on-4/6 и открытому синус-лифтингу.
+              </p>
+              <div class="doctor-card-footer">
+                <button type="button" class="btn btn--outline btn--block btn--sm" data-open-modal data-service="Консультация главврача Волкова А.С.">
+                  Записаться к врачу
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Doctor 2 -->
+          <article class="doctor-card">
+            <div class="doctor-card-media">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/team-smirnova.jpg -->
+              <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=600&q=80" alt="Смирнова Елена Михайловна — Ортопед" class="doctor-card-img" loading="lazy">
+              <span class="doctor-exp-pill">Стаж 14 лет</span>
+            </div>
+            <div class="doctor-card-body">
+              <h3 class="doctor-name">Смирнова Елена Михайловна</h3>
+              <div class="doctor-specialty">Стоматолог-ортопед, гнатолог</div>
+              <p class="doctor-bio">
+                Ведущий эксперт по эстетическому протезированию винирами E-max и диоксидом циркония. Мастер функциональной нейромышечной коррекции прикуса.
+              </p>
+              <div class="doctor-card-footer">
+                <button type="button" class="btn btn--outline btn--block btn--sm" data-open-modal data-service="Консультация ортопеда Смирновой Е.М.">
+                  Записаться к врачу
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Doctor 3 -->
+          <article class="doctor-card">
+            <div class="doctor-card-media">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/team-sokolova.jpg -->
+              <img src="https://images.unsplash.com/photo-1651008376811-b90baee60c1f?auto=format&fit=crop&w=600&q=80" alt="Соколова Анна Дмитриевна — Ортодонт" class="doctor-card-img" loading="lazy">
+              <span class="doctor-exp-pill">Стаж 11 лет</span>
+            </div>
+            <div class="doctor-card-body">
+              <h3 class="doctor-name">Соколова Анна Дмитриевна</h3>
+              <div class="doctor-specialty">Стоматолог-ортодонт</div>
+              <p class="doctor-bio">
+                Сертифицированный специалист международных систем элайнеров Invisalign (Diamond Provider) и самолигирующих брекетов Damon Q/Clear.
+              </p>
+              <div class="doctor-card-footer">
+                <button type="button" class="btn btn--outline btn--block btn--sm" data-open-modal data-service="Консультация ортодонта Соколовой А.Д.">
+                  Записаться к врачу
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Doctor 4 -->
+          <article class="doctor-card">
+            <div class="doctor-card-media">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/team-vasiliev.jpg -->
+              <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=600&q=80" alt="Васильев Дмитрий Игоревич — Терапевт" class="doctor-card-img" loading="lazy">
+              <span class="doctor-exp-pill">Стаж 12 лет</span>
+            </div>
+            <div class="doctor-card-body">
+              <h3 class="doctor-name">Васильев Дмитрий Игоревич</h3>
+              <div class="doctor-specialty">Стоматолог-терапевт, эндодонтист</div>
+              <p class="doctor-bio">
+                Специализируется на высокоточном лечении каналов под микроскопом Carl Zeiss. Спасает зубы от удаления даже при сложных воспалениях и перфорациях.
+              </p>
+              <div class="doctor-card-footer">
+                <button type="button" class="btn btn--outline btn--block btn--sm" data-open-modal data-service="Консультация терапевта Васильева Д.И.">
+                  Записаться к врачу
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         PRICING & TRANSPARENCY SECTION
+         ====================================================================== -->
+    <section id="pricing" class="section section--alt">
+      <div class="container">
+        <header class="section-header">
+          <div class="section-badge">Честный прайс-лист</div>
+          <h2 class="section-title">Прозрачные цены <span class="highlight">«под ключ»</span></h2>
+          <p class="section-subtitle">
+            Мы фиксируем окончательную стоимость в договоре до начала лечения. Никаких скрытых платежей за анестезию, снимки или расходные материалы.
+          </p>
+        </header>
+
+        <!-- Pricing Categories Tabs -->
+        <div class="pricing-tabs">
+          <button type="button" class="pricing-tab-btn active" data-tab="all">Все программы</button>
+          <button type="button" class="pricing-tab-btn" data-tab="implants">Имплантация</button>
+          <button type="button" class="pricing-tab-btn" data-tab="veneers">Виниры</button>
+          <button type="button" class="pricing-tab-btn" data-tab="hygiene">Гигиена</button>
+        </div>
+
+        <div class="pricing-cards-grid">
+          <!-- Tier 1: Straumann Single Implant -->
+          <article class="price-card" data-category="implants">
+            <span class="price-card-tier">Хирургический протокол</span>
+            <h3 class="price-card-name">Имплантация Straumann</h3>
+            <div class="price-card-amount">69 000 ₽</div>
+            <div class="price-card-installment">или от 5 750 ₽/мес в рассрочку 0%</div>
+            
+            <div class="price-card-features">
+              <div class="price-feature-row">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Премиальный швейцарский имплант Straumann SLA</span>
+              </div>
+              <div class="price-feature-row">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Операция под местной анестезией последнего поколения</span>
+              </div>
+              <div class="price-feature-row">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Установка формирователя десны и контрольные КТ</span>
+              </div>
+              <div class="price-feature-row">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Официальный паспорт изделия и пожизненная гарантия</span>
+              </div>
+            </div>
+
+            <div class="price-card-btn-wrap">
+              <button type="button" class="btn btn--outline btn--block" data-open-modal data-service="Имплантация Straumann (69 000 ₽)">
+                Зафиксировать цену
+              </button>
+            </div>
+          </article>
+
+          <!-- Tier 2: All-on-4 Full Jaw (Featured) -->
+          <article class="price-card price-card--featured" data-category="implants">
+            <span class="price-featured-badge">Популярный выбор</span>
+            <span class="price-card-tier">Тотальная реабилитация</span>
+            <h3 class="price-card-name">All-on-4 «Зубы за 1 день»</h3>
+            <div class="price-card-amount">245 000 ₽</div>
+            <div class="price-card-installment">или от 20 400 ₽/мес в рассрочку 0%</div>
+            
+            <div class="price-card-features">
+              <div class="price-feature-row">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Установка 4 оригинальных имплантов Nobel / Straumann</span>
+              </div>
+              <div class="price-feature-row">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Изготовление и фиксация несъемного протеза в день операции</span>
+              </div>
+              <div class="price-feature-row">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Возможность проведения во сне (седация включена)</span>
+              </div>
+              <div class="price-feature-row">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Индивидуальный навигационный хирургический шаблон</span>
+              </div>
+            </div>
+
+            <div class="price-card-btn-wrap">
+              <button type="button" class="btn btn--primary btn--block" data-open-modal data-service="All-on-4 под ключ (245 000 ₽)">
+                Записаться на консультацию
+              </button>
+            </div>
+          </article>
+
+          <!-- Tier 3: Veneers Package -->
+          <article class="price-card" data-category="veneers">
+            <span class="price-card-tier">Зона улыбки</span>
+            <h3 class="price-card-name">Виниры E-max (Комплекс)</h3>
+            <div class="price-card-amount">38 500 ₽ <small style="font-size: 1rem; font-weight: 500;">/ зуб</small></div>
+            <div class="price-card-installment">или от 3 200 ₽/мес за 1 винир</div>
+            
+            <div class="price-card-features">
+              <div class="price-feature-row">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Керамика Ivoclar Vivadent (Германия/Лихтенштейн)</span>
+              </div>
+              <div class="price-feature-row">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Цифровое 3D-моделирование и примерка Mock-Up</span>
+              </div>
+              <div class="price-feature-row">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Минимальное микропрепарирование в пределах эмали</span>
+              </div>
+              <div class="price-feature-row">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Временные виниры на период изготовления</span>
+              </div>
+            </div>
+
+            <div class="price-card-btn-wrap">
+              <button type="button" class="btn btn--outline btn--block" data-open-modal data-service="Виниры E-max">
+                Записаться на примерку
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         REVIEWS & RATINGS SECTION
+         ====================================================================== -->
+    <section id="reviews" class="section section--white">
+      <div class="container">
+        <header class="section-header">
+          <div class="section-badge">Доверие пациентов</div>
+          <h2 class="section-title">Истории пациентов <span class="highlight">«Аура Дент»</span></h2>
+          <p class="section-subtitle">
+            Более 1 200 честных отзывов на независимых медицинских порталах со средней оценкой 4.9 из 5.0.
+          </p>
+        </header>
+
+        <div class="reviews-grid">
+          <!-- Review 1 -->
+          <article class="review-card">
+            <div>
+              <div class="review-rating-stars" aria-label="Рейтинг: 5 из 5">
+                <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              </div>
+              <p class="review-text">
+                «Я панически боялся стоматологов с детства, поэтому запустил зубы. В Аура Дент мне предложили сделать все под седацией. Я просто уснул, а проснулся уже с новыми красивыми зубами! Никакой боли, отеков практически не было. Огромное спасибо Александру Сергеевичу Волкову за золотые руки!»
+              </p>
+            </div>
+            <div class="review-author-wrap">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/review-1.jpg -->
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="Игорь Николаевич" class="review-author-avatar">
+              <div>
+                <div class="review-author-name">Игорь Николаевич, 45 лет</div>
+                <div class="review-treatment-badge">Имплантация All-on-4 во сне</div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Review 2 -->
+          <article class="review-card">
+            <div>
+              <div class="review-rating-stars" aria-label="Рейтинг: 5 из 5">
+                <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              </div>
+              <p class="review-text">
+                «Ставила 8 виниров E-max у Смирновой Елены Михайловны. Результат превзошел все ожидания — зубы выглядят абсолютно естественно, прозрачный режущий край, никто даже не догадывается, что это виниры. Очень уютная клиника, вежливый персонал и удобная парковка в самом центре.»
+              </p>
+            </div>
+            <div class="review-author-wrap">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/review-2.jpg -->
+              <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=150&q=80" alt="Мария Соловьева" class="review-author-avatar">
+              <div>
+                <div class="review-author-name">Мария Соловьева, 29 лет</div>
+                <div class="review-treatment-badge">Керамические виниры E-max</div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Review 3 -->
+          <article class="review-card">
+            <div>
+              <div class="review-rating-stars" aria-label="Рейтинг: 5 из 5">
+                <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              </div>
+              <p class="review-text">
+                «Лечимся здесь всей семьей уже четвертый год. Дочке 6 лет лечили кариес — ребенок даже не понял, что был у стоматолога, смотрела мультики и выбрала себе игрушку из сундука храбрости. А мне спасли сложный зуб под микроскопом, который в другой клинике хотели удалить.»
+              </p>
+            </div>
+            <div class="review-author-wrap">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/review-3.jpg -->
+              <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=150&q=80" alt="Артем Воронов" class="review-author-avatar">
+              <div>
+                <div class="review-author-name">Артем Воронов, 38 лет</div>
+                <div class="review-treatment-badge">Семейное лечение и микроскоп</div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         FAQ ACCORDION
+         ====================================================================== -->
+    <section id="faq" class="section section--white">
+      <div class="container">
+        <header class="section-header">
+          <div class="section-badge">Вопрос — Ответ</div>
+          <h2 class="section-title">Часто задаваемые <span class="highlight">вопросы</span></h2>
+          <p class="section-subtitle">
+            Ответы главных специалистов клиники на самые частые вопросы и опасения пациентов.
+          </p>
+        </header>
+
+        <div class="faq-container">
+          <!-- FAQ 1 -->
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false">
+              <span class="faq-question">Больно ли устанавливать зубной имплант?</span>
+              <span class="faq-icon-wrap" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </span>
+            </button>
+            <div class="faq-content">
+              <div class="faq-content-inner">
+                Установка импланта абсолютно безболезненна. В костной ткани практически нет нервных окончаний, поэтому процедура переносится даже легче, чем удаление зуба. Мы используем передовые анестетики артикаинового ряда (Германия/Франция), полностью блокирующие чувствительность. Для пациентов с дентофобией или повышенной тревогой мы проводим установку в состоянии медикаментозного сна (седации).
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false">
+              <span class="faq-question">В чем разница между технологиями All-on-4 и All-on-6?</span>
+              <span class="faq-icon-wrap" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </span>
+            </button>
+            <div class="faq-content">
+              <div class="faq-content-inner">
+                Оба метода позволяют восстановить весь зубной ряд несъемным протезом всего за 1 день. All-on-4 предполагает установку 4 имплантов (2 прямо во фронтальном отделе и 2 под углом в боковых). All-on-6 использует 6 имплантов, что обеспечивает более равномерное распределение жевательной нагрузки и рекомендуется при широкой челюсти, мощных жевательных мышцах или умеренной атрофии костной ткани. Выбор метода определяет хирург на основе 3D-томографии.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false">
+              <span class="faq-question">Что входит в стоимость имплантации «под ключ»?</span>
+              <span class="faq-icon-wrap" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </span>
+            </button>
+            <div class="faq-content">
+              <div class="faq-content-inner">
+                В нашей клинике в стоимость «под ключ» входит полный комплекс: консультация хирурга, компьютерная томография до и после, сам оригинальный титановый имплант Straumann или Nobel Biocare, хирургическая операция установки, анестезия, наложение швов, установка формирователя десны, абатмент, индивидуальный трансфер и контрольные осмотры в период приживления. Никаких непредвиденных доплат.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false">
+              <span class="faq-question">Как проходит лечение зубов во сне (под седацией)?</span>
+              <span class="faq-icon-wrap" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </span>
+            </button>
+            <div class="faq-content">
+              <div class="faq-content-inner">
+                Пациент вдыхает через маску смесь кислорода с закисью азота либо получает микродозу безопасного седативного препарата ультракороткого действия. Вы погружаетесь в приятное состояние легкой дрёмы: страх и мышечное напряжение полностью уходят, сохраняется способность слышать врача. На протяжении всей процедуры за вашим пульсом, давлением и насыщением крови кислородом следит врач-анестезиолог на мониторе Philips. Через 15 минут после окончания вы чувствуете себя бодрым и можете возвращаться домой.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false">
+              <span class="faq-question">Сильно ли нужно обтачивать зубы под керамические виниры?</span>
+              <span class="faq-icon-wrap" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </span>
+            </button>
+            <div class="faq-content">
+              <div class="faq-content-inner">
+                Мы используем ультратонкую полевошпатовую керамику и дисиликат лития E-max. Толщина винира составляет всего 0.3 – 0.5 мм (как контактная линза). Обработка зуба проводится строго под микроскопом Carl Zeiss в пределах внешней эмали без снятия глубоких слоев дентина. Нерв зуба обязательно сохраняется живым. В некоторых случаях (при микродентии или диастемах) возможна установка ультратонких виниров вовсе без обточки (Non-Prep).
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 6 -->
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false">
+              <span class="faq-question">Предоставляется ли беспроцентная рассрочка и налоговый вычет?</span>
+              <span class="faq-icon-wrap" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </span>
+            </button>
+            <div class="faq-content">
+              <div class="faq-content-inner">
+                Да. Клиника предоставляет беспроцентную рассрочку от банков-партнеров (Т-Банк, Сбербанк) на срок от 6 до 24 месяцев без первоначального взноса и переплат (проценты банку за вас выплачивает клиника). Также мы подготавливаем полный комплект документов и справок об оплате медицинских услуг для оформления государственного налогового вычета 13% в ФНС.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         MAP & CONTACTS SECTION
+         ====================================================================== -->
+    <section id="contacts" class="section contacts-section">
+      <div class="container">
+        <header class="section-header">
+          <div class="section-badge">Локация и визит</div>
+          <h2 class="section-title">Контакты клиники <span class="highlight">«Аура Дент»</span></h2>
+          <p class="section-subtitle">
+            Удобное расположение в историческом центре Москвы. Собственный закрытый паркинг для пациентов.
+          </p>
+        </header>
+
+        <div class="contacts-wrapper">
+          <!-- Glass Contact Card -->
+          <div class="contact-card-glass">
+            <div>
+              <div class="contact-item">
+                <div class="contact-item-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                </div>
+                <div>
+                  <div class="contact-item-title">Адрес клиники</div>
+                  <div class="contact-item-value" data-config="address">г. Москва, Малый Гнездниковский переулок, д. 9, стр. 2</div>
+                  <div style="font-size: 0.825rem; color: var(--color-turquoise); font-weight: 600; margin-top: 4px;">
+                    м. Тверская / Пушкинская / Чеховская (3 минуты пешком)
+                  </div>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-item-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                </div>
+                <div>
+                  <div class="contact-item-title">Телефон регистратуры</div>
+                  <div class="contact-item-value">
+                    <a href="tel:+74958452140" data-config="phone-link">+7 (495) 845-21-40</a>
+                  </div>
+                  <div style="font-size: 0.8rem; color: var(--color-slate-light);">Многоканальный, круглосуточно</div>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-item-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                </div>
+                <div>
+                  <div class="contact-item-title">График приема</div>
+                  <div class="contact-item-value" data-config="schedule-full">
+                    Пн-Пт: 09:00 – 21:00 | Сб-Вс: 09:00 – 20:00
+                  </div>
+                  <div class="live-status" style="margin-top: 6px;">
+                    <span class="live-pulse" aria-hidden="true"></span>
+                    <span class="live-status-text">Открыто сейчас</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-item-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </div>
+                <div>
+                  <div class="contact-item-title">Электронная почта</div>
+                  <div class="contact-item-value">
+                    <a href="mailto:care@auradental.ru" data-config="email">care@auradental.ru</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div style="margin-top: 24px;">
+              <button type="button" class="btn btn--primary btn--block btn--lg" data-open-modal>
+                Записаться на прием
+              </button>
+            </div>
+          </div>
+
+          <!-- Yandex Maps Box -->
+          <div class="map-container-box">
+            <div id="yandex-map" role="application" aria-label="Интерактивная карта проезда"></div>
+
+            <!-- Fallback Overlay in case maps are blocked/offline -->
+            <div class="map-fallback-overlay">
+              <svg style="width: 48px; height: 48px; color: var(--color-turquoise); margin-bottom: 16px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <h3 style="font-family: var(--font-heading); font-size: 1.25rem; color: var(--color-navy); margin-bottom: 8px;">
+                Клиника «Аура Дент» в центре Москвы
+              </h3>
+              <p style="color: var(--color-slate); font-size: 0.95rem; margin-bottom: 20px; max-width: 400px;">
+                г. Москва, Малый Гнездниковский пер., 9, стр. 2 (метро Тверская / Пушкинская, 3 минуты). Собственная парковка для пациентов.
+              </p>
+              <a href="https://yandex.ru/maps/?pt=37.605332,55.760241&z=17&l=map" target="_blank" rel="noopener noreferrer" class="btn btn--primary" data-config="yandex-maps-link">
+                Открыть в Яндекс.Картах
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-disclaimer-banner">
+        Имеются противопоказания. Необходима очная консультация квалифицированного врача-специалиста.
+      </div>
+
+      <div class="footer-top">
+        <!-- Col 1: Brand -->
+        <div>
+          <a href="#" class="logo" style="margin-bottom: 16px;">
+            <div class="logo-symbol" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2C7 2 5 5 5 9c0 4 2 6 2 11 0 1.5 1 2 2 2s2-1 2-3c0-1.5 1-2 2-2s2 .5 2 2c0 2 1 3 2 3s2-.5 2-2c0-5 2-7 2-11 0-4-2-7-7-7z"></path>
+              </svg>
+            </div>
+            <div class="logo-text">
+              <span class="logo-title" style="color: #FFFFFF;">АУРА <span>ДЕНТ</span></span>
+              <span class="logo-desc" style="color: rgba(255, 255, 255, 0.65);">Стоматология премиум-класса</span>
+            </div>
+          </a>
+          <p style="font-size: 0.85rem; line-height: 1.6; color: rgba(255, 255, 255, 0.65); margin-bottom: 16px;">
+            Европейские стандарты доказательной стоматологии, цифровая имплантация за 1 день и лечение во сне без страха и боли в историческом центре Москвы.
+          </p>
+          <div class="footer-legal-notice">
+            ООО «Аура Дент» • ОГРН 1187746123456 • ИНН 7710984521<br>
+            Медицинская лицензия № Л041-01137-77/00345678 от 14 апреля 2018 г. Выдана Департаментом здравоохранения города Москвы.
+          </div>
+        </div>
+
+        <!-- Col 2: Services Links -->
+        <div>
+          <h4 class="footer-col-title">Услуги</h4>
+          <ul class="footer-nav-list">
+            <li><a href="#services" class="footer-nav-link">Имплантация All-on-4 / 6</a></li>
+            <li><a href="#services" class="footer-nav-link">Керамические виниры E-max</a></li>
+            <li><a href="#services" class="footer-nav-link">Исправление прикуса элайнерами</a></li>
+            <li><a href="#services" class="footer-nav-link">Лечение зубов под микроскопом</a></li>
+            <li><a href="#services" class="footer-nav-link">Отбеливание Zoom 4 WhiteSpeed</a></li>
+            <li><a href="#services" class="footer-nav-link">Лечение зубов во сне (седация)</a></li>
+            <li><a href="#services" class="footer-nav-link">Детская стоматология</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Navigation -->
+        <div>
+          <h4 class="footer-col-title">Навигация</h4>
+          <ul class="footer-nav-list">
+            <li><a href="#features" class="footer-nav-link">О клинике</a></li>
+            <li><a href="#doctors" class="footer-nav-link">Наши врачи</a></li>
+            <li><a href="#cases" class="footer-nav-link">Клинические случаи</a></li>
+            <li><a href="#pricing" class="footer-nav-link">Цены и рассрочка</a></li>
+            <li><a href="#reviews" class="footer-nav-link">Отзывы пациентов</a></li>
+            <li><a href="#faq" class="footer-nav-link">Частые вопросы</a></li>
+            <li><a href="#contacts" class="footer-nav-link">Схема проезда</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contacts -->
+        <div>
+          <h4 class="footer-col-title">Контакты</h4>
+          <p style="font-size: 0.85rem; line-height: 1.6; color: rgba(255, 255, 255, 0.75); margin-bottom: 12px;" data-config="address">
+            г. Москва, Малый Гнездниковский пер., д. 9, стр. 2
+          </p>
+          <p style="font-size: 0.85rem; color: rgba(255, 255, 255, 0.75); margin-bottom: 16px;">
+            <a href="tel:+74958452140" style="color: #FFFFFF; font-weight: 700; font-size: 1.05rem;" data-config="phone-link">+7 (495) 845-21-40</a><br>
+            <span style="font-size: 0.8rem; color: var(--color-turquoise);">Ежедневно с 09:00 до 21:00</span>
+          </p>
+          <div class="social-links-small" style="gap: 12px;">
+            <a href="#" class="social-link-item" data-config="whatsapp" target="_blank" rel="noopener noreferrer" title="WhatsApp" style="width: 32px; height: 32px;">
+              <svg viewBox="0 0 24 24" fill="currentColor" style="width: 16px; height: 16px;">
+                <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.669-.699c.968.54 1.838.82 2.791.82 3.185 0 5.771-2.587 5.772-5.766.001-3.187-2.575-5.77-5.772-5.77zm0 10.373c-.854 0-1.63-.25-2.279-.699l-.163-.109-1.579.414.421-1.539-.107-.171a4.675 4.675 0 0 1-.722-2.502c.001-2.584 2.103-4.686 4.687-4.686 2.586 0 4.689 2.102 4.689 4.686 0 2.587-2.102 4.687-4.689 4.687z"/>
+              </svg>
+            </a>
+            <a href="#" class="social-link-item" data-config="telegram" target="_blank" rel="noopener noreferrer" title="Telegram" style="width: 32px; height: 32px;">
+              <svg viewBox="0 0 24 24" fill="currentColor" style="width: 16px; height: 16px;">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 0 0-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 Стоматологическая клиника «Аура Дент» (Aura Dental). Все права защищены.
+        </div>
+        <div>
+          Информация на сайте носит ознакомительный характер и не является публичной офертой (ст. 437 ГК РФ).
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       MODAL: LEAD CAPTURE / APPOINTMENT
+       ======================================================================== -->
+  <div id="appointment-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-title-text">
+    <div class="modal-window">
+      <button type="button" class="modal-close-btn" data-modal-close aria-label="Закрыть модальное окно">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+
+      <!-- Form View -->
+      <div class="modal-form-content">
+        <div class="modal-header">
+          <h3 class="modal-title" id="modal-title-text">Запись на прием</h3>
+          <p class="modal-desc">
+            Оставьте свои контактные данные. Медицинский куратор перезвонит вам в течение 10 минут и подберет удобное время.
+          </p>
+        </div>
+
+        <form id="lead-modal-form">
+          <div class="form-group">
+            <label class="form-label" for="modal-user-name">Ваше имя</label>
+            <input type="text" id="modal-user-name" name="user_name" class="form-input" placeholder="Иван Иванов" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="modal-user-phone">Телефон</label>
+            <input type="tel" id="modal-user-phone" name="user_phone" class="form-input" placeholder="+7 (___) ___-__-__" required>
+            <span class="form-error-msg">Пожалуйста, укажите контактный телефон для подтверждения записи</span>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="modal-service-select">Интересующая услуга</label>
+            <select id="modal-service-select" name="service" class="form-select">
+              <option value="Первичный прием и 3D-КТ">Первичная консультация и 3D-КТ (0 ₽)</option>
+              <option value="Имплантация зубов">Имплантация одного или нескольких зубов</option>
+              <option value="All-on-4 / All-on-6">Тотальная имплантация All-on-4 / All-on-6</option>
+              <option value="Виниры E-max">Керамические виниры E-max</option>
+              <option value="Исправление прикуса">Исправление прикуса (элайнеры / брекеты)</option>
+              <option value="Лечение во сне">Лечение зубов во сне (под седацией)</option>
+              <option value="Лечение зубов">Лечение кариеса под микроскопом</option>
+              <option value="Профгигиена">Профессиональная гигиена и отбеливание</option>
+            </select>
+          </div>
+
+          <div class="form-checkbox-group">
+            <input type="checkbox" id="modal-policy" checked required>
+            <label for="modal-policy">
+              Я соглашаюсь на обработку персональных данных и подтверждаю ознакомление с политикой конфиденциальности.
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--block btn--lg">
+            Подтвердить запись
+          </button>
+        </form>
+      </div>
+
+      <!-- Success View -->
+      <div class="modal-success-screen">
+        <div class="success-icon-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+        </div>
+        <h3 class="modal-title">Заявка успешно принята!</h3>
+        <p class="modal-desc" style="margin-bottom: 24px;">
+          Медицинский координатор «Аура Дент» свяжется с вами по указанному номеру для подтверждения времени визита.
+        </p>
+        <div style="background: var(--color-seafoam); border: 1px dashed var(--color-turquoise); border-radius: var(--radius-md); padding: 16px; margin-bottom: 24px; font-size: 0.9rem;">
+          <strong>Ваш промокод на 3D-КТ:</strong> <span style="color: var(--color-turquoise); font-weight: 800; font-size: 1.1rem; letter-spacing: 0.05em;">AURA-2026</span>
+          <div style="font-size: 0.8rem; color: var(--color-slate); margin-top: 4px;">Назовите администратору при визите для бесплатной 3D-томографии челюсти</div>
+        </div>
+        <button type="button" class="btn btn--primary btn--block" data-modal-close>
+          Отлично, понятно
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Quick Booking Pill -->
+  <a href="#booking" class="floating-call-btn" title="Записаться онлайн на прием" aria-label="Быстрая запись на прием">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+      <line x1="16" y1="2" x2="16" y2="6"></line>
+      <line x1="8" y1="2" x2="8" y2="6"></line>
+      <line x1="3" y1="10" x2="21" y2="10"></line>
+    </svg>
+  </a>
+
+  <!-- Main JavaScript Bundle -->
+  <script src="script.js"></script>
+</body>
+</html>

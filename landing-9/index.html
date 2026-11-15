@@ -1,0 +1,1542 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ROBO-START Академия — Робототехника и программирование для детей 5–16 лет в Москве</title>
+  <meta name="description" content="Детская академия робототехники и IT ROBO-START в Москве. Обучение детей от 5 до 16 лет: LEGO WeDo, Spike Prime, Arduino, Python, 3D-моделирование. Бесплатный пробный урок!">
+  <meta name="keywords" content="робототехника для детей, курсы программирования для детей, LEGO WeDo, LEGO Spike Prime, Python для детей, Arduino, кружок робототехники Москва">
+  <meta property="og:title" content="ROBO-START Академия — Робототехника и IT для детей 5–16 лет">
+  <meta property="og:description" content="Учим детей конструировать роботов, программировать и мыслить как инженер. Запишитесь на бесплатный пробный урок!">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts: Nunito (Headings) + Montserrat (Body & UI) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Top Utility Bar -->
+  <aside class="top-bar" aria-label="Служебная информация">
+    <div class="container top-bar__inner">
+      <div class="top-bar__location">
+        <svg class="icon icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span data-config="contacts.address">г. Москва, ул. Дербеневская, д. 1, стр. 6</span>
+        <span class="top-bar__metro">(м. Павелецкая)</span>
+      </div>
+
+      <div class="top-bar__status">
+        <span class="status-indicator">
+          <span class="status-indicator__dot"></span>
+          <span class="status-indicator__text" id="live-working-status">Проверяем статус...</span>
+        </span>
+      </div>
+
+      <div class="top-bar__contacts">
+        <a href="tel:+74957894215" class="top-bar__phone" data-config-phone>
+          <svg class="icon icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span data-config="contacts.phone">+7 (495) 789-42-15</span>
+        </a>
+        <div class="top-bar__messengers">
+          <a href="https://t.me/robostart_academy" target="_blank" rel="noopener noreferrer" class="messenger-link messenger-link--tg" title="Написать в Telegram" data-config-tg>
+            <svg class="icon icon--sm" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 0 0-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+          </a>
+          <a href="https://wa.me/74957894215" target="_blank" rel="noopener noreferrer" class="messenger-link messenger-link--wa" title="Написать в WhatsApp" data-config-wa>
+            <svg class="icon icon--sm" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c.01 4.54-3.69 8.23-8.22 8.23zm4.52-6.17c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.84-.86 2.05s.88 2.38 1 2.54c.12.17 1.73 2.64 4.19 3.7.59.25 1.05.4 1.41.51.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.11-.23-.17-.48-.29z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Header / Navigation -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#hero" class="brand-logo" aria-label="ROBO-START Главная">
+        <div class="brand-logo__icon-wrap">
+          <svg class="brand-logo__svg" viewBox="0 0 48 48" fill="none">
+            <rect x="6" y="10" width="36" height="30" rx="10" fill="#2563EB"/>
+            <rect x="10" y="14" width="28" height="22" rx="7" fill="#1E40AF"/>
+            <circle cx="18" cy="22" r="4.5" fill="#FBBF24"/>
+            <circle cx="18" cy="22" r="2" fill="#0F172A"/>
+            <circle cx="30" cy="22" r="4.5" fill="#FBBF24"/>
+            <circle cx="30" cy="22" r="2" fill="#0F172A"/>
+            <path d="M18 29c1.5 2 4.5 3 6 3s4.5-1 6-3" stroke="#F8FAFC" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="24" y1="2" x2="24" y2="10" stroke="#F43F5E" stroke-width="3" stroke-linecap="round"/>
+            <circle cx="24" cy="3" r="3" fill="#F43F5E"/>
+            <rect x="2" y="19" width="4" height="10" rx="2" fill="#10B981"/>
+            <rect x="42" y="19" width="4" height="10" rx="2" fill="#10B981"/>
+          </svg>
+        </div>
+        <div class="brand-logo__text-group">
+          <span class="brand-logo__title">ROBO<span class="text-coral">-</span>START</span>
+          <span class="brand-logo__subtitle">Академия робототехники & IT</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu" aria-label="Основная навигация">
+        <ul class="nav-menu__list">
+          <li class="nav-menu__item"><a href="#about" class="nav-menu__link">О нас</a></li>
+          <li class="nav-menu__item"><a href="#recommender" class="nav-menu__link">Тест по возрасту</a></li>
+          <li class="nav-menu__item"><a href="#courses" class="nav-menu__link">Курсы</a></li>
+          <li class="nav-menu__item"><a href="#methodology" class="nav-menu__link">Методика</a></li>
+          <li class="nav-menu__item"><a href="#pricing" class="nav-menu__link">Цены</a></li>
+          <li class="nav-menu__item"><a href="#mentors" class="nav-menu__link">Преподаватели</a></li>
+          <li class="nav-menu__item"><a href="#gallery" class="nav-menu__link">Галерея</a></li>
+          <li class="nav-menu__item"><a href="#faq" class="nav-menu__link">FAQ</a></li>
+          <li class="nav-menu__item"><a href="#contacts" class="nav-menu__link">Контакты</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <button type="button" class="btn btn--primary btn--header-cta" data-modal-open="trial-modal" data-course-source="Хедер: Записаться">
+          <span class="btn__text">Пробный урок 0 ₽</span>
+          <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+
+        <button type="button" class="burger-btn" id="burger-btn" aria-label="Открыть мобильное меню" aria-expanded="false" aria-controls="mobile-drawer">
+          <span class="burger-btn__bar"></span>
+          <span class="burger-btn__bar"></span>
+          <span class="burger-btn__bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="drawer-overlay" id="drawer-overlay" aria-hidden="true"></div>
+  <aside class="mobile-drawer" id="mobile-drawer" aria-label="Мобильное меню" aria-hidden="true">
+    <div class="mobile-drawer__header">
+      <div class="brand-logo brand-logo--drawer">
+        <span class="brand-logo__title">ROBO<span class="text-coral">-</span>START</span>
+      </div>
+      <button type="button" class="drawer-close-btn" id="drawer-close-btn" aria-label="Закрыть меню">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+
+    <nav class="mobile-drawer__nav">
+      <ul class="mobile-drawer__list">
+        <li><a href="#about" class="mobile-drawer__link">О нас</a></li>
+        <li><a href="#recommender" class="mobile-drawer__link">Подбор курса по возрасту</a></li>
+        <li><a href="#courses" class="mobile-drawer__link">Программы курсов</a></li>
+        <li><a href="#methodology" class="mobile-drawer__link">Как проходит обучение</a></li>
+        <li><a href="#pricing" class="mobile-drawer__link">Тарифы и абонементы</a></li>
+        <li><a href="#mentors" class="mobile-drawer__link">Наши наставники</a></li>
+        <li><a href="#gallery" class="mobile-drawer__link">Фотогалерея классов</a></li>
+        <li><a href="#faq" class="mobile-drawer__link">Частые вопросы (FAQ)</a></li>
+        <li><a href="#contacts" class="mobile-drawer__link">Контакты и адрес</a></li>
+      </ul>
+    </nav>
+
+    <div class="mobile-drawer__footer">
+      <button type="button" class="btn btn--primary btn--full" data-modal-open="trial-modal" data-course-source="Мобильное меню">
+        Записаться на пробный урок
+      </button>
+      <div class="mobile-drawer__phone-box">
+        <a href="tel:+74957894215" class="mobile-drawer__phone" data-config-phone>
+          <span data-config="contacts.phone">+7 (495) 789-42-15</span>
+        </a>
+        <span class="mobile-drawer__schedule" data-config="schedule.weekdays">Пн-Пт: 10:00 – 20:00</span>
+      </div>
+    </div>
+  </aside>
+
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+      <div class="hero-bg-shapes" aria-hidden="true">
+        <div class="shape shape--circle-yellow"></div>
+        <div class="shape shape--circle-blue"></div>
+        <div class="shape shape--circle-coral"></div>
+        <div class="shape shape--grid-dots"></div>
+      </div>
+
+      <div class="container hero-section__inner">
+        <div class="hero-section__content">
+          <div class="hero-badge animate-fade-in">
+            <span class="hero-badge__emoji">🚀</span>
+            <span class="hero-badge__text">Открыт набор на новый сезон • Скидка 15% на 1-й абонемент</span>
+          </div>
+
+          <h1 class="hero-section__title">
+            От первой шестерёнки до <span class="text-highlight text-highlight--blue">собственного робота</span> и соревнований
+          </h1>
+
+          <p class="hero-section__lead">
+            Обучаем детей от <strong>5 до 16 лет</strong> инженерии, схемотехнике и программированию в игровой практической форме. На каждом занятии ребёнок собирает работающую модель с нуля!
+          </p>
+
+          <div class="hero-section__cta-group">
+            <button type="button" class="btn btn--primary btn--lg btn--pulse" data-modal-open="trial-modal" data-course-source="Hero: Главная кнопка">
+              <span>Записаться на пробный урок</span>
+              <span class="btn__badge-chip">0 ₽</span>
+            </button>
+            <a href="#recommender" class="btn btn--outline btn--lg">
+              <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+              <span>Подобрать курс за 30 сек</span>
+            </a>
+          </div>
+
+          <!-- Trust Counters -->
+          <div class="hero-metrics">
+            <div class="metric-card">
+              <span class="metric-card__number">8+</span>
+              <span class="metric-card__label">лет обучаем юных инженеров</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-card__number">2 400+</span>
+              <span class="metric-card__label">выпускников собрали проекты</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-card__number">45+</span>
+              <span class="metric-card__label">призовых мест на олимпиадах</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-card__number">до 8</span>
+              <span class="metric-card__label">детей в мини-группе</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual Media -->
+        <div class="hero-section__media">
+          <div class="hero-card-composition">
+            <div class="hero-main-photo-wrapper">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/hero-robotics.jpg -->
+              <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=900&q=80" 
+                   alt="Девочка увлечённо собирает и настраивает учебного робота" 
+                   class="hero-main-photo" 
+                   width="540" 
+                   height="420"
+                   loading="eager">
+              <div class="hero-photo-badge hero-photo-badge--top-right">
+                <span class="hero-photo-badge__icon">🤖</span>
+                <span class="hero-photo-badge__text">LEGO Spike & WeDo</span>
+              </div>
+              <div class="hero-photo-badge hero-photo-badge--bottom-left">
+                <span class="hero-photo-badge__icon">🏆</span>
+                <span class="hero-photo-badge__text">Победители Robofest 2025</span>
+              </div>
+            </div>
+
+            <!-- Floating Mini Card -->
+            <div class="floating-tech-card">
+              <div class="floating-tech-card__header">
+                <span class="tech-dot tech-dot--green"></span>
+                <span class="floating-tech-card__title">Что собираем сегодня:</span>
+              </div>
+              <p class="floating-tech-card__desc">Автономный марсоход с ультразвуковым датчиком расстояния</p>
+              <div class="floating-tech-card__chips">
+                <span class="tech-chip tech-chip--yellow">Механика</span>
+                <span class="tech-chip tech-chip--blue">Scratch код</span>
+                <span class="tech-chip tech-chip--coral">Arduino</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Value Proposition / Advantages -->
+    <section class="section section--advantages" id="about">
+      <div class="container">
+        <div class="section-heading text-center">
+          <span class="section-tag section-tag--yellow">Наши преимущества</span>
+          <h2 class="section-title">Почему родители доверяют нам обучение детей</h2>
+          <p class="section-subtitle">
+            Мы превращаем детское увлечение гаджетами и играми в полезные практические навыки конструирования, логики и программирования.
+          </p>
+        </div>
+
+        <div class="advantages-grid">
+          <article class="advantage-card advantage-card--blue">
+            <div class="advantage-card__icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3 class="advantage-card__title">Мини-группы до 8 человек</h3>
+            <p class="advantage-card__desc">
+              Преподаватель успевает поработать с каждым ребёнком, объяснить сложную физическую или программную задачу и поддержать интерес без спешки.
+            </p>
+          </article>
+
+          <article class="advantage-card advantage-card--yellow">
+            <div class="advantage-card__icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+            </div>
+            <h3 class="advantage-card__title">Свой робот на каждом уроке</h3>
+            <p class="advantage-card__desc">
+              Никакой скучной лекционной теории. Дети с первых минут берут детали, соединяют приводы, подключают контроллеры и оживляют алгоритмы.
+            </p>
+          </article>
+
+          <article class="advantage-card advantage-card--coral">
+            <div class="advantage-card__icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <h3 class="advantage-card__title">Оригинальное оборудование</h3>
+            <p class="advantage-card__desc">
+              Используем сертифицированные наборы LEGO Education WeDo 2.0, Spike Prime, микроконтроллеры Arduino, безопасные паяльные станции и 3D-принтеры.
+            </p>
+          </article>
+
+          <article class="advantage-card advantage-card--mint">
+            <div class="advantage-card__icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            </div>
+            <h3 class="advantage-card__title">Преподаватели из МГТУ и МФТИ</h3>
+            <p class="advantage-card__desc">
+              Наши наставники — действующие инженеры и разработчики с педагогической сертификацией, умеющие заразить любовью к технике с горящими глазами.
+            </p>
+          </article>
+
+          <article class="advantage-card advantage-card--blue">
+            <div class="advantage-card__icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.45 1-1 1H7c-.55 0-1-.45-1-1v-2.34"/><path d="M18 14.66V17c0 .55-.45 1-1 1h-2c-.55 0-1-.45-1-1v-2.34"/><path d="M6 2h12v7a6 6 0 0 1-12 0V2z"/></svg>
+            </div>
+            <h3 class="advantage-card__title">Олимпиады и соревнования</h3>
+            <p class="advantage-card__desc">
+              Готовим команды к Robofest, WRO (World Robot Olympiad) и НТО Юниор. Ученики побеждают на городских и всероссийских хакатонах.
+            </p>
+          </article>
+
+          <article class="advantage-card advantage-card--yellow">
+            <div class="advantage-card__icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <h3 class="advantage-card__title">Отчёты родителям в Telegram</h3>
+            <p class="advantage-card__desc">
+              После каждого занятия вы получаете фото и видео собранного робота, комментарий педагога о прогрессе и рекомендации по развитию дома.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Age-Group Course Recommender -->
+    <section class="section section--recommender" id="recommender">
+      <div class="container">
+        <div class="recommender-card">
+          <div class="recommender-card__header text-center">
+            <span class="section-tag section-tag--coral">Интерактивный подбор</span>
+            <h2 class="section-title">Какой курс подойдёт именно вашему ребёнку?</h2>
+            <p class="section-subtitle">
+              Ответьте на 3 простых вопроса, и наша система мгновенно подберёт идеальную программу с учётом возраста и склонностей ребёнка.
+            </p>
+          </div>
+
+          <div class="quiz-container" id="quiz-container">
+            <!-- Step 1: Age Selection -->
+            <div class="quiz-step" data-quiz-step="1">
+              <div class="quiz-step__badge">Шаг 1 из 3</div>
+              <h3 class="quiz-step__question">Сколько лет вашему ребёнку?</h3>
+              <div class="quiz-options quiz-options--age">
+                <button type="button" class="quiz-opt-btn" data-field="age" data-value="5-7">
+                  <span class="quiz-opt-btn__icon">🧸</span>
+                  <span class="quiz-opt-btn__title">5 – 7 лет</span>
+                  <span class="quiz-opt-btn__sub">Дошкольники и 1 класс</span>
+                </button>
+                <button type="button" class="quiz-opt-btn active" data-field="age" data-value="8-11">
+                  <span class="quiz-opt-btn__icon">🚀</span>
+                  <span class="quiz-opt-btn__title">8 – 11 лет</span>
+                  <span class="quiz-opt-btn__sub">Начальная и средняя школа</span>
+                </button>
+                <button type="button" class="quiz-opt-btn" data-field="age" data-value="12-16">
+                  <span class="quiz-opt-btn__icon">💻</span>
+                  <span class="quiz-opt-btn__title">12 – 16 лет</span>
+                  <span class="quiz-opt-btn__sub">Подростки и старшеклассники</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Step 2: Experience / Interests -->
+            <div class="quiz-step" data-quiz-step="2">
+              <div class="quiz-step__badge">Шаг 2 из 3</div>
+              <h3 class="quiz-step__question">Чем больше всего нравится заниматься?</h3>
+              <div class="quiz-options quiz-options--interest">
+                <button type="button" class="quiz-opt-btn active" data-field="interest" data-value="lego">
+                  <span class="quiz-opt-btn__icon">🧩</span>
+                  <span class="quiz-opt-btn__title">Собирать LEGO и конструкторы</span>
+                  <span class="quiz-opt-btn__sub">Обожает строить и механизмы</span>
+                </button>
+                <button type="button" class="quiz-opt-btn" data-field="interest" data-value="gaming">
+                  <span class="quiz-opt-btn__icon">🎮</span>
+                  <span class="quiz-opt-btn__title">Играть в видеоигры (Roblox, Minecraft)</span>
+                  <span class="quiz-opt-btn__sub">Хочет создавать свои игры и сюжеты</span>
+                </button>
+                <button type="button" class="quiz-opt-btn" data-field="interest" data-value="coding">
+                  <span class="quiz-opt-btn__icon">⌨️</span>
+                  <span class="quiz-opt-btn__title">Интересуется кодом и компьютерами</span>
+                  <span class="quiz-opt-btn__sub">Хочет писать программы и ботов</span>
+                </button>
+                <button type="button" class="quiz-opt-btn" data-field="interest" data-value="circuits">
+                  <span class="quiz-opt-btn__icon">⚡</span>
+                  <span class="quiz-opt-btn__title">Интересуется электроникой и схемами</span>
+                  <span class="quiz-opt-btn__sub">Любит разбирать приборы и паять</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Step 3: Goal -->
+            <div class="quiz-step" data-quiz-step="3">
+              <div class="quiz-step__badge">Шаг 3 из 3</div>
+              <h3 class="quiz-step__question">Какая главная цель занятий?</h3>
+              <div class="quiz-options quiz-options--goal">
+                <button type="button" class="quiz-opt-btn active" data-field="goal" data-value="hobby">
+                  <span class="quiz-opt-btn__icon">💡</span>
+                  <span class="quiz-opt-btn__title">Увлечь полезным хобби</span>
+                  <span class="quiz-opt-btn__sub">Оторвать от смартфона и развить логику</span>
+                </button>
+                <button type="button" class="quiz-opt-btn" data-field="goal" data-value="career">
+                  <span class="quiz-opt-btn__icon">🎯</span>
+                  <span class="quiz-opt-btn__title">Подготовка к IT-профессии</span>
+                  <span class="quiz-opt-btn__sub">Фундаментальные навыки программирования</span>
+                </button>
+                <button type="button" class="quiz-opt-btn" data-field="goal" data-value="olympiad">
+                  <span class="quiz-opt-btn__icon">🥇</span>
+                  <span class="quiz-opt-btn__title">Олимпиады и победы</span>
+                  <span class="quiz-opt-btn__sub">Серьёзные соревнования и дипломы</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Recommendation Result Box -->
+            <div class="quiz-result-box" id="quiz-result-box">
+              <div class="quiz-result-box__header">
+                <span class="quiz-result-box__badge">Рекомендованный курс для вашего возраста</span>
+                <h4 class="quiz-result-box__title" id="quiz-rec-title">Инженерная лига & LEGO Spike Prime</h4>
+              </div>
+              <div class="quiz-result-box__body">
+                <p class="quiz-result-box__desc" id="quiz-rec-desc">
+                  Идеальный старт для школьников: ребёнок освоит датчики движения, ультразвук, моторы и визуальный код Scratch. Каждый урок — полноценная работающая модель (робот-манипулятор, шагоход, автоматический шлагбаум).
+                </p>
+                <div class="quiz-result-box__features" id="quiz-rec-features">
+                  <span class="rec-feature-item">✓ Формат: 1-2 раза в неделю по 90 мин</span>
+                  <span class="rec-feature-item">✓ Оборудование: LEGO Spike Prime</span>
+                  <span class="rec-feature-item">✓ Группа: до 8 человек</span>
+                </div>
+              </div>
+              <div class="quiz-result-box__footer">
+                <button type="button" class="btn btn--primary btn--lg" id="quiz-rec-btn" data-modal-open="trial-modal" data-course-source="Тест-рекомендация">
+                  Записаться на этот курс бесплатно
+                </button>
+                <span class="quiz-result-box__note">Пробный урок 0 ₽ • Все материалы предоставляем</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Courses Catalog Section -->
+    <section class="section section--courses" id="courses">
+      <div class="container">
+        <div class="section-heading text-center">
+          <span class="section-tag section-tag--blue">Программы обучения</span>
+          <h2 class="section-title">Все курсы по возрастным направлениям</h2>
+          <p class="section-subtitle">
+            Программы выстроены по принципу непрерывного инженерного образования: от базовой моторики до сложных нейросетей и роботов на микроконтроллерах.
+          </p>
+        </div>
+
+        <!-- Age Filter Tabs -->
+        <div class="filter-tabs" role="tablist" aria-label="Фильтр курсов по возрасту">
+          <button type="button" class="filter-tab active" data-filter="all" role="tab" aria-selected="true">Все направления</button>
+          <button type="button" class="filter-tab" data-filter="5-7" role="tab" aria-selected="false">5 – 7 лет (Старт)</button>
+          <button type="button" class="filter-tab" data-filter="8-11" role="tab" aria-selected="false">8 – 11 лет (Развитие)</button>
+          <button type="button" class="filter-tab" data-filter="12-16" role="tab" aria-selected="false">12 – 16 лет (Профи)</button>
+        </div>
+
+        <!-- Courses Grid -->
+        <div class="courses-grid" id="courses-grid">
+          <!-- Course Card 1: 5-7 LEGO WeDo -->
+          <article class="course-card" data-age="5-7">
+            <div class="course-card__media">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/course-wedo.jpg -->
+              <img src="https://images.unsplash.com/photo-1561557944-6e7860d1a7eb?auto=format&fit=crop&w=700&q=80" 
+                   alt="Дети собирают модели из конструктора LEGO WeDo" 
+                   class="course-card__img" 
+                   width="400" 
+                   height="240" 
+                   loading="lazy">
+              <span class="course-card__age-tag course-card__age-tag--yellow">5 – 7 лет</span>
+            </div>
+            <div class="course-card__content">
+              <div class="course-card__category">Дошкольный модуль</div>
+              <h3 class="course-card__title">Юный Архитектор & LEGO WeDo 2.0</h3>
+              <p class="course-card__desc">
+                Развиваем мелкую моторику, усидчивость и пространственное мышление. Изучаем простые механизмы: зубчатые колёса, шкивы, червячные передачи и первые алгоритмы.
+              </p>
+              <ul class="course-card__skills-list">
+                <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Визуальное блочное программирование</li>
+                <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Основы физики и механики в игре</li>
+                <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Наборы LEGO Education WeDo 2.0</li>
+              </ul>
+              <div class="course-card__footer">
+                <div class="course-card__duration">
+                  <span class="course-card__duration-label">Длительность:</span>
+                  <strong>1 раз/нед по 60 мин</strong>
+                </div>
+                <button type="button" class="btn btn--primary btn--sm" data-modal-open="trial-modal" data-course-source="Курс: LEGO WeDo 2.0">
+                  Записаться
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Course Card 2: 8-11 LEGO Spike Prime -->
+          <article class="course-card" data-age="8-11">
+            <div class="course-card__media">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/course-spike.jpg -->
+              <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=700&q=80" 
+                   alt="Школьники программируют робота Spike Prime на ноутбуке" 
+                   class="course-card__img" 
+                   width="400" 
+                   height="240" 
+                   loading="lazy">
+              <span class="course-card__age-tag course-card__age-tag--blue">8 – 11 лет</span>
+              <span class="course-card__hit-badge">Хит продаж 🔥</span>
+            </div>
+            <div class="course-card__content">
+              <div class="course-card__category">Школьный инженерный модуль</div>
+              <h3 class="course-card__title">Инженерная лига & LEGO Spike Prime</h3>
+              <p class="course-card__desc">
+                Флагманский курс для школьников. Работаем с многоосевыми гироскопами, оптическими датчиками цвета и умными моторами. Программируем логику в Scratch и готовимся к турнирам.
+              </p>
+              <ul class="course-card__skills-list">
+                <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Алгоритмы, ветвления и циклы</li>
+                <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Роботы-сумоисты, сортировщики и манипуляторы</li>
+                <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Подготовка к олимпиадам Robofest / WRO</li>
+              </ul>
+              <div class="course-card__footer">
+                <div class="course-card__duration">
+                  <span class="course-card__duration-label">Длительность:</span>
+                  <strong>1-2 раза/нед по 90 мин</strong>
+                </div>
+                <button type="button" class="btn btn--primary btn--sm" data-modal-open="trial-modal" data-course-source="Курс: LEGO Spike Prime">
+                  Записаться
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Course Card 3: 8-11 Scratch GameDev -->
+          <article class="course-card" data-age="8-11">
+            <div class="course-card__media">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/course-scratch.jpg -->
+              <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=700&q=80" 
+                   alt="Создание игр и анимации на компьютере" 
+                   class="course-card__img" 
+                   width="400" 
+                   height="240" 
+                   loading="lazy">
+              <span class="course-card__age-tag course-card__age-tag--mint">8 – 11 лет</span>
+            </div>
+            <div class="course-card__content">
+              <div class="course-card__category">Программирование и геймдев</div>
+              <h3 class="course-card__title">Создание 2D-игр и анимации на Scratch</h3>
+              <p class="course-card__desc">
+                Превращаем геймера в создателя. Ребёнок придумает персонажей, запрограммирует физику прыжков, счёт очков, диалоги и опубликует 6 собственных игр за модуль.
+              </p>
+              <ul class="course-card__skills-list">
+                <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Игровая механика и архитектура уровней</li>
+                <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Работа с переменными, списками и событиями</li>
+                <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Создание платформеров и аркад</li>
+              </ul>
+              <div class="course-card__footer">
+                <div class="course-card__duration">
+                  <span class="course-card__duration-label">Длительность:</span>
+                  <strong>1 раз/нед по 90 мин</strong>
+                </div>
+                <button type="button" class="btn btn--primary btn--sm" data-modal-open="trial-modal" data-course-source="Курс: Игры на Scratch">
+                  Записаться
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Course Card 4: 12-16 Arduino & Схемотехника -->
+          <article class="course-card" data-age="12-16">
+            <div class="course-card__media">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/course-arduino.jpg -->
+              <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=700&q=80" 
+                   alt="Электронная плата Arduino и подключенные датчики" 
+                   class="course-card__img" 
+                   width="400" 
+                   height="240" 
+                   loading="lazy">
+              <span class="course-card__age-tag course-card__age-tag--coral">12 – 16 лет</span>
+            </div>
+            <div class="course-card__content">
+              <div class="course-card__category">Настоящая инженерия & Hardware</div>
+              <h3 class="course-card__title">Схемотехника и роботы на Arduino & C++</h3>
+              <p class="course-card__desc">
+                Переход от конструктора к взрослым технологиям: макетные платы, резисторы, транзисторы, сервоприводы и микроконтроллеры Arduino. Пишем код на настоящем языке C++.
+              </p>
+              <ul class="course-card__skills-list">
+                <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Пайка, чтение принципиальных схем</li>
+                <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Умный дом: датчики газа, света, температуры</li>
+                <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Программирование прошивок в Arduino IDE</li>
+              </ul>
+              <div class="course-card__footer">
+                <div class="course-card__duration">
+                  <span class="course-card__duration-label">Длительность:</span>
+                  <strong>1 раз/нед по 120 мин</strong>
+                </div>
+                <button type="button" class="btn btn--primary btn--sm" data-modal-open="trial-modal" data-course-source="Курс: Arduino & C++">
+                  Записаться
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Course Card 5: 12-16 Python & AI -->
+          <article class="course-card" data-age="12-16">
+            <div class="course-card__media">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/course-python.jpg -->
+              <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=700&q=80" 
+                   alt="Подростки работают с кодом на ноутбуках" 
+                   class="course-card__img" 
+                   width="400" 
+                   height="240" 
+                   loading="lazy">
+              <span class="course-card__age-tag course-card__age-tag--blue">12 – 16 лет</span>
+              <span class="course-card__hit-badge">Топ для IT 🚀</span>
+            </div>
+            <div class="course-card__content">
+              <div class="course-card__category">Профессиональное программирование</div>
+              <h3 class="course-card__title">Python: Боты, Алгоритмы и основы ИИ</h3>
+              <p class="course-card__desc">
+                Осваиваем самый популярный язык мира. Изучаем ООП, структуры данных, пишем полезных Telegram-ботов с базами данных SQLite и знакомимся с компьютерным зрением OpenCV.
+              </p>
+              <ul class="course-card__skills-list">
+                <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Чистый синтаксис Python, функции и классы</li>
+                <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Боты для Telegram с интеграцией AI API</li>
+                <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Подготовка к ОГЭ/ЕГЭ по информатике</li>
+              </ul>
+              <div class="course-card__footer">
+                <div class="course-card__duration">
+                  <span class="course-card__duration-label">Длительность:</span>
+                  <strong>1 раз/нед по 120 мин</strong>
+                </div>
+                <button type="button" class="btn btn--primary btn--sm" data-modal-open="trial-modal" data-course-source="Курс: Python & AI">
+                  Записаться
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Course Card 6: 10-16 3D-моделирование -->
+          <article class="course-card" data-age="12-16">
+            <div class="course-card__media">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/course-3d.jpg -->
+              <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=700&q=80" 
+                   alt="Робот и трехмерное моделирование" 
+                   class="course-card__img" 
+                   width="400" 
+                   height="240" 
+                   loading="lazy">
+              <span class="course-card__age-tag course-card__age-tag--yellow">10 – 16 лет</span>
+            </div>
+            <div class="course-card__content">
+              <div class="course-card__category">Прототипирование и дизайн</div>
+              <h3 class="course-card__title">3D-моделирование и печать деталей</h3>
+              <p class="course-card__desc">
+                Создаём трёхмерные чертежи корпусов для роботов в Autodesk Fusion 360 и Blender, готовим слайсинг и печатаем готовые детали на настоящих 3D-принтерах.
+              </p>
+              <ul class="course-card__skills-list">
+                <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Твёрдотельное CAD-моделирование</li>
+                <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Настройка принтера и работа с пластиком</li>
+                <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Создание реального физического прототипа</li>
+              </ul>
+              <div class="course-card__footer">
+                <div class="course-card__duration">
+                  <span class="course-card__duration-label">Длительность:</span>
+                  <strong>1 раз/нед по 90 мин</strong>
+                </div>
+                <button type="button" class="btn btn--primary btn--sm" data-modal-open="trial-modal" data-course-source="Курс: 3D-моделирование">
+                  Записаться
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Methodology & Student Journey -->
+    <section class="section section--methodology" id="methodology">
+      <div class="container">
+        <div class="section-heading text-center">
+          <span class="section-tag section-tag--mint">Наша методика</span>
+          <h2 class="section-title">Как устроен путь юного инженера</h2>
+          <p class="section-subtitle">
+            Мы бережно ведём ребёнка от первого восторга до уверенных инженерных решений по проверенной 5-ступенчатой методике.
+          </p>
+        </div>
+
+        <div class="journey-steps">
+          <div class="journey-step">
+            <div class="journey-step__number">01</div>
+            <div class="journey-step__content">
+              <h3 class="journey-step__title">Пробный урок-диагностика</h3>
+              <p class="journey-step__desc">
+                Знакомимся с ребёнком, собираем первого робота за 40 минут. Педагог определяет сильные стороны, темперамент и рекомендует подходящую группу.
+              </p>
+            </div>
+          </div>
+
+          <div class="journey-step">
+            <div class="journey-step__number">02</div>
+            <div class="journey-step__content">
+              <h3 class="journey-step__title">Погружение в мини-группе</h3>
+              <p class="journey-step__desc">
+                Ребёнок занимается среди сверстников с равным уровнем подготовки. Преподаватель направляет, но даёт простор для творческих экспериментов.
+              </p>
+            </div>
+          </div>
+
+          <div class="journey-step">
+            <div class="journey-step__number">03</div>
+            <div class="journey-step__content">
+              <h3 class="journey-step__title">Проектная практика 90%</h3>
+              <p class="journey-step__desc">
+                Никакой зубрежки! На каждом занятии — реальная инженерная проблема (построить лифт, создать робота-уборщика, написать игру).
+              </p>
+            </div>
+          </div>
+
+          <div class="journey-step">
+            <div class="journey-step__number">04</div>
+            <div class="journey-step__content">
+              <h3 class="journey-step__title">Демо-дни перед родителями</h3>
+              <p class="journey-step__desc">
+                Каждые 3 месяца организуем открытый праздник: дети защищают свои проекты, запускают роботов и гордятся реальными результатами труда.
+              </p>
+            </div>
+          </div>
+
+          <div class="journey-step">
+            <div class="journey-step__number">05</div>
+            <div class="journey-step__content">
+              <h3 class="journey-step__title">Олимпиады и портфолио</h3>
+              <p class="journey-step__desc">
+                Желающие ученики формируют команды для участия в региональных и всероссийских хакатонах, получая официальные дипломы и баллы к портфолио.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing & Subscriptions -->
+    <section class="section section--pricing" id="pricing">
+      <div class="container">
+        <div class="section-heading text-center">
+          <span class="section-tag section-tag--yellow">Стоимость занятий</span>
+          <h2 class="section-title">Прозрачные тарифы без скрытых платежей</h2>
+          <p class="section-subtitle">
+            Все материалы, ноутбуки, робототехнические наборы и доступ к обучающей платформе уже включены в стоимость абонемента.
+          </p>
+        </div>
+
+        <!-- Pricing Toggle -->
+        <div class="pricing-toggle-wrap">
+          <span class="pricing-toggle-label active" id="billing-monthly-label">Ежемесячно</span>
+          <button type="button" class="pricing-switch" id="pricing-switch" role="switch" aria-checked="false" aria-label="Переключить скидку на 3 месяца">
+            <span class="pricing-switch__thumb"></span>
+          </button>
+          <span class="pricing-toggle-label" id="billing-season-label">
+            3 месяца <span class="discount-pill">-15%</span>
+          </span>
+        </div>
+
+        <div class="pricing-grid">
+          <!-- Plan 1: Trial -->
+          <article class="pricing-card">
+            <div class="pricing-card__header">
+              <span class="pricing-card__badge">Знакомство</span>
+              <h3 class="pricing-card__title">Пробный урок</h3>
+              <p class="pricing-card__desc">Идеальный способ протестировать интерес ребёнка перед покупкой абонемента</p>
+            </div>
+            <div class="pricing-card__price-box">
+              <div class="pricing-card__price">0 ₽</div>
+              <div class="pricing-card__period">при покупке абонемента (иначе 500 ₽)</div>
+            </div>
+            <ul class="pricing-card__features">
+              <li>✓ 60–90 минут практики в классе</li>
+              <li>✓ Сборка и запуск робота на уроке</li>
+              <li>✓ Все наборы и ноутбук включены</li>
+              <li>✓ Персональная оценка от педагога</li>
+            </ul>
+            <button type="button" class="btn btn--outline btn--full" data-modal-open="trial-modal" data-course-source="Тариф: Пробный 0 ₽">
+              Записаться на пробу
+            </button>
+          </article>
+
+          <!-- Plan 2: Basic Start -->
+          <article class="pricing-card">
+            <div class="pricing-card__header">
+              <span class="pricing-card__badge">Стандарт</span>
+              <h3 class="pricing-card__title">Базовый старт</h3>
+              <p class="pricing-card__desc">Оптимальный темп для регулярного развития без перегрузки школьной программой</p>
+            </div>
+            <div class="pricing-card__price-box">
+              <div class="pricing-card__price" data-price-month="6 400 ₽" data-price-season="16 300 ₽">6 400 ₽</div>
+              <div class="pricing-card__period" data-period-month="в месяц (4 занятия)" data-period-season="за 3 месяца (12 занятий)">в месяц (4 занятия)</div>
+            </div>
+            <ul class="pricing-card__features">
+              <li>✓ 4 занятия в месяц по 90–120 мин</li>
+              <li>✓ 1 раз в неделю в удобное время</li>
+              <li>✓ До 8 детей в мини-группе</li>
+              <li>✓ Фотоотчёты и видео в Telegram</li>
+              <li>✓ 1 перенос занятия при болезни</li>
+            </ul>
+            <button type="button" class="btn btn--primary btn--full" data-modal-open="trial-modal" data-course-source="Тариф: Базовый старт">
+              Выбрать тариф
+            </button>
+          </article>
+
+          <!-- Plan 3: Intensive PRO (Featured) -->
+          <article class="pricing-card pricing-card--featured">
+            <div class="featured-ribbon">Хит выбор родителей 🔥</div>
+            <div class="pricing-card__header">
+              <span class="pricing-card__badge pricing-card__badge--featured">Максимум результата</span>
+              <h3 class="pricing-card__title">Интенсив PRO</h3>
+              <p class="pricing-card__desc">Глубокое погружение, быстрая прокачка навыков и подготовка к турнирам</p>
+            </div>
+            <div class="pricing-card__price-box">
+              <div class="pricing-card__price" data-price-month="11 500 ₽" data-price-season="29 300 ₽">11 500 ₽</div>
+              <div class="pricing-card__period" data-period-month="в месяц (8 занятий)" data-period-season="за 3 месяца (24 занятия)">в месяц (8 занятий)</div>
+            </div>
+            <ul class="pricing-card__features">
+              <li>✓ 8 занятий в месяц по 90–120 мин</li>
+              <li>✓ 2 раза в неделю (будни или выходные)</li>
+              <li>✓ Подготовка к олимпиадам и хакатонам</li>
+              <li>✓ Персональные консультации куратора</li>
+              <li>✓ До 3 переносов / заморозок абонемента</li>
+              <li>✓ Скидка 10% на второй курс или для брата/сестры</li>
+            </ul>
+            <button type="button" class="btn btn--primary btn--full btn--pulse" data-modal-open="trial-modal" data-course-source="Тариф: Интенсив PRO">
+              Записаться со скидкой
+            </button>
+          </article>
+
+          <!-- Plan 4: Personal 1-on-1 -->
+          <article class="pricing-card">
+            <div class="pricing-card__header">
+              <span class="pricing-card__badge">Индивидуально</span>
+              <h3 class="pricing-card__title">Индивидуальный трек</h3>
+              <p class="pricing-card__desc">Персональная программа 1-на-1 под олимпиадный проект или особые задачи</p>
+            </div>
+            <div class="pricing-card__price-box">
+              <div class="pricing-card__price" data-price-month="14 900 ₽" data-price-season="37 900 ₽">14 900 ₽</div>
+              <div class="pricing-card__period" data-period-month="в месяц (4 занятия 1-на-1)" data-period-season="за 3 месяца (12 занятий)">в месяц (4 занятия 1-на-1)</div>
+            </div>
+            <ul class="pricing-card__features">
+              <li>✓ Персональный наставник — ведущий инженер</li>
+              <li>✓ Гибкий график занятий под ученика</li>
+              <li>✓ Проект под ключ для олимпиад и конкурсов</li>
+              <li>✓ Индивидуальная скорость изучения тем</li>
+            </ul>
+            <button type="button" class="btn btn--outline btn--full" data-modal-open="trial-modal" data-course-source="Тариф: Индивидуальный трек">
+              Обсудить цели
+            </button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mentors / Team Section -->
+    <section class="section section--mentors" id="mentors">
+      <div class="container">
+        <div class="section-heading text-center">
+          <span class="section-tag section-tag--blue">Команда наставников</span>
+          <h2 class="section-title">Практикующие инженеры с любовью к детям</h2>
+          <p class="section-subtitle">
+            Каждый наш преподаватель прошёл многоуровневый отбор: диплом ведущего технического вуза, опыт практической разработки и курс детской психологии.
+          </p>
+        </div>
+
+        <div class="mentors-grid">
+          <article class="mentor-card">
+            <div class="mentor-card__avatar-wrap">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/mentor-alexander.jpg -->
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80" 
+                   alt="Александр Мельников — ведущий наставник по робототехнике" 
+                   class="mentor-card__avatar" 
+                   width="180" 
+                   height="180" 
+                   loading="lazy">
+              <span class="mentor-card__badge">МГТУ им. Баумана</span>
+            </div>
+            <h3 class="mentor-card__name">Александр Мельников</h3>
+            <div class="mentor-card__role">Руководитель робототехнического направления</div>
+            <p class="mentor-card__bio">
+              Опыт преподавания — 8 лет. Разработчик систем автоматизации, подготовил 12 команд-победителей Всероссийского этапа Robofest.
+            </p>
+            <div class="mentor-card__skills">
+              <span>LEGO Spike</span>
+              <span>Arduino</span>
+              <span>C++</span>
+            </div>
+          </article>
+
+          <article class="mentor-card">
+            <div class="mentor-card__avatar-wrap">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/mentor-daria.jpg -->
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80" 
+                   alt="Дарья Смирнова — старший педагог дошкольного направления" 
+                   class="mentor-card__avatar" 
+                   width="180" 
+                   height="180" 
+                   loading="lazy">
+              <span class="mentor-card__badge">МГПУ / ТРИЗ-педагог</span>
+            </div>
+            <h3 class="mentor-card__name">Дарья Смирнова</h3>
+            <div class="mentor-card__role">Ведущий педагог курсов 5–7 лет</div>
+            <p class="mentor-card__bio">
+              Опыт преподавания — 6 лет. Специалист по методике ТРИЗ для дошкольников, превращает каждое занятие в увлекательную сказку-исследование.
+            </p>
+            <div class="mentor-card__skills">
+              <span>LEGO WeDo 2.0</span>
+              <span>ТРИЗ</span>
+              <span>Моторика</span>
+            </div>
+          </article>
+
+          <article class="mentor-card">
+            <div class="mentor-card__avatar-wrap">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/mentor-maxim.jpg -->
+              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80" 
+                   alt="Максим Воронов — наставник Python и AI" 
+                   class="mentor-card__avatar" 
+                   width="180" 
+                   height="180" 
+                   loading="lazy">
+              <span class="mentor-card__badge">НИУ ВШЭ</span>
+            </div>
+            <h3 class="mentor-card__name">Максим Воронов</h3>
+            <div class="mentor-card__role">Наставник направлений Python и AI</div>
+            <p class="mentor-card__bio">
+              Опыт преподавания — 5 лет. Действующий backend-разработчик. Учит школьников писать чистый код, проектировать Telegram-ботов и базы данных.
+            </p>
+            <div class="mentor-card__skills">
+              <span>Python</span>
+              <span>Telegram API</span>
+              <span>Machine Learning</span>
+            </div>
+          </article>
+
+          <article class="mentor-card">
+            <div class="mentor-card__avatar-wrap">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/mentor-ekaterina.jpg -->
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80" 
+                   alt="Екатерина Романова — специалист по 3D-моделированию" 
+                   class="mentor-card__avatar" 
+                   width="180" 
+                   height="180" 
+                   loading="lazy">
+              <span class="mentor-card__badge">МАИ</span>
+            </div>
+            <h3 class="mentor-card__name">Екатерина Романова</h3>
+            <div class="mentor-card__role">Инженер 3D-печати и прототипирования</div>
+            <p class="mentor-card__bio">
+              Опыт преподавания — 4 года. Победитель студенческого кубка по аддитивным технологиям. Учит создавать прочные конструкции в Fusion 360 и Blender.
+            </p>
+            <div class="mentor-card__skills">
+              <span>Fusion 360</span>
+              <span>Blender</span>
+              <span>3D-печать</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Photo Gallery / Atmosphere -->
+    <section class="section section--gallery" id="gallery">
+      <div class="container">
+        <div class="section-heading text-center">
+          <span class="section-tag section-tag--coral">Жизнь академии</span>
+          <h2 class="section-title">Атмосфера на наших занятиях</h2>
+          <p class="section-subtitle">
+            Посмотрите, как горят глаза у детей, когда собранная своими руками модель оживает и начинает выполнять команды!
+          </p>
+        </div>
+
+        <div class="gallery-grid">
+          <!-- Gallery Item 1 -->
+          <div class="gallery-item" data-gallery-src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=85">
+            <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/gallery-1.jpg -->
+            <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=600&q=80" 
+                 alt="Занятие по конструированию в классе" 
+                 class="gallery-item__img" 
+                 width="400" 
+                 height="280" 
+                 loading="lazy">
+            <div class="gallery-item__overlay">
+              <span class="gallery-item__caption">Командная работа над роботом</span>
+              <span class="gallery-item__zoom-btn">🔍</span>
+            </div>
+          </div>
+
+          <!-- Gallery Item 2 -->
+          <div class="gallery-item" data-gallery-src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=1200&q=85">
+            <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/gallery-2.jpg -->
+            <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=600&q=80" 
+                 alt="Преподаватель объясняет принцип работы алгоритма" 
+                 class="gallery-item__img" 
+                 width="400" 
+                 height="280" 
+                 loading="lazy">
+            <div class="gallery-item__overlay">
+              <span class="gallery-item__caption">Разбор логических ветвлений</span>
+              <span class="gallery-item__zoom-btn">🔍</span>
+            </div>
+          </div>
+
+          <!-- Gallery Item 3 -->
+          <div class="gallery-item" data-gallery-src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=1200&q=85">
+            <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/gallery-3.jpg -->
+            <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=600&q=80" 
+                 alt="Сборка электронной схемы на макетной плате" 
+                 class="gallery-item__img" 
+                 width="400" 
+                 height="280" 
+                 loading="lazy">
+            <div class="gallery-item__overlay">
+              <span class="gallery-item__caption">Пайка и сборка датчиков Arduino</span>
+              <span class="gallery-item__zoom-btn">🔍</span>
+            </div>
+          </div>
+
+          <!-- Gallery Item 4 -->
+          <div class="gallery-item" data-gallery-src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1200&q=85">
+            <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/gallery-4.jpg -->
+            <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=600&q=80" 
+                 alt="Демо-день и защита проектов" 
+                 class="gallery-item__img" 
+                 width="400" 
+                 height="280" 
+                 loading="lazy">
+            <div class="gallery-item__overlay">
+              <span class="gallery-item__caption">Защита проектов на Демо-дне</span>
+              <span class="gallery-item__zoom-btn">🔍</span>
+            </div>
+          </div>
+
+          <!-- Gallery Item 5 -->
+          <div class="gallery-item" data-gallery-src="https://images.unsplash.com/photo-1531497865144-0464ef8fb9a9?auto=format&fit=crop&w=1200&q=85">
+            <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/gallery-5.jpg -->
+            <img src="https://images.unsplash.com/photo-1531497865144-0464ef8fb9a9?auto=format&fit=crop&w=600&q=80" 
+                 alt="Тестирование программы на ноутбуке" 
+                 class="gallery-item__img" 
+                 width="400" 
+                 height="280" 
+                 loading="lazy">
+            <div class="gallery-item__overlay">
+              <span class="gallery-item__caption">Тестирование кода в среде Scratch</span>
+              <span class="gallery-item__zoom-btn">🔍</span>
+            </div>
+          </div>
+
+          <!-- Gallery Item 6 -->
+          <div class="gallery-item" data-gallery-src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc?auto=format&fit=crop&w=1200&q=85">
+            <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/gallery-6.jpg -->
+            <img src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc?auto=format&fit=crop&w=600&q=80" 
+                 alt="Вручение сертификатов и дипломов выпускникам" 
+                 class="gallery-item__img" 
+                 width="400" 
+                 height="280" 
+                 loading="lazy">
+            <div class="gallery-item__overlay">
+              <span class="gallery-item__caption">Награждение победителей турнира</span>
+              <span class="gallery-item__zoom-btn">🔍</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews / Testimonials -->
+    <section class="section section--reviews" id="reviews">
+      <div class="container">
+        <div class="section-heading text-center">
+          <span class="section-tag section-tag--yellow">Отзывы родителей</span>
+          <h2 class="section-title">Истории успеха наших учеников</h2>
+          <p class="section-subtitle">
+            Рейтинг 4.9 на Яндекс.Картах и 2ГИС на основе более 350 реальных отзывов родителей Москвы.
+          </p>
+        </div>
+
+        <div class="reviews-grid">
+          <article class="review-card">
+            <div class="review-card__header">
+              <div class="review-card__author-info">
+                <span class="review-card__name">Ольга Васильева</span>
+                <span class="review-card__child">Сын Тимур (8 лет), курс LEGO Spike</span>
+              </div>
+              <div class="review-card__stars">★★★★★</div>
+            </div>
+            <p class="review-card__text">
+              «Раньше сына невозможно было оторвать от планшета и Roblox. Записались на пробный урок в ROBO-START без особых ожиданий — и Тимур пропал! Приходит с занятий с горящими глазами, рассказывает про ультразвуковые датчики и зубчатые передачи. Дома сам построил робота-собаку из домашнего лего. Преподавателю Александру отдельное спасибо за чуткость!»
+            </p>
+            <div class="review-card__footer">
+              <span class="review-card__badge-check">✓ Проверенный отзыв с Яндекс.Карт</span>
+            </div>
+          </article>
+
+          <article class="review-card">
+            <div class="review-card__header">
+              <div class="review-card__author-info">
+                <span class="review-card__name">Сергей Пономарёв</span>
+                <span class="review-card__child">Сын Артём (13 лет), курс Python & Arduino</span>
+              </div>
+              <div class="review-card__stars">★★★★★</div>
+            </div>
+            <p class="review-card__text">
+              «Отличный центр с серьёзной академической базой, без детского сюсюканья. Сын уже год изучает Python и схемотехнику. Недавно защитил проект умного полива комнатных растений с оповещением в Telegram — всё спаял и запрограммировал сам! В школе подтянулись оценки по физике и математике. Рекомендую всем родителям мальчиков и девочек!»
+            </p>
+            <div class="review-card__footer">
+              <span class="review-card__badge-check">✓ Проверенный отзыв с 2ГИС</span>
+            </div>
+          </article>
+
+          <article class="review-card">
+            <div class="review-card__header">
+              <div class="review-card__author-info">
+                <span class="review-card__name">Марина Королёва</span>
+                <span class="review-card__child">Дочь Алиса (6 лет), курс LEGO WeDo</span>
+              </div>
+              <div class="review-card__stars">★★★★★</div>
+            </div>
+            <p class="review-card__text">
+              «Очень переживала, что дочке в 6 лет будет трудно усидеть 60 минут. Но Дарья Смирнова ведёт занятия в формате приключенческой игры, дети даже не замечают, как пролетает время. Алиса научилась концентрироваться, стала аккуратнее и увереннее в себе. На Демо-дне с гордостью показывала нам своего шагающего робота-крокодила!»
+            </p>
+            <div class="review-card__footer">
+              <span class="review-card__badge-check">✓ Проверенный отзыв с Google</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Accordion -->
+    <section class="section section--faq" id="faq">
+      <div class="container">
+        <div class="section-heading text-center">
+          <span class="section-tag section-tag--mint">Вопрос-ответ</span>
+          <h2 class="section-title">Часто задаваемые вопросы</h2>
+          <p class="section-subtitle">
+            Собрали ответы на главные вопросы родителей об организации занятий, оборудовании и пробном уроке.
+          </p>
+        </div>
+
+        <div class="faq-accordion" id="faq-accordion">
+          <!-- FAQ 1 -->
+          <div class="faq-item">
+            <button type="button" class="faq-item__btn" aria-expanded="false">
+              <span class="faq-item__question">Нужно ли что-то покупать или приносить с собой на уроки?</span>
+              <span class="faq-item__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </span>
+            </button>
+            <div class="faq-item__content">
+              <div class="faq-item__content-inner">
+                <p>
+                  Абсолютно ничего! Мы полностью обеспечиваем каждого ребёнка всем необходимым: персональным мощным ноутбуком, оригинальными наборами LEGO Education Spike и WeDo, микроконтроллерами Arduino, инструментами и расходными материалами. С собой нужна только сменная обувь для комфорта в классе и хорошее настроение.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-item">
+            <button type="button" class="faq-item__btn" aria-expanded="false">
+              <span class="faq-item__question">Что делать, если ребёнок никогда не программировал и не знаком с техникой?</span>
+              <span class="faq-item__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </span>
+            </button>
+            <div class="faq-item__content">
+              <div class="faq-item__content-inner">
+                <p>
+                  Более 85% детей приходят к нам с нулевым опытом. Наши программы специально разбиты на последовательные уровни. Наставники мягко вводят ребёнка в тему через визуальные блоки и понятные бытовые аналогии. Уже на первом пробном уроке каждый ребёнок самостоятельно соберёт и запрограммирует своего робота!
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-item">
+            <button type="button" class="faq-item__btn" aria-expanded="false">
+              <span class="faq-item__question">Что происходит, если ребёнок заболел или пропустил занятие?</span>
+              <span class="faq-item__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </span>
+            </button>
+            <div class="faq-item__content">
+              <div class="faq-item__content-inner">
+                <p>
+                  Занятия не сгорают! При предупреждении за 4 часа до урока мы замораживаем занятие. Вы можете отработать пропущенный урок с параллельной группой в течение 30 дней либо получить персональную консультацию с наставником перед следующим занятием, чтобы не отстать от группы.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-item">
+            <button type="button" class="faq-item__btn" aria-expanded="false">
+              <span class="faq-item__question">Могут ли родители присутствовать на занятии?</span>
+              <span class="faq-item__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </span>
+            </button>
+            <div class="faq-item__content">
+              <div class="faq-item__content-inner">
+                <p>
+                  На первом пробном занятии родители могут находиться в классе первые 10–15 минут, чтобы ребёнок освоился. Затем мы приглашаем родителей в уютную зону ожидания с чаем, кофе, Wi-Fi и библиотекой инженерных книг. За 15 минут до конца урока родители приглашаются на презентацию роботов!
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="faq-item">
+            <button type="button" class="faq-item__btn" aria-expanded="false">
+              <span class="faq-item__question">Безопасно ли работать с электроникой и паяльниками?</span>
+              <span class="faq-item__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </span>
+            </button>
+            <div class="faq-item__content">
+              <div class="faq-item__content-inner">
+                <p>
+                  Безопасность — наш главный приоритет. Дети до 11 лет работают исключительно с низковольтными безопасными наборами (до 5V постоянного тока). Модули пайки и схемотехники проводятся только с подростками от 12 лет на сертифицированных станциях с локальными дымоуловителями, защитными очками и под строгим контролем инженера.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 6 -->
+          <div class="faq-item">
+            <button type="button" class="faq-item__btn" aria-expanded="false">
+              <span class="faq-item__question">Как оплачивать обучение? Есть ли скидки для нескольких детей?</span>
+              <span class="faq-item__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </span>
+            </button>
+            <div class="faq-item__content">
+              <div class="faq-item__content-inner">
+                <p>
+                  Оплата производится удобным онлайн-способом по СБП, картой любого банка РФ или безналичным расчетом по реквизитам. Действует семейная скидка 10% на абонемент для второго ребёнка, а также скидка 15% при единовременной оплате сезона на 3 месяца. Возможна оплата материнским капиталом (имеется государственная лицензия).
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacts & Interactive Map -->
+    <section class="section section--contacts" id="contacts">
+      <div class="container">
+        <div class="contacts-wrapper">
+          <div class="contacts-info">
+            <span class="section-tag section-tag--blue">Ждём вас в гости</span>
+            <h2 class="contacts-info__title">Приходите познакомиться с академией</h2>
+            <p class="contacts-info__subtitle">
+              Мы находимся в 7 минутах пешком от м. Павелецкая. На территории есть бесплатная гостевая парковка для родителей.
+            </p>
+
+            <div class="contacts-details">
+              <div class="contact-item">
+                <div class="contact-item__icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <div class="contact-item__body">
+                  <span class="contact-item__label">Адрес центра:</span>
+                  <strong class="contact-item__value" data-config="contacts.address">г. Москва, ул. Дербеневская, д. 1, стр. 6</strong>
+                  <span class="contact-item__hint" data-config="contacts.metro">м. Павелецкая / Пролетарская (7 мин)</span>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-item__icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </div>
+                <div class="contact-item__body">
+                  <span class="contact-item__label">Режим работы:</span>
+                  <strong class="contact-item__value" data-config="schedule.weekdays">Пн-Пт: 10:00 – 20:00</strong>
+                  <span class="contact-item__hint" data-config="schedule.weekends">Сб-Вс: 09:30 – 19:30</span>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-item__icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                </div>
+                <div class="contact-item__body">
+                  <span class="contact-item__label">Телефон для записи:</span>
+                  <a href="tel:+74957894215" class="contact-item__link" data-config-phone>
+                    <strong class="contact-item__value" data-config="contacts.phone">+7 (495) 789-42-15</strong>
+                  </a>
+                  <span class="contact-item__hint">Звонок по РФ бесплатный</span>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-item__icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </div>
+                <div class="contact-item__body">
+                  <span class="contact-item__label">Электронная почта:</span>
+                  <a href="mailto:hello@robostart-academy.ru" class="contact-item__link" data-config="contacts.email">hello@robostart-academy.ru</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="contacts-actions">
+              <button type="button" class="btn btn--primary btn--lg" data-modal-open="trial-modal" data-course-source="Контакты: Записаться">
+                Записаться на экскурсию и урок
+              </button>
+            </div>
+          </div>
+
+          <!-- Yandex Map Container with Fallback -->
+          <div class="contacts-map-box">
+            <div id="yandex-map" class="map-container" aria-label="Интерактивная карта расположения ROBO-START">
+              <!-- Fallback content if maps API fails or offline -->
+              <div class="map-fallback" id="map-fallback">
+                <div class="map-fallback__content">
+                  <div class="map-fallback__pin">📍</div>
+                  <h4 class="map-fallback__title">ROBO-START Академия</h4>
+                  <p class="map-fallback__address">Москва, ул. Дербеневская, д. 1, стр. 6</p>
+                  <a href="https://yandex.ru/maps/?pt=37.662194,55.733512&z=16&l=map" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm">
+                    Открыть в Яндекс.Картах
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__col footer__col--brand">
+        <a href="#hero" class="brand-logo brand-logo--footer">
+          <div class="brand-logo__icon-wrap">
+            <svg class="brand-logo__svg" viewBox="0 0 48 48" fill="none">
+              <rect x="6" y="10" width="36" height="30" rx="10" fill="#2563EB"/>
+              <rect x="10" y="14" width="28" height="22" rx="7" fill="#1E40AF"/>
+              <circle cx="18" cy="22" r="4.5" fill="#FBBF24"/>
+              <circle cx="18" cy="22" r="2" fill="#0F172A"/>
+              <circle cx="30" cy="22" r="4.5" fill="#FBBF24"/>
+              <circle cx="30" cy="22" r="2" fill="#0F172A"/>
+              <path d="M18 29c1.5 2 4.5 3 6 3s4.5-1 6-3" stroke="#F8FAFC" stroke-width="2.5" stroke-linecap="round"/>
+              <line x1="24" y1="2" x2="24" y2="10" stroke="#F43F5E" stroke-width="3" stroke-linecap="round"/>
+              <circle cx="24" cy="3" r="3" fill="#F43F5E"/>
+            </svg>
+          </div>
+          <div class="brand-logo__text-group">
+            <span class="brand-logo__title">ROBO<span class="text-coral">-</span>START</span>
+            <span class="brand-logo__subtitle">Академия робототехники</span>
+          </div>
+        </a>
+        <p class="footer__brand-desc">
+          Образовательное пространство нового поколения для детей от 5 до 16 лет в Москве. Учим мыслить нестандартно, собирать сложные механизмы и создавать собственное будущее.
+        </p>
+        <div class="footer__socials">
+          <a href="https://t.me/robostart_academy" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Telegram" data-config-tg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 0 0-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+          </a>
+          <a href="https://vk.com/robostart_academy" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="ВКонтакте" data-config-vk>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M15.07 2H8.93C4.54 2 2 4.54 2 8.93v6.14C2 19.46 4.54 22 8.93 22h6.14c4.39 0 6.93-2.54 6.93-6.93V8.93C22 4.54 19.46 2 15.07 2zm3.38 13.91c-.36.56-1.05.89-1.92.89-.95 0-1.63-.39-2.32-.97-.56-.47-.96-.75-1.38-.75-.24 0-.46.12-.76.46-.38.44-.82 1.2-1.58 1.25-.13.01-.26.01-.39.01-1.25 0-2.6-.96-3.83-2.73-1.63-2.33-2.47-4.83-2.47-5.04 0-.17.07-.33.19-.45.14-.14.34-.23.55-.23h1.83c.4 0 .74.24.88.61.56 1.48 1.34 2.82 2.15 3.73.2.22.4.34.58.34.14 0 .26-.07.36-.2.27-.35.34-1.01.34-1.85V9.43c0-.67-.18-.94-.52-1.04-.2-.06-.31-.15-.31-.28 0-.19.24-.39.6-.39h2.39c.39 0 .7.31.7.7v3.29c0 .41.13.56.24.56.09 0 .2-.09.34-.28.84-1.14 1.55-2.67 1.63-2.82.13-.26.39-.42.69-.42h1.9c.23 0 .43.1.56.26.13.16.16.37.09.58-.33.99-1.55 3.01-2.19 3.84-.2.27-.29.42-.29.56 0 .12.07.24.2.38.47.48 1.31 1.27 1.83 2.05.29.43.3.77.16 1.05z"/></svg>
+          </a>
+          <a href="https://wa.me/74957894215" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="WhatsApp" data-config-wa>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c.01 4.54-3.69 8.23-8.22 8.23zm4.52-6.17c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.84-.86 2.05s.88 2.38 1 2.54c.12.17 1.73 2.64 4.19 3.7.59.25 1.05.4 1.41.51.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.11-.23-.17-.48-.29z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__heading">Программы</h4>
+        <ul class="footer__list">
+          <li><a href="#courses">LEGO WeDo (5–7 лет)</a></li>
+          <li><a href="#courses">LEGO Spike Prime (8–11 лет)</a></li>
+          <li><a href="#courses">Scratch Геймдев (8–11 лет)</a></li>
+          <li><a href="#courses">Arduino & C++ (12–16 лет)</a></li>
+          <li><a href="#courses">Python & ИИ (12–16 лет)</a></li>
+          <li><a href="#courses">3D-моделирование и печать</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__heading">Навигация</h4>
+        <ul class="footer__list">
+          <li><a href="#about">О нас и преимущества</a></li>
+          <li><a href="#recommender">Подобрать курс онлайн</a></li>
+          <li><a href="#methodology">Наша методика</a></li>
+          <li><a href="#pricing">Тарифы и скидки</a></li>
+          <li><a href="#mentors">Наши наставники</a></li>
+          <li><a href="#faq">Ответы на вопросы</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col footer__col--contacts">
+        <h4 class="footer__heading">Контакты</h4>
+        <p class="footer__contact-line" data-config="contacts.address">г. Москва, ул. Дербеневская, д. 1, стр. 6</p>
+        <p class="footer__contact-line">
+          <a href="tel:+74957894215" class="footer__phone-link" data-config-phone>
+            <strong data-config="contacts.phone">+7 (495) 789-42-15</strong>
+          </a>
+        </p>
+        <p class="footer__contact-line">
+          <a href="mailto:hello@robostart-academy.ru" class="footer__mail-link" data-config="contacts.email">hello@robostart-academy.ru</a>
+        </p>
+        <div class="footer__schedule-box">
+          <span class="footer__schedule-tag" data-config="schedule.weekdays">Пн-Пт: 10:00 – 20:00</span>
+          <span class="footer__schedule-tag" data-config="schedule.weekends">Сб-Вс: 09:30 – 19:30</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <p class="footer__copy">© 2026 ROBO-START Академия. Все права защищены. Образовательная деятельность лицензирована.</p>
+        <div class="footer__legal">
+          <a href="#privacy">Политика конфиденциальности</a>
+          <a href="#terms">Договор оферты</a>
+          <span>ИНН 772591048291 / ОГРНИП 321774600128941</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lead Capture Modal (Trial Lesson Sign-Up) -->
+  <div class="modal" id="trial-modal" aria-hidden="true" role="dialog" aria-labelledby="modal-title">
+    <div class="modal__overlay" data-modal-close></div>
+    <div class="modal__dialog">
+      <button type="button" class="modal__close" data-modal-close aria-label="Закрыть окно">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+
+      <div class="modal__header">
+        <span class="modal__badge">Бесплатный пробный урок</span>
+        <h3 class="modal__title" id="modal-title">Запись в ROBO-START</h3>
+        <p class="modal__subtitle">
+          Оставьте номер телефона — перезвоним в течение 15 минут в рабочее время, ответим на вопросы и забронируем место для ребёнка!
+        </p>
+      </div>
+
+      <!-- Lead Capture Form -->
+      <form class="modal-form" id="lead-form" novalidate>
+        <input type="hidden" name="source" id="form-source" value="Главная страница">
+
+        <div class="form-group">
+          <label for="parent-name" class="form-label">Ваше имя (родителя) *</label>
+          <input type="text" id="parent-name" name="parent_name" class="form-control" placeholder="Например, Анна" required minlength="2">
+          <span class="form-error" id="parent-name-error">Пожалуйста, укажите ваше имя (минимум 2 буквы)</span>
+        </div>
+
+        <div class="form-group">
+          <label for="phone-input" class="form-label">Номер телефона *</label>
+          <input type="tel" id="phone-input" name="phone" class="form-control form-control--phone" placeholder="+7 (___) ___-__-__" required autocomplete="tel">
+          <span class="form-error" id="phone-error">Пожалуйста, укажите полный номер телефона</span>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group form-col">
+            <label for="child-age-select" class="form-label">Возраст ребёнка *</label>
+            <select id="child-age-select" name="child_age" class="form-control" required>
+              <option value="" disabled selected>Выберите возраст</option>
+              <option value="5-7">5 – 7 лет (Дошкольник / 1 класс)</option>
+              <option value="8-11">8 – 11 лет (Начальная/средняя школа)</option>
+              <option value="12-16">12 – 16 лет (Подросток / Старшеклассник)</option>
+            </select>
+            <span class="form-error" id="age-error">Выберите возраст ребёнка</span>
+          </div>
+
+          <div class="form-group form-col">
+            <label for="course-select" class="form-label">Направление</label>
+            <select id="course-select" name="course_interest" class="form-control">
+              <option value="recommender">Помочь подобрать на уроке</option>
+              <option value="wedo">LEGO WeDo 2.0 (5–7 лет)</option>
+              <option value="spike">LEGO Spike Prime (8–11 лет)</option>
+              <option value="scratch">Создание игр на Scratch (8–11 лет)</option>
+              <option value="arduino">Arduino & Схемотехника (12–16 лет)</option>
+              <option value="python">Python & AI (12–16 лет)</option>
+              <option value="3d">3D-моделирование (10–16 лет)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group form-group--checkbox">
+          <label class="checkbox-label">
+            <input type="checkbox" name="privacy_consent" id="privacy-consent" checked required>
+            <span class="checkbox-custom"></span>
+            <span class="checkbox-text">
+              Я согласен(а) на обработку персональных данных в соответствии с <a href="#privacy" target="_blank">политикой конфиденциальности</a>
+            </span>
+          </label>
+          <span class="form-error" id="privacy-error">Необходимо ваше согласие на обработку данных</span>
+        </div>
+
+        <button type="submit" class="btn btn--primary btn--full btn--lg modal-form__submit-btn" id="lead-submit-btn">
+          <span class="btn__text">Записаться на бесплатный урок</span>
+          <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+
+        <p class="modal-form__security-note">
+          🔒 Ваши данные надёжно защищены и не передаются третьим лицам.
+        </p>
+      </form>
+
+      <!-- Success Screen -->
+      <div class="modal-success" id="lead-success" style="display: none;">
+        <div class="modal-success__icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+          </svg>
+        </div>
+        <h4 class="modal-success__title">Заявка успешно принята!</h4>
+        <p class="modal-success__desc">
+          Спасибо за обращение! Наш методист свяжется с вами в течение 15 минут (в рабочее время) для подтверждения удобного времени пробного занятия.
+        </p>
+        <div class="modal-success__info-box">
+          <p>📍 <strong>Ждём вас по адресу:</strong> <span data-config="contacts.address">г. Москва, ул. Дербеневская, д. 1, стр. 6</span></p>
+          <p>📞 <strong>Телефон для связи:</strong> <span data-config="contacts.phone">+7 (495) 789-42-15</span></p>
+        </div>
+        <button type="button" class="btn btn--primary btn--full" data-modal-close>
+          Отлично, жду звонка
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Gallery Lightbox Modal -->
+  <div class="lightbox" id="gallery-lightbox" aria-hidden="true" role="dialog" aria-label="Просмотр фотографии">
+    <div class="lightbox__overlay" id="lightbox-overlay"></div>
+    <div class="lightbox__dialog">
+      <button type="button" class="lightbox__close" id="lightbox-close" aria-label="Закрыть фото">✕</button>
+      <img src="" alt="Увеличенная фотография" class="lightbox__img" id="lightbox-img">
+      <div class="lightbox__caption" id="lightbox-caption"></div>
+    </div>
+  </div>
+
+  <!-- Yandex Maps API 2.1 -->
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+
+  <!-- Main JavaScript Application -->
+  <script src="script.js"></script>
+</body>
+</html>

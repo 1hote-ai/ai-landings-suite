@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Эфиопия & Зерно — Спешелти ростери и слоу-бар в Москве</title>
+  <meta name="description" content="Премиальная спешелти кофейня и обжарка микролотов прямого импорта из Эфиопии (Сидама, Йиргачеффе, Гуджи). Свежий обжар каждую неделю, слоу-бар и каппинги на Покровке.">
+  <meta name="theme-color" content="#241915">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Эфиопия & Зерно — Спешелти ростери и слоу-бар">
+  <meta property="og:description" content="Прямой импорт и свежая конвекционная обжарка микролотов с оценкой Q 86+. Слоу-бар на Покровке, 17.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+
+  <!-- Google Fonts: Playfair Display + Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ВЕРХНЯЯ ИНФО-ПОЛОСА (ANNOUNCEMENT BAR) -->
+  <div class="announcement-bar">
+    <div class="container announcement-bar__inner">
+      <span class="announcement-bar__tag">Свежий обжар</span>
+      <p class="announcement-bar__text">Новый микролот: <strong>Эфиопия Гуджи Анаэробной ферментации (Q 89.2)</strong> уже в баре и каталоге!</p>
+      <a href="#catalog" class="announcement-bar__link">Смотреть лот &rarr;</a>
+    </div>
+  </div>
+
+  <!-- ШАПКА САЙТА (HEADER & NAVBAR) -->
+  <header class="site-header" id="header">
+    <div class="container site-header__inner">
+      <!-- ЛОГОТИП -->
+      <a href="#" class="brand-logo" aria-label="Эфиопия и Зерно — Главная">
+        <span class="brand-logo__monogram">E&amp;Z</span>
+        <div class="brand-logo__text">
+          <span class="brand-logo__title" data-config="brandName">Эфиопия &amp; Зерно</span>
+          <span class="brand-logo__subtitle" data-config="brandTagline">Specialty Roastery &amp; Slow Bar</span>
+        </div>
+      </a>
+
+      <!-- ДЕСКТОП НАВИГАЦИЯ -->
+      <nav class="main-nav" aria-label="Основная навигация">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#about" class="nav-link">О ростери</a></li>
+          <li class="nav-item"><a href="#catalog" class="nav-link">Коллекция зёрен</a></li>
+          <li class="nav-item"><a href="#brew-guide" class="nav-link">Гид по завариванию</a></li>
+          <li class="nav-item"><a href="#atmosphere" class="nav-link">Атмосфера бара</a></li>
+          <li class="nav-item"><a href="#faq" class="nav-link">FAQ</a></li>
+          <li class="nav-item"><a href="#contacts" class="nav-link">Контакты</a></li>
+        </ul>
+      </nav>
+
+      <!-- ХЕДЕР ПРАВАЯ ЧАСТЬ: СТАТУС РАБОТЫ И КНОПКА ЗАКАЗА -->
+      <div class="header-actions">
+        <!-- ЖИВОЙ СТАТУС РАБОТЫ -->
+        <div class="working-status-pill" id="workingStatusPill" title="Режим работы обновляется автоматически">
+          <span class="status-dot"></span>
+          <span class="status-label" id="workingStatusLabel">Проверка времени...</span>
+        </div>
+
+        <button type="button" class="btn btn--primary btn--sm header-cta modal-trigger" data-modal="orderModal" data-coffee="Любой лот / Дегустация">
+          <span>Заказать зерно</span>
+        </button>
+
+        <!-- КНОПКА МОБИЛЬНОГО МЕНЮ -->
+        <button type="button" class="burger-btn" id="burgerBtn" aria-label="Открыть мобильное меню" aria-expanded="false" aria-controls="mobileDrawer">
+          <span class="burger-bar"></span>
+          <span class="burger-bar"></span>
+          <span class="burger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- МОБИЛЬНОЕ МЕНЮ (DRAWER) -->
+  <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <div class="mobile-drawer__overlay" id="drawerOverlay"></div>
+    <div class="mobile-drawer__content">
+      <div class="mobile-drawer__header">
+        <div class="brand-logo">
+          <span class="brand-logo__monogram">E&amp;Z</span>
+          <div class="brand-logo__text">
+            <span class="brand-logo__title">Эфиопия &amp; Зерно</span>
+            <span class="brand-logo__subtitle">Specialty Coffee</span>
+          </div>
+        </div>
+        <button type="button" class="drawer-close-btn" id="drawerCloseBtn" aria-label="Закрыть меню">&times;</button>
+      </div>
+
+      <nav class="mobile-nav">
+        <ul class="mobile-nav__list">
+          <li><a href="#about" class="mobile-nav__link">О ростери</a></li>
+          <li><a href="#catalog" class="mobile-nav__link">Коллекция зёрен</a></li>
+          <li><a href="#brew-guide" class="mobile-nav__link">Гид по завариванию</a></li>
+          <li><a href="#atmosphere" class="mobile-nav__link">Атмосфера бара</a></li>
+          <li><a href="#faq" class="mobile-nav__link">FAQ</a></li>
+          <li><a href="#contacts" class="mobile-nav__link">Контакты и карта</a></li>
+        </ul>
+      </nav>
+
+      <div class="mobile-drawer__footer">
+        <div class="working-status-pill working-status-pill--mobile" id="mobileStatusPill">
+          <span class="status-dot"></span>
+          <span class="status-label" id="mobileStatusLabel">Проверка времени...</span>
+        </div>
+        <a href="tel:+74958224590" class="drawer-phone" data-config="brandPhoneLink">
+          <span data-config="brandPhone">+7 (495) 822-45-90</span>
+        </a>
+        <p class="drawer-address" data-config="brandAddress">ул. Покровка, 17, стр. 1, Москва</p>
+        <button type="button" class="btn btn--primary btn--full modal-trigger" data-modal="orderModal" data-coffee="Консультация бариста">
+          Заказать зерно / Задать вопрос
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="hero-section__bg-texture"></div>
+      <div class="container hero-section__grid">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="badge-icon">🌿</span>
+            <span>Direct Trade • Микролоты из колыбели кофе</span>
+          </div>
+
+          <h1 class="hero-title">
+            Честный кофе <br>
+            <span class="text-terracotta italic-serif">прямого импорта</span> <br>
+            из высокогорий Эфиопии.
+          </h1>
+
+          <p class="hero-lead">
+            Обжариваем только спешелти зерно с оценкой Q-Grader выше 86 баллов на чистом конвекционном ростере Loring. Каждую неделю привозим свежий урожай регионов Сидама, Йиргачеффе и Гуджи в наш слоу-бар на Покровке.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#catalog" class="btn btn--primary btn--lg">
+              <span>Выбрать свой микролот</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="#brew-guide" class="btn btn--secondary btn--lg">
+              <span>Интерактивный brew-гид</span>
+            </a>
+          </div>
+
+          <!-- МЕТРИКИ / ДОВЕРИЕ -->
+          <div class="hero-stats">
+            <div class="hero-stat-item">
+              <span class="hero-stat-value">86+</span>
+              <span class="hero-stat-label">Q-Score оценка зерна</span>
+            </div>
+            <div class="hero-stat-divider"></div>
+            <div class="hero-stat-item">
+              <span class="hero-stat-value">2200м</span>
+              <span class="hero-stat-label">Высота произрастания</span>
+            </div>
+            <div class="hero-stat-divider"></div>
+            <div class="hero-stat-item">
+              <span class="hero-stat-value">48ч</span>
+              <span class="hero-stat-label">От обжара до чашки</span>
+            </div>
+            <div class="hero-stat-divider"></div>
+            <div class="hero-stat-item">
+              <span class="hero-stat-value">100%</span>
+              <span class="hero-stat-label">Арабика Direct Trade</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-image-card">
+            <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/hero-coffee.jpg -->
+            <img 
+              src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1200&q=80" 
+              alt="Свежезаваренный спешелти кофе в керамической чашке" 
+              class="hero-image"
+              loading="eager"
+            >
+            <div class="hero-image-card__tag">
+              <span class="tag-title">Свежий каппинг сегодня</span>
+              <span class="tag-desc">Слоу-бар на Покровке • 19:00</span>
+            </div>
+            <div class="hero-stamp-badge">
+              <div class="stamp-inner">
+                <span class="stamp-curved">SPECIALTY ROASTERY</span>
+                <span class="stamp-year">2021</span>
+                <span class="stamp-sub">MOSCOW</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- СЕКЦИЯ 2: ФИЛОСОФИЯ И ТЕРРУАР (ABOUT / CRAFT) -->
+    <section class="section section--philosophy" id="about">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-eyebrow">Манифест вкуса</span>
+          <h2 class="section-title">Почему мы влюблены исключительно в Эфиопию</h2>
+          <p class="section-subtitle">
+            Эфиопия — родина арабики. Здесь кофе не высаживают на искусственных плантациях: тысячи диких эндемичных разновидностей веками растут под сенью реликтовых лесов на вулканических почвах.
+          </p>
+        </div>
+
+        <div class="philosophy-grid">
+          <!-- Карточка 1 -->
+          <article class="craft-card">
+            <div class="craft-card__number">01</div>
+            <div class="craft-card__image-wrap">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/harvest.jpg -->
+              <img 
+                src="https://images.unsplash.com/photo-1587734195503-904fca47e0e9?auto=format&fit=crop&w=800&q=80" 
+                alt="Сбор спелых кофейных ягод в Эфиопии"
+                loading="lazy"
+              >
+            </div>
+            <h3 class="craft-card__title">Высокогорный терруар (1900–2250м)</h3>
+            <p class="craft-card__text">
+              Резкие перепады температур между жарким африканским днем и прохладной ночью замедляют созревание кофейной ягоды. За 9 месяцев зерно накапливает максимальную концентрацию фруктозы, эфирных масел и цветочных кислот.
+            </p>
+            <ul class="craft-card__specs">
+              <li>Регионы: Сидама, Гуджи, Йиргачеффе</li>
+              <li>Сбор: 100% ручной селективный сбор ягод</li>
+            </ul>
+          </article>
+
+          <!-- Карточка 2 -->
+          <article class="craft-card">
+            <div class="craft-card__number">02</div>
+            <div class="craft-card__image-wrap">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/roaster.jpg -->
+              <img 
+                src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=800&q=80" 
+                alt="Конвекционный ростер Loring и обжаренные зерна кофе"
+                loading="lazy"
+              >
+            </div>
+            <h3 class="craft-card__title">Конвекционный обжар Loring S15</h3>
+            <p class="craft-card__text">
+              Мы не жарим кофе в традиционных барабанных печах, где контакт с раскаленным металлом оставляет горькие углистые ноты. В Loring зерно парит в потоке очищенного горячего воздуха, раскрывая природный вкус жасмина и персика.
+            </p>
+            <ul class="craft-card__specs">
+              <li>Технология: 85% конвекция, 0% дымного привкуса</li>
+              <li>Профилирование: цифровой трекинг RoR в реальном времени</li>
+            </ul>
+          </article>
+
+          <!-- Карточка 3 -->
+          <article class="craft-card">
+            <div class="craft-card__number">03</div>
+            <div class="craft-card__image-wrap">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/sensory.jpg -->
+              <img 
+                src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=800&q=80" 
+                alt="Сенсорная дегустация и оценка зерна на ложках каппинга"
+                loading="lazy"
+              >
+            </div>
+            <h3 class="craft-card__title">Сенсорный контроль Q-Grader</h3>
+            <p class="craft-card__text">
+              Каждый приходящий мешок и каждая жарка проходят проверку в дегустационной чашке по строгим протоколам Specialty Coffee Association (SCA). Мы не пускаем в фасовку кофе, набравший менее 86 баллов.
+            </p>
+            <ul class="craft-card__specs">
+              <li>Упаковка: трёхслойная металлизация с клапаном WICO</li>
+              <li>Срок пика вкуса: с 7 по 45 день от обжара</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- СЕКЦИЯ 3: КАТАЛОГ МИКРОЛОТОВ (CATALOG / BEANS) -->
+    <section class="section section--catalog" id="catalog">
+      <div class="container">
+        <div class="catalog-header-row">
+          <div>
+            <span class="section-eyebrow">Свежий урожай 2024</span>
+            <h2 class="section-title">Коллекция микролотов в зёрнах</h2>
+            <p class="section-subtitle">
+              Фасуем в пачки по 250 г и 1 кг с дегазационным клапаном. Бесплатно намелем под ваш способ заваривания перед отправкой.
+            </p>
+          </div>
+
+          <!-- ТАБЫ ФИЛЬТРАЦИИ -->
+          <div class="catalog-filter-tabs" role="tablist" aria-label="Фильтр зёрен">
+            <button type="button" class="filter-tab active" data-filter="all" role="tab" aria-selected="true">Все микролоты (4)</button>
+            <button type="button" class="filter-tab" data-filter="filter" role="tab" aria-selected="false">Для фильтра и V60</button>
+            <button type="button" class="filter-tab" data-filter="espresso" role="tab" aria-selected="false">Под эспрессо и молоко</button>
+            <button type="button" class="filter-tab" data-filter="anaerobic" role="tab" aria-selected="false">Анаэробные эксперименты</button>
+          </div>
+        </div>
+
+        <!-- СЕТКА ТОВАРОВ -->
+        <div class="catalog-grid" id="catalogGrid">
+          
+          <!-- ЛОТ 1: ЙИРГАЧЕФФЕ ЧЕЛЧЕЛЕ -->
+          <article class="coffee-card" data-category="filter" data-id="chelchele">
+            <div class="coffee-card__media">
+              <span class="coffee-badge coffee-badge--light">Мытая обработка</span>
+              <span class="coffee-qscore">Q 88.0</span>
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/lot-chelchele.jpg -->
+              <img 
+                src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?auto=format&fit=crop&w=800&q=80" 
+                alt="Пачка кофе Эфиопия Йиргачеффе Челчеле"
+                loading="lazy"
+              >
+            </div>
+            <div class="coffee-card__body">
+              <div class="coffee-meta">
+                <span class="coffee-region">Йиргачеффе, Челчеле</span>
+                <span class="coffee-altitude">2050–2200 м</span>
+              </div>
+              <h3 class="coffee-card__title">Ethiopia Yirgacheffe Chelchele</h3>
+              
+              <!-- ДЕСКРИПТОРЫ ВКУСА -->
+              <div class="flavor-pills">
+                <span class="flavor-pill">Бергамот</span>
+                <span class="flavor-pill">Белый персик</span>
+                <span class="flavor-pill">Жасминовый чай</span>
+                <span class="flavor-pill">Мёд акации</span>
+              </div>
+
+              <p class="coffee-card__desc">
+                Классика мытой Эфиопии высшей пробы. Хрустальное чайное тело, взрывная цитрусовая кислотность и долгое цветочное послевкусие.
+              </p>
+
+              <div class="roast-meter">
+                <div class="roast-meter__label">
+                  <span>Обжарка: под фильтр</span>
+                  <strong>Светлая (Light)</strong>
+                </div>
+                <div class="roast-meter__bar">
+                  <div class="roast-meter__fill" style="width: 32%;"></div>
+                </div>
+              </div>
+
+              <div class="coffee-card__footer">
+                <div class="coffee-price">
+                  <span class="price-value">1 250 ₽</span>
+                  <span class="price-unit">/ 250 г</span>
+                </div>
+                <button type="button" class="btn btn--primary btn--sm modal-trigger" data-modal="orderModal" data-coffee="Эфиопия Йиргачеффе Челчеле (1 250 ₽)">
+                  Заказать лот
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- ЛОТ 2: СИДАМА БОМБЕ -->
+          <article class="coffee-card" data-category="espresso" data-id="bombe">
+            <div class="coffee-card__media">
+              <span class="coffee-badge coffee-badge--warm">Натуральная сушка</span>
+              <span class="coffee-qscore">Q 87.5</span>
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/lot-bombe.jpg -->
+              <img 
+                src="https://images.unsplash.com/photo-1518832553480-cd0e625ed3e6?auto=format&fit=crop&w=800&q=80" 
+                alt="Кофейное зерно Сидама Бомбе"
+                loading="lazy"
+              >
+            </div>
+            <div class="coffee-card__body">
+              <div class="coffee-meta">
+                <span class="coffee-region">Сидама, станция Бомбе</span>
+                <span class="coffee-altitude">1980–2100 м</span>
+              </div>
+              <h3 class="coffee-card__title">Ethiopia Sidama Bombe Natural</h3>
+              
+              <div class="flavor-pills">
+                <span class="flavor-pill">Клубничный джем</span>
+                <span class="flavor-pill">Темный шоколад</span>
+                <span class="flavor-pill">Папайя</span>
+                <span class="flavor-pill">Карамель</span>
+              </div>
+
+              <p class="coffee-card__desc">
+                Сочный, сладкий и плотный профиль с нотами спелых красных ягод и карамельного послевкусия. Превосходно раскрывается в эспрессо и капучино.
+              </p>
+
+              <div class="roast-meter">
+                <div class="roast-meter__label">
+                  <span>Обжарка: универсал / эспрессо</span>
+                  <strong>Средняя (Medium-Light)</strong>
+                </div>
+                <div class="roast-meter__bar">
+                  <div class="roast-meter__fill" style="width: 58%;"></div>
+                </div>
+              </div>
+
+              <div class="coffee-card__footer">
+                <div class="coffee-price">
+                  <span class="price-value">1 190 ₽</span>
+                  <span class="price-unit">/ 250 г</span>
+                </div>
+                <button type="button" class="btn btn--primary btn--sm modal-trigger" data-modal="orderModal" data-coffee="Эфиопия Сидама Бомбе (1 190 ₽)">
+                  Заказать лот
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- ЛОТ 3: ГУДЖИ УРАГА АНАЭРОБИК -->
+          <article class="coffee-card" data-category="anaerobic filter" data-id="uraga-anaerobic">
+            <div class="coffee-card__media">
+              <span class="coffee-badge coffee-badge--accent">Анаэробная 72ч</span>
+              <span class="coffee-qscore">Q 89.2</span>
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/lot-uraga.jpg -->
+              <img 
+                src="https://images.unsplash.com/photo-1610632380989-680fe40816c6?auto=format&fit=crop&w=800&q=80" 
+                alt="Микролот Гуджи Анаэробик"
+                loading="lazy"
+              >
+            </div>
+            <div class="coffee-card__body">
+              <div class="coffee-meta">
+                <span class="coffee-region">Гуджи, станция Урага</span>
+                <span class="coffee-altitude">2150–2300 м</span>
+              </div>
+              <h3 class="coffee-card__title">Ethiopia Guji Uraga Anaerobic</h3>
+              
+              <div class="flavor-pills">
+                <span class="flavor-pill">Маракуйя</span>
+                <span class="flavor-pill">Красный вермут</span>
+                <span class="flavor-pill">Манго</span>
+                <span class="flavor-pill">Цветы бузины</span>
+              </div>
+
+              <p class="coffee-card__desc">
+                Экспериментальная бескислородная ферментация кофейных ягод в течение 72 часов. Ошеломляющий тропический букет с ликёрной плотностью.
+              </p>
+
+              <div class="roast-meter">
+                <div class="roast-meter__label">
+                  <span>Обжарка: под альтернативу</span>
+                  <strong>Светлая (Omni-Filter)</strong>
+                </div>
+                <div class="roast-meter__bar">
+                  <div class="roast-meter__fill" style="width: 35%;"></div>
+                </div>
+              </div>
+
+              <div class="coffee-card__footer">
+                <div class="coffee-price">
+                  <span class="price-value">1 580 ₽</span>
+                  <span class="price-unit">/ 250 г</span>
+                </div>
+                <button type="button" class="btn btn--primary btn--sm modal-trigger" data-modal="orderModal" data-coffee="Эфиопия Гуджи Анаэробик (1 580 ₽)">
+                  Заказать лот
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- ЛОТ 4: ДЖИММА АГАРО ЛИМУ -->
+          <article class="coffee-card" data-category="filter espresso" data-id="agaro">
+            <div class="coffee-card__media">
+              <span class="coffee-badge coffee-badge--light">Мытая эко-станция</span>
+              <span class="coffee-qscore">Q 86.8</span>
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/lot-agaro.jpg -->
+              <img 
+                src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=800&q=80" 
+                alt="Зерно Джимма Агаро"
+                loading="lazy"
+              >
+            </div>
+            <div class="coffee-card__body">
+              <div class="coffee-meta">
+                <span class="coffee-region">Джимма, кооператив Агаро</span>
+                <span class="coffee-altitude">1900–2050 м</span>
+              </div>
+              <h3 class="coffee-card__title">Ethiopia Jimma Agaro Kolla</h3>
+              
+              <div class="flavor-pills">
+                <span class="flavor-pill">Красное яблоко</span>
+                <span class="flavor-pill">Лесной орех</span>
+                <span class="flavor-pill">Черный чай</span>
+                <span class="flavor-pill">Лайм</span>
+              </div>
+
+              <p class="coffee-card__desc">
+                Сбалансированный и мягкий кофе на каждый день. Деликатная яблочная кислотность, шелковистое тело и орехово-шоколадный финал.
+              </p>
+
+              <div class="roast-meter">
+                <div class="roast-meter__label">
+                  <span>Обжарка: универсал</span>
+                  <strong>Средняя (City Roast)</strong>
+                </div>
+                <div class="roast-meter__bar">
+                  <div class="roast-meter__fill" style="width: 50%;"></div>
+                </div>
+              </div>
+
+              <div class="coffee-card__footer">
+                <div class="coffee-price">
+                  <span class="price-value">1 050 ₽</span>
+                  <span class="price-unit">/ 250 г</span>
+                </div>
+                <button type="button" class="btn btn--primary btn--sm modal-trigger" data-modal="orderModal" data-coffee="Эфиопия Джимма Агаро (1 050 ₽)">
+                  Заказать лот
+                </button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="catalog-custom-banner">
+          <div class="banner-content">
+            <h4 class="banner-title">Нужен кофе для кофейни или офиса?</h4>
+            <p class="banner-text">Поставляем свежеобжаренное зерно оптом от 5 кг со скидками до 35%, бесплатной настройкой оборудования и обучением бариста.</p>
+          </div>
+          <button type="button" class="btn btn--secondary modal-trigger" data-modal="orderModal" data-coffee="Оптовый запрос / Кофейня / Офис">
+            Получить оптовый прайс
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- СЕКЦИЯ 4: ИНТЕРАКТИВНЫЙ ГИД ЗАВАРИВАНИЯ (BREW GUIDE & CALCULATOR) -->
+    <section class="section section--brew-guide" id="brew-guide">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-eyebrow">Лаборатория экстракции</span>
+          <h2 class="section-title">Интерактивный гид по приготовлению</h2>
+          <p class="section-subtitle">
+            Выберите ваш девайс, и наш гид автоматически рассчитает идеальные граммовки, помол, температуру воды и пошаговый рецепт пролива.
+          </p>
+        </div>
+
+        <!-- СЕЛЕКТОР МЕТОДОВ ЗАВАРИВАНИЯ -->
+        <div class="brew-methods-nav" role="tablist" aria-label="Методы заваривания">
+          <button type="button" class="brew-method-btn active" data-method="v60" role="tab" aria-selected="true">
+            <span class="brew-icon">⏳</span>
+            <span class="brew-name">Hario V60 (Воронка)</span>
+          </button>
+          <button type="button" class="brew-method-btn" data-method="aeropress" role="tab" aria-selected="false">
+            <span class="brew-icon">🧪</span>
+            <span class="brew-name">Аэропресс (Aeropress)</span>
+          </button>
+          <button type="button" class="brew-method-btn" data-method="chemex" role="tab" aria-selected="false">
+            <span class="brew-icon">🏺</span>
+            <span class="brew-name">Кемекс (Chemex)</span>
+          </button>
+          <button type="button" class="brew-method-btn" data-method="french" role="tab" aria-selected="false">
+            <span class="brew-icon">🫖</span>
+            <span class="brew-name">Френч-пресс</span>
+          </button>
+          <button type="button" class="brew-method-btn" data-method="espresso" role="tab" aria-selected="false">
+            <span class="brew-icon">☕</span>
+            <span class="brew-name">Эспрессо / Гейзер</span>
+          </button>
+        </div>
+
+        <!-- ИНТЕРАКТИВНЫЙ БЛОК РЕЦЕПТА -->
+        <div class="brew-display-card" id="brewDisplayCard">
+          <div class="brew-card-header">
+            <div>
+              <span class="brew-card-badge" id="brewBadge">Классическая воронка</span>
+              <h3 class="brew-card-title" id="brewTitle">Hario V60: Хрустальная чистота и цветочные ноты</h3>
+            </div>
+            <div class="brew-ratio-box">
+              <span class="ratio-label">Пропорция:</span>
+              <span class="ratio-val" id="brewRatio">1 : 16</span>
+            </div>
+          </div>
+
+          <!-- ПАРАМЕТРЫ РЕЦЕПТА -->
+          <div class="brew-parameters-grid">
+            <div class="brew-param">
+              <span class="param-icon">⚖️</span>
+              <div class="param-info">
+                <span class="param-title">Вес зерна</span>
+                <span class="param-value" id="brewCoffeeWeight">15.0 г</span>
+              </div>
+            </div>
+            <div class="brew-param">
+              <span class="param-icon">💧</span>
+              <div class="param-info">
+                <span class="param-title">Объем воды</span>
+                <span class="param-value" id="brewWaterVolume">240 мл (93–94°C)</span>
+              </div>
+            </div>
+            <div class="brew-param">
+              <span class="param-icon">⚙️</span>
+              <div class="param-info">
+                <span class="param-title">Степень помола</span>
+                <span class="param-value" id="brewGrindSize">Средний (как морская соль)</span>
+              </div>
+            </div>
+            <div class="brew-param">
+              <span class="param-icon">⏱️</span>
+              <div class="param-info">
+                <span class="param-title">Время экстракции</span>
+                <span class="param-value" id="brewTotalTime">2 мин 45 сек</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ПОШАГОВЫЙ РЕЦЕПТ -->
+          <div class="brew-steps-wrap">
+            <h4 class="steps-heading">Пошаговый протокол приготовления:</h4>
+            <div class="steps-list" id="brewStepsList">
+              <!-- Заполняется динамически скриптом -->
+            </div>
+          </div>
+
+          <!-- РЕКОМЕНДУЕМЫЙ ЛОТ -->
+          <div class="brew-recommended-lot">
+            <span class="recommended-tag">Идеально подойдет для этого метода:</span>
+            <div class="recommended-card-snippet">
+              <strong id="brewRecBean">Ethiopia Yirgacheffe Chelchele</strong>
+              <span id="brewRecNotes">— дескрипторы жасмина и спелого белого персика</span>
+              <a href="#catalog" class="recommended-link">Заказать это зерно &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- СЕКЦИЯ 5: АТМОСФЕРА СЛОУ-БАРА И МЕНЮ (CAFE & ATMOSPHERE) -->
+    <section class="section section--atmosphere" id="atmosphere">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-eyebrow">Оазис спокойствия</span>
+          <h2 class="section-title">Слоу-бар на Покровке</h2>
+          <p class="section-subtitle">
+            Пространство для тех, кто ценит медленное утро, мягкий естественный свет, шелест страниц и звук винилового проигрывателя. Приходите пить фильтр дня и пробовать свежую выпечку.
+          </p>
+        </div>
+
+        <!-- ГАЛЕРЕЯ АТМОСФЕРЫ -->
+        <div class="atmosphere-gallery">
+          <div class="gallery-item gallery-item--large">
+            <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/bar-interior.jpg -->
+            <img 
+              src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=1200&q=80" 
+              alt="Уютный интерьер кофейни с деревянными столами и теплым светом"
+              loading="lazy"
+            >
+            <div class="gallery-overlay">
+              <span class="gallery-overlay__title">Теплый интерьер из массива дуба и глины</span>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/bar-pourover.jpg -->
+            <img 
+              src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=800&q=80" 
+              alt="Бариста заваривает воронку в слоу-баре"
+              loading="lazy"
+            >
+            <div class="gallery-overlay">
+              <span class="gallery-overlay__title">Slow Bar станция и ручные проливы</span>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/bar-pastry.jpg -->
+            <img 
+              src="https://images.unsplash.com/photo-1509785307050-d4066910ec1e?auto=format&fit=crop&w=800&q=80" 
+              alt="Свежие слоеные круассаны на сливочном масле"
+              loading="lazy"
+            >
+            <div class="gallery-overlay">
+              <span class="gallery-overlay__title">Французская утренняя выпечка</span>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/bar-latte.jpg -->
+            <img 
+              src="https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&w=800&q=80" 
+              alt="Чашка флэт уайта с латте-артом"
+              loading="lazy"
+            >
+            <div class="gallery-overlay">
+              <span class="gallery-overlay__title">Флэт уайт на зерне Сидама Бомбе</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- МИНИ-МЕНЮ БАРА -->
+        <div class="bar-menu-card">
+          <div class="bar-menu-header">
+            <h3 class="bar-menu-title">Избранные позиции бара</h3>
+            <span class="bar-menu-badge">Все напитки готовим на моносортах Эфиопии</span>
+          </div>
+
+          <div class="bar-menu-columns">
+            <div class="menu-col">
+              <h4 class="menu-col__title">Черный кофе &amp; Альтернатива</h4>
+              <ul class="menu-list">
+                <li class="menu-item">
+                  <div class="menu-item__name">
+                    <strong>Фильтр дня (Батч-брю)</strong>
+                    <p class="menu-item__desc">Ежедневно меняем лот на усмотрение шеф-бариста</p>
+                  </div>
+                  <span class="menu-item__price">280 ₽</span>
+                </li>
+                <li class="menu-item">
+                  <div class="menu-item__name">
+                    <strong>Hario V60 / Кемекс</strong>
+                    <p class="menu-item__desc">Индивидуальный ручной пролив любого лота из каталога</p>
+                  </div>
+                  <span class="menu-item__price">390 ₽</span>
+                </li>
+                <li class="menu-item">
+                  <div class="menu-item__name">
+                    <strong>Двойной Эспрессо</strong>
+                    <p class="menu-item__desc">Плотный шот с ягодным телом и высокой сладостью</p>
+                  </div>
+                  <span class="menu-item__price">240 ₽</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="menu-col">
+              <h4 class="menu-col__title">Молочный бар &amp; Авторские</h4>
+              <ul class="menu-list">
+                <li class="menu-item">
+                  <div class="menu-item__name">
+                    <strong>Флэт Уайт / Капучино</strong>
+                    <p class="menu-item__desc">Цельное фермерское или растительное овсяное молоко</p>
+                  </div>
+                  <span class="menu-item__price">350 ₽</span>
+                </li>
+                <li class="menu-item">
+                  <div class="menu-item__name">
+                    <strong>Эфиопский раф «Цветок Акации»</strong>
+                    <p class="menu-item__desc">С натуральным настоем флердоранжа, мёдом и кардамоном</p>
+                  </div>
+                  <span class="menu-item__price">420 ₽</span>
+                </li>
+                <li class="menu-item">
+                  <div class="menu-item__name">
+                    <strong>Матча Латте Удзи</strong>
+                    <p class="menu-item__desc">Церемониальный зеленый чай из Киото с кокосовым молоком</p>
+                  </div>
+                  <span class="menu-item__price">380 ₽</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- СЕКЦИЯ 6: ОТЗЫВЫ ГОСТЕЙ (TESTIMONIALS) -->
+    <section class="section section--reviews" id="reviews">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-eyebrow">Сообщество ценителей</span>
+          <h2 class="section-title">Что говорят о нашем кофе</h2>
+          <p class="section-subtitle">
+            Каждый день нас выбирают как профессиональные бариста и судьи каппингов, так и любители уютного домашнего утра.
+          </p>
+        </div>
+
+        <div class="reviews-grid">
+          <!-- Отзыв 1 -->
+          <article class="review-card">
+            <div class="review-card__stars">★★★★★</div>
+            <p class="review-card__text">
+              «Их Йиргачеффе Челчеле — это эталон мытой Эфиопии. Завариваю в V60 каждое утро: чистота невероятная, бергамот и абрикос звенят в чашке. Радует, что зерно обжарено ровно, без печености и гари.»
+            </p>
+            <div class="review-card__author">
+              <div class="author-avatar">АВ</div>
+              <div class="author-meta">
+                <strong class="author-name">Алексей Воронов</strong>
+                <span class="author-role">Сертифицированный Q-Grader, Москва</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Отзыв 2 -->
+          <article class="review-card">
+            <div class="review-card__stars">★★★★★</div>
+            <p class="review-card__text">
+              «Кофейня на Покровке — самое атмосферное место в районе. Играет тихий винил, нет суеты, бариста увлеченно рассказывают про ферментацию каждого лота. Пачка Гуджи Анаэробик улетела за 5 дней!»
+            </p>
+            <div class="review-card__author">
+              <div class="author-avatar">ЕС</div>
+              <div class="author-meta">
+                <strong class="author-name">Елена Смирнова</strong>
+                <span class="author-role">Архитектор, постоянный гость</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Отзыв 3 -->
+          <article class="review-card">
+            <div class="review-card__stars">★★★★★</div>
+            <p class="review-card__text">
+              «Заказываем зерно в офис уже полгода. Ребята всегда отправляют обжарку текущей недели, пачки приходят с идеальным клапаном. Коллеги больше не хотят пить никакой другой кофе.»
+            </p>
+            <div class="review-card__author">
+              <div class="author-avatar">МК</div>
+              <div class="author-meta">
+                <strong class="author-name">Михаил Ковалев</strong>
+                <span class="author-role">CEO студии дизайна</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- СЕКЦИЯ 7: ВОПРОСЫ И ОТВЕТЫ (FAQ ACCORDION) -->
+    <section class="section section--faq" id="faq">
+      <div class="container container--narrow">
+        <div class="section-header text-center">
+          <span class="section-eyebrow">Полезная информация</span>
+          <h2 class="section-title">Часто задаваемые вопросы</h2>
+          <p class="section-subtitle">
+            Всё, что вам нужно знать о хранении, помоле, доставке и каппингах в нашей кофейне.
+          </p>
+        </div>
+
+        <div class="faq-accordion" id="faqAccordion">
+          <!-- FAQ 1 -->
+          <div class="faq-item">
+            <button type="button" class="faq-header" aria-expanded="false">
+              <span class="faq-question">Когда лучше пить кофе после даты обжарки?</span>
+              <span class="faq-chevron"></span>
+            </button>
+            <div class="faq-content">
+              <div class="faq-content__inner">
+                Свежеобжаренному кофе требуется дегазация — выход углекислого газа. Для фильтра и альтернативы оптимальный пик вкуса наступает через <strong>7–14 дней</strong> после обжарки. Для эспрессо мы рекомендуем дать зерну «отдохнуть» <strong>10–20 дней</strong>. При правильном хранении в оригинальной пачке с клапаном кофе сохраняет яркий букет до 60–75 дней.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-item">
+            <button type="button" class="faq-header" aria-expanded="false">
+              <span class="faq-question">Можете ли вы смолоть зерно под мой способ приготовления?</span>
+              <span class="faq-chevron"></span>
+            </button>
+            <div class="faq-content">
+              <div class="faq-content__inner">
+                Да, конечно! Мы бесплатно намелем кофе прямо перед передачей курьеру или самовывозом на профессиональной лабораторной кофемолке Mahlkönig EK43 с точно откалиброванными жерновами. Просто укажите ваш девайс (турка, эспрессо, гейзер, воронка V60, френч-пресс) в комментарии к заказу.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-item">
+            <button type="button" class="faq-header" aria-expanded="false">
+              <span class="faq-question">Как работает доставка по Москве и регионам России?</span>
+              <span class="faq-chevron"></span>
+            </button>
+            <div class="faq-content">
+              <div class="faq-content__inner">
+                По Москве доставка курьером осуществляется день-в-день или на следующий день (бесплатно при заказе от 2 500 ₽). По всей России отправляем заказы через СДЭК и Яндекс Доставку до пункта выдачи или двери за 2–4 рабочих дня.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-item">
+            <button type="button" class="faq-header" aria-expanded="false">
+              <span class="faq-question">Проводите ли вы открытые каппинги и дегустации?</span>
+              <span class="faq-chevron"></span>
+            </button>
+            <div class="faq-content">
+              <div class="faq-content__inner">
+                Каждую субботу в 12:00 в нашем баре на Покровке проходит открытый любительский каппинг с шеф-бариста. Мы пробуем 6–8 лотов вслепую, учимся распознавать дескрипторы и оценивать баланс чашки. Участие бесплатное по предварительной записи через форму на сайте.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="faq-item">
+            <button type="button" class="faq-header" aria-expanded="false">
+              <span class="faq-question">Работаете ли вы с оптовыми заказами и кофейнями?</span>
+              <span class="faq-chevron"></span>
+            </button>
+            <div class="faq-content">
+              <div class="faq-content__inner">
+                Да, мы поставляем спешелти зерно в кофейни, рестораны и корпоративные офисы по всей стране. Предоставляем индивидуальные профили обжарки, оптовый прайс со скидками от объема (заказы от 5 кг), а также помогаем с настройкой оборудования и обучением команды.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- СЕКЦИЯ 8: КОНТАКТЫ И ЯНДЕКС КАРТА (CONTACTS & MAP) -->
+    <section class="section section--contacts" id="contacts">
+      <div class="container">
+        <div class="contacts-wrapper">
+          <!-- ЛЕВАЯ КОЛОНКА С ИНФОРМАЦИЕЙ -->
+          <div class="contacts-info">
+            <span class="section-eyebrow">Ждем вас в гости</span>
+            <h2 class="section-title">Приходите пробовать зерно на Покровке</h2>
+            <p class="contacts-desc">
+              В историческом флигеле старой Москвы мы открыли медленный бар, где можно попробовать любой микролот из нашего каталога в альтернативных способах заваривания.
+            </p>
+
+            <div class="contact-details-list">
+              <div class="contact-detail-item">
+                <span class="detail-icon">📍</span>
+                <div>
+                  <strong>Адрес:</strong>
+                  <p data-config="brandAddress">ул. Покровка, 17, стр. 1, Москва</p>
+                  <span class="metro-badge" data-config="brandMetro">м. Чистые пруды / Курская (7 мин пешком)</span>
+                </div>
+              </div>
+
+              <div class="contact-detail-item">
+                <span class="detail-icon">🕒</span>
+                <div>
+                  <strong>Режим работы бара:</strong>
+                  <p id="scheduleWeekdaysText" data-config="scheduleWeekdays">Пн–Пт: 08:00 – 22:00</p>
+                  <p id="scheduleWeekendsText" data-config="scheduleWeekends">Сб–Вс: 09:00 – 23:00</p>
+                  <div class="status-indicator-box">
+                    <span class="status-dot"></span>
+                    <span id="contactsStatusLabel">Открыто сейчас</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="contact-detail-item">
+                <span class="detail-icon">📞</span>
+                <div>
+                  <strong>Контакты:</strong>
+                  <p><a href="tel:+74958224590" class="contact-link" data-config="brandPhoneLink"><span data-config="brandPhone">+7 (495) 822-45-90</span></a></p>
+                  <p><a href="mailto:hello@ethiopia-grain.ru" class="contact-link" data-config="brandEmail">hello@ethiopia-grain.ru</a></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="contacts-actions">
+              <button type="button" class="btn btn--primary modal-trigger" data-modal="orderModal" data-coffee="Бронь места на каппинг">
+                Записаться на каппинг
+              </button>
+              <a href="https://t.me/ethiopia_grain" target="_blank" rel="noopener noreferrer" class="btn btn--secondary" data-config="socialTelegram">
+                <span>Наш Telegram-канал</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- ПРАВАЯ КОЛОНКА С ЯНДЕКС КАРТОЙ -->
+          <div class="contacts-map-wrap">
+            <div id="yandex-map" class="map-container" role="application" aria-label="Интерактивная карта Яндекс с адресом кофейни">
+              <div class="map-loading" id="mapLoadingState">
+                <div class="map-spinner"></div>
+                <span>Загрузка интерактивной карты...</span>
+              </div>
+            </div>
+            
+            <div class="map-fallback" id="mapFallback">
+              <p>Если карта не отображается, откройте прямой маршрут:</p>
+              <a href="https://yandex.ru/maps/-/CDT4E56" target="_blank" rel="noopener noreferrer" class="btn btn--secondary btn--sm" id="mapExternalLink" data-config="socialYandexMaps">
+                Открыть в Яндекс.Картах &rarr;
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ПОДВАЛ САЙТА (FOOTER) -->
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <div class="footer-col footer-col--brand">
+        <div class="brand-logo">
+          <span class="brand-logo__monogram">E&amp;Z</span>
+          <div class="brand-logo__text">
+            <span class="brand-logo__title" data-config="brandName">Эфиопия &amp; Зерно</span>
+            <span class="brand-logo__subtitle">Specialty Coffee Roastery</span>
+          </div>
+        </div>
+        <p class="footer-manifesto">
+          Независимый обжарщик спешелти кофе прямого импорта из Эфиопии. Чистый конвекционный обжар, дегустационная лаборатория и слоу-бар в Москве.
+        </p>
+        <div class="footer-socials">
+          <a href="https://t.me/ethiopia_grain" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Telegram" data-config="socialTelegram">TG</a>
+          <a href="https://vk.com/ethiopia_grain" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="ВКонтакте" data-config="socialVk">VK</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-title">Навигация</h4>
+        <ul class="footer-links">
+          <li><a href="#about">О ростери и философии</a></li>
+          <li><a href="#catalog">Коллекция микролотов</a></li>
+          <li><a href="#brew-guide">Интерактивный brew-гид</a></li>
+          <li><a href="#atmosphere">Слоу-бар на Покровке</a></li>
+          <li><a href="#faq">Вопросы и ответы</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-title">Контакты</h4>
+        <ul class="footer-links">
+          <li><span data-config="brandAddress">ул. Покровка, 17, стр. 1</span></li>
+          <li><a href="tel:+74958224590" data-config="brandPhoneLink"><span data-config="brandPhone">+7 (495) 822-45-90</span></a></li>
+          <li><a href="mailto:hello@ethiopia-grain.ru" data-config="brandEmail">hello@ethiopia-grain.ru</a></li>
+          <li><span class="footer-highlight" id="footerScheduleLabel">Пн–Вс: 08:00 – 23:00</span></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-title">Подписка на свежие лоты</h4>
+        <p class="footer-newsletter-text">Присылаем оповещение, когда ростер выпускает новый экспериментальный микролот. Никакого спама.</p>
+        <form class="footer-newsletter-form" id="newsletterForm">
+          <input type="email" class="input-text input-text--sm" placeholder="Ваш e-mail" required aria-label="Электронная почта">
+          <button type="submit" class="btn btn--primary btn--sm">Подписаться</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom__inner">
+        <p class="copyright">&copy; <span id="currentYear">2024</span> Эфиопия &amp; Зерно. Все права защищены.</p>
+        <div class="legal-links">
+          <a href="#" class="legal-link modal-trigger" data-modal="privacyModal">Политика конфиденциальности</a>
+          <span class="legal-divider">•</span>
+          <a href="#" class="legal-link modal-trigger" data-modal="privacyModal">Публичная оферта</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- МОДАЛЬНОЕ ОКНО: ЗАКАЗ / ЗАЯВКА (LEAD CAPTURE MODAL) -->
+  <div class="modal-backdrop" id="orderModal" aria-hidden="true" role="dialog" aria-labelledby="modalTitle">
+    <div class="modal-dialog">
+      <button type="button" class="modal-close-btn" id="modalCloseBtn" aria-label="Закрыть окно">&times;</button>
+      
+      <!-- Форма оформления -->
+      <div class="modal-body" id="modalFormContainer">
+        <div class="modal-header">
+          <span class="modal-badge">Быстрый заказ &amp; Консультация</span>
+          <h3 class="modal-title" id="modalTitle">Оформить заказ зерна</h3>
+          <p class="modal-subtitle">
+            Оставьте телефон, и шеф-бариста свяжется с вами в течение 10 минут для уточнения помола, даты обжарки и адреса доставки.
+          </p>
+        </div>
+
+        <form class="lead-form" id="leadForm" novalidate>
+          <div class="form-group">
+            <label for="formCoffee" class="form-label">Выбранный лот / Услуга</label>
+            <input type="text" id="formCoffee" name="coffee" class="form-input" readonly value="Любой лот / Консультация">
+          </div>
+
+          <div class="form-group">
+            <label for="formName" class="form-label">Ваше имя <span class="required">*</span></label>
+            <input type="text" id="formName" name="name" class="form-input" placeholder="Например, Александр" required autocomplete="name">
+            <span class="form-error" id="nameError">Пожалуйста, укажите ваше имя</span>
+          </div>
+
+          <div class="form-group">
+            <label for="formPhone" class="form-label">Номер телефона <span class="required">*</span></label>
+            <input type="tel" id="formPhone" name="phone" class="form-input" placeholder="+7 (___) ___-__-__" required autocomplete="tel">
+            <span class="form-error" id="phoneError">Введите полный номер телефона (+7 ...)</span>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Удобный способ связи</label>
+            <div class="form-radio-group">
+              <label class="radio-label">
+                <input type="radio" name="contactMethod" value="telegram" checked>
+                <span>Telegram</span>
+              </label>
+              <label class="radio-label">
+                <input type="radio" name="contactMethod" value="phone">
+                <span>Звонок</span>
+              </label>
+              <label class="radio-label">
+                <input type="radio" name="contactMethod" value="whatsapp">
+                <span>WhatsApp</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="formComment" class="form-label">Пожелания (нужен ли помол, вес, адрес)</label>
+            <textarea id="formComment" name="comment" class="form-textarea" rows="2" placeholder="Например: смолоть под воронку V60, 2 пачки по 250 г"></textarea>
+          </div>
+
+          <div class="form-group form-checkbox-group">
+            <label class="checkbox-label">
+              <input type="checkbox" id="formConsent" name="consent" required checked>
+              <span>Согласен на обработку персональных данных в соответствии с политикой</span>
+            </label>
+            <span class="form-error" id="consentError">Необходимо согласие на обработку данных</span>
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--full btn--submit" id="submitBtn">
+            <span class="btn-text">Отправить заявку</span>
+            <span class="btn-spinner"></span>
+          </button>
+        </form>
+      </div>
+
+      <!-- Состояние успеха -->
+      <div class="modal-success" id="modalSuccessContainer" style="display: none;">
+        <div class="success-icon">✓</div>
+        <h3 class="success-title">Спасибо за ваш заказ!</h3>
+        <p class="success-text">
+          Ваша заявка успешно передана в ростери. Бариста уже проверяет дату обжарки выбранного микролота и свяжется с вами в ближайшее время.
+        </p>
+        <div class="success-summary" id="successSummary">
+          <!-- Заполняется JS -->
+        </div>
+        <button type="button" class="btn btn--secondary btn--full" id="successCloseBtn">
+          Вернуться на сайт
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- МОДАЛЬНОЕ ОКНО: ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ -->
+  <div class="modal-backdrop" id="privacyModal" aria-hidden="true" role="dialog" aria-labelledby="privacyTitle">
+    <div class="modal-dialog modal-dialog--scrollable">
+      <button type="button" class="modal-close-btn" id="privacyCloseBtn" aria-label="Закрыть окно">&times;</button>
+      <div class="modal-body">
+        <h3 class="modal-title" id="privacyTitle">Политика конфиденциальности</h3>
+        <div class="privacy-text">
+          <p>Настоящая Политика обработки персональных данных регулирует порядок сбора, хранения и использования сведений, предоставляемых пользователями сайта «Эфиопия &amp; Зерно».</p>
+          <h4>1. Сбор информации</h4>
+          <p>Мы запрашиваем только те данные, которые необходимы для обработки заказа на спешелти зерно или бронирования места на каппинг: имя, контактный номер телефона, e-mail и комментарии по способу приготовления.</p>
+          <h4>2. Использование данных</h4>
+          <p>Предоставленные данные используются исключительно сотрудниками ростери для связи с клиентом, уточнения деталей помола и организации доставки. Мы не передаем контакты третьим лицам и не занимаемся рассылкой спама.</p>
+          <h4>3. Защита данных</h4>
+          <p>Все персональные данные обрабатываются в строгом соответствии с Федеральным законом № 152-ФЗ «О персональных данных».</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ПЛАВАЮЩИЙ ТОСТ ДЛЯ УВЕДОМЛЕНИЙ -->
+  <div class="toast-notification" id="toastNotification" role="alert" aria-live="polite">
+    <span class="toast-message" id="toastMessage">Сообщение</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

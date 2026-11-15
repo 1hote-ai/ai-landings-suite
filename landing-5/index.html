@@ -1,0 +1,1376 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <title>Хлеб &amp; Масло — Ремесленная пекарня на дикой закваске в Москве</title>
+  <meta name="description" content="Ремесленный подовый хлеб 36-часовой холодной ферментации на живой закваске, слоёная выпечка с французским сливочным маслом и фермерские намазки. Свежие горячие партии из каменной печи 5 раз в день.">
+  <meta name="keywords" content="пекарня москва, хлеб на закваске, тартин, круассаны, свежая выпечка, ремесленный хлеб, бородинский хлеб, бриошь">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Хлеб &amp; Масло — Ремесленная пекарня на закваске">
+  <meta property="og:description" content="Честный подовый хлеб длительной ферментации и слоёные круассаны из печи. Оформите предзаказ ко времени.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hlebmaslo.ru/">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1200&q=80">
+  
+  <!-- Favicon (SVG) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥖</text></svg>">
+  
+  <!-- Google Fonts: Cormorant Garamond & Mulish -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Mulish:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Yandex Maps 2.1 API -->
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <div class="topbar__status">
+        <span class="status-indicator" id="topbar-status-dot"></span>
+        <span id="topbar-status-text">Определяем статус пекарни...</span>
+        <span class="topbar__sep">·</span>
+        <span class="topbar__highlight">Горячий хлеб выходит каждые 2.5 часа</span>
+      </div>
+      <div class="topbar__info">
+        <span class="topbar__address" data-config="address">Москва, Пречистенский пер., 12</span>
+        <span class="topbar__sep">·</span>
+        <a href="tel:+74957924418" class="topbar__phone" data-config="phone">+7 (495) 792-44-18</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Site Header -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <!-- Brand Logo -->
+      <a href="#hero" class="brand-logo" aria-label="Хлеб и Масло — Главная">
+        <div class="brand-logo__symbol">
+          <svg width="34" height="34" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14 36C10 32 8 26 8 20C8 13.37 13.37 8 20 8C26.63 8 32 13.37 32 20C32 23 31 25.5 29.5 27.5" stroke="#C98A35" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M16 22C16 17.58 19.58 14 24 14C28.42 14 32 17.58 32 22C32 26.42 28.42 30 24 30" stroke="#4A2E1B" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M38 34C40 31 41 27 41 23C41 18 39 14 36 11" stroke="#626B50" stroke-width="2" stroke-linecap="round" stroke-dasharray="2 3"/>
+            <path d="M12 40L36 16" stroke="#C98A35" stroke-width="2.5" stroke-linecap="round"/>
+            <circle cx="24" cy="24" r="3" fill="#C98A35"/>
+          </svg>
+        </div>
+        <div class="brand-logo__text">
+          <span class="brand-logo__title" data-config="brandName">Хлеб &amp; Масло</span>
+          <span class="brand-logo__subtitle">ремесленная пекарня</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="nav-desktop" aria-label="Основная навигация">
+        <ul class="nav-desktop__list">
+          <li><a href="#about" class="nav-link">О пекарне</a></li>
+          <li><a href="#schedule" class="nav-link">Расписание</a></li>
+          <li><a href="#menu" class="nav-link">Меню выпечки</a></li>
+          <li><a href="#philosophy" class="nav-link">Ремесло</a></li>
+          <li><a href="#pairings" class="nav-link">С чем подать</a></li>
+          <li><a href="#reviews" class="nav-link">Отзывы</a></li>
+          <li><a href="#faq" class="nav-link">Вопросы</a></li>
+          <li><a href="#contacts" class="nav-link">Контакты</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="header__actions">
+        <button class="cart-trigger" id="cart-open-btn" aria-label="Открыть корзину предзаказа">
+          <svg class="cart-trigger__icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="cart-trigger__label">Корзина</span>
+          <span class="cart-trigger__badge" id="header-cart-count">0</span>
+        </button>
+
+        <a href="#menu" class="btn btn--primary btn--sm header__cta">
+          <span>Свежий хлеб</span>
+        </a>
+
+        <!-- Mobile Menu Hamburger -->
+        <button class="hamburger-btn" id="mobile-menu-toggle" aria-label="Открыть мобильное меню" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+    <div class="mobile-drawer__overlay" id="mobile-drawer-overlay"></div>
+    <div class="mobile-drawer__panel">
+      <div class="mobile-drawer__header">
+        <div class="brand-logo">
+          <div class="brand-logo__symbol">
+            <svg width="28" height="28" viewBox="0 0 48 48" fill="none">
+              <path d="M14 36C10 32 8 26 8 20C8 13.37 13.37 8 20 8C26.63 8 32 13.37 32 20C32 23 31 25.5 29.5 27.5" stroke="#C98A35" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M12 40L36 16" stroke="#C98A35" stroke-width="2.5" stroke-linecap="round"/>
+              <circle cx="24" cy="24" r="3" fill="#C98A35"/>
+            </svg>
+          </div>
+          <div class="brand-logo__text">
+            <span class="brand-logo__title">Хлеб &amp; Масло</span>
+          </div>
+        </div>
+        <button class="drawer-close-btn" id="mobile-drawer-close" aria-label="Закрыть меню">&times;</button>
+      </div>
+
+      <nav class="mobile-drawer__nav">
+        <ul class="mobile-nav__list">
+          <li><a href="#about" class="mobile-nav__link">О пекарне</a></li>
+          <li><a href="#schedule" class="mobile-nav__link">График свежих выходов</a></li>
+          <li><a href="#menu" class="mobile-nav__link">Меню и корзина</a></li>
+          <li><a href="#philosophy" class="mobile-nav__link">Наше ремесло и закваска</a></li>
+          <li><a href="#pairings" class="mobile-nav__link">Идеальные сочетания</a></li>
+          <li><a href="#reviews" class="mobile-nav__link">Отзывы гостей</a></li>
+          <li><a href="#faq" class="mobile-nav__link">Частые вопросы</a></li>
+          <li><a href="#contacts" class="mobile-nav__link">Пекарня на карте</a></li>
+        </ul>
+      </nav>
+
+      <div class="mobile-drawer__footer">
+        <div class="mobile-drawer__status">
+          <span class="status-indicator" id="mobile-status-dot"></span>
+          <span id="mobile-status-text">Определяем статус...</span>
+        </div>
+        <div class="mobile-drawer__contacts">
+          <a href="tel:+74957924418" class="mobile-contact-link" data-config="phone">+7 (495) 792-44-18</a>
+          <p class="mobile-contact-address" data-config="address">Москва, Пречистенский пер., 12</p>
+          <p class="mobile-contact-hours">Ежедневно: пн–пт 07:30–21:00, сб–вс 08:30–21:30</p>
+        </div>
+        <button class="btn btn--primary btn--full" id="mobile-drawer-preorder">
+          Оформить предзаказ выпечки
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero" id="hero">
+      <div class="hero__bg-grain"></div>
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <div class="vintage-badge">
+            <span class="vintage-badge__icon">🌾</span>
+            <span class="vintage-badge__text">Традиционная французская ремесленная выпечка</span>
+          </div>
+
+          <h1 class="hero__title">
+            Честный хлеб <em>36-часовой</em> ферментации и круассаны на фермерском масле
+          </h1>
+
+          <p class="hero__description">
+            Мы возрождаем культуру неспешного хлеба: без промышленных дрожжей, улучшителей и химии. Только дикая закваска «Клара», цельное зерно с каменных жерновов, французское сливочное масло 84% и каменная подовая печь.
+          </p>
+
+          <div class="hero__actions">
+            <a href="#menu" class="btn btn--primary btn--lg">
+              <span>Выбрать выпечку в меню</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="#schedule" class="btn btn--secondary btn--lg">
+              <span>Расписание партий</span>
+            </a>
+          </div>
+
+          <!-- Hero live indicator pill -->
+          <div class="hero__live-pill">
+            <div class="live-pulse"></div>
+            <div>
+              <strong>Следующий горячий выход из печи:</strong>
+              <span id="hero-next-batch-desc">через 24 мин (Тартины &amp; Багеты)</span>
+            </div>
+          </div>
+
+          <!-- Hero key highlights bar -->
+          <div class="hero__features">
+            <div class="hero-feature">
+              <span class="hero-feature__num">36 ч</span>
+              <span class="hero-feature__label">медленное созревание на холоде</span>
+            </div>
+            <div class="hero-feature">
+              <span class="hero-feature__num">100%</span>
+              <span class="hero-feature__label">живая дикая закваска с 2018 г.</span>
+            </div>
+            <div class="hero-feature">
+              <span class="hero-feature__num">84%</span>
+              <span class="hero-feature__label">жирность фермерского масла</span>
+            </div>
+            <div class="hero-feature">
+              <span class="hero-feature__num">5 раз</span>
+              <span class="hero-feature__label">горячая выпечка в течение дня</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__visual">
+          <div class="hero__frame">
+            <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/... -->
+            <img src="images/hero-bakery.jpg" 
+                 onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1200&q=80';"
+                 alt="Свежеиспеченный ремесленный подовый хлеб на полках пекарни Хлеб и Масло" 
+                 class="hero__image"
+                 loading="eager"
+                 width="600" 
+                 height="700">
+            <div class="hero__stamp">
+              <svg viewBox="0 0 100 100" class="hero__stamp-svg">
+                <path id="curve" d="M 50 50 m -37 0 a 37 37 0 1 1 74 0 a 37 37 0 1 1 -74 0" fill="transparent"/>
+                <text>
+                  <textPath href="#curve" startOffset="0%">
+                    * РЕМЕСЛЕННЫЙ ХЛЕБ * РУЧНАЯ РАБОТА *
+                  </textPath>
+                </text>
+              </svg>
+              <span class="hero__stamp-year">2018</span>
+            </div>
+
+            <div class="hero__floating-card">
+              <div class="floating-card__icon">🥐</div>
+              <div class="floating-card__info">
+                <strong>Французский круассан</strong>
+                <span>27 хрустящих слоев теста</span>
+              </div>
+              <span class="floating-card__price">220 ₽</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LIVE BAKING SCHEDULE & FRESHNESS TRACKER -->
+    <section class="section schedule-section" id="schedule">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-tag">С пылу с жару из печи</div>
+          <h2 class="section-title">Расписание выхода свежих партий</h2>
+          <p class="section-subtitle">
+            Мы выпекаем хлеб небольшими партиями пять раз в день, чтобы вы всегда могли забрать буханку с хрустящей поющей корочкой и еще теплой нежной сердцевиной.
+          </p>
+        </div>
+
+        <!-- Live Countdown Master Card -->
+        <div class="live-tracker-card" id="live-tracker-card">
+          <div class="live-tracker-card__left">
+            <div class="live-status-pill">
+              <span class="live-status-pulse"></span>
+              <span id="tracker-batch-status">Выпекается прямо сейчас в каменной печи</span>
+            </div>
+            <h3 class="live-tracker-card__title" id="tracker-next-name">Ближайший выход: Классический Тартин и Французские Багеты</h3>
+            <p class="live-tracker-card__desc" id="tracker-next-sub">
+              Подовая гранитная печь нагрета до 250°C. Достаем хрустящие буханки строго по таймеру мастера-пекаря.
+            </p>
+            <div class="live-tracker-card__details">
+              <span><strong>Время выхода:</strong> <span id="tracker-next-time">13:30</span></span>
+              <span><strong>Осталось буханок для брони:</strong> <span id="tracker-remaining-loaves">8 из 24</span></span>
+            </div>
+          </div>
+
+          <div class="live-tracker-card__right">
+            <div class="countdown-box">
+              <div class="countdown-box__label">До свежей партии осталось:</div>
+              <div class="countdown-box__digits">
+                <div class="countdown-unit">
+                  <span class="countdown-num" id="cd-hours">00</span>
+                  <span class="countdown-sub">часов</span>
+                </div>
+                <span class="countdown-sep">:</span>
+                <div class="countdown-unit">
+                  <span class="countdown-num" id="cd-minutes">28</span>
+                  <span class="countdown-sub">минут</span>
+                </div>
+                <span class="countdown-sep">:</span>
+                <div class="countdown-unit">
+                  <span class="countdown-num" id="cd-seconds">45</span>
+                  <span class="countdown-sub">секунд</span>
+                </div>
+              </div>
+              <button class="btn btn--primary btn--sm countdown-box__btn" id="tracker-reserve-btn">
+                Забронировать из этой партии
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Daily Batches Timeline Grid -->
+        <div class="batches-grid" id="batches-schedule-container">
+          <!-- Populated by JS based on LANDING_CONFIG.bakingSchedule -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT & CRAFTSMANSHIP PHILOSOPHY -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about__visual">
+            <div class="about__image-stacked">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/baker-craft.jpg -->
+              <img src="images/baker-craft.jpg" 
+                   alt="Мастер-пекарь формует тесто вручную на деревянном столе" 
+                   class="about__img-main"
+                   loading="lazy">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/bread-crumb.jpg -->
+              <img src="images/bread-crumb.jpg" 
+                   alt="Ажурный мякиш ремесленного тартина на закваске" 
+                   class="about__img-secondary"
+                   loading="lazy">
+            </div>
+            <div class="about__caption-quote">
+              <blockquote>
+                «Хлеб не терпит спешки. Ему нужно время, тепло рук и капля дикой закваски, которая помнит традиции старых французских деревушек».
+              </blockquote>
+              <cite>— Эдуард Морозов, шеф-пекарь и основатель «Хлеб &amp; Масло»</cite>
+            </div>
+          </div>
+
+          <div class="about__content">
+            <div class="section-tag">История и принципы</div>
+            <h2 class="section-title">Мы не делаем быстрый хлеб. Мы печем живой.</h2>
+            <p class="about__lead">
+              В современной промышленности хлеб делают за 2 часа с помощью термофильных дрожжей и улучшителей. Мы вернулись к истокам: наш хлеб рождается двое суток.
+            </p>
+
+            <div class="craft-pillars">
+              <div class="craft-pillar">
+                <div class="craft-pillar__icon">🏺</div>
+                <div class="craft-pillar__body">
+                  <h4>Закваска «Клара» с 2018 года</h4>
+                  <p>
+                    Наша дикая закваска спонтанного брожения живет уже более 8 лет. В ней сосуществуют полезные молочнокислые бактерии, расщепляющие белок зерна и делающие хлеб легким для пищеварения.
+                  </p>
+                </div>
+              </div>
+
+              <div class="craft-pillar">
+                <div class="craft-pillar__icon">🌾</div>
+                <div class="craft-pillar__body">
+                  <h4>Мука каменного помола без добавок</h4>
+                  <p>
+                    Используем цельнозерновую и сортовую муку с фермерских мельниц на каменных жерновах. Зерно не перегревается, сохраняя зародыш, клетчатку и подлинный ореховый аромат.
+                  </p>
+                </div>
+              </div>
+
+              <div class="craft-pillar">
+                <div class="craft-pillar__icon">🧈</div>
+                <div class="craft-pillar__body">
+                  <h4>Сливочное масло 84% из нормандских сливок</h4>
+                  <p>
+                    Для слоеной выпечки берем только отборное сладкосливочное масло холодного сбивания. Именно оно дает тончайшие карамелизованные лепестки круассана и тающую текстуру.
+                  </p>
+                </div>
+              </div>
+
+              <div class="craft-pillar">
+                <div class="craft-pillar__icon">🔥</div>
+                <div class="craft-pillar__body">
+                  <h4>Каменная подовая печь с паром</h4>
+                  <p>
+                    Буханки выпекаются прямо на раскаленных шамотных плитах. Мощный паровой удар в первую минуту создает ту самую хрустящую, глубоко румяную «поющую» корочку.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE MENU & PRE-ORDER CATALOG -->
+    <section class="section menu-section" id="menu">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-tag">Свежая витрина</div>
+          <h2 class="section-title">Меню ремесленной выпечки и хлеба</h2>
+          <p class="section-subtitle">
+            Выберите позиции для бронирования к вашему приходу или с курьерской доставкой. Горячий хлеб бережно упаковываем в дышащие крафтовые пакеты.
+          </p>
+        </div>
+
+        <!-- Category Filters -->
+        <div class="menu-tabs" role="tablist">
+          <button class="menu-tab active" data-category="all" role="tab" aria-selected="true">Все позиции</button>
+          <button class="menu-tab" data-category="sourdough" role="tab" aria-selected="false">Подовый хлеб</button>
+          <button class="menu-tab" data-category="viennoiserie" role="tab" aria-selected="false">Слоёная выпечка</button>
+          <button class="menu-tab" data-category="pastry" role="tab" aria-selected="false">Сдоба и бриошь</button>
+          <button class="menu-tab" data-category="butter" role="tab" aria-selected="false">Масло и намазки</button>
+        </div>
+
+        <!-- Product Cards Grid -->
+        <div class="products-grid" id="products-grid">
+          
+          <!-- Product 1 -->
+          <article class="product-card" data-category="sourdough" data-id="tartine-classic">
+            <div class="product-card__thumb">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/tartine-classic.jpg -->
+              <img src="images/tartine-classic.jpg" 
+                   alt="Классический пшеничный Тартин на закваске" 
+                   loading="lazy">
+              <span class="product-badge product-badge--amber">Хит пекарни</span>
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__meta">
+                <span class="product-meta__weight">850 г</span>
+                <span class="product-meta__ferment">36 ч ферментация</span>
+              </div>
+              <h3 class="product-card__title">Тартин пшеничный «Традисьон»</h3>
+              <p class="product-card__desc">
+                Флагманский хлеб на дикой закваске. Крупнопористый шелковистый мякиш с легкой карамельной кислинкой и звонкая темно-янтарная корочка.
+              </p>
+              <div class="product-card__ingredients">
+                Мука пшеничная в/с, мука цельнозерновая, вода артезианская, живая закваска, морская серая соль.
+              </div>
+              <div class="product-card__footer">
+                <div class="product-card__price">390 ₽</div>
+                <div class="product-card__action" data-product-control="tartine-classic">
+                  <button class="btn btn--outline btn--add" data-action="add" data-id="tartine-classic" data-name="Тартин пшеничный «Традисьон»" data-price="390">
+                    + В предзаказ
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 2 -->
+          <article class="product-card" data-category="sourdough" data-id="rye-borodino">
+            <div class="product-card__thumb">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/rye-borodino.jpg -->
+              <img src="images/rye-borodino.jpg" 
+                   alt="Ржаной бородинский хлеб с кориандром на закваске" 
+                   loading="lazy">
+              <span class="product-badge product-badge--green">На красном солоде</span>
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__meta">
+                <span class="product-meta__weight">700 г</span>
+                <span class="product-meta__ferment">24 ч заварка</span>
+              </div>
+              <h3 class="product-card__title">Бородинский на ржаной закваске</h3>
+              <p class="product-card__desc">
+                Настоящий заварной подовый хлеб на ферментированном ржаном солоде, темной патоке и целом кориандре. Плотный, влажный, благородный вкус.
+              </p>
+              <div class="product-card__ingredients">
+                Мука ржаная обойная, солод ржаной ферментированный, патока, кориандр, ржаная закваска, соль.
+              </div>
+              <div class="product-card__footer">
+                <div class="product-card__price">340 ₽</div>
+                <div class="product-card__action" data-product-control="rye-borodino">
+                  <button class="btn btn--outline btn--add" data-action="add" data-id="rye-borodino" data-name="Бородинский на ржаной закваске" data-price="340">
+                    + В предзаказ
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 3 -->
+          <article class="product-card" data-category="sourdough" data-id="french-baguette">
+            <div class="product-card__thumb">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/french-baguette.jpg -->
+              <img src="images/french-baguette.jpg" 
+                   alt="Французский хрустящий багет Традисьон" 
+                   loading="lazy">
+              <span class="product-badge product-badge--amber">Горячий выход</span>
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__meta">
+                <span class="product-meta__weight">320 г</span>
+                <span class="product-meta__ferment">28 ч расстойка</span>
+              </div>
+              <h3 class="product-card__title">Багет французский «Традисьон»</h3>
+              <p class="product-card__desc">
+                Выпекается по классическому парижскому регламенту: ультра-хрустящий гребешок, легкая сливочная середина и тончайший аромат пропеченного зерна.
+              </p>
+              <div class="product-card__ingredients">
+                Пшеничная мука Т65, холодный пулши, живая закваска, вода родниковая, морская соль.
+              </div>
+              <div class="product-card__footer">
+                <div class="product-card__price">210 ₽</div>
+                <div class="product-card__action" data-product-control="french-baguette">
+                  <button class="btn btn--outline btn--add" data-action="add" data-id="french-baguette" data-name="Багет французский «Традисьон»" data-price="210">
+                    + В предзаказ
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 4 -->
+          <article class="product-card" data-category="viennoiserie" data-id="croissant-butter">
+            <div class="product-card__thumb">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/croissant-butter.jpg -->
+              <img src="images/croissant-butter.jpg" 
+                   alt="Классический круассан на сливочном масле" 
+                   loading="lazy">
+              <span class="product-badge product-badge--butter">Масло 84%</span>
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__meta">
+                <span class="product-meta__weight">85 г</span>
+                <span class="product-meta__ferment">27 слоев</span>
+              </div>
+              <h3 class="product-card__title">Круассан классический сливочный</h3>
+              <p class="product-card__desc">
+                Эталонная французская слойка. Золотистая хрупкая корочка, распадающаяся на тысячи невесомых чешуек, и тягучее сочное сливочное сердце.
+              </p>
+              <div class="product-card__ingredients">
+                Мука пшеничная высшего сорта, фермерское сливочное масло 84%, молоко цельное, тростниковый сахар, морская соль.
+              </div>
+              <div class="product-card__footer">
+                <div class="product-card__price">220 ₽</div>
+                <div class="product-card__action" data-product-control="croissant-butter">
+                  <button class="btn btn--outline btn--add" data-action="add" data-id="croissant-butter" data-name="Круассан классический сливочный" data-price="220">
+                    + В предзаказ
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 5 -->
+          <article class="product-card" data-category="viennoiserie" data-id="croissant-almond">
+            <div class="product-card__thumb">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/croissant-almond.jpg -->
+              <img src="images/croissant-almond.jpg" 
+                   alt="Миндальный круассан с франжипаном" 
+                   loading="lazy">
+              <span class="product-badge product-badge--amber">Любимец гостей</span>
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__meta">
+                <span class="product-meta__weight">150 г</span>
+                <span class="product-meta__ferment">Франжипан</span>
+              </div>
+              <h3 class="product-card__title">Круассан миндальный с франжипаном</h3>
+              <p class="product-card__desc">
+                Пропитанный сиропом с цветками апельсина, начиненный густым миндальным кремом франжипан и посыпанный поджаренными миндальными лепестками.
+              </p>
+              <div class="product-card__ingredients">
+                Слоёное круассановое тесто, миндальная мука, масло сливочное 84%, тростниковый сироп, миндальные лепестки.
+              </div>
+              <div class="product-card__footer">
+                <div class="product-card__price">350 ₽</div>
+                <div class="product-card__action" data-product-control="croissant-almond">
+                  <button class="btn btn--outline btn--add" data-action="add" data-id="croissant-almond" data-name="Круассан миндальный с франжипаном" data-price="350">
+                    + В предзаказ
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 6 -->
+          <article class="product-card" data-category="viennoiserie" data-id="pain-au-chocolat">
+            <div class="product-card__thumb">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/pain-au-chocolat.jpg -->
+              <img src="images/pain-au-chocolat.jpg" 
+                   alt="Шоколатин Пэн-о-шоколя с темным бельгийским шоколадом" 
+                   loading="lazy">
+              <span class="product-badge product-badge--amber">Шоколад 70%</span>
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__meta">
+                <span class="product-meta__weight">95 г</span>
+                <span class="product-meta__ferment">2 бруска какао</span>
+              </div>
+              <h3 class="product-card__title">Пэн-о-шоколя (Шоколатин)</h3>
+              <p class="product-card__desc">
+                Хрустящий золотистый конверт из 27 слоев теста с двумя палочками горького бельгийского шоколада Valrhona. Подается слегка теплым.
+              </p>
+              <div class="product-card__ingredients">
+                Французская мука, масло фермерское 84%, шоколадные термостабильные дропсы 70%, молоко, ваниль Бурбон.
+              </div>
+              <div class="product-card__footer">
+                <div class="product-card__price">260 ₽</div>
+                <div class="product-card__action" data-product-control="pain-au-chocolat">
+                  <button class="btn btn--outline btn--add" data-action="add" data-id="pain-au-chocolat" data-name="Пэн-о-шоколя (Шоколатин)" data-price="260">
+                    + В предзаказ
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 7 -->
+          <article class="product-card" data-category="pastry" data-id="brioche-nanterre">
+            <div class="product-card__thumb">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/brioche-nanterre.jpg -->
+              <img src="images/brioche-nanterre.jpg" 
+                   alt="Сливочная парижская бриошь Нантер" 
+                   loading="lazy">
+              <span class="product-badge product-badge--green">Тает во рту</span>
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__meta">
+                <span class="product-meta__weight">400 г</span>
+                <span class="product-meta__ferment">50% сливочного масла</span>
+              </div>
+              <h3 class="product-card__title">Бриошь «Нантер» на желтках</h3>
+              <p class="product-card__desc">
+                Невесомая, волокнистая, нежно-желтая сдоба на деревенских яичных желтках и сливочном масле. Идеальна для тостов, джема и утреннего кофе.
+              </p>
+              <div class="product-card__ingredients">
+                Пшеничная мука, сливочное масло 84%, фермерские желтки, тростниковый сахар, морская соль, щепотка кардамона.
+              </div>
+              <div class="product-card__footer">
+                <div class="product-card__price">410 ₽</div>
+                <div class="product-card__action" data-product-control="brioche-nanterre">
+                  <button class="btn btn--outline btn--add" data-action="add" data-id="brioche-nanterre" data-name="Бриошь «Нантер» на желтках" data-price="410">
+                    + В предзаказ
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 8 -->
+          <article class="product-card" data-category="pastry" data-id="cinnamon-bun">
+            <div class="product-card__thumb">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/cinnamon-bun.jpg -->
+              <img src="images/cinnamon-bun.jpg" 
+                   alt="Улитка с цейлонской корицей и карамелью" 
+                   loading="lazy">
+              <span class="product-badge product-badge--amber">Пряный аромат</span>
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__meta">
+                <span class="product-meta__weight">140 г</span>
+                <span class="product-meta__ferment">Цейлонская корица</span>
+              </div>
+              <h3 class="product-card__title">Булочка с корицей и крем-чизом</h3>
+              <p class="product-card__desc">
+                Сочная пышная бриошная спираль с настоящей тертой корицей с Шри-Ланки, тростниковым сахаром Мусковадо и шапочкой из нежного сырного крема.
+              </p>
+              <div class="product-card__ingredients">
+                Сдобное тесто, корица высшего сорта, сахар демерара, сливочный сыр маскарпоне, ванильный экстракт.
+              </div>
+              <div class="product-card__footer">
+                <div class="product-card__price">280 ₽</div>
+                <div class="product-card__action" data-product-control="cinnamon-bun">
+                  <button class="btn btn--outline btn--add" data-action="add" data-id="cinnamon-bun" data-name="Булочка с корицей и крем-чизом" data-price="280">
+                    + В предзаказ
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 9 -->
+          <article class="product-card" data-category="sourdough" data-id="seeded-country">
+            <div class="product-card__thumb">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/seeded-country.jpg -->
+              <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=800&q=80" 
+                   alt="Сельский подовый хлеб с семенами подсолнечника, льна и кунжута" 
+                   loading="lazy">
+              <span class="product-badge product-badge--green">5 злаков</span>
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__meta">
+                <span class="product-meta__weight">800 г</span>
+                <span class="product-meta__ferment">32 ч созревание</span>
+              </div>
+              <h3 class="product-card__title">Сельский хлеб с 5 семенами</h3>
+              <p class="product-card__desc">
+                Смесь пшеничной и ржаной муки с поджаренными семенами тыквы, льна, подсолнечника, чиа и кунжута. Глубокий орехово-хлебный профиль.
+              </p>
+              <div class="product-card__ingredients">
+                Мука пшеничная, мука ржаная, семена льна золотого, семечки тыквы, кунжут, дикая закваска, морская соль.
+              </div>
+              <div class="product-card__footer">
+                <div class="product-card__price">420 ₽</div>
+                <div class="product-card__action" data-product-control="seeded-country">
+                  <button class="btn btn--outline btn--add" data-action="add" data-id="seeded-country" data-name="Сельский хлеб с 5 семенами" data-price="420">
+                    + В предзаказ
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 10 -->
+          <article class="product-card" data-category="butter" data-id="whipped-butter-fleur">
+            <div class="product-card__thumb">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/whipped-butter.jpg -->
+              <img src="images/whipped-butter.jpg" 
+                   alt="Взбитое фермерское сливочное масло с солью флёр-де-сель" 
+                   loading="lazy">
+              <span class="product-badge product-badge--butter">Фирменный рецепт</span>
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__meta">
+                <span class="product-meta__weight">120 г</span>
+                <span class="product-meta__ferment">Взбито до мусса</span>
+              </div>
+              <h3 class="product-card__title">Масло взбитое с солью Fleur de Sel</h3>
+              <p class="product-card__desc">
+                Фермерское сладкосливочное масло, взбитое до воздушного облака с хлопьями морской соли с острова Ре. Тает на горячем хлебе за секунды.
+              </p>
+              <div class="product-card__ingredients">
+                Пастеризованные сливки фермерские 84%, морская соль Fleur de Sel de Guérande.
+              </div>
+              <div class="product-card__footer">
+                <div class="product-card__price">290 ₽</div>
+                <div class="product-card__action" data-product-control="whipped-butter-fleur">
+                  <button class="btn btn--outline btn--add" data-action="add" data-id="whipped-butter-fleur" data-name="Масло взбитое с солью Fleur de Sel" data-price="290">
+                    + В предзаказ
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 11 -->
+          <article class="product-card" data-category="butter" data-id="herb-truffle-butter">
+            <div class="product-card__thumb">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/herb-truffle-butter.jpg -->
+              <img src="images/whipped-butter.jpg" 
+                   alt="Взбитое сливочное масло с черным трюфелем и прованскими травами" 
+                   loading="lazy">
+              <span class="product-badge product-badge--green">Черный трюфель</span>
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__meta">
+                <span class="product-meta__weight">120 г</span>
+                <span class="product-meta__ferment">Трюфельная паста</span>
+              </div>
+              <h3 class="product-card__title">Масло с черным трюфелем и травами</h3>
+              <p class="product-card__desc">
+                Ароматное гастрономическое масло с натуральным черным трюфелем, диким розмарином и чесночным конфи. Идеальная пара к пшеничному тартину.
+              </p>
+              <div class="product-card__ingredients">
+                Сливочное масло 84%, паста из черного трюфеля, розмарин, печеный чеснок, розовая соль.
+              </div>
+              <div class="product-card__footer">
+                <div class="product-card__price">390 ₽</div>
+                <div class="product-card__action" data-product-control="herb-truffle-butter">
+                  <button class="btn btn--outline btn--add" data-action="add" data-id="herb-truffle-butter" data-name="Масло с черным трюфелем и травами" data-price="390">
+                    + В предзаказ
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 12 -->
+          <article class="product-card" data-category="sourdough" data-id="focaccia-rosemary">
+            <div class="product-card__thumb">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/focaccia-rosemary.jpg -->
+              <img src="images/french-baguette.jpg" 
+                   alt="Фокачча на оливковом масле с вялеными томатами и розмарином" 
+                   loading="lazy">
+              <span class="product-badge product-badge--amber">Оливковое масло EV</span>
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__meta">
+                <span class="product-meta__weight">450 г</span>
+                <span class="product-meta__ferment">24 ч закваска</span>
+              </div>
+              <h3 class="product-card__title">Фокачча лигурийская с томатами</h3>
+              <p class="product-card__desc">
+                Ультра-воздушная сочная лепешка с глубокими кратерами, залитая сицилийским нефильтрованным оливковым маслом Extra Virgin, сочными вялеными томатами и морской солью.
+              </p>
+              <div class="product-card__ingredients">
+                Пшеничная мука, оливковое масло первого холодного отжима, вяленые томаты, свежий розмарин, закваска, соль.
+              </div>
+              <div class="product-card__footer">
+                <div class="product-card__price">360 ₽</div>
+                <div class="product-card__action" data-product-control="focaccia-rosemary">
+                  <button class="btn btn--outline btn--add" data-action="add" data-id="focaccia-rosemary" data-name="Фокачча лигурийская с томатами" data-price="360">
+                    + В предзаказ
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- TASTE & PAIRING GUIDE -->
+    <section class="section pairings-section" id="pairings">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-tag">Гастрономический гид</div>
+          <h2 class="section-title">С чем раскрывается наш хлеб</h2>
+          <p class="section-subtitle">
+            Мы подобрали идеальные вкусовые сочетания для теплых семейных ужинов, воскресных бранчей и бокала вина.
+          </p>
+        </div>
+
+        <div class="pairings-grid">
+          <div class="pairing-card">
+            <div class="pairing-card__img">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/pairing-tartine.jpg -->
+              <img src="images/pairing-tartine.jpg" 
+                   alt="Пшеничный тартин с авокадо и взбитым маслом" 
+                   loading="lazy">
+            </div>
+            <div class="pairing-card__content">
+              <span class="pairing-card__tag">Классика бранча</span>
+              <h3>Пшеничный тартин + взбитое масло и анчоусы</h3>
+              <p>
+                Хрустящий ломоть тартина толщиной в два пальца, щедрый слой взбитого масла с морской солью, филе кантабрийского анчоуса и капля свежего лимонного сока.
+              </p>
+              <div class="pairing-card__hint">Попробуйте с бокалом сухого Рислинга или игристого Crémant de Loire.</div>
+            </div>
+          </div>
+
+          <div class="pairing-card">
+            <div class="pairing-card__img">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/pairing-rye.jpg -->
+              <img src="images/rye-borodino.jpg" 
+                   alt="Бородинский хлеб с сельдью и утиным паштетом" 
+                   loading="lazy">
+            </div>
+            <div class="pairing-card__content">
+              <span class="pairing-card__tag">Русское северное тепло</span>
+              <h3>Бородинский + утиный паштет и брусника</h3>
+              <p>
+                Плотный солодовый вкус с нотами кориандра подчеркивает нежность фермерского паштета из утиной печени и легкую кислинку моченых лесных ягод.
+              </p>
+              <div class="pairing-card__hint">Прекрасно сочетается с густым наваристым борщом или домашними соленьями.</div>
+            </div>
+          </div>
+
+          <div class="pairing-card">
+            <div class="pairing-card__img">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/pairing-croissant.jpg -->
+              <img src="images/croissant-butter.jpg" 
+                   alt="Сливочный круассан со свежим фильтр-кофе" 
+                   loading="lazy">
+            </div>
+            <div class="pairing-card__content">
+              <span class="pairing-card__tag">Парижское утро</span>
+              <h3>Масляный круассан + абрикосовый джем и фильтр</h3>
+              <p>
+                Разломите еще теплый круассан руками (вы услышите хруст!), окуните в чашку черного кофе спешелти или намажьте каплей домашнего конфитюра из абрикоса.
+              </p>
+              <div class="pairing-card__hint">Выпекаем свежую партию круассанов каждый день ровно к 07:30 утра.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REVIEWS & CRITICS -->
+    <section class="section reviews-section" id="reviews">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-tag">Гости о нас</div>
+          <h2 class="section-title">Тепло, за которым возвращаются</h2>
+          <p class="section-subtitle">
+            Каждое утро к нам заходят соседи с Пречистенки, повара лучших ресторанов города и те, кто просто ценит честный хлеб.
+          </p>
+        </div>
+
+        <div class="reviews-grid">
+          <div class="review-card">
+            <div class="review-card__stars">★★★★★</div>
+            <p class="review-card__text">
+              «Я выросла во Франции и объездила полмира. Тартин в «Хлеб &amp; Масло» — это лучший хлеб, который я пробовала в Москве за 10 лет. Корочка поет, когда сжимаешь буханку, а мякиш переливается на свету. Масло со флёр-де-сель — чистая любовь!»
+            </p>
+            <div class="review-card__author">
+              <div class="review-author__avatar">АН</div>
+              <div class="review-author__meta">
+                <strong>Анна Новикова</strong>
+                <span>Гастрономический обозреватель</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-card__stars">★★★★★</div>
+            <p class="review-card__text">
+              «Наконец-то нашел пекарню, где круассаны делают на НАСТОЯЩЕМ масле, а не на гидрогенизированном маргарине. Никакого тяжелого послевкусия, слои тончайшие, а миндальный круассан с кофе — мой обязательный ритуал перед работой».
+            </p>
+            <div class="review-card__author">
+              <div class="review-author__avatar">ДВ</div>
+              <div class="review-author__meta">
+                <strong>Дмитрий Васильев</strong>
+                <span>Архитектор, житель Пречистенки</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-card__stars">★★★★★</div>
+            <p class="review-card__text">
+              «У моего мужа чувствительность к обычному магазинному хлебу — сразу тяжесть в желудке. Хлеб на дикой закваске от Эдуарда едим всей семьей уже второй год без малейших проблем. Он отлично хранится целую неделю в льняном полотенце!»
+            </p>
+            <div class="review-card__author">
+              <div class="review-author__avatar">ЕК</div>
+              <div class="review-author__meta">
+                <strong>Елена Ковалева</strong>
+                <span>Нутрициолог</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Press Quote Banner -->
+        <div class="press-banner">
+          <div class="press-banner__logo">«Афиша Рестораны»</div>
+          <p class="press-banner__quote">
+            «Хлеб &amp; Масло возродили дух камерных ремесленных пекарен старого Парижа прямо в переулках Арбата. Их подовый тартин задает новую планку честного хлебопечения в столице».
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ ACCORDION -->
+    <section class="section faq-section" id="faq">
+      <div class="container container--narrow">
+        <div class="section-header text-center">
+          <div class="section-tag">Полезно знать</div>
+          <h2 class="section-title">Часто задаваемые вопросы</h2>
+          <p class="section-subtitle">
+            Все о нашей закваске, секретах правильного хранения хлеба и бронировании свежих партий.
+          </p>
+        </div>
+
+        <div class="accordion" id="faq-accordion">
+          
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false">
+              <span class="accordion-title">Почему ваш хлеб хранится до 7 дней и не плесневеет?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-content">
+              <p>
+                Все дело в 36-часовой ферментации на живой закваске. Молочнокислые бактерии вырабатывают естественную молочную и уксусную кислоту, которая является природным консервантом. В отличие от магазинного хлеба на промышленных дрожжах, наш хлеб медленно подсыхает, сохраняя вкус, но не подвержен быстрой плесени. Храните его срезом вниз на деревянной доске или в льняном мешочке при комнатной температуре.
+              </p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false">
+              <span class="accordion-title">В чем разница между дикой закваской и хлебопекарными дрожжами?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-content">
+              <p>
+                Промышленные дрожжи заставляют тесто подниматься за 1–2 часа за счет быстрого выделения углекислого газа, при этом сложный белок глютена остается непереваренным. Дикая закваска — это симбиоз десятков штаммов диких дрожжей и лактобактерий. За 36 часов они практически полностью ферментируют и расщепляют фитиновую кислоту и сложные белки, превращая зерно в легкоусвояемый, полезный продукт с низким гликемическим индексом.
+              </p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false">
+              <span class="accordion-title">Как правильно разогреть круассан или багет дома, чтобы вернуть хруст?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-content">
+              <p>
+                Никогда не грейте ремесленную выпечку в микроволновке — она сделает мякиш резиновым! Разогрейте духовку до 180°C, сбрызните багет или круассан буквально парой капель воды и поставьте на решетку на 3–4 минуты. Масло внутри растопится, корочка снова станет ультра-хрустящей, будто выпечка только что из каменной печи.
+              </p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false">
+              <span class="accordion-title">Как работает предзаказ ко времени?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-content">
+              <p>
+                Вы выбираете нужные позиции на сайте и указываете желаемое время визита (или курьерской доставки). Пекари откладывают горячую выпечку из нужной партии именно под ваш заказ, упаковывают в фирменный крафт и держат в термо-боксе до вашего прихода. Вам не придется стоять в очереди или переживать, что любимый тартин разберут.
+              </p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false">
+              <span class="accordion-title">Можно ли замораживать ваш хлеб?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-content">
+              <p>
+                Да, хлеб на закваске великолепно переносит заморозку! Мы рекомендуем нарезать буханку ломтиками, положить в зип-пакет и убрать в морозилку (до 2 месяцев). Утром просто положите замороженный ломтик в тостер или на сухую сковороду — получите горячий свежий хлеб за 2 минуты.
+              </p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false">
+              <span class="accordion-title">Доставляете ли вы выпечку по Москве?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-content">
+              <p>
+                Да! В радиусе 3 км от пекарни (Хамовники, Арбат, Тверской, Якиманка) доставка осуществляется собственными пешими и велокурьерами за 30–45 минут (бесплатно при заказе от 1800 ₽). В другие районы Москвы отправляем через курьерские службы Яндекс Доставки по их стандартным тарифам.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- LOCATION, MAP & ATMOSPHERE -->
+    <section class="section contacts-section" id="contacts">
+      <div class="container">
+        <div class="contacts-grid">
+          
+          <div class="contacts-card">
+            <div class="section-tag">Ждем вас в гости</div>
+            <h2 class="section-title">Пекарня &amp; Кафе в переулках Пречистенки</h2>
+            <p class="contacts-desc">
+              Загляните за утренней чашкой спешелти кофе и хрустящим круассаном или заберите теплый хлеб к семейному ужину. У нас тепло, пахнет сливочным маслом и звучит французский джаз.
+            </p>
+
+            <div class="contacts-info-list">
+              <div class="contact-item">
+                <div class="contact-item__icon">📍</div>
+                <div class="contact-item__body">
+                  <strong>Адрес:</strong>
+                  <span data-config="address">Москва, Пречистенский пер., 12</span>
+                  <div class="contact-subinfo">м. Кропоткинская / Парк Культуры (6 мин пешком)</div>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-item__icon">⏰</div>
+                <div class="contact-item__body">
+                  <strong>Часы работы:</strong>
+                  <span>Понедельник — Пятница: 07:30 – 21:00</span>
+                  <span>Суббота — Воскресенье: 08:30 – 21:30</span>
+                  <div class="contact-live-status">
+                    <span class="status-indicator" id="contacts-status-dot"></span>
+                    <span id="contacts-status-text">Определяем статус...</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-item__icon">📞</div>
+                <div class="contact-item__body">
+                  <strong>Телефон для брони и справок:</strong>
+                  <a href="tel:+74957924418" class="contact-phone" data-config="phone">+7 (495) 792-44-18</a>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-item__icon">✉️</div>
+                <div class="contact-item__body">
+                  <strong>Электронная почта:</strong>
+                  <a href="mailto:bonjour@hlebmaslo.ru" class="contact-email" data-config="email">bonjour@hlebmaslo.ru</a>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-item__icon">🐾</div>
+                <div class="contact-item__body">
+                  <strong>Dog-Friendly:</strong>
+                  <span>Мы всегда рады гостям с четвероногими друзьями. У входа стоит миска с чистой водой.</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="contacts-actions">
+              <button class="btn btn--primary" id="contacts-preorder-btn">
+                Заказать выпечку ко времени
+              </button>
+              <a href="https://yandex.ru/maps/?pt=37.592314,55.748912&z=16&l=map" target="_blank" rel="noopener noreferrer" class="btn btn--outline">
+                Маршрут в Яндекс Картах ↗
+              </a>
+            </div>
+          </div>
+
+          <div class="map-wrapper">
+            <!-- Yandex Map Canvas Container -->
+            <div id="yandex-map" class="yandex-map-container" role="application" aria-label="Интерактивная карта расположения пекарни">
+              <div class="map-fallback" id="map-fallback">
+                <div class="map-fallback__content">
+                  <span class="map-fallback__pin">📍</span>
+                  <h4>Пекарня «Хлеб &amp; Масло»</h4>
+                  <p>Москва, Пречистенский пер., 12</p>
+                  <a href="https://yandex.ru/maps/?pt=37.592314,55.748912&z=16&l=map" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--sm">
+                    Открыть в приложении Яндекс Карты
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- STICKY FLOATING CART BAR -->
+  <aside class="sticky-cart-bar" id="sticky-cart-bar" aria-hidden="true">
+    <div class="container sticky-cart-bar__inner">
+      <div class="sticky-cart-bar__info">
+        <div class="sticky-cart-bar__count">
+          В заказе <strong id="bar-items-count">0</strong> поз.
+        </div>
+        <div class="sticky-cart-bar__total">
+          на сумму: <strong id="bar-total-price">0 ₽</strong>
+        </div>
+        <div class="sticky-cart-bar__gift-hint" id="bar-gift-hint">
+          Добавьте позиций еще на 500 ₽ для подарка!
+        </div>
+      </div>
+      <div class="sticky-cart-bar__action">
+        <button class="btn btn--primary" id="sticky-checkout-btn">
+          <span>Оформить предзаказ</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- PRE-ORDER / CHECKOUT MODAL -->
+  <div class="modal" id="checkout-modal" aria-hidden="true" role="dialog" aria-labelledby="modal-title">
+    <div class="modal__overlay" id="checkout-modal-overlay"></div>
+    <div class="modal__dialog">
+      <button class="modal__close" id="checkout-modal-close" aria-label="Закрыть окно">&times;</button>
+      
+      <!-- Modal Content State: Form -->
+      <div class="modal__content" id="modal-form-view">
+        <div class="modal__header">
+          <div class="section-tag">Бронирование выпечки</div>
+          <h2 class="modal__title" id="modal-title">Оформление предзаказа</h2>
+          <p class="modal__subtitle">
+            Мы бережно отложим еще теплый хлеб или упакуем слоеную выпечку к указанному времени.
+          </p>
+        </div>
+
+        <!-- Selected Items Summary inside Modal -->
+        <div class="modal-order-summary" id="modal-order-summary">
+          <div class="summary-header">
+            <span>Выбранные позиции:</span>
+            <button type="button" class="summary-clear-btn" id="modal-clear-cart">Очистить</button>
+          </div>
+          <div class="summary-items-list" id="modal-summary-items">
+            <!-- Dynamically populated or empty message -->
+          </div>
+          <div class="summary-gift-progress">
+            <div class="gift-progress-bar">
+              <div class="gift-progress-fill" id="gift-progress-fill" style="width: 0%;"></div>
+            </div>
+            <div class="gift-progress-text" id="gift-progress-text">
+              Заказ от 2000 ₽: фирменное взбитое масло Fleur de Sel в подарок!
+            </div>
+          </div>
+          <div class="summary-total-row">
+            <span>Итого к оплате при получении:</span>
+            <strong id="modal-summary-total">0 ₽</strong>
+          </div>
+        </div>
+
+        <!-- Pre-order Form -->
+        <form class="order-form" id="order-form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="order-name" class="form-label">Ваше имя <span class="required">*</span></label>
+              <input type="text" id="order-name" name="name" class="form-input" placeholder="Например, Александр" autocomplete="name" required>
+              <span class="form-error" id="order-name-error">Пожалуйста, укажите ваше имя</span>
+            </div>
+
+            <div class="form-group">
+              <label for="order-phone" class="form-label">Номер телефона <span class="required">*</span></label>
+              <input type="tel" id="order-phone" name="phone" class="form-input" placeholder="+7 (___) ___-__-__" autocomplete="tel" required>
+              <span class="form-error" id="order-phone-error">Введите корректный номер в формате +7 (XXX) XXX-XX-XX</span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <span class="form-label">Способ получения</span>
+            <div class="delivery-options">
+              <label class="radio-label">
+                <input type="radio" name="delivery_type" value="pickup" checked>
+                <span class="radio-custom"></span>
+                <span>Самовывоз из пекарни (Пречистенский пер., 12)</span>
+              </label>
+              <label class="radio-label">
+                <input type="radio" name="delivery_type" value="delivery">
+                <span class="radio-custom"></span>
+                <span>Курьерская доставка по Москве</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="order-time" class="form-label">Желаемое время готовности <span class="required">*</span></label>
+              <select id="order-time" name="time" class="form-select" required>
+                <option value="nearest">Ближайшая горячая партия (~25-30 мин)</option>
+                <option value="today-1330">Сегодня к 13:30 (Дневной Тартин)</option>
+                <option value="today-1630">Сегодня к 16:30 (Ржаной подовый)</option>
+                <option value="today-1830">Сегодня к 18:30 (Вечерняя партия)</option>
+                <option value="tomorrow-morning">Завтра к открытию (08:30 утра)</option>
+                <option value="tomorrow-noon">Завтра к обеду (13:00)</option>
+              </select>
+            </div>
+
+            <div class="form-group" id="address-field-group" style="display: none;">
+              <label for="order-address" class="form-label">Адрес доставки</label>
+              <input type="text" id="order-address" name="address" class="form-input" placeholder="Улица, дом, квартира/офис" autocomplete="street-address">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="order-comment" class="form-label">Пожелания к заказу</label>
+            <textarea id="order-comment" name="comment" class="form-textarea" rows="2" placeholder="Например: нарезать тартин, добавить приборы к кофе, без семян кунжута..."></textarea>
+          </div>
+
+          <div class="form-group form-privacy">
+            <label class="checkbox-label">
+              <input type="checkbox" id="order-privacy" name="privacy" checked required>
+              <span class="checkbox-custom"></span>
+              <span>Согласен на обработку персональных данных в соответствии с политикой конфиденциальности</span>
+            </label>
+            <span class="form-error" id="order-privacy-error">Необходимо ваше согласие</span>
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--full btn--lg" id="submit-order-btn">
+            Подтвердить бронирование
+          </button>
+        </form>
+      </div>
+
+      <!-- Modal Content State: Success -->
+      <div class="modal__success" id="modal-success-view" style="display: none;">
+        <div class="success-icon">
+          <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+            <circle cx="32" cy="32" r="30" stroke="#C98A35" stroke-width="3" fill="#FFFDF7"/>
+            <path d="M20 32L28 40L44 24" stroke="#626B50" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h2 class="success-title">Предзаказ успешно принят!</h2>
+        <div class="success-order-number">
+          Номер вашего заказа: <strong id="success-order-id">#HM-4182</strong>
+        </div>
+        <p class="success-message">
+          Мы уже передали ваш заказ шеф-пекарю. Через несколько минут мы пришлем вам подтверждение в SMS / WhatsApp со ссылкой на отслеживание готовности вашей выпечки.
+        </p>
+
+        <div class="success-recap" id="success-recap-content">
+          <!-- Populated by JS -->
+        </div>
+
+        <div class="success-actions">
+          <button class="btn btn--primary" id="success-modal-close-btn">
+            Отлично, спасибо!
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- SITE FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__col footer__brand">
+        <a href="#hero" class="brand-logo footer__logo">
+          <div class="brand-logo__symbol">
+            <svg width="30" height="30" viewBox="0 0 48 48" fill="none">
+              <path d="M14 36C10 32 8 26 8 20C8 13.37 13.37 8 20 8C26.63 8 32 13.37 32 20C32 23 31 25.5 29.5 27.5" stroke="#C98A35" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M12 40L36 16" stroke="#C98A35" stroke-width="2.5" stroke-linecap="round"/>
+              <circle cx="24" cy="24" r="3" fill="#C98A35"/>
+            </svg>
+          </div>
+          <div class="brand-logo__text">
+            <span class="brand-logo__title">Хлеб &amp; Масло</span>
+            <span class="brand-logo__subtitle">пекарня на закваске</span>
+          </div>
+        </a>
+        <p class="footer__text">
+          Ремесленная пекарня французских традиций в историческом центре Москвы. Настоящий подовый хлеб длительной ферментации, хрустящие багеты и слоёная выпечка из печи.
+        </p>
+        <div class="footer__socials">
+          <a href="https://t.me/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Телеграм-канал пекарни">
+            <span>Telegram</span>
+          </a>
+          <a href="https://vk.com/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="ВКонтакте пекарни">
+            <span>ВКонтакте</span>
+          </a>
+          <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="WhatsApp пекарни">
+            <span>WhatsApp</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__col-title">Навигация</h4>
+        <ul class="footer__links">
+          <li><a href="#about">О пекарне и закваске</a></li>
+          <li><a href="#schedule">Расписание горячих партий</a></li>
+          <li><a href="#menu">Каталог выпечки</a></li>
+          <li><a href="#pairings">Гастрономические пары</a></li>
+          <li><a href="#reviews">Отзывы гостей</a></li>
+          <li><a href="#faq">Частые вопросы</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__col-title">Выпечка и хлеб</h4>
+        <ul class="footer__links">
+          <li><a href="#menu" data-filter="sourdough">Подовый тартин на закваске</a></li>
+          <li><a href="#menu" data-filter="sourdough">Ржаной бородинский на солоде</a></li>
+          <li><a href="#menu" data-filter="viennoiserie">Сливочный круассан 84%</a></li>
+          <li><a href="#menu" data-filter="viennoiserie">Миндальный круассан</a></li>
+          <li><a href="#menu" data-filter="pastry">Сдобная бриошь Нантер</a></li>
+          <li><a href="#menu" data-filter="butter">Взбитое масло Fleur de Sel</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__col-title">Контакты и пекарня</h4>
+        <ul class="footer__contacts">
+          <li>
+            <strong>Адрес:</strong>
+            <span data-config="address">Москва, Пречистенский пер., 12</span>
+          </li>
+          <li>
+            <strong>Телефон:</strong>
+            <a href="tel:+74957924418" data-config="phone">+7 (495) 792-44-18</a>
+          </li>
+          <li>
+            <strong>Почта:</strong>
+            <a href="mailto:bonjour@hlebmaslo.ru" data-config="email">bonjour@hlebmaslo.ru</a>
+          </li>
+          <li>
+            <strong>Режим:</strong>
+            <span>пн–пт 07:30–21:00, сб–вс 08:30–21:30</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <div class="footer__copy">
+          &copy; <span id="current-year">2026</span> «Хлеб &amp; Масло». Все права защищены. Настоящий ремесленный хлеб.
+        </div>
+        <div class="footer__badges">
+          <span>🌾 100% натуральные ингредиенты</span>
+          <span>🥖 Выпекается в каменной подовой печи</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript Application -->
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,1515 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SILK & SOUL — Санктуарий эстетики, холистического SPA и тишины в Москве</title>
+  <meta name="description" content="Премиальный спа-санктуарий SILK & SOUL в историческом центре Москвы. Персональные сьюты, восточные техники массажа, скульптурный лифтинг, купели из оникса и чайные церемонии.">
+  <meta name="keywords" content="спа москва, silk soul, люкс массаж, хаммам, уход за лицом кобидо, спа для двоих москва, премиум спа салон">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:title" content="SILK & SOUL — Санктуарий эстетики и тишины">
+  <meta property="og:description" content="Обретите невесомость тела и покой ума. Премиальные холистические ритуалы, редкие ботанические масла и абсолютная приватность.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='46' fill='%23FAF6F0' stroke='%23BD7A63' stroke-width='4'/><path d='M50 24 C40 38, 30 52, 50 76 C70 52, 60 38, 50 24 Z' fill='%23BD7A63'/><circle cx='50' cy='46' r='6' fill='%237D8C81'/></svg>" type="image/svg+xml">
+
+  <!-- Google Fonts: Cormorant Infant & Tenor Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Tenor+Sans&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Yandex Maps 2.1 API -->
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <div class="topbar__status">
+        <span class="status-indicator live-status-dot"></span>
+        <span class="topbar__status-text" id="live-status-text">Загрузка статуса...</span>
+      </div>
+      <div class="topbar__address">
+        <svg class="icon icon-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+          <circle cx="12" cy="10" r="3"></circle>
+        </svg>
+        <span data-bind="address">Москва, Романов переулок, 4с2</span>
+        <span class="topbar__metro" data-bind="metro">(м. Библиотека им. Ленина, 3 мин)</span>
+      </div>
+      <div class="topbar__action">
+        <a href="#booking" class="topbar__link" data-open-modal="booking-modal">Подарочные сертификаты & Визиты</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <!-- Brand Logo -->
+      <a href="#" class="brand" aria-label="SILK & SOUL Главная">
+        <span class="brand__title" data-bind="brandName">SILK &amp; SOUL</span>
+        <span class="brand__tagline">Sanctuary of Slow Living</span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="nav" aria-label="Основная навигация">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#rituals" class="nav__link">Ритуалы</a></li>
+          <li class="nav__item"><a href="#philosophy" class="nav__link">Философия</a></li>
+          <li class="nav__item"><a href="#calculator" class="nav__link">Конструктор визита</a></li>
+          <li class="nav__item"><a href="#masters" class="nav__link">Мастера</a></li>
+          <li class="nav__item"><a href="#space" class="nav__link">Атмосфера</a></li>
+          <li class="nav__item"><a href="#reviews" class="nav__link">Отзывы</a></li>
+          <li class="nav__item"><a href="#faq" class="nav__link">Вопросы</a></li>
+          <li class="nav__item"><a href="#contacts" class="nav__link">Контакты</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="header__actions">
+        <a href="tel:+74958224570" class="header__phone" data-bind-phone="display" data-bind="phone">
+          <svg class="icon icon-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
+          <span>+7 (495) 822-45-70</span>
+        </a>
+
+        <button class="btn btn--primary header__btn" data-open-modal="booking-modal">
+          <span>Забронировать</span>
+        </button>
+
+        <!-- Mobile Drawer Toggle -->
+        <button class="menu-toggle" id="menu-toggle" aria-label="Открыть мобильное меню" aria-expanded="false">
+          <span class="menu-toggle__line"></span>
+          <span class="menu-toggle__line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+    <div class="mobile-drawer__overlay" id="drawer-overlay"></div>
+    <div class="mobile-drawer__panel">
+      <div class="mobile-drawer__header">
+        <div class="brand">
+          <span class="brand__title">SILK &amp; SOUL</span>
+          <span class="brand__tagline">Sanctuary of Slow Living</span>
+        </div>
+        <button class="drawer-close" id="drawer-close" aria-label="Закрыть меню">&times;</button>
+      </div>
+      
+      <div class="mobile-drawer__status">
+        <span class="status-indicator live-status-dot"></span>
+        <span id="drawer-live-status-text">Открыто сейчас</span>
+      </div>
+
+      <nav class="mobile-drawer__nav">
+        <ul class="mobile-drawer__list">
+          <li><a href="#rituals" class="drawer-link">Ритуалы и программы</a></li>
+          <li><a href="#philosophy" class="drawer-link">Философия замедления</a></li>
+          <li><a href="#calculator" class="drawer-link">Конструктор и расчет визита</a></li>
+          <li><a href="#masters" class="drawer-link">Мастера и терапевты</a></li>
+          <li><a href="#space" class="drawer-link">Пространство санктуария</a></li>
+          <li><a href="#reviews" class="drawer-link">Впечатления гостей</a></li>
+          <li><a href="#faq" class="drawer-link">Частые вопросы</a></li>
+          <li><a href="#contacts" class="drawer-link">Контакты и адрес</a></li>
+        </ul>
+      </nav>
+
+      <div class="mobile-drawer__footer">
+        <a href="tel:+74958224570" class="drawer-phone" data-bind-phone="display" data-bind="phone">+7 (495) 822-45-70</a>
+        <p class="drawer-address" data-bind="address">Москва, Романов переулок, 4с2</p>
+        <button class="btn btn--primary btn--full" data-open-modal="booking-modal">
+          <span>Забронировать визит</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero" id="hero">
+      <div class="hero__bg-wrap">
+        <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/hero-sanctuary.jpg -->
+        <img class="hero__bg-img" 
+             src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=1920&q=85" 
+             alt="Атмосфера спа-санктуария SILK & SOUL: шелковые простыни, теплое дерево, ботанические масла" 
+             loading="eager">
+        <div class="hero__overlay"></div>
+      </div>
+
+      <div class="container hero__container">
+        <div class="hero__content">
+          <div class="hero__pill">
+            <span class="hero__pill-icon">✦</span>
+            <span>Санктуарий эстетики, холистического SPA и тишины</span>
+          </div>
+
+          <h1 class="hero__title">
+            Искусство замедления <br>
+            <span class="hero__title-italic">в сердце мегаполиса</span>
+          </h1>
+
+          <p class="hero__desc">
+            Пространство абсолютного покоя, где тело освобождается от невидимой тяжести стресса, 
+            а чувства пробуждаются через шелковые текстуры, целебный пар, тибетские чаши и редкие 
+            органические эликсиры.
+          </p>
+
+          <div class="hero__actions">
+            <button class="btn btn--primary btn--lg" data-open-modal="booking-modal">
+              <span>Забронировать визит</span>
+              <svg class="icon icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </button>
+            <a href="#calculator" class="btn btn--secondary btn--lg">
+              <span>Собрать свой ритуал</span>
+            </a>
+          </div>
+
+          <div class="hero__meta">
+            <div class="meta-item">
+              <span class="meta-item__val">4.98 ★</span>
+              <span class="meta-item__lbl">Рейтинг Яндекс &amp; 2ГИС</span>
+            </div>
+            <div class="meta-separator"></div>
+            <div class="meta-item">
+              <span class="meta-item__val">100%</span>
+              <span class="meta-item__lbl">Приватные сьюты</span>
+            </div>
+            <div class="meta-separator"></div>
+            <div class="meta-item">
+              <span class="meta-item__val">350 м²</span>
+              <span class="meta-item__lbl">Территория тишины</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__badge-card">
+          <div class="badge-card__top">
+            <span class="badge-card__tag">SLOW LIVING</span>
+            <span class="badge-card__dot"></span>
+          </div>
+          <h3 class="badge-card__title">Ритуал недели: Шёлковый кокон</h3>
+          <p class="badge-card__text">Глубокое прогревание в кедровой фитобочке, массаж горячими шелковыми мешочками и укутывание в терракотовую глину.</p>
+          <div class="badge-card__bottom">
+            <span class="badge-card__duration">90 мин · 8 900 ₽</span>
+            <button class="badge-card__btn" data-preselect="silk-cocoon" data-open-modal="booking-modal">Выбрать</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll Down Hint -->
+      <a href="#philosophy" class="hero__scroll-indicator" aria-label="Прокрутить к философии">
+        <span class="scroll-mouse">
+          <span class="scroll-wheel"></span>
+        </span>
+        <span class="scroll-label">Листайте вниз</span>
+      </a>
+    </section>
+
+    <!-- PHILOSOPHY / SLOW LIVING SECTION -->
+    <section class="philosophy section" id="philosophy">
+      <div class="container">
+        <div class="section-header section-header--center">
+          <span class="section-eyebrow">Манифест присутствия</span>
+          <h2 class="section-title">Четыре опоры гармонии SILK &amp; SOUL</h2>
+          <p class="section-subtitle">
+            Мы не просто предлагаем спа-процедуры. Мы создали тихий приют посреди Москвы, 
+            где восстанавливается естественная связь между душой, дыханием и телом.
+          </p>
+        </div>
+
+        <div class="pillars-grid">
+          <article class="pillar-card">
+            <div class="pillar-card__icon">
+              <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="16" cy="16" r="14"></circle>
+                <path d="M16 6c0 5.5-4 10-4 10s4 4.5 4 10c0-5.5 4-10 4-10s-4-4.5-4-10z"></path>
+              </svg>
+            </div>
+            <h3 class="pillar-card__title">Глубокая тишина</h3>
+            <p class="pillar-card__desc">
+              Все ритуалы проходят в персональных изолированных сьютах с акустической защитой. 
+              Никаких посторонних звуков: только мягкий шепот бамбука, вибрации поющих чаш и умиротворение.
+            </p>
+          </article>
+
+          <article class="pillar-card">
+            <div class="pillar-card__icon">
+              <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M16 2L20 12L31 16L20 20L16 30L12 20L1 16L12 12Z"></path>
+              </svg>
+            </div>
+            <h3 class="pillar-card__title">Редкие ботанические эликсиры</h3>
+            <p class="pillar-card__desc">
+              Мы используем сертифицированные органические масла первого холодного отжима, 
+              дикорастущие травы Альп и Бали, марокканскую вулканическую глину Рассул и гидролаты розы.
+            </p>
+          </article>
+
+          <article class="pillar-card">
+            <div class="pillar-card__icon">
+              <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 22s2-4 4-4 4 4 4 4"></path>
+                <circle cx="16" cy="11" r="5"></circle>
+                <path d="M4 29c0-6 5.5-11 12-11s12 5 12 11"></path>
+              </svg>
+            </div>
+            <h3 class="pillar-card__title">Глубинная терапия рук</h3>
+            <p class="pillar-card__desc">
+              Наши мастера обладают международными степенями в японском скульптурном массаже, 
+              остеопатических практиках и аюрведе. Каждое прикосновение выверено до миллиметра.
+            </p>
+          </article>
+
+          <article class="pillar-card">
+            <div class="pillar-card__icon">
+              <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M5 26h22"></path>
+                <path d="M8 26V14a8 8 0 0 1 16 0v12"></path>
+                <path d="M16 6V2"></path>
+                <path d="M12 4h8"></path>
+              </svg>
+            </div>
+            <h3 class="pillar-card__title">Чайная медитация Гунфу Ча</h3>
+            <p class="pillar-card__desc">
+              После каждого ритуала вы перемещаетесь в чайный лаунж, где чайный мастер заваривает 
+              коллекционные улуны в глиняной исинской посуде под медитативное потрескивание благовоний.
+            </p>
+          </article>
+        </div>
+
+        <!-- Visual Storytelling Block -->
+        <div class="philosophy__story">
+          <div class="story-image-wrap">
+            <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/philosophy-details.jpg -->
+            <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1000&q=80" 
+                 alt="Ботанические масла, теплые полотенца и лепестки в спа SILK & SOUL" 
+                 class="story-img" loading="lazy">
+            <div class="story-image-badge">
+              <span class="badge-num">100%</span>
+              <span class="badge-text">Натуральные ингредиенты без синтетических отдушек</span>
+            </div>
+          </div>
+
+          <div class="story-content">
+            <h3 class="story-title">«Время, отданное себе — это высшая форма роскоши»</h3>
+            <p class="story-paragraph">
+              В современном ритме человек постоянно находится в режиме многозадачности. Наша нервная система 
+              перегружена десятками импульсов в секунду. В SILK &amp; SOUL вы оставляете телефон в персональном 
+              сейфе и попадаете в другое измерение времени.
+            </p>
+            <p class="story-paragraph">
+              Здесь некуда спешить. Воздух насыщен тонкими нотами эвкалипта и сандала, свет приглушен до золотистого 
+              сияния свечей, а температура купели выверена с точностью до десятой доли градуса.
+            </p>
+            <div class="story-signature">
+              <div class="signature-details">
+                <span class="signature-name">Анастасия Морозова</span>
+                <span class="signature-role">Основательница и хранитель традиций SILK &amp; SOUL</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RITUALS CATALOG / MENU SECTION -->
+    <section class="rituals section" id="rituals">
+      <div class="container">
+        <div class="section-header section-header--center">
+          <span class="section-eyebrow">Коллекция программ</span>
+          <h2 class="section-title">Авторские ритуалы преображения</h2>
+          <p class="section-subtitle">
+            Каждая программа — это законченное чувственное путешествие, продуманное от первого 
+            глотка травяного эликсира до мягкого выхода в чайном лаунже.
+          </p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="rituals-filter" role="tablist" aria-label="Категории ритуалов">
+          <button class="filter-btn is-active" data-filter="all" role="tab" aria-selected="true">Все программы</button>
+          <button class="filter-btn" data-filter="body" role="tab" aria-selected="false">Тело &amp; Расслабление</button>
+          <button class="filter-btn" data-filter="face" role="tab" aria-selected="false">Лицо &amp; Сияние</button>
+          <button class="filter-btn" data-filter="couples" role="tab" aria-selected="false">Для двоих</button>
+          <button class="filter-btn" data-filter="sound" role="tab" aria-selected="false">Звук &amp; Арома</button>
+        </div>
+
+        <!-- Rituals Grid -->
+        <div class="rituals-grid" id="rituals-container">
+          
+          <!-- Ritual Card 1 -->
+          <article class="ritual-card" data-category="body" data-id="silk-cocoon">
+            <div class="ritual-card__media">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/ritual-silk-cocoon.jpg -->
+              <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=800&q=80" 
+                   alt="Ритуал Шёлковый кокон: расслабляющий массаж тела" 
+                   class="ritual-card__img" loading="lazy">
+              <span class="ritual-card__pill">Бестселлер</span>
+            </div>
+            <div class="ritual-card__body">
+              <div class="ritual-card__meta">
+                <span class="ritual-card__tag">Тело &amp; Баланс</span>
+                <span class="ritual-card__time">60 / 90 мин</span>
+              </div>
+              <h3 class="ritual-card__title">Шёлковый кокон (Silk Cocoon Body)</h3>
+              <p class="ritual-card__desc">
+                Глубокий масляный массаж тела теплыми шелковыми коконами и вулканическими камнями. 
+                Снимает хроническое напряжение спины, возвращает мышцам мягкость и питает кожу драгоценным маслом ши.
+              </p>
+              <div class="ritual-card__steps">
+                <span class="step-tag">Очищающий солевой гоммаж</span>
+                <span class="step-tag">Масляный ритуал 60°C</span>
+                <span class="step-tag">Шелковое укутывание</span>
+              </div>
+              <div class="ritual-card__footer">
+                <div class="ritual-card__pricing">
+                  <span class="price-label">Стоимость:</span>
+                  <span class="price-value">от 7 500 ₽</span>
+                </div>
+                <button class="btn btn--secondary btn--sm ritual-book-btn" 
+                        data-ritual-name="Шёлковый кокон (Silk Cocoon Body)" 
+                        data-ritual-price="7500" 
+                        data-ritual-duration="60">
+                  Выбрать
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Ritual Card 2 -->
+          <article class="ritual-card" data-category="face" data-id="kobido-jade">
+            <div class="ritual-card__media">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/ritual-kobido.jpg -->
+              <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=800&q=80" 
+                   alt="Скульптурный массаж лица Кобидо с белым нефритом" 
+                   class="ritual-card__img" loading="lazy">
+              <span class="ritual-card__pill ritual-card__pill--accent">Лифтинг-эксперт</span>
+            </div>
+            <div class="ritual-card__body">
+              <div class="ritual-card__meta">
+                <span class="ritual-card__tag">Лицо &amp; Сияние</span>
+                <span class="ritual-card__time">60 / 90 мин</span>
+              </div>
+              <h3 class="ritual-card__title">Императорский лифтинг Кобидо &amp; Нефрит</h3>
+              <p class="ritual-card__desc">
+                Древняя японская скульптурно-буккальная техника в сочетании с охлажденными скребками гуаша из белого нефрита. 
+                Моментальный овал лица, снятие отечности и сияние фарфоровой кожи.
+              </p>
+              <div class="ritual-card__steps">
+                <span class="step-tag">Глубокое лимфодренажное очищение</span>
+                <span class="step-tag">Буккальная проработка</span>
+                <span class="step-tag">Нефритовое охлаждение</span>
+              </div>
+              <div class="ritual-card__footer">
+                <div class="ritual-card__pricing">
+                  <span class="price-label">Стоимость:</span>
+                  <span class="price-value">от 8 200 ₽</span>
+                </div>
+                <button class="btn btn--secondary btn--sm ritual-book-btn" 
+                        data-ritual-name="Императорский лифтинг Кобидо & Нефрит" 
+                        data-ritual-price="8200" 
+                        data-ritual-duration="60">
+                  Выбрать
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Ritual Card 3 -->
+          <article class="ritual-card" data-category="body" data-id="eucalyptus-hammam">
+            <div class="ritual-card__media">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/ritual-hammam.jpg -->
+              <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=800&q=80" 
+                   alt="Эвкалиптовый хаммам и спа-купель с лепестками" 
+                   class="ritual-card__img" loading="lazy">
+            </div>
+            <div class="ritual-card__body">
+              <div class="ritual-card__meta">
+                <span class="ritual-card__tag">Тело &amp; Детокс</span>
+                <span class="ritual-card__time">90 / 120 мин</span>
+              </div>
+              <h3 class="ritual-card__title">Эвкалиптовый хаммам &amp; Чёрное мыло</h3>
+              <p class="ritual-card__desc">
+                Традиционное восточное парение в мраморном хаммаме. Очищение пастой из марокканских черных оливок, 
+                интенсивный пилинг рукавицей Кесса и контрастное омовение в купели из оникса.
+              </p>
+              <div class="ritual-card__steps">
+                <span class="step-tag">Парение с эвкалиптовым паром</span>
+                <span class="step-tag">Пилинг Кесса</span>
+                <span class="step-tag">Обливание розовой водой</span>
+              </div>
+              <div class="ritual-card__footer">
+                <div class="ritual-card__pricing">
+                  <span class="price-label">Стоимость:</span>
+                  <span class="price-value">от 9 500 ₽</span>
+                </div>
+                <button class="btn btn--secondary btn--sm ritual-book-btn" 
+                        data-ritual-name="Эвкалиптовый хаммам & Чёрное мыло" 
+                        data-ritual-price="9500" 
+                        data-ritual-duration="90">
+                  Выбрать
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Ritual Card 4 -->
+          <article class="ritual-card" data-category="body" data-id="rhassoul-clay">
+            <div class="ritual-card__media">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/ritual-clay.jpg -->
+              <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=800&q=80" 
+                   alt="Терракотовое укутывание глиной Рассул" 
+                   class="ritual-card__img" loading="lazy">
+            </div>
+            <div class="ritual-card__body">
+              <div class="ritual-card__meta">
+                <span class="ritual-card__tag">Тело &amp; Минералы</span>
+                <span class="ritual-card__time">90 мин</span>
+              </div>
+              <h3 class="ritual-card__title">Терракотовое укутывание глиной Рассул</h3>
+              <p class="ritual-card__desc">
+                Минеральное насыщение в капсуле тепла. Атласская вулканическая глина Рассул абсорбирует токсины, 
+                укрепляет тургор кожи и дарит бархатную мягкость. Завершается массажем с аргановым бальзамом.
+              </p>
+              <div class="ritual-card__steps">
+                <span class="step-tag">Травяное распаривание</span>
+                <span class="step-tag">Маска из теплой глины</span>
+                <span class="step-tag">Аргановый массаж</span>
+              </div>
+              <div class="ritual-card__footer">
+                <div class="ritual-card__pricing">
+                  <span class="price-label">Стоимость:</span>
+                  <span class="price-value">от 8 900 ₽</span>
+                </div>
+                <button class="btn btn--secondary btn--sm ritual-book-btn" 
+                        data-ritual-name="Терракотовое укутывание глиной Рассул" 
+                        data-ritual-price="8900" 
+                        data-ritual-duration="90">
+                  Выбрать
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Ritual Card 5 -->
+          <article class="ritual-card" data-category="couples" data-id="couples-symphony">
+            <div class="ritual-card__media">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/ritual-couples.jpg -->
+              <img src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=800&q=80" 
+                   alt="Парный спа-ритуал в VIP-сьюте SILK & SOUL" 
+                   class="ritual-card__img" loading="lazy">
+              <span class="ritual-card__pill">Для двоих в VIP-сьюте</span>
+            </div>
+            <div class="ritual-card__body">
+              <div class="ritual-card__meta">
+                <span class="ritual-card__tag">Свидание &amp; Гармония</span>
+                <span class="ritual-card__time">120 / 150 мин</span>
+              </div>
+              <h3 class="ritual-card__title">Симфония чувств для двоих</h3>
+              <p class="ritual-card__desc">
+                Романтический ритуал в изолированном двухместном сьюте: совместная теплая купель с лепестками роз 
+                и эфирными маслами, синхронный массаж от двух топ-мастеров и отдых у камина с чайной церемонией.
+              </p>
+              <div class="ritual-card__steps">
+                <span class="step-tag">Купель с цветами &amp; шампанским</span>
+                <span class="step-tag">Синхронный массаж</span>
+                <span class="step-tag">Приватный лаунж у камина</span>
+              </div>
+              <div class="ritual-card__footer">
+                <div class="ritual-card__pricing">
+                  <span class="price-label">Стоимость:</span>
+                  <span class="price-value">от 18 500 ₽</span>
+                </div>
+                <button class="btn btn--secondary btn--sm ritual-book-btn" 
+                        data-ritual-name="Симфония чувств для двоих" 
+                        data-ritual-price="18500" 
+                        data-ritual-duration="120">
+                  Выбрать
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Ritual Card 6 -->
+          <article class="ritual-card" data-category="sound" data-id="tibetan-peace">
+            <div class="ritual-card__media">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/ritual-sound-bath.jpg -->
+              <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80" 
+                   alt="Краниосакральный покой и поющие тибетские чаши" 
+                   class="ritual-card__img" loading="lazy">
+            </div>
+            <div class="ritual-card__body">
+              <div class="ritual-card__meta">
+                <span class="ritual-card__tag">Звук &amp; Нервная система</span>
+                <span class="ritual-card__time">90 мин</span>
+              </div>
+              <h3 class="ritual-card__title">Тибетский покой &amp; Поющие чаши</h3>
+              <p class="ritual-card__desc">
+                Акустико-вибрационная терапия коваными тибетскими чашами и мягкий остеопатический массаж шеи и головы. 
+                Погружает мозг в глубокие тета-ритмы, стирая бессонницу и тревогу.
+              </p>
+              <div class="ritual-card__steps">
+                <span class="step-tag">Аромадиагностика</span>
+                <span class="step-tag">Звуковая ванна чашами</span>
+                <span class="step-tag">Краниосакральная гармонизация</span>
+              </div>
+              <div class="ritual-card__footer">
+                <div class="ritual-card__pricing">
+                  <span class="price-label">Стоимость:</span>
+                  <span class="price-value">от 9 000 ₽</span>
+                </div>
+                <button class="btn btn--secondary btn--sm ritual-book-btn" 
+                        data-ritual-name="Тибетский покой & Поющие чаши" 
+                        data-ritual-price="9000" 
+                        data-ritual-duration="90">
+                  Выбрать
+                </button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE RITUAL DURATION & SPA MASTER SELECTOR (CALCULATOR) -->
+    <section class="calculator section" id="calculator">
+      <div class="container">
+        <div class="section-header section-header--center">
+          <span class="section-eyebrow">Конструктор впечатлений</span>
+          <h2 class="section-title">Соберите свой персональный визит</h2>
+          <p class="section-subtitle">
+            Выберите ритуал, длительность, любимого мастера и дополнительные элементы расслабления. 
+            Система мгновенно рассчитает точную стоимость и перенесет выбор в календарь бронирования.
+          </p>
+        </div>
+
+        <div class="calc-box">
+          <div class="calc-box__controls">
+            
+            <!-- Step 1: Base Ritual -->
+            <div class="calc-group">
+              <label class="calc-label" for="calc-ritual-select">
+                <span class="step-num">1</span>
+                <span>Основная программа</span>
+              </label>
+              <div class="custom-select-wrap">
+                <select id="calc-ritual-select" class="calc-select" aria-label="Выберите основную программу">
+                  <option value="silk-cocoon" data-price="7500" data-duration="60">Шёлковый кокон (Silk Cocoon Body) — 7 500 ₽</option>
+                  <option value="kobido-jade" data-price="8200" data-duration="60">Императорский лифтинг Кобидо &amp; Нефрит — 8 200 ₽</option>
+                  <option value="eucalyptus-hammam" data-price="9500" data-duration="90">Эвкалиптовый хаммам &amp; Чёрное мыло — 9 500 ₽</option>
+                  <option value="rhassoul-clay" data-price="8900" data-duration="90">Терракотовое укутывание глиной Рассул — 8 900 ₽</option>
+                  <option value="couples-symphony" data-price="18500" data-duration="120">Симфония чувств для двоих (VIP Suite) — 18 500 ₽</option>
+                  <option value="tibetan-peace" data-price="9000" data-duration="90">Тибетский покой &amp; Поющие чаши — 9 000 ₽</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Step 2: Duration Selector -->
+            <div class="calc-group">
+              <label class="calc-label">
+                <span class="step-num">2</span>
+                <span>Длительность ритуала</span>
+              </label>
+              <div class="duration-pills" id="duration-pills">
+                <button type="button" class="duration-btn is-active" data-duration="60" data-mult="1.0">
+                  <span class="duration-btn__time">60 минут</span>
+                  <span class="duration-btn__sub">Классика</span>
+                </button>
+                <button type="button" class="duration-btn" data-duration="90" data-mult="1.35">
+                  <span class="duration-btn__time">90 минут</span>
+                  <span class="duration-btn__sub">Глубокое погружение (+35%)</span>
+                </button>
+                <button type="button" class="duration-btn" data-duration="120" data-mult="1.70">
+                  <span class="duration-btn__time">120 минут</span>
+                  <span class="duration-btn__sub">Абсолютный релакс (+70%)</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Step 3: SPA Master Selector -->
+            <div class="calc-group">
+              <label class="calc-label">
+                <span class="step-num">3</span>
+                <span>Выбор мастера</span>
+              </label>
+              <div class="masters-selector" id="masters-selector">
+                
+                <label class="master-radio">
+                  <input type="radio" name="calc-master" value="anna-levina" aria-label="Анна Левина" checked>
+                  <div class="master-radio__card">
+                    <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/master-anna.jpg -->
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80" 
+                         alt="Анна Левина — Гранд-мастер японских техник" class="master-radio__avatar">
+                    <div class="master-radio__info">
+                      <span class="master-radio__name">Анна Левина</span>
+                      <span class="master-radio__spec">Гранд-мастер японских техник Кобидо</span>
+                      <span class="master-radio__exp">Опыт 9 лет · Сертификат Токио</span>
+                    </div>
+                  </div>
+                </label>
+
+                <label class="master-radio">
+                  <input type="radio" name="calc-master" value="mikhail-sokolov" aria-label="Михаил Соколов">
+                  <div class="master-radio__card">
+                    <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/master-mikhail.jpg -->
+                    <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&q=80" 
+                         alt="Михаил Соколов — Остео-массажист" class="master-radio__avatar">
+                    <div class="master-radio__info">
+                      <span class="master-radio__name">Михаил Соколов</span>
+                      <span class="master-radio__spec">Остео-массажист &amp; Звукотерапевт</span>
+                      <span class="master-radio__exp">Опыт 12 лет · Краниосакральная практика</span>
+                    </div>
+                  </div>
+                </label>
+
+                <label class="master-radio">
+                  <input type="radio" name="calc-master" value="elena-vetrova" aria-label="Елена Ветрова">
+                  <div class="master-radio__card">
+                    <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/master-elena.jpg -->
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80" 
+                         alt="Елена Ветрова — Эксперт скульптурного лифтинга" class="master-radio__avatar">
+                    <div class="master-radio__info">
+                      <span class="master-radio__name">Елена Ветрова</span>
+                      <span class="master-radio__spec">Эксперт моделирующего массажа и аромалогии</span>
+                      <span class="master-radio__exp">Опыт 8 лет · Обучение в Грасе, Франция</span>
+                    </div>
+                  </div>
+                </label>
+
+                <label class="master-radio">
+                  <input type="radio" name="calc-master" value="sofia-kim" aria-label="София Ким">
+                  <div class="master-radio__card">
+                    <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/master-sofia.jpg -->
+                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=200&q=80" 
+                         alt="София Ким — Мастер восточных практик" class="master-radio__avatar">
+                    <div class="master-radio__info">
+                      <span class="master-radio__name">София Ким</span>
+                      <span class="master-radio__spec">Балийские ритуалы &amp; Хаммам-эстетист</span>
+                      <span class="master-radio__exp">Опыт 10 лет · Школа Нуса-Дуа, Бали</span>
+                    </div>
+                  </div>
+                </label>
+
+              </div>
+            </div>
+
+            <!-- Step 4: Optional Add-ons -->
+            <div class="calc-group">
+              <label class="calc-label">
+                <span class="step-num">4</span>
+                <span>Дополнительные штрихи комфорта (по желанию)</span>
+              </label>
+              <div class="addons-grid" id="addons-grid">
+                
+                <label class="addon-checkbox">
+                  <input type="checkbox" name="calc-addon" value="hot-stones" data-price="2000" data-duration="15">
+                  <div class="addon-checkbox__box">
+                    <span class="addon-title">Теплые базальтовые камни</span>
+                    <span class="addon-meta">+15 мин · +2 000 ₽</span>
+                  </div>
+                </label>
+
+                <label class="addon-checkbox">
+                  <input type="checkbox" name="calc-addon" value="rose-bath" data-price="3000" data-duration="30">
+                  <div class="addon-checkbox__box">
+                    <span class="addon-title">Купель с лепестками роз и молоком</span>
+                    <span class="addon-meta">+30 мин · +3 000 ₽</span>
+                  </div>
+                </label>
+
+                <label class="addon-checkbox">
+                  <input type="checkbox" name="calc-addon" value="head-massage" data-price="1800" data-duration="15">
+                  <div class="addon-checkbox__box">
+                    <span class="addon-title">Массаж головы &amp; Шелковая маска</span>
+                    <span class="addon-meta">+15 мин · +1 800 ₽</span>
+                  </div>
+                </label>
+
+                <label class="addon-checkbox">
+                  <input type="checkbox" name="calc-addon" value="tea-gongfu" data-price="1200" data-duration="20">
+                  <div class="addon-checkbox__box">
+                    <span class="addon-title">Чайная церемония Гунфу Ча с улуном</span>
+                    <span class="addon-meta">+20 мин · +1 200 ₽</span>
+                  </div>
+                </label>
+
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Summary Sticky Box -->
+          <div class="calc-box__summary">
+            <div class="summary-card">
+              <div class="summary-card__header">
+                <span class="summary-card__eyebrow">Ваш идеальный ритуал</span>
+                <h3 class="summary-card__title" id="summary-ritual-title">Шёлковый кокон</h3>
+              </div>
+
+              <div class="summary-details">
+                <div class="summary-row">
+                  <span class="summary-row__label">Общее время:</span>
+                  <span class="summary-row__value" id="summary-total-time">60 минут</span>
+                </div>
+                <div class="summary-row">
+                  <span class="summary-row__label">Терапевт:</span>
+                  <span class="summary-row__value" id="summary-master-name">Анна Левина</span>
+                </div>
+                <div class="summary-row">
+                  <span class="summary-row__label">Дополнения:</span>
+                  <span class="summary-row__value" id="summary-addons-list">Не выбраны</span>
+                </div>
+                <div class="summary-row summary-row--privilege">
+                  <span class="summary-row__label">Включено в визит:</span>
+                  <span class="summary-row__value">Халат из чистого шелка, травяной эликсир, приватный сьют</span>
+                </div>
+              </div>
+
+              <div class="summary-card__total">
+                <span class="total-label">Итоговая стоимость:</span>
+                <span class="total-price" id="summary-total-price">7 500 ₽</span>
+              </div>
+
+              <button class="btn btn--primary btn--full calc-proceed-btn" id="calc-proceed-btn">
+                <span>Забронировать это время</span>
+                <svg class="icon icon-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+              </button>
+
+              <p class="summary-card__note">
+                Оплата происходит после завершения ритуала в санктуарии. Отмена или перенос без штрафов за 4 часа.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SPA MASTERS SECTION -->
+    <section class="masters section" id="masters">
+      <div class="container">
+        <div class="section-header section-header--center">
+          <span class="section-eyebrow">Мастера тишины</span>
+          <h2 class="section-title">Терапевты, которым доверяют тело</h2>
+          <p class="section-subtitle">
+            Каждый специалист санктуария обладает медицинским или телесно-ориентированным образованием, 
+            прошел стажировку в Японии, Франции или на Бали и непрерывно оттачивает чистоту своего внимания.
+          </p>
+        </div>
+
+        <div class="masters-grid">
+          
+          <!-- Master 1 -->
+          <article class="master-card">
+            <div class="master-card__photo-wrap">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/team-anna.jpg -->
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" 
+                   alt="Анна Левина — Гранд-мастер японских техник" class="master-card__img" loading="lazy">
+              <span class="master-card__badge">9 лет опыта</span>
+            </div>
+            <div class="master-card__content">
+              <h3 class="master-card__name">Анна Левина</h3>
+              <p class="master-card__role">Гранд-мастер японских техник &amp; скульптор лица</p>
+              <p class="master-card__bio">
+                Обучалась в Международной академии Кобидо в Токио. Специализируется на глубокотканном омоложении лица, 
+                снятии челюстных зажимов и бережном восстановлении тонуса без инъекций.
+              </p>
+              <div class="master-card__specialties">
+                <span>Японский Кобидо</span>
+                <span>Буккальный массаж</span>
+                <span>Белый нефрит</span>
+              </div>
+              <button class="btn btn--outline btn--sm master-select-btn" data-master-id="anna-levina">Записаться к Анне</button>
+            </div>
+          </article>
+
+          <!-- Master 2 -->
+          <article class="master-card">
+            <div class="master-card__photo-wrap">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/team-mikhail.jpg -->
+              <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=600&q=80" 
+                   alt="Михаил Соколов — Остео-массажист" class="master-card__img" loading="lazy">
+              <span class="master-card__badge">12 лет опыта</span>
+            </div>
+            <div class="master-card__content">
+              <h3 class="master-card__name">Михаил Соколов</h3>
+              <p class="master-card__role">Остео-массажист &amp; Краниосакральный терапевт</p>
+              <p class="master-card__bio">
+                Врач по базовому образованию, мастер телесной интеграции. Мягко распутывает хронические блоки шейного 
+                отдела и крестца, возвращая позвоночнику ощущение невесомой оси.
+              </p>
+              <div class="master-card__specialties">
+                <span>Остеопластика</span>
+                <span>Поющие чаши</span>
+                <span>Глубокий релакс</span>
+              </div>
+              <button class="btn btn--outline btn--sm master-select-btn" data-master-id="mikhail-sokolov">Записаться к Михаилу</button>
+            </div>
+          </article>
+
+          <!-- Master 3 -->
+          <article class="master-card">
+            <div class="master-card__photo-wrap">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/team-elena.jpg -->
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80" 
+                   alt="Елена Ветрова — Эксперт скульптурного лифтинга" class="master-card__img" loading="lazy">
+              <span class="master-card__badge">8 лет опыта</span>
+            </div>
+            <div class="master-card__content">
+              <h3 class="master-card__name">Елена Ветрова</h3>
+              <p class="master-card__role">Эксперт натуральной фитокосметологии &amp; ароматерапевт</p>
+              <p class="master-card__bio">
+                Прошла обучение в институте парфюмерии и аромалогии в Грасе. Создает индивидуальные эфирные купажи 
+                под состояние гостя и виртуозно владеет лимфодренажными практиками.
+              </p>
+              <div class="master-card__specialties">
+                <span>Аромадиагностика</span>
+                <span>Французский дренаж</span>
+                <span>Шелковые коконы</span>
+              </div>
+              <button class="btn btn--outline btn--sm master-select-btn" data-master-id="elena-vetrova">Записаться к Елене</button>
+            </div>
+          </article>
+
+          <!-- Master 4 -->
+          <article class="master-card">
+            <div class="master-card__photo-wrap">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/team-sofia.jpg -->
+              <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=600&q=80" 
+                   alt="София Ким — Балийские ритуалы" class="master-card__img" loading="lazy">
+              <span class="master-card__badge">10 лет опыта</span>
+            </div>
+            <div class="master-card__content">
+              <h3 class="master-card__name">София Ким</h3>
+              <p class="master-card__role">Мастер восточных телесных практик &amp; Хаммам-эстетист</p>
+              <p class="master-card__bio">
+                Впитала мудрость телесных традиций Бали и Марокко. Ее мягкие, волнообразные приемы в хаммаме 
+                снимают многомесячную усталость и восстанавливают циркуляцию тонкой энергии.
+              </p>
+              <div class="master-card__specialties">
+                <span>Эвкалиптовый хаммам</span>
+                <span>Балийский массаж</span>
+                <span>Глина Рассул</span>
+              </div>
+              <button class="btn btn--outline btn--sm master-select-btn" data-master-id="sofia-kim">Записаться к Софии</button>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ATMOSPHERE & SPACE GALLERY SECTION -->
+    <section class="space section" id="space">
+      <div class="container">
+        <div class="section-header section-header--center">
+          <span class="section-eyebrow">Пространство санктуария</span>
+          <h2 class="section-title">Интерьеры, созданные для тишины</h2>
+          <p class="section-subtitle">
+            Природный известняк, цельный оникс, натуральный лен и приглушенный теплый свет. 
+            Каждая деталь нашего интерьера помогает мыслям замедлиться. Нажмите на фото для просмотра.
+          </p>
+        </div>
+
+        <div class="gallery-grid" id="gallery-grid">
+          
+          <figure class="gallery-item gallery-item--large" data-caption="Индивидуальный сьют с ванной из цельного оникса и лепестками роз">
+            <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/gallery-suite.jpg -->
+            <img src="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?auto=format&fit=crop&w=1200&q=80" 
+                 alt="Купель и зона гидротерапии в SILK & SOUL" class="gallery-img" loading="lazy">
+            <figcaption class="gallery-item__overlay">
+              <span class="gallery-tag">Персональный сьют</span>
+              <span class="gallery-title">Ванна из природного оникса с гидромассажем</span>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item" data-caption="Массажная зона с мягким освещением и шелковыми простынями">
+            <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/gallery-massage-room.jpg -->
+            <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=800&q=80" 
+                 alt="Массажный кабинет с теплыми простынями и маслами" class="gallery-img" loading="lazy">
+            <figcaption class="gallery-item__overlay">
+              <span class="gallery-tag">Кабинет</span>
+              <span class="gallery-title">Шёлковые простыни и подогреваемый стол</span>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item" data-caption="Аптека редких эфирных масел, гидролатов и керамических флаконов">
+            <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/gallery-oils.jpg -->
+            <img src="https://images.unsplash.com/photo-1596178065887-1198b6148b2b?auto=format&fit=crop&w=800&q=80" 
+                 alt="Ботанические флаконы с органическими маслами" class="gallery-img" loading="lazy">
+            <figcaption class="gallery-item__overlay">
+              <span class="gallery-tag">Ботаника</span>
+              <span class="gallery-title">Органическая лаборатория масел</span>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item" data-caption="Чайная комната Гунфу Ча с исинскими чайниками и коллекционными улунами">
+            <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/gallery-tea-room.jpg -->
+            <img src="https://images.unsplash.com/photo-1517256064527-09c73fc73e38?auto=format&fit=crop&w=800&q=80" 
+                 alt="Чайная комната для церемоний после спа-процедур" class="gallery-img" loading="lazy">
+            <figcaption class="gallery-item__overlay">
+              <span class="gallery-tag">Чайный лаунж</span>
+              <span class="gallery-title">Коллекционные улуны и фарфор</span>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item gallery-item--large" data-caption="Зона релаксации с камином, теплыми пледами и приглушенным светом">
+            <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/gallery-lounge.jpg -->
+            <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=1200&q=80" 
+                 alt="Зона медитации и отдыха после ритуалов" class="gallery-img" loading="lazy">
+            <figcaption class="gallery-item__overlay">
+              <span class="gallery-tag">Релаксация</span>
+              <span class="gallery-title">Пространство тишины и медитации</span>
+            </figcaption>
+          </figure>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS SECTION -->
+    <section class="reviews section" id="reviews">
+      <div class="container">
+        <div class="section-header section-header--center">
+          <span class="section-eyebrow">Впечатления гостей</span>
+          <h2 class="section-title">Что говорят те, кто замедлился</h2>
+          <p class="section-subtitle">
+            Каждый отзыв — подтверждение того, что несколько часов в тишине способны восстановить силы 
+            лучше недельного отпуска.
+          </p>
+        </div>
+
+        <div class="reviews-grid">
+          
+          <article class="review-card">
+            <div class="review-card__header">
+              <div class="review-card__author">
+                <span class="review-card__name">Виктория Савельева</span>
+                <span class="review-card__meta">Ритуал «Шёлковый кокон» · Посетила 12 мая</span>
+              </div>
+              <div class="review-card__rating">★★★★★</div>
+            </div>
+            <p class="review-card__text">
+              «В SILK &amp; SOUL невероятная культура уважения к личному пространству. Никаких навязчивых разговоров, 
+              телефон забываешь в сейфе с первой же секунды. Руки Анны сотворили чудо — боль между лопаток, 
+              мучившая меня полгода у компьютера, просто растворилась. А чайная церемония после массажа — это отдельная поэзия.»
+            </p>
+          </article>
+
+          <article class="review-card">
+            <div class="review-card__header">
+              <div class="review-card__author">
+                <span class="review-card__name">Артем и Дарья Мельниковы</span>
+                <span class="review-card__meta">«Симфония чувств для двоих» · Посетили 28 апреля</span>
+              </div>
+              <div class="review-card__rating">★★★★★</div>
+            </div>
+            <p class="review-card__text">
+              «Отмечали годовщину свадьбы в VIP-сьюте. Это лучший подарок, который мы могли себе сделать. 
+              Ванна из оникса с лепестками, теплый пар хаммама и абсолютно синхронная работа мастеров. 
+              Вышли обновленными, будто заново познакомились друг с другом.»
+            </p>
+          </article>
+
+          <article class="review-card">
+            <div class="review-card__header">
+              <div class="review-card__author">
+                <span class="review-card__name">Екатерина Романова</span>
+                <span class="review-card__meta">«Императорский Кобидо & Нефрит» · Посетила 5 мая</span>
+              </div>
+              <div class="review-card__rating">★★★★★</div>
+            </div>
+            <p class="review-card__text">
+              «Скульптурный массаж лица у Елены — это не просто эстетика, это глубокая разгрузка челюстных зажимов 
+              и мимических складок. Лицо выглядит свежим и подтянутым, кожа буквально сияет без тонального крема. 
+              Оформила абонемент на 5 ритуалов.»
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- GIFT CERTIFICATES BANNER -->
+    <section class="gift-banner section" id="gift">
+      <div class="container">
+        <div class="gift-banner__box">
+          <div class="gift-banner__content">
+            <span class="section-eyebrow section-eyebrow--white">Подарок со смыслом</span>
+            <h2 class="gift-banner__title">Подарите близким часы безмятежности</h2>
+            <p class="gift-banner__text">
+              Сертификат в SILK &amp; SOUL оформляется на хлопковой фактурной бумаге ручной работы с шелковой лентой 
+              и сургучной печатью. Мы доставим его с консьержем или пришлем изысканную электронную версию.
+            </p>
+            <div class="gift-banner__actions">
+              <button class="btn btn--primary" data-open-modal="booking-modal" data-type="certificate">
+                <span>Оформить сертификат</span>
+              </button>
+              <a href="https://t.me/silksoul_spa" target="_blank" rel="noopener noreferrer" class="btn btn--secondary btn--light">
+                <span>Консультация в Telegram</span>
+              </a>
+            </div>
+          </div>
+          <div class="gift-banner__decor">
+            <!-- Decorative Seal / Ornament -->
+            <div class="gift-card-preview">
+              <div class="gift-card-inner">
+                <span class="gift-card-logo">SILK &amp; SOUL</span>
+                <span class="gift-card-denom">Подарочный сертификат</span>
+                <span class="gift-card-sub">На любую программу или номинал от 10 000 ₽</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ ACCORDION SECTION -->
+    <section class="faq section" id="faq">
+      <div class="container">
+        <div class="section-header section-header--center">
+          <span class="section-eyebrow">Забота о деталях</span>
+          <h2 class="section-title">Часто задаваемые вопросы</h2>
+          <p class="section-subtitle">
+            Все, что вам нужно знать перед первым визитом в наш санктуарий.
+          </p>
+        </div>
+
+        <div class="faq-accordion" id="faq-accordion">
+          
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Нужно ли брать с собой что-то для ритуала?</span>
+              <span class="faq-icon"></span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer__inner">
+                Вам не нужно брать с собой ничего. В вашем персональном сьюте подготовлены халат из натурального шелка 
+                и мягкого бамбука, индивидуальные тапочки, полотенца из органического хлопка, расчески из сандалового дерева 
+                и премиальная натуральная косметика для душа.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>За какое время до начала сеанса лучше приехать?</span>
+              <span class="faq-icon"></span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer__inner">
+                Мы рекомендуем прибыть за 15 минут до назначенного времени. Это позволит вам не спеша переодеться, 
+                выпить приветственный ботанический эликсир и заполнить краткую анкету индивидуальных предпочтений и противопоказаний.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Как обеспечивается приватность и тишина?</span>
+              <span class="faq-icon"></span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer__inner">
+                Все процедуры проходят в полностью изолированных сьютах с акустической звукоизоляцией. 
+                В зонах общего пользования действует режим «тишины»: мобильные телефоны просим переводить в беззвучный режим. 
+                Количество гостей строго ограничено, чтобы никто не пересекался друг с другом.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Есть ли у вас охраняемая парковка?</span>
+              <span class="faq-icon"></span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer__inner">
+                Да, для наших гостей доступен бесплатный подземный паркинг и услуги валет-паркинга. При въезде во двор 
+                Романова переулка достаточно назвать консьержу ваше имя и кодовое слово бронирования.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Каковы условия отмены или переноса визита?</span>
+              <span class="faq-icon"></span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer__inner">
+                Мы с уважением относимся к вашему времени и просим сообщать об отмене или переносе визита не позднее, 
+                чем за 4 часа до назначенного времени. В этом случае бронь переносится без каких-либо комиссий.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Возможно ли составить индивидуальную программу?</span>
+              <span class="faq-icon"></span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer__inner">
+                Безусловно. Наш спа-консьерж с удовольствием подберет для вас персональное сочетание гидротерапии, 
+                пилингов, остеопатического массажа и ароматерапии на основе ваших текущих потребностей и самочувствия.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- LOCATION & MAP SECTION -->
+    <section class="contacts section" id="contacts">
+      <div class="container">
+        <div class="contacts__wrapper">
+          
+          <div class="contacts__card">
+            <span class="section-eyebrow">Как нас найти</span>
+            <h2 class="contacts__title">Приют тишины в центре столицы</h2>
+            <p class="contacts__lead">
+              Мы расположены в тихом историческом дворе Романова переулка, в нескольких шагах от Кремля и Александровского сада.
+            </p>
+
+            <div class="contact-rows">
+              <div class="contact-row">
+                <div class="contact-row__icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </div>
+                <div class="contact-row__data">
+                  <span class="contact-label">Адрес:</span>
+                  <span class="contact-value" data-bind="address">Москва, Романов переулок, 4, стр. 2</span>
+                  <span class="contact-sub" data-bind="metro">м. Библиотека им. Ленина / Арбатская (3 мин пешком)</span>
+                </div>
+              </div>
+
+              <div class="contact-row">
+                <div class="contact-row__icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                </div>
+                <div class="contact-row__data">
+                  <span class="contact-label">Режим работы:</span>
+                  <span class="contact-value" id="contacts-schedule">Пн–Вс: 10:00 – 22:00</span>
+                  <div class="status-badge" id="contacts-status-badge">
+                    <span class="status-indicator live-status-dot"></span>
+                    <span id="contacts-live-status-text">Открыто сейчас</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="contact-row">
+                <div class="contact-row__icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                  </svg>
+                </div>
+                <div class="contact-row__data">
+                  <span class="contact-label">Телефон и бронирование:</span>
+                  <a href="tel:+74958224570" class="contact-value contact-value--link" data-bind-phone="display" data-bind="phone">+7 (495) 822-45-70</a>
+                  <a href="mailto:welcome@silk-soul.ru" class="contact-sub" data-bind="email">welcome@silk-soul.ru</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="contacts__socials">
+              <span class="socials-label">Мы на связи в мессенджерах:</span>
+              <div class="social-links">
+                <a href="https://t.me/silksoul_spa" target="_blank" rel="noopener noreferrer" class="social-pill" data-bind-href="social.telegram">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 0 0-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/>
+                  </svg>
+                  <span>Telegram</span>
+                </a>
+                <a href="https://wa.me/74958224570" target="_blank" rel="noopener noreferrer" class="social-pill" data-bind-href="social.whatsapp">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19.01L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67Z"/>
+                  </svg>
+                  <span>WhatsApp</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="contacts__cta">
+              <button class="btn btn--primary btn--full" data-open-modal="booking-modal">
+                <span>Забронировать визит онлайн</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Yandex Map Container -->
+          <div class="contacts__map-box">
+            <div id="yandex-map" class="map-container" aria-label="Карта проезда к спа SILK & SOUL">
+              <!-- Fallback message while map loads or if offline -->
+              <div class="map-fallback" id="map-fallback">
+                <div class="map-fallback__content">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="map-fallback__icon">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <p class="map-fallback__title">SILK &amp; SOUL Sanctuary</p>
+                  <p class="map-fallback__address">Москва, Романов переулок, 4с2</p>
+                  <a href="https://yandex.ru/maps/?rtext=~55.742389,37.589112" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm">
+                    Открыть в Яндекс.Картах
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand-col">
+        <a href="#" class="brand brand--footer">
+          <span class="brand__title" data-bind="brandName">SILK &amp; SOUL</span>
+          <span class="brand__tagline">Sanctuary of Slow Living</span>
+        </a>
+        <p class="footer__desc">
+          Пространство глубокого восстановления, эстетики и чувственного баланса. 
+          Индивидуальные сьюты, редкие ботанические ритуалы и культура уважения к тишине.
+        </p>
+        <div class="footer__copyright">
+          &copy; <span id="current-year">2026</span> SILK &amp; SOUL. Все права защищены.
+        </div>
+      </div>
+
+      <div class="footer__nav-col">
+        <span class="footer__heading">Навигация</span>
+        <ul class="footer__list">
+          <li><a href="#rituals">Коллекция ритуалов</a></li>
+          <li><a href="#philosophy">Философия замедления</a></li>
+          <li><a href="#calculator">Конструктор визита</a></li>
+          <li><a href="#masters">Наши терапевты</a></li>
+          <li><a href="#space">Пространство и сьюты</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__nav-col">
+        <span class="footer__heading">Информация</span>
+        <ul class="footer__list">
+          <li><a href="#gift">Подарочные сертификаты</a></li>
+          <li><a href="#faq">Правила посещения</a></li>
+          <li><a href="#contacts">Парковка и маршрут</a></li>
+          <li><a href="#privacy" id="privacy-link">Политика конфиденциальности</a></li>
+          <li><a href="#terms" id="terms-link">Пользовательское соглашение</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__contact-col">
+        <span class="footer__heading">Контакты</span>
+        <p class="footer__contact-line" data-bind="address">Москва, Романов переулок, 4с2</p>
+        <p class="footer__contact-line">
+          <a href="tel:+74958224570" data-bind-phone="display" data-bind="phone">+7 (495) 822-45-70</a>
+        </p>
+        <p class="footer__contact-line">
+          <a href="mailto:welcome@silk-soul.ru" data-bind="email">welcome@silk-soul.ru</a>
+        </p>
+        <p class="footer__schedule-line" id="footer-schedule">Ежедневно: 10:00 – 22:00</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== MODALS ==================== -->
+
+  <!-- ONLINE BOOKING CALENDAR MODAL -->
+  <div class="modal" id="booking-modal" aria-hidden="true" role="dialog" aria-labelledby="booking-modal-title">
+    <div class="modal__overlay" data-close-modal></div>
+    <div class="modal__dialog">
+      <button class="modal__close" data-close-modal aria-label="Закрыть окно">&times;</button>
+      
+      <div class="modal__header">
+        <span class="modal__eyebrow">Онлайн-бронирование</span>
+        <h3 class="modal__title" id="booking-modal-title">Забронировать ритуал в SILK &amp; SOUL</h3>
+        <p class="modal__sub">Выберите удобный день, время и укажите ваши контактные данные</p>
+      </div>
+
+      <form class="booking-form" id="booking-form" novalidate>
+        
+        <!-- Summary Strip (Dynamic) -->
+        <div class="booking-summary-strip" id="modal-summary-strip">
+          <div class="strip-item">
+            <span class="strip-label">Программа:</span>
+            <span class="strip-val" id="modal-selected-ritual">Шёлковый кокон</span>
+          </div>
+          <div class="strip-item">
+            <span class="strip-label">Время:</span>
+            <span class="strip-val" id="modal-selected-duration">60 мин</span>
+          </div>
+          <div class="strip-item">
+            <span class="strip-label">Терапевт:</span>
+            <span class="strip-val" id="modal-selected-master">Анна Левина</span>
+          </div>
+          <div class="strip-item strip-item--price">
+            <span class="strip-label">К оплате:</span>
+            <span class="strip-val" id="modal-selected-price">7 500 ₽</span>
+          </div>
+        </div>
+
+        <!-- Date Picker (Interactive upcoming 14 days) -->
+        <div class="form-section">
+          <label class="form-label">
+            <span>Выберите дату визита</span>
+            <span class="selected-date-badge" id="selected-date-badge">Сегодня</span>
+          </label>
+          <div class="calendar-scroll-wrap">
+            <div class="calendar-days" id="calendar-days">
+              <!-- Injected by script.js -->
+            </div>
+          </div>
+          <input type="hidden" name="booking-date" id="booking-date-input" required>
+        </div>
+
+        <!-- Time Slot Picker -->
+        <div class="form-section">
+          <label class="form-label">
+            <span>Выберите доступное время</span>
+            <span class="selected-time-badge" id="selected-time-badge">11:30</span>
+          </label>
+          <div class="time-slots-grid" id="time-slots-grid">
+            <button type="button" class="time-slot" data-time="10:00">10:00</button>
+            <button type="button" class="time-slot is-active" data-time="11:30">11:30</button>
+            <button type="button" class="time-slot" data-time="13:00">13:00</button>
+            <button type="button" class="time-slot" data-time="14:30">14:30</button>
+            <button type="button" class="time-slot" data-time="16:00">16:00</button>
+            <button type="button" class="time-slot" data-time="17:30">17:30</button>
+            <button type="button" class="time-slot" data-time="19:00">19:00</button>
+            <button type="button" class="time-slot" data-time="20:30">20:30</button>
+          </div>
+          <input type="hidden" name="booking-time" id="booking-time-input" value="11:30" required>
+        </div>
+
+        <!-- Guest Details -->
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="guest-name" class="form-label">Ваше имя *</label>
+            <input type="text" id="guest-name" name="name" class="form-input" placeholder="Как к вам обращаться" required minlength="2" autocomplete="name">
+            <span class="form-error" id="name-error">Пожалуйста, укажите ваше имя</span>
+          </div>
+
+          <div class="form-group">
+            <label for="guest-phone" class="form-label">Телефон *</label>
+            <input type="tel" id="guest-phone" name="phone" class="form-input" placeholder="+7 (___) ___-__-__" required autocomplete="tel">
+            <span class="form-error" id="phone-error">Введите корректный номер телефона</span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="guest-notes" class="form-label">Пожелания или ограничения по здоровью (по желанию)</label>
+          <textarea id="guest-notes" name="notes" class="form-input form-textarea" rows="2" placeholder="Например: аллергия на цитрусовые, акцент на шейно-воротниковую зону..." aria-label="Пожелания или ограничения по здоровью"></textarea>
+        </div>
+
+        <div class="form-consent">
+          <label class="consent-label">
+            <input type="checkbox" id="booking-consent" required checked aria-label="Согласие с правилами и политикой конфиденциальности">
+            <span class="consent-text">Я соглашаюсь с <a href="#privacy" target="_blank">политикой конфиденциальности</a> и правилами санктуария</span>
+          </label>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn--primary btn--full btn--lg" id="submit-booking-btn">
+            <span class="btn-text">Подтвердить бронирование</span>
+            <span class="btn-loader" aria-hidden="true"></span>
+          </button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+  <!-- SUCCESS CONFIRMATION MODAL -->
+  <div class="modal" id="success-modal" aria-hidden="true" role="dialog">
+    <div class="modal__overlay" data-close-modal></div>
+    <div class="modal__dialog modal__dialog--success">
+      <button class="modal__close" data-close-modal aria-label="Закрыть окно">&times;</button>
+      
+      <div class="success-icon-wrap">
+        <svg viewBox="0 0 52 52" class="checkmark">
+          <circle cx="26" cy="26" r="25" fill="none" class="checkmark__circle"/>
+          <path fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" class="checkmark__check"/>
+        </svg>
+      </div>
+
+      <span class="modal__eyebrow">Бронирование подтверждено</span>
+      <h3 class="modal__title">Мы ждем вас в SILK &amp; SOUL</h3>
+      <p class="modal__sub">
+        Ваш персональный сьют будет подготовлен к назначенному времени. Детали визита отправлены по SMS и мессенджер.
+      </p>
+
+      <div class="receipt-card" id="success-receipt">
+        <!-- Injected dynamically by script.js -->
+      </div>
+
+      <div class="success-modal__actions">
+        <button class="btn btn--primary btn--full" data-close-modal>
+          <span>Прекрасно, спасибо</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- GALLERY LIGHTBOX MODAL -->
+  <div class="lightbox" id="gallery-lightbox" aria-hidden="true" role="dialog">
+    <div class="lightbox__overlay" id="lightbox-overlay"></div>
+    <div class="lightbox__container">
+      <button class="lightbox__close" id="lightbox-close" aria-label="Закрыть галерею">&times;</button>
+      <img src="" alt="" class="lightbox__img" id="lightbox-img">
+      <div class="lightbox__caption" id="lightbox-caption"></div>
+    </div>
+  </div>
+
+  <!-- PRIVACY POLICY MODAL -->
+  <div class="modal" id="policy-modal" aria-hidden="true" role="dialog">
+    <div class="modal__overlay" data-close-modal></div>
+    <div class="modal__dialog modal__dialog--text">
+      <button class="modal__close" data-close-modal aria-label="Закрыть окно">&times;</button>
+      <div class="modal__header">
+        <h3 class="modal__title">Политика конфиденциальности</h3>
+      </div>
+      <div class="modal__scroll-content">
+        <p>Настоящая Политика конфиденциальности определяет порядок обработки и защиты персональных данных гостей санктуария SILK &amp; SOUL в соответствии с Федеральным законом РФ № 152-ФЗ «О персональных данных».</p>
+        <h4>1. Сбор и использование информации</h4>
+        <p>Мы собираем исключительно те данные, которые необходимы для организации вашего комфортного и безопасного визита: имя, контактный телефон, пожелания по процедурам и ограничения по здоровью. Ваши данные не передаются третьим лицам ни при каких обстоятельствах.</p>
+        <h4>2. Безопасность и хранение</h4>
+        <p>Все персональные сведения хранятся в защищенном контуре с шифрованием. Доступ к картам предпочтений имеют только ваш индивидуальный спа-консьерж и ведущий мастер.</p>
+        <h4>3. Ваши права</h4>
+        <p>Вы имеете право в любой момент запросить удаление или изменение ваших данных, направив запрос на адрес <span data-bind="email">welcome@silk-soul.ru</span>.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="script.js"></script>
+</body>
+</html>

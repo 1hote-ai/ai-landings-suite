@@ -1,0 +1,1636 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="FLEUR Botanical Atelier — авторская флористика, редкие садовые розы и дикорастущие травы в Москве. Экспресс-доставка букетов в аквабоксах от 60 минут.">
+  <meta name="keywords" content="цветы москва, доставка цветов, авторский букет, садовые розы, пионы, флористическое ателье, цветочная подписка">
+  <title>FLEUR Botanical — Авторское флористическое ателье в Москве</title>
+
+  <!-- Google Fonts: Italiana (display serif) + Jost (clean sans-serif) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Jost:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Favicon SVG -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
+
+  <!-- Yandex Maps API 2.1 -->
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+</head>
+<body>
+
+  <!-- =================================================================
+       TOP ANNOUNCEMENT BAR
+       ================================================================= -->
+  <div class="top-bar">
+    <div class="container top-bar__inner">
+      <div class="top-bar__status">
+        <span class="live-dot" aria-hidden="true"></span>
+        <span id="liveStatusText" class="top-bar__text">Открыто сейчас • до 21:00</span>
+      </div>
+      <div class="top-bar__delivery">
+        <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+        </svg>
+        <span>Бережная доставка в аквабоксах от 60 минут по Москве</span>
+      </div>
+      <div class="top-bar__contacts">
+        <span class="top-bar__address" data-config="address">Москва, Чистопрудный бульвар, 12, стр. 4</span>
+        <a href="tel:+74958224918" class="top-bar__phone" data-config="phone">+7 (495) 822-49-18</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- =================================================================
+       SITE HEADER / NAVIGATION
+       ================================================================= -->
+  <header class="site-header" id="header">
+    <div class="container site-header__inner">
+      <!-- Brand Logo -->
+      <a href="#hero" class="brand-logo" aria-label="FLEUR Botanical Atelier">
+        <span class="brand-logo__main">FLEUR</span>
+        <span class="brand-logo__sub">Botanical Atelier • Moscow</span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="desktop-nav" aria-label="Основное меню">
+        <ul class="desktop-nav__list">
+          <li><a href="#catalog" class="desktop-nav__link">Коллекции</a></li>
+          <li><a href="#builder" class="desktop-nav__link">Конструктор букета</a></li>
+          <li><a href="#philosophy" class="desktop-nav__link">О концепции</a></li>
+          <li><a href="#subscription" class="desktop-nav__link">Подписка</a></li>
+          <li><a href="#reviews" class="desktop-nav__link">Отзывы</a></li>
+          <li><a href="#faq" class="desktop-nav__link">Вопросы</a></li>
+          <li><a href="#contacts" class="desktop-nav__link">Контакты</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Action Buttons -->
+      <div class="site-header__actions">
+        <button type="button" class="btn btn--outline btn--sm" id="btnHeaderCallback" data-modal="orderModal" data-modal-title="Заказать обратный звонок" data-modal-source="Шапка: Заказать звонок">
+          Заказать звонок
+        </button>
+        <a href="#builder" class="btn btn--primary btn--sm hide-mobile">
+          Собрать букет
+        </a>
+        <!-- Mobile Drawer Hamburger -->
+        <button type="button" class="hamburger-btn" id="hamburgerBtn" aria-label="Открыть мобильное меню" aria-expanded="false" aria-controls="mobileDrawer">
+          <span class="hamburger-btn__line"></span>
+          <span class="hamburger-btn__line"></span>
+          <span class="hamburger-btn__line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- =================================================================
+       MOBILE NAVIGATION DRAWER
+       ================================================================= -->
+  <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <div class="mobile-drawer__backdrop" id="mobileDrawerBackdrop"></div>
+    <div class="mobile-drawer__panel">
+      <div class="mobile-drawer__header">
+        <div class="brand-logo">
+          <span class="brand-logo__main">FLEUR</span>
+          <span class="brand-logo__sub">Botanical Atelier</span>
+        </div>
+        <button type="button" class="mobile-drawer__close" id="mobileDrawerClose" aria-label="Закрыть меню">
+          &times;
+        </button>
+      </div>
+
+      <div class="mobile-drawer__body">
+        <nav class="mobile-nav" aria-label="Мобильное меню">
+          <ul class="mobile-nav__list">
+            <li><a href="#catalog" class="mobile-nav__link">Сезонные коллекции</a></li>
+            <li><a href="#builder" class="mobile-nav__link">Конструктор букета</a></li>
+            <li><a href="#philosophy" class="mobile-nav__link">О концепции и стандартах</a></li>
+            <li><a href="#subscription" class="mobile-nav__link">Цветочная подписка</a></li>
+            <li><a href="#reviews" class="mobile-nav__link">Истории клиентов</a></li>
+            <li><a href="#faq" class="mobile-nav__link">Частые вопросы</a></li>
+            <li><a href="#contacts" class="mobile-nav__link">Контакты & Ателье</a></li>
+          </ul>
+        </nav>
+
+        <div class="mobile-drawer__info">
+          <div class="status-badge status-badge--sm">
+            <span class="live-dot" aria-hidden="true"></span>
+            <span id="liveStatusTextMobile">Открыто сейчас</span>
+          </div>
+          <div class="mobile-drawer__contacts">
+            <a href="tel:+74958224918" class="mobile-drawer__phone" data-config="phone">+7 (495) 822-49-18</a>
+            <p class="mobile-drawer__address" data-config="address">Москва, Чистопрудный бульвар, 12, стр. 4</p>
+            <p class="mobile-drawer__schedule" data-config="schedule">Пн-Пт: 09:00 — 21:00, Сб-Вс: 10:00 — 20:00</p>
+          </div>
+          <div class="mobile-drawer__cta">
+            <button type="button" class="btn btn--primary btn--full" data-modal="orderModal" data-modal-title="Оставить заявку на букет" data-modal-source="Мобильное меню">
+              Заказать букет
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main id="mainContent">
+
+    <!-- =================================================================
+         HERO SECTION: ROMANTIC EDITORIAL FLORAL
+         ================================================================= -->
+    <section class="hero-section" id="hero">
+      <div class="hero-section__bg-decor" aria-hidden="true"></div>
+      <div class="container hero-section__container">
+        
+        <!-- Left Column: Copy & CTAs -->
+        <div class="hero-section__content">
+          <div class="badge badge--botanical">
+            <svg class="badge__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+              <path d="M12 2a9 9 0 0 1 9 9c0 4.97-4.03 9-9 9A9 9 0 0 1 3 11a9 9 0 0 1 9-9z"/>
+              <path d="M12 2c0 5 4 8 9 9-5 0-9 4-9 9 0-5-4-9-9-9 5-1 9-4 9-9z"/>
+            </svg>
+            <span>Органическая флористика & Редкие садовые сорта</span>
+          </div>
+
+          <h1 class="hero-section__title">
+            Цветы, говорящие на&nbsp;языке ваших <span class="text-italic text-rose">искренних чувств</span>
+          </h1>
+
+          <p class="hero-section__lead">
+            Создаем живую поэзию из садовых роз Дэвида Остина, воздушных ранункулюсов и полевых трав. Без целлофана и шаблонных форм — только природная гармония, аквабоксы и каллиграфия с сургучной печатью.
+          </p>
+
+          <div class="hero-section__cta-group">
+            <a href="#builder" class="btn btn--primary btn--lg">
+              <span>Собрать букет по настроению</span>
+              <svg class="btn__arrow" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+              </svg>
+            </a>
+            <a href="#catalog" class="btn btn--secondary btn--lg">
+              Смотреть сезонный каталог
+            </a>
+          </div>
+
+          <!-- Micro Trust Stats -->
+          <div class="hero-section__metrics">
+            <div class="metric-item">
+              <div class="metric-item__num">60 мин</div>
+              <div class="metric-item__label">Экспресс-доставка по Москве в аквабоксе</div>
+            </div>
+            <div class="metric-item__divider"></div>
+            <div class="metric-item">
+              <div class="metric-item__num">100%</div>
+              <div class="metric-item__label">Свежесрезанные цветы прямо с аукционов</div>
+            </div>
+            <div class="metric-item__divider"></div>
+            <div class="metric-item">
+              <div class="metric-item__num">7–12 дн</div>
+              <div class="metric-item__label">Стойкость букета при правильном уходе</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Asymmetric Editorial Collage -->
+        <div class="hero-section__visual">
+          <div class="editorial-collage">
+            <!-- Main Photo Card -->
+            <div class="editorial-card editorial-card--primary">
+              <div class="editorial-card__img-wrap">
+                <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/hero-main.jpg -->
+                <img 
+                  src="https://images.unsplash.com/photo-1561181286-d3fee7d55364?auto=format&fit=crop&w=1200&q=85" 
+                  alt="Роскошный авторский букет садовых роз и эвкалипта от FLEUR Botanical" 
+                  class="editorial-card__img"
+                  loading="eager"
+                  width="540" 
+                  height="680"
+                >
+              </div>
+              <div class="editorial-card__caption">
+                <span class="editorial-card__tag">Букет недели</span>
+                <span class="editorial-card__name">«Шёпот Оранжерей»</span>
+              </div>
+            </div>
+
+            <!-- Overlapping Secondary Card -->
+            <div class="editorial-card editorial-card--secondary">
+              <div class="editorial-card__img-wrap">
+                <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/hero-detail.jpg -->
+                <img 
+                  src="https://images.unsplash.com/photo-1526047932273-341f2a7631f9?auto=format&fit=crop&w=600&q=85" 
+                  alt="Деталь лепестков пионовидных роз пастельной палитры" 
+                  class="editorial-card__img"
+                  loading="eager"
+                  width="320" 
+                  height="380"
+                >
+              </div>
+            </div>
+
+            <!-- Floating Seal Badge -->
+            <div class="floating-seal" aria-hidden="true">
+              <svg viewBox="0 0 140 140" class="floating-seal__circle-svg">
+                <path id="sealCurve" d="M 70 70 m -50 0 a 50 50 0 1 1 100 0 a 50 50 0 1 1 -100 0" fill="none"/>
+                <text class="floating-seal__text">
+                  <textPath href="#sealCurve">FLEUR BOTANICAL • ATELIER MOSCOW • EST. 2018 •</textPath>
+                </text>
+              </svg>
+              <div class="floating-seal__center">🌿</div>
+            </div>
+
+            <!-- Micro feature badge -->
+            <div class="floating-pill">
+              <span class="floating-pill__dot"></span>
+              <span class="floating-pill__text">Аквабокс & питательный Chrysal в каждом заказе</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =================================================================
+         BRAND VALUES STRIP
+         ================================================================= -->
+    <section class="values-strip" aria-label="Преимущества ателье">
+      <div class="container">
+        <div class="values-strip__grid">
+          <div class="value-item">
+            <div class="value-item__icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 21a9 9 0 100-18 9 9 0 000 18z"/><path d="M12 8v5l3 3"/></svg>
+            </div>
+            <div class="value-item__text">
+              <h3 class="value-item__title">Сборка за 30 минут</h3>
+              <p class="value-item__desc">Флорист приступает к сборке сразу после подтверждения заказа</p>
+            </div>
+          </div>
+          <div class="value-item">
+            <div class="value-item__icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><path d="M9 22V12h6v10"/></svg>
+            </div>
+            <div class="value-item__text">
+              <h3 class="value-item__title">Аквабокс с водой</h3>
+              <p class="value-item__desc">Цветы пьют воду в пути и остаются идеальными при вручении</p>
+            </div>
+          </div>
+          <div class="value-item">
+            <div class="value-item__icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></svg>
+            </div>
+            <div class="value-item__text">
+              <h3 class="value-item__title">Письмо с сургучом</h3>
+              <p class="value-item__desc">Каллиграф напишет ваши теплые слова на плотной хлопковой бумаге</p>
+            </div>
+          </div>
+          <div class="value-item">
+            <div class="value-item__icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg>
+            </div>
+            <div class="value-item__text">
+              <h3 class="value-item__title">Фото перед выездом</h3>
+              <p class="value-item__desc">Пришлем фото и видео готового букета в мессенджер на согласование</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         CATALOG SECTION (SEASONAL COLLECTIONS)
+         ================================================================= -->
+    <section class="section catalog-section" id="catalog">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <span class="section-header__subtitle">Весенне-летнее собрание 2026</span>
+          <h2 class="section-header__title">Авторские сезонные композиции</h2>
+          <p class="section-header__desc">
+            Каждый букет собирается в единственном экземпляре. Мы сохраняем естественную геометрию и раскрываем индивидуальный характер каждого цветка.
+          </p>
+        </div>
+
+        <!-- Filter Navigation -->
+        <div class="catalog-filters" role="tablist" aria-label="Фильтры каталога">
+          <button type="button" class="catalog-filter-btn active" data-filter="all" role="tab" aria-selected="true">
+            Все композиции
+          </button>
+          <button type="button" class="catalog-filter-btn" data-filter="rose" role="tab" aria-selected="false">
+            Пыльная роза & Пудра
+          </button>
+          <button type="button" class="catalog-filter-btn" data-filter="pastel" role="tab" aria-selected="false">
+            Воздушная пастель
+          </button>
+          <button type="button" class="catalog-filter-btn" data-filter="botanical" role="tab" aria-selected="false">
+            Лесная ботаника
+          </button>
+          <button type="button" class="catalog-filter-btn" data-filter="mono" role="tab" aria-selected="false">
+            Моно-охапки
+          </button>
+        </div>
+
+        <!-- Products Grid (Asymmetric Editorial Layout) -->
+        <div class="catalog-grid" id="catalogGrid">
+
+          <!-- Card 1 -->
+          <article class="product-card" data-category="pastel" data-id="1">
+            <div class="product-card__image-container">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/catalog-1.jpg -->
+              <img 
+                src="https://images.unsplash.com/photo-1582794543139-8ac9cb0f7b11?auto=format&fit=crop&w=900&q=85" 
+                alt="Авторский букет Рассвет в Провансе" 
+                class="product-card__image"
+                loading="lazy"
+                width="420"
+                height="520"
+              >
+              <span class="product-card__badge product-card__badge--bestseller">Хит сезона</span>
+              <button type="button" class="product-card__quick-view" data-quickview="1" aria-label="Быстрый просмотр состава букета Рассвет в Провансе">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-eye"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                Состав
+              </button>
+            </div>
+            <div class="product-card__content">
+              <div class="product-card__meta">
+                <span class="product-card__size">Размер M • D 35 см</span>
+                <span class="product-card__durability">Стойкость 8-10 дней</span>
+              </div>
+              <h3 class="product-card__title">Рассвет в Провансе</h3>
+              <p class="product-card__composition">Садовые розы Дэвид Остин, дельфиниум небесного оттенка, оксипеталум, ароматная маттиола, серебристый эвкалипт</p>
+              <div class="product-card__footer">
+                <span class="product-card__price">7 900 ₽</span>
+                <button type="button" class="btn btn--primary btn--sm btn-order-bouquet" 
+                  data-modal="orderModal" 
+                  data-modal-title="Заказать букет «Рассвет в Провансе»" 
+                  data-modal-bouquet="Рассвет в Провансе (7 900 ₽)">
+                  Заказать
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="product-card product-card--featured" data-category="rose" data-id="2">
+            <div class="product-card__image-container">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/catalog-2.jpg -->
+              <img 
+                src="https://images.unsplash.com/photo-1487070183336-b863922373d4?auto=format&fit=crop&w=900&q=85" 
+                alt="Пышный букет Пыльная Роза & Шампань" 
+                class="product-card__image"
+                loading="lazy"
+                width="420"
+                height="520"
+              >
+              <span class="product-card__badge product-card__badge--exclusive">Эксклюзив</span>
+              <button type="button" class="product-card__quick-view" data-quickview="2" aria-label="Быстрый просмотр состава букета Пыльная Роза & Шампань">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-eye"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                Состав
+              </button>
+            </div>
+            <div class="product-card__content">
+              <div class="product-card__meta">
+                <span class="product-card__size">Размер L • D 48 см</span>
+                <span class="product-card__durability">Стойкость 10-14 дней</span>
+              </div>
+              <h3 class="product-card__title">Пыльная Роза & Шампань</h3>
+              <p class="product-card__composition">Пионовидные розы Westminster Abbey, французские ранункулюсы пудрового тона, дикий латирус, кремовая эустома</p>
+              <div class="product-card__footer">
+                <span class="product-card__price">9 200 ₽</span>
+                <button type="button" class="btn btn--primary btn--sm btn-order-bouquet" 
+                  data-modal="orderModal" 
+                  data-modal-title="Заказать букет «Пыльная Роза & Шампань»" 
+                  data-modal-bouquet="Пыльная Роза & Шампань (9 200 ₽)">
+                  Заказать
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="product-card" data-category="botanical" data-id="3">
+            <div class="product-card__image-container">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/catalog-3.jpg -->
+              <img 
+                src="https://images.unsplash.com/photo-1508610048659-a06b669e3321?auto=format&fit=crop&w=900&q=85" 
+                alt="Ботаническая композиция Тайны Оранжерей" 
+                class="product-card__image"
+                loading="lazy"
+                width="420"
+                height="520"
+              >
+              <span class="product-card__badge">Ботаника</span>
+              <button type="button" class="product-card__quick-view" data-quickview="3" aria-label="Быстрый просмотр состава букета Тайны Оранжерей">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-eye"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                Состав
+              </button>
+            </div>
+            <div class="product-card__content">
+              <div class="product-card__meta">
+                <span class="product-card__size">Размер Grand • D 52 см</span>
+                <span class="product-card__durability">Стойкость 10-12 дней</span>
+              </div>
+              <h3 class="product-card__title">Тайны Оранжерей</h3>
+              <p class="product-card__composition">Королевские анемоны с темной сердцевиной, гортензия капучино, скимия, дикий оксипеталум и веточки оливкового дерева</p>
+              <div class="product-card__footer">
+                <span class="product-card__price">11 500 ₽</span>
+                <button type="button" class="btn btn--primary btn--sm btn-order-bouquet" 
+                  data-modal="orderModal" 
+                  data-modal-title="Заказать букет «Тайны Оранжерей»" 
+                  data-modal-bouquet="Тайны Оранжерей (11 500 ₽)">
+                  Заказать
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="product-card" data-category="mono" data-id="4">
+            <div class="product-card__image-container">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/catalog-4.jpg -->
+              <img 
+                src="https://images.unsplash.com/photo-1525310072745-f49212b5ac6d?auto=format&fit=crop&w=900&q=85" 
+                alt="Охапка пионов Облако Нежности" 
+                class="product-card__image"
+                loading="lazy"
+                width="420"
+                height="520"
+              >
+              <span class="product-card__badge product-card__badge--bestseller">Охапка</span>
+              <button type="button" class="product-card__quick-view" data-quickview="4" aria-label="Быстрый просмотр состава букета Облако Нежности">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-eye"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                Состав
+              </button>
+            </div>
+            <div class="product-card__content">
+              <div class="product-card__meta">
+                <span class="product-card__size">Размер XL • 25 стеблей</span>
+                <span class="product-card__durability">Стойкость 7-9 дней</span>
+              </div>
+              <h3 class="product-card__title">Облако Нежности</h3>
+              <p class="product-card__composition">Охапка голландских пионов сорта «Sarah Bernhardt» нежнейшего молочно-розового оттенка в объятиях тончайшей шёлковой ленты</p>
+              <div class="product-card__footer">
+                <span class="product-card__price">15 400 ₽</span>
+                <button type="button" class="btn btn--primary btn--sm btn-order-bouquet" 
+                  data-modal="orderModal" 
+                  data-modal-title="Заказать букет «Облако Нежности»" 
+                  data-modal-bouquet="Облако Нежности (15 400 ₽)">
+                  Заказать
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 5 -->
+          <article class="product-card" data-category="rose" data-id="5">
+            <div class="product-card__image-container">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/catalog-5.jpg -->
+              <img 
+                src="https://images.unsplash.com/photo-1591886960571-74d43a9d4166?auto=format&fit=crop&w=900&q=85" 
+                alt="Букет Карамельный Закат с розами Toffee" 
+                class="product-card__image"
+                loading="lazy"
+                width="420"
+                height="520"
+              >
+              <span class="product-card__badge">Редкий сорт</span>
+              <button type="button" class="product-card__quick-view" data-quickview="5" aria-label="Быстрый просмотр состава букета Карамельный Закат">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-eye"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                Состав
+              </button>
+            </div>
+            <div class="product-card__content">
+              <div class="product-card__meta">
+                <span class="product-card__size">Размер M • D 38 см</span>
+                <span class="product-card__durability">Стойкость 10-12 дней</span>
+              </div>
+              <h3 class="product-card__title">Карамельный Закат</h3>
+              <p class="product-card__composition">Кофейно-карамельные розы Toffee, терракотовые садовые георгины, эрингиум, бронзовые веточки фисташки и колосья</p>
+              <div class="product-card__footer">
+                <span class="product-card__price">8 600 ₽</span>
+                <button type="button" class="btn btn--primary btn--sm btn-order-bouquet" 
+                  data-modal="orderModal" 
+                  data-modal-title="Заказать букет «Карамельный Закат»" 
+                  data-modal-bouquet="Карамельный Закат (8 600 ₽)">
+                  Заказать
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 6 -->
+          <article class="product-card" data-category="botanical" data-id="6">
+            <div class="product-card__image-container">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/catalog-6.jpg -->
+              <img 
+                src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=900&q=85" 
+                alt="Ботанический этюд Мелодия Сада" 
+                class="product-card__image"
+                loading="lazy"
+                width="420"
+                height="520"
+              >
+              <span class="product-card__badge">Атмосфера</span>
+              <button type="button" class="product-card__quick-view" data-quickview="6" aria-label="Быстрый просмотр состава букета Мелодия Сада">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-eye"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                Состав
+              </button>
+            </div>
+            <div class="product-card__content">
+              <div class="product-card__meta">
+                <span class="product-card__size">Размер L • D 45 см</span>
+                <span class="product-card__durability">Стойкость 9-11 дней</span>
+              </div>
+              <h3 class="product-card__title">Мелодия Сада</h3>
+              <p class="product-card__composition">Белоснежная садовая гортензия, антирринум, веточки жасмина, пионовидная роза White O'Hara с чарующим цитрусовым ароматом</p>
+              <div class="product-card__footer">
+                <span class="product-card__price">10 400 ₽</span>
+                <button type="button" class="btn btn--primary btn--sm btn-order-bouquet" 
+                  data-modal="orderModal" 
+                  data-modal-title="Заказать букет «Мелодия Сада»" 
+                  data-modal-bouquet="Мелодия Сада (10 400 ₽)">
+                  Заказать
+                </button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="catalog-bottom-cta text-center">
+          <p class="catalog-bottom-cta__text">Хотите индивидуальный состав под ваш интерьер или особый повод?</p>
+          <a href="#builder" class="btn btn--outline btn--md">
+            Перейти в интерактивный конструктор
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =================================================================
+         INTERACTIVE BOUQUET BUILDER
+         ================================================================= -->
+    <section class="section builder-section" id="builder">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <span class="section-header__subtitle">Индивидуальный шедевр</span>
+          <h2 class="section-header__title">Конструктор букета по настроению и поводу</h2>
+          <p class="section-header__desc">
+            Соберите формулу идеального букета: выберите событие, палитру эмоций, масштаб и дату вручения. Наш ведущий флорист соберет уникальный флористический сет.
+          </p>
+        </div>
+
+        <div class="builder-wrapper">
+          <!-- Left: Controls Form -->
+          <div class="builder-controls">
+            
+            <!-- Step 1: Occasion -->
+            <div class="builder-step">
+              <div class="builder-step__header">
+                <span class="builder-step__num">01</span>
+                <h3 class="builder-step__title">По какому поводу создаем букет?</h3>
+              </div>
+              <div class="builder-options-grid builder-options-grid--occasions" id="builderOccasions">
+                <button type="button" class="builder-chip active" data-occasion="birthday" data-name="День рождения">
+                  <span class="builder-chip__icon">✨</span>
+                  <span class="builder-chip__title">День рождения</span>
+                </button>
+                <button type="button" class="builder-chip" data-occasion="romance" data-name="Признание в любви">
+                  <span class="builder-chip__icon">💌</span>
+                  <span class="builder-chip__title">Признание в чувствах</span>
+                </button>
+                <button type="button" class="builder-chip" data-occasion="anniversary" data-name="Годовщина / Свадьба">
+                  <span class="builder-chip__icon">🕊️</span>
+                  <span class="builder-chip__title">Годовщина / Свадьба</span>
+                </button>
+                <button type="button" class="builder-chip" data-occasion="gratitude" data-name="Слова благодарности">
+                  <span class="builder-chip__icon">🌿</span>
+                  <span class="builder-chip__title">Благодарность</span>
+                </button>
+                <button type="button" class="builder-chip" data-occasion="interior" data-name="Для уюта дома">
+                  <span class="builder-chip__icon">🕯️</span>
+                  <span class="builder-chip__title">Для дома и уюта</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Step 2: Mood & Palette -->
+            <div class="builder-step">
+              <div class="builder-step__header">
+                <span class="builder-step__num">02</span>
+                <h3 class="builder-step__title">Желаемая палитра и настроение</h3>
+              </div>
+              <div class="palette-selector" id="builderPalettes">
+                
+                <label class="palette-card active">
+                  <input type="radio" name="builder_palette" value="dusty-rose" checked>
+                  <div class="palette-card__swatches">
+                    <span style="background-color: #D8A49B;"></span>
+                    <span style="background-color: #F4E8DF;"></span>
+                    <span style="background-color: #5C6B5E;"></span>
+                  </div>
+                  <div class="palette-card__info">
+                    <span class="palette-card__name">Пыльная роза & Шампань</span>
+                    <span class="palette-card__desc">Винтажные розы Kahala, латирус, пудровый эвкалипт</span>
+                  </div>
+                </label>
+
+                <label class="palette-card">
+                  <input type="radio" name="builder_palette" value="airy-pastel">
+                  <div class="palette-card__swatches">
+                    <span style="background-color: #FBF4F2;"></span>
+                    <span style="background-color: #CFE0D8;"></span>
+                    <span style="background-color: #E8D3DC;"></span>
+                  </div>
+                  <div class="palette-card__info">
+                    <span class="palette-card__name">Воздушный фарфор & Пастель</span>
+                    <span class="palette-card__desc">Белые ранункулюсы, оксипеталум, маттиола</span>
+                  </div>
+                </label>
+
+                <label class="palette-card">
+                  <input type="radio" name="builder_palette" value="forest-emerald">
+                  <div class="palette-card__swatches">
+                    <span style="background-color: #27382B;"></span>
+                    <span style="background-color: #5C6B5E;"></span>
+                    <span style="background-color: #D8A49B;"></span>
+                  </div>
+                  <div class="palette-card__info">
+                    <span class="palette-card__name">Глубокий лесной изумруд</span>
+                    <span class="palette-card__desc">Гортензии мокко, королевские анемоны, дикие травы</span>
+                  </div>
+                </label>
+
+                <label class="palette-card">
+                  <input type="radio" name="builder_palette" value="warm-sunset">
+                  <div class="palette-card__swatches">
+                    <span style="background-color: #B56B45;"></span>
+                    <span style="background-color: #E6C29E;"></span>
+                    <span style="background-color: #7A4E39;"></span>
+                  </div>
+                  <div class="palette-card__info">
+                    <span class="palette-card__name">Карамельный бархат & Мед</span>
+                    <span class="palette-card__desc">Розы Toffee, георгины, сухоцветы и эрингиум</span>
+                  </div>
+                </label>
+
+              </div>
+            </div>
+
+            <!-- Step 3: Size & Scale -->
+            <div class="builder-step">
+              <div class="builder-step__header">
+                <span class="builder-step__num">03</span>
+                <h3 class="builder-step__title">Масштаб композиции</h3>
+              </div>
+              <div class="size-selector" id="builderSizes">
+                
+                <label class="size-card">
+                  <input type="radio" name="builder_size" value="petit" data-price="4900" data-label="Petit (Компактный)">
+                  <div class="size-card__content">
+                    <span class="size-card__badge">Petit</span>
+                    <span class="size-card__dim">Диаметр ~30 см</span>
+                    <span class="size-card__desc">Изящный комплимент, идеален для свидания и кофе</span>
+                    <span class="size-card__price">4 900 ₽</span>
+                  </div>
+                </label>
+
+                <label class="size-card active">
+                  <input type="radio" name="builder_size" value="grand" data-price="8900" data-label="Grand (Классика)" checked>
+                  <div class="size-card__content">
+                    <span class="size-card__badge size-card__badge--popular">Популярный выбор</span>
+                    <span class="size-card__title">Grand</span>
+                    <span class="size-card__dim">Диаметр ~45 см</span>
+                    <span class="size-card__desc">Пышная объемная композиция для яркого впечатления</span>
+                    <span class="size-card__price">8 900 ₽</span>
+                  </div>
+                </label>
+
+                <label class="size-card">
+                  <input type="radio" name="builder_size" value="imperial" data-price="15500" data-label="Imperial (Премиум)">
+                  <div class="size-card__content">
+                    <span class="size-card__badge">Imperial</span>
+                    <span class="size-card__dim">Диаметр ~65 см</span>
+                    <span class="size-card__desc">Монументальный оранжерейный арт-объект</span>
+                    <span class="size-card__price">15 500 ₽</span>
+                  </div>
+                </label>
+
+              </div>
+            </div>
+
+            <!-- Step 4: Extras & Details -->
+            <div class="builder-step">
+              <div class="builder-step__header">
+                <span class="builder-step__num">04</span>
+                <h3 class="builder-step__title">Особые детали и дополнения</h3>
+              </div>
+              <div class="extras-grid" id="builderExtras">
+                
+                <label class="extra-checkbox">
+                  <input type="checkbox" name="extra_card" value="card" checked disabled>
+                  <div class="extra-checkbox__box">
+                    <span class="extra-checkbox__title">Каллиграфическая открытка</span>
+                    <span class="extra-checkbox__note">Хлопковая бумага + сургуч</span>
+                    <span class="extra-checkbox__price">В подарок</span>
+                  </div>
+                </label>
+
+                <label class="extra-checkbox">
+                  <input type="checkbox" name="extra_vase" value="vase" data-price="1800">
+                  <div class="extra-checkbox__box">
+                    <span class="extra-checkbox__title">Дизайнерская ваза</span>
+                    <span class="extra-checkbox__note">Тонированное матовое стекло</span>
+                    <span class="extra-checkbox__price">+1 800 ₽</span>
+                  </div>
+                </label>
+
+                <label class="extra-checkbox">
+                  <input type="checkbox" name="extra_candle" value="candle" data-price="1400">
+                  <div class="extra-checkbox__box">
+                    <span class="extra-checkbox__title">Соевая аромасвеча</span>
+                    <span class="extra-checkbox__note">Аромат дикого инжира и кедра</span>
+                    <span class="extra-checkbox__price">+1 400 ₽</span>
+                  </div>
+                </label>
+
+                <label class="extra-checkbox">
+                  <input type="checkbox" name="extra_chocolate" value="chocolate" data-price="950">
+                  <div class="extra-checkbox__box">
+                    <span class="extra-checkbox__title">Крафтовый шоколад</span>
+                    <span class="extra-checkbox__note">С лепестками роз и фисташкой</span>
+                    <span class="extra-checkbox__price">+950 ₽</span>
+                  </div>
+                </label>
+
+              </div>
+            </div>
+
+            <!-- Step 5: Delivery Date & Slot -->
+            <div class="builder-step">
+              <div class="builder-step__header">
+                <span class="builder-step__num">05</span>
+                <h3 class="builder-step__title">Когда доставить букет?</h3>
+              </div>
+              <div class="delivery-time-grid">
+                <div class="form-group">
+                  <label for="builderDeliveryDate" class="form-label">Дата доставки</label>
+                  <input type="date" id="builderDeliveryDate" class="form-input" min="2026-11-15">
+                </div>
+                <div class="form-group">
+                  <label for="builderDeliveryTime" class="form-label">Интервал времени</label>
+                  <select id="builderDeliveryTime" class="form-select">
+                    <option value="urgent">Срочно (в течение 60-90 минут)</option>
+                    <option value="morning">Утро (09:00 — 13:00)</option>
+                    <option value="day" selected>День (13:00 — 17:00)</option>
+                    <option value="evening">Вечер (17:00 — 21:00)</option>
+                    <option value="exact">К точному времени (по согласованию)</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right: Dynamic Live Summary Sticky Card -->
+          <div class="builder-summary-col">
+            <div class="builder-summary-card">
+              <div class="builder-summary-card__header">
+                <span class="builder-summary-card__label">Ваша авторская формула</span>
+                <h4 class="builder-summary-card__title" id="summaryBouquetName">Букет «Пыльная роза & Шампань»</h4>
+              </div>
+
+              <!-- Dynamic Photo Preview -->
+              <div class="builder-summary-card__preview">
+                <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/builder-preview.jpg -->
+                <img 
+                  id="builderPreviewImage" 
+                  src="https://images.unsplash.com/photo-1561181286-d3fee7d55364?auto=format&fit=crop&w=800&q=85" 
+                  alt="Предпросмотр собранного букета" 
+                  class="builder-summary-card__img"
+                  width="380"
+                  height="260"
+                >
+                <div class="builder-summary-card__badge" id="summaryOccasionBadge">День рождения</div>
+              </div>
+
+              <div class="builder-summary-card__specs">
+                <div class="spec-row">
+                  <span class="spec-row__name">Масштаб:</span>
+                  <span class="spec-row__val" id="summarySizeVal">Grand (Классика ~45 см)</span>
+                </div>
+                <div class="spec-row">
+                  <span class="spec-row__name">Палитра:</span>
+                  <span class="spec-row__val" id="summaryPaletteVal">Пыльная роза & Шампань</span>
+                </div>
+                <div class="spec-row">
+                  <span class="spec-row__name">Дополнения:</span>
+                  <span class="spec-row__val" id="summaryExtrasVal">Открытка с сургучом</span>
+                </div>
+                <div class="spec-row">
+                  <span class="spec-row__name">Доставка:</span>
+                  <span class="spec-row__val" id="summaryDeliveryVal">15 ноября, 13:00 — 17:00</span>
+                </div>
+                <div class="spec-row">
+                  <span class="spec-row__name">Аквабокс & упаковка:</span>
+                  <span class="spec-row__val text-rose">Включено бесплатно</span>
+                </div>
+              </div>
+
+              <div class="builder-summary-card__total">
+                <div class="total-label">Итоговая стоимость:</div>
+                <div class="total-price" id="builderTotalPrice">8 900 ₽</div>
+              </div>
+
+              <button type="button" class="btn btn--primary btn--full btn--lg" id="btnOrderBuilder">
+                Оформить этот букет
+              </button>
+
+              <div class="builder-summary-card__guarantee">
+                <svg viewBox="0 0 20 20" fill="currentColor" class="icon-shield"><path fill-rule="evenodd" d="M10 1.944A11.954 11.954 0 012.166 5C2.056 5.649 2 6.319 2 7c0 5.225 3.34 9.67 8 11.317C14.66 16.67 18 12.225 18 7c0-.682-.057-1.35-.166-2.001A11.954 11.954 0 0110 1.944zM11 14a1 1 0 11-2 0 1 1 0 012 0zm0-7a1 1 0 10-2 0v3a1 1 0 102 0V7z" clip-rule="evenodd"/></svg>
+                <span>Пришлем фото и видео готового букета перед доставкой</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =================================================================
+         PHILOSOPHY & BOTANICAL STANDARDS
+         ================================================================= -->
+    <section class="section philosophy-section" id="philosophy">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <span class="section-header__subtitle">Философия ателье</span>
+          <h2 class="section-header__title">Почему FLEUR выбирают для самых важных событий</h2>
+          <p class="section-header__desc">
+            Мы отказались от конвейерной флористики в пользу органической эстетики, индивидуального подхода и уважения к природе.
+          </p>
+        </div>
+
+        <div class="philosophy-grid">
+          
+          <div class="philosophy-card">
+            <span class="philosophy-card__number">01</span>
+            <h3 class="philosophy-card__title">Редкие сорта роз и ботаника</h3>
+            <p class="philosophy-card__desc">
+              Мы работаем с пионовидными розами Дэвида Остина, японскими садовыми сортами, французскими ранункулюсами и ароматной зеленью. Никаких крашеных гипсофил и синтетики.
+            </p>
+          </div>
+
+          <div class="philosophy-card">
+            <span class="philosophy-card__number">02</span>
+            <h3 class="philosophy-card__title">Бережный аквабокс в дорогу</h3>
+            <p class="philosophy-card__desc">
+              Каждый букет упаковывается в герметичный резервуар с водой и подкормкой Chrysal. Цветы не теряют тургор и прибывают к получателю такими же свежими, как в момент срезки.
+            </p>
+          </div>
+
+          <div class="philosophy-card">
+            <span class="philosophy-card__number">03</span>
+            <h3 class="philosophy-card__title">Каллиграфия ручной работы</h3>
+            <p class="philosophy-card__desc">
+              Мы не печатаем текст на принтере. Каждое ваше пожелание выводится тушью и пером на фактурной хлопковой бумаге и запечатывается натуральным сургучом с фирменным оттиском.
+            </p>
+          </div>
+
+          <div class="philosophy-card">
+            <span class="philosophy-card__number">04</span>
+            <h3 class="philosophy-card__title">Пунктуальная курьерская служба</h3>
+            <p class="philosophy-card__desc">
+              Наши штатные вежливые курьеры перевозят цветы в климатических термобоксах на автомобилях, не роняют коробки и передают букет с искренней улыбкой.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Atmospheric Photo Banner -->
+        <div class="philosophy-banner">
+          <div class="philosophy-banner__image-wrap">
+            <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/atelier-interior.jpg -->
+            <img 
+              src="https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=1400&q=85" 
+              alt="Интерьер ботанического ателье FLEUR на Чистых прудах" 
+              class="philosophy-banner__img"
+              loading="lazy"
+              width="1200"
+              height="480"
+            >
+          </div>
+          <div class="philosophy-banner__overlay">
+            <div class="philosophy-banner__content">
+              <span class="philosophy-banner__sub">Пространство вдохновения</span>
+              <h3 class="philosophy-banner__title">Ателье на Чистопрудном бульваре</h3>
+              <p class="philosophy-banner__text">
+                Приходите выпить чашку травяного чая, вдохнуть аромат свежих пионов и выбрать цветы лично. Мы всегда рады гостям.
+              </p>
+              <a href="#contacts" class="btn btn--outline-light btn--md">Посмотреть на карте</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =================================================================
+         FLORAL SUBSCRIPTION & CONCIERGE
+         ================================================================= -->
+    <section class="section subscription-section" id="subscription">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <span class="section-header__subtitle">Эстетика жизни каждый день</span>
+          <h2 class="section-header__title">Цветочная подписка в дом и офис</h2>
+          <p class="section-header__desc">
+            Регулярная доставка свежих охапок сезонных цветов прямо к вашей двери. Наполните свой дом ароматами цветущих садов.
+          </p>
+        </div>
+
+        <div class="subscription-grid">
+          
+          <!-- Plan 1 -->
+          <div class="plan-card">
+            <div class="plan-card__header">
+              <span class="plan-card__type">Тариф</span>
+              <h3 class="plan-card__name">Утренний Комплимент</h3>
+              <p class="plan-card__desc">Свежие полевые и садовые цветы в уютную вазу</p>
+              <div class="plan-card__price">
+                <span class="plan-card__amount">16 000 ₽</span>
+                <span class="plan-card__period">/ месяц (4 охапки)</span>
+              </div>
+            </div>
+            <ul class="plan-card__features">
+              <li>Доставка 1 раз в неделю по выбранным дням</li>
+              <li>Охапка из 15-19 сезонных стеблей</li>
+              <li>Стерилизующая подкормка Chrysal к каждой поставке</li>
+              <li>Гид по продлению жизни букета</li>
+            </ul>
+            <button type="button" class="btn btn--outline btn--full" data-modal="orderModal" data-modal-title="Оформление подписки «Утренний Комплимент»" data-modal-bouquet="Подписка «Утренний Комплимент» (16 000 ₽/мес)">
+              Выбрать подписку
+            </button>
+          </div>
+
+          <!-- Plan 2 (Popular) -->
+          <div class="plan-card plan-card--featured">
+            <span class="plan-card__badge">Фаворит эстетов</span>
+            <div class="plan-card__header">
+              <span class="plan-card__type">Тариф</span>
+              <h3 class="plan-card__name">Интерьерный Этюд</h3>
+              <p class="plan-card__desc">Пышные авторские композиции в дизайнерской вазе</p>
+              <div class="plan-card__price">
+                <span class="plan-card__amount">32 000 ₽</span>
+                <span class="plan-card__period">/ месяц (4 букета)</span>
+              </div>
+            </div>
+            <ul class="plan-card__features">
+              <li>Доставка каждую неделю в готовой вазе от ателье</li>
+              <li>Сменяемый сет ваз: забираем прошлую, привозим чистую</li>
+              <li>Редкие сорта садовых роз, ранункулюсы, анемоны</li>
+              <li>Профессиональный секатор флориста в подарок к 1-му заказу</li>
+              <li>Персональный куратор под ваш интерьер</li>
+            </ul>
+            <button type="button" class="btn btn--primary btn--full" data-modal="orderModal" data-modal-title="Оформление подписки «Интерьерный Этюд»" data-modal-bouquet="Подписка «Интерьерный Этюд» (32 000 ₽/мес)">
+              Оформить интерьерную подписку
+            </button>
+          </div>
+
+          <!-- Plan 3 -->
+          <div class="plan-card">
+            <div class="plan-card__header">
+              <span class="plan-card__type">Тариф</span>
+              <h3 class="plan-card__name">Арт-Консьерж</h3>
+              <p class="plan-card__desc">Для резиденций, загородных домов, бутиков и офисов</p>
+              <div class="plan-card__price">
+                <span class="plan-card__amount">58 000 ₽</span>
+                <span class="plan-card__period">/ месяц (индивидуально)</span>
+              </div>
+            </div>
+            <ul class="plan-card__features">
+              <li>Неограниченное количество зон флористики</li>
+              <li>Выезд ведущего флориста для замеров и концепции</li>
+              <li>Автоматические подарки к важным датам вашего календаря</li>
+              <li>Приоритетная доставка в день заказа без очередей</li>
+            </ul>
+            <button type="button" class="btn btn--outline btn--full" data-modal="orderModal" data-modal-title="Запрос на сервис «Арт-Консьерж»" data-modal-bouquet="Сервис «Арт-Консьерж» (от 58 000 ₽/мес)">
+              Обсудить детали
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =================================================================
+         CLIENT STORIES & REVIEWS
+         ================================================================= -->
+    <section class="section reviews-section" id="reviews">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <span class="section-header__subtitle">Любовь в каждом лепестке</span>
+          <h2 class="section-header__title">Истории и отзывы наших гостей</h2>
+          <p class="section-header__desc">
+            Более 4 800 доставленных эмоций за 7 лет работы. Вот что говорят те, кто доверяет нам свои особенные моменты.
+          </p>
+        </div>
+
+        <div class="reviews-grid">
+          
+          <!-- Review 1 -->
+          <div class="review-card">
+            <div class="review-card__header">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/review-1.jpg -->
+              <img 
+                src="https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=150&q=80" 
+                alt="Екатерина Романова" 
+                class="review-card__avatar"
+                width="60"
+                height="60"
+              >
+              <div class="review-card__author">
+                <h3 class="review-card__name">Екатерина Романова</h3>
+                <span class="review-card__role">Заказ на годовщину свадьбы</span>
+              </div>
+              <div class="review-card__stars" aria-label="Оценка 5 из 5">★★★★★</div>
+            </div>
+            <p class="review-card__text">
+              «Заказывала букет "Пыльная Роза & Шампань" для мамы. Это не просто цветы, это произведение искусства! Настоящая живая акварель. Отдельный восторг вызвала каллиграфическая записка с сургучом — мама даже сохранила её на память. Букет простоял почти две недели!»
+            </p>
+            <div class="review-card__footer">
+              <span class="review-card__date">12 мая 2026</span>
+              <span class="review-card__verified">✓ Проверенный покупатель</span>
+            </div>
+          </div>
+
+          <!-- Review 2 -->
+          <div class="review-card">
+            <div class="review-card__header">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/review-2.jpg -->
+              <img 
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" 
+                alt="Александр Власов" 
+                class="review-card__avatar"
+                width="60"
+                height="60"
+              >
+              <div class="review-card__author">
+                <h3 class="review-card__name">Александр Власов</h3>
+                <span class="review-card__role">Срочный заказ за 70 минут</span>
+              </div>
+              <div class="review-card__stars" aria-label="Оценка 5 из 5">★★★★★</div>
+            </div>
+            <p class="review-card__text">
+              «Нужен был букет для предложения девушке в ресторане на Чистых прудах. Флористы FLEUR собрали индивидуальный сет по моим пожеланиям прямо за полчаса, прислали видео в Telegram и доставили вовремя в ресторан в красивом аквабоксе. Сказала "Да"!»
+            </p>
+            <div class="review-card__footer">
+              <span class="review-card__date">28 апреля 2026</span>
+              <span class="review-card__verified">✓ Проверенный покупатель</span>
+            </div>
+          </div>
+
+          <!-- Review 3 -->
+          <div class="review-card">
+            <div class="review-card__header">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/review-3.jpg -->
+              <img 
+                src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=150&q=80" 
+                alt="Алена Мельникова" 
+                class="review-card__avatar"
+                width="60"
+                height="60"
+              >
+              <div class="review-card__author">
+                <h3 class="review-card__name">Алена Мельникова</h3>
+                <span class="review-card__role">Подписка «Интерьерный Этюд»</span>
+              </div>
+              <div class="review-card__stars" aria-label="Оценка 5 из 5">★★★★★</div>
+            </div>
+            <p class="review-card__text">
+              «Оформила подписку на цветы для квартиры третий месяц назад. Это лучшее решение для уюта дома! Каждый вторник в 10 утра курьер привозит свежайший букет в чистой вазе. Сорта невероятные — редкие японские розы, темные анемоны, дикий эвкалипт. Рекомендую от души!»
+            </p>
+            <div class="review-card__footer">
+              <span class="review-card__date">04 мая 2026</span>
+              <span class="review-card__verified">✓ Проверенный покупатель</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =================================================================
+         FAQ ACCORDION
+         ================================================================= -->
+    <section class="section faq-section" id="faq">
+      <div class="container container--narrow">
+        
+        <div class="section-header text-center">
+          <span class="section-header__subtitle">Ответы на вопросы</span>
+          <h2 class="section-header__title">Часто задаваемые вопросы</h2>
+          <p class="section-header__desc">
+            Все о доставке, свежести стеблей, анонимных заказах и индивидуальных пожеланиях.
+          </p>
+        </div>
+
+        <div class="faq-accordion" id="faqAccordion">
+
+          <!-- FAQ 1 -->
+          <div class="faq-item active">
+            <button type="button" class="faq-item__trigger" aria-expanded="true">
+              <span class="faq-item__question">Как долго живут ваши цветы и как правильно за ними ухаживать?</span>
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-item__panel">
+              <div class="faq-item__content">
+                <p>Наши букеты радуют от 7 до 14 дней в зависимости от сортов. Секрет долговечности прост: мы не используем цветы со складов длительного хранения, а получаем прямые поставки с аукционов 4 раза в неделю. К каждому заказу мы прилагаем пакетик питательной подкормки Chrysal и памятку: подрезайте стебли острым ножом под углом 45° каждые два дня и держите вазу вдали от прямых солнечных лучей и отопительных приборов.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-item">
+            <button type="button" class="faq-item__trigger" aria-expanded="false">
+              <span class="faq-item__question">Можно ли отправить букет анонимно или зная только номер телефона?</span>
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-item__panel">
+              <div class="faq-item__content">
+                <p>Да, безусловно. Мы гарантируем 100% конфиденциальность: курьер ни при каких обстоятельствах не раскрывает личность заказчика. Если вы не знаете точный адрес, просто укажите телефон получателя — наш менеджер тактично свяжется, представится курьерской службой и согласует удобное место и время вручения подарка без спойлеров.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-item">
+            <button type="button" class="faq-item__trigger" aria-expanded="false">
+              <span class="faq-item__question">В каком виде цветы доставляются получателю? Что такое аквабокс?</span>
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-item__panel">
+              <div class="faq-item__content">
+                <p>Аквабокс — это герметичный временный резервуар со стерильной водой и питательным раствором, в который погружены стебли букета. Сверху букет защищен эстетичной фирменной переноской и термопленкой при плохой погоде. Получателю не нужно срочно искать вазу посреди рабочего дня или праздника — цветы могут комфортно стоять в аквабоксе до 48 часов!</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-item">
+            <button type="button" class="faq-item__trigger" aria-expanded="false">
+              <span class="faq-item__question">Присылаете ли вы фото букета перед отправкой?</span>
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-item__panel">
+              <div class="faq-item__content">
+                <p>Да, это наш золотой стандарт сервиса. После завершения сборки флорист делает детальные фото и видео в естественном студийном свете и отправляет вам в Telegram или WhatsApp. Курьер выезжает только после вашего подтверждения. При необходимости мы бесплатно скорректируем детали по вашей просьбе.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="faq-item">
+            <button type="button" class="faq-item__trigger" aria-expanded="false">
+              <span class="faq-item__question">Сколько стоит доставка и какие интервалы времени доступны?</span>
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-item__panel">
+              <div class="faq-item__content">
+                <p>В пределах Садового кольца доставка бесплатная при заказе от 7 000 ₽ (иначе 390 ₽). По Москве в пределах МКАД — 490 ₽. Экспресс-доставка осуществляется от 60 минут. Доступны удобные 3-часовые интервалы или доставка к точному времени (+350 ₽). Доставка за МКАД рассчитывается по ставке 50 ₽/км.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 6 -->
+          <div class="faq-item">
+            <button type="button" class="faq-item__trigger" aria-expanded="false">
+              <span class="faq-item__question">Что делать, если нужного редкого цветка нет в наличии?</span>
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-item__panel">
+              <div class="faq-item__content">
+                <p>Так как мы работаем с живыми природными материалами и редкими сортами, состав букета может незначительно варьироваться в зависимости от сезона. В случае отсутствия конкретного цветка наш шеф-флорист предложит равноценную или более дорогую замену без доплаты, строго сохраняя цветовую палитру, объем и общее настроение композиции.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =================================================================
+         CONTACTS & YANDEX MAP SECTION
+         ================================================================= -->
+    <section class="section contacts-section" id="contacts">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <span class="section-header__subtitle">Встретимся в ателье</span>
+          <h2 class="section-header__title">Контакты & Расположение</h2>
+          <p class="section-header__desc">
+            Ждем вас в нашем уютном ботаническом ателье на Чистых прудах или на связи онлайн.
+          </p>
+        </div>
+
+        <div class="contacts-wrapper">
+          
+          <!-- Left Column: Atelier Info Card -->
+          <div class="atelier-info-card">
+            
+            <div class="atelier-status-pill">
+              <span class="live-dot" aria-hidden="true"></span>
+              <span id="liveStatusTextContacts">Открыто сейчас • ждем вас до 21:00</span>
+            </div>
+
+            <h3 class="atelier-info-card__title">FLEUR Botanical Atelier</h3>
+            <p class="atelier-info-card__subtitle">Особняк на Чистопрудном, отдельный вход через тихий зеленый дворик</p>
+
+            <div class="contact-details-list">
+              
+              <div class="contact-detail-row">
+                <div class="contact-detail-row__icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <div class="contact-detail-row__text">
+                  <strong class="contact-detail-row__label">Адрес ателье</strong>
+                  <span data-config="address">Москва, Чистопрудный бульвар, 12, стр. 4</span>
+                  <span class="contact-detail-row__hint">м. Чистые пруды / Тургеневская (4 мин пешком). Гостевая парковка по звонку.</span>
+                </div>
+              </div>
+
+              <div class="contact-detail-row">
+                <div class="contact-detail-row__icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                </div>
+                <div class="contact-detail-row__text">
+                  <strong class="contact-detail-row__label">Часы работы ателье</strong>
+                  <span data-config="schedule">Пн-Пт: 09:00 — 21:00, Сб-Вс: 10:00 — 20:00</span>
+                  <span class="contact-detail-row__hint">Доставка цветов работает ежедневно с 08:00 до 23:00</span>
+                </div>
+              </div>
+
+              <div class="contact-detail-row">
+                <div class="contact-detail-row__icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                </div>
+                <div class="contact-detail-row__text">
+                  <strong class="contact-detail-row__label">Телефон и заказы</strong>
+                  <a href="tel:+74958224918" class="contact-link" data-config="phone">+7 (495) 822-49-18</a>
+                  <a href="mailto:atelier@fleur-botanical.ru" class="contact-link contact-link--secondary" data-config="email">atelier@fleur-botanical.ru</a>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Messengers and Route Button -->
+            <div class="atelier-actions">
+              <a href="https://t.me/fleur_botanical" target="_blank" rel="noopener noreferrer" class="btn btn--telegram">
+                <svg viewBox="0 0 24 24" fill="currentColor" class="icon-social"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+                Telegram флориста
+              </a>
+              <a href="https://wa.me/79858224918" target="_blank" rel="noopener noreferrer" class="btn btn--whatsapp">
+                <svg viewBox="0 0 24 24" fill="currentColor" class="icon-social"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zm0 18.12c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.156 8.156 0 01-1.25-4.35c0-4.52 3.68-8.2 8.2-8.2 2.19 0 4.25.85 5.8 2.4 1.55 1.55 2.4 3.61 2.4 5.8 0 4.52-3.68 8.21-8.16 8.21zm4.49-6.14c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.84-.86 2.05s.88 2.38 1 2.55c.12.17 1.73 2.65 4.2 3.71.59.25 1.05.4 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.07-.1-.23-.17-.47-.29z"/></svg>
+                WhatsApp
+              </a>
+              <a href="https://yandex.ru/maps/?rtext=~55.762145,37.632918" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--route" id="btnRouteYandex">
+                Маршрут в Яндекс.Картах
+              </a>
+            </div>
+
+          </div>
+
+          <!-- Right Column: Interactive Yandex Map -->
+          <div class="map-container-wrapper">
+            <div id="map" class="yandex-map-container" role="application" aria-label="Карта проезда к FLEUR Botanical Atelier">
+              <!-- Fallback placeholder while map is loading or if JS/API is offline -->
+              <div class="map-fallback" id="mapFallback">
+                <div class="map-fallback__content">
+                  <div class="map-fallback__pin">📍</div>
+                  <h4 class="map-fallback__title">FLEUR Botanical Atelier</h4>
+                  <p class="map-fallback__address">Москва, Чистопрудный бульвар, 12, стр. 4</p>
+                  <a href="https://yandex.ru/maps/?text=Москва,Чистопрудный%20бульвар,12,стр.4" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--sm">
+                    Открыть в приложении Яндекс.Карты
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =================================================================
+       SITE FOOTER
+       ================================================================= -->
+  <footer class="site-footer">
+    <div class="container site-footer__container">
+      
+      <!-- Footer Col 1: Brand & Manifesto -->
+      <div class="footer-col footer-col--brand">
+        <a href="#hero" class="brand-logo brand-logo--footer">
+          <span class="brand-logo__main">FLEUR</span>
+          <span class="brand-logo__sub">Botanical Atelier • Moscow</span>
+        </a>
+        <p class="footer-manifesto">
+          Флористика как форма искусства. Мы соединяем дикую первозданную красоту с благородной эстетикой французских оранжерей. Доставляем моменты истинной нежности с 2018 года.
+        </p>
+        <div class="footer-social-links">
+          <a href="https://t.me/fleur_botanical" target="_blank" rel="noopener noreferrer" aria-label="Telegram" class="footer-social-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+          </a>
+          <a href="https://wa.me/79858224918" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="footer-social-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zm0 18.12c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.156 8.156 0 01-1.25-4.35c0-4.52 3.68-8.2 8.2-8.2 2.19 0 4.25.85 5.8 2.4 1.55 1.55 2.4 3.61 2.4 5.8 0 4.52-3.68 8.21-8.16 8.21zm4.49-6.14c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.84-.86 2.05s.88 2.38 1 2.55c.12.17 1.73 2.65 4.2 3.71.59.25 1.05.4 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.07-.1-.23-.17-.47-.29z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Footer Col 2: Navigation Links -->
+      <div class="footer-col">
+        <h4 class="footer-col__title">Навигация</h4>
+        <ul class="footer-links-list">
+          <li><a href="#catalog">Сезонные коллекции</a></li>
+          <li><a href="#builder">Конструктор букета</a></li>
+          <li><a href="#philosophy">О концепции</a></li>
+          <li><a href="#subscription">Цветочная подписка</a></li>
+          <li><a href="#reviews">Истории клиентов</a></li>
+          <li><a href="#faq">Частые вопросы</a></li>
+          <li><a href="#contacts">Контакты и карта</a></li>
+        </ul>
+      </div>
+
+      <!-- Footer Col 3: Occasions -->
+      <div class="footer-col">
+        <h4 class="footer-col__title">Букеты к поводам</h4>
+        <ul class="footer-links-list">
+          <li><a href="#builder">День рождения</a></li>
+          <li><a href="#builder">Романтическое свидание</a></li>
+          <li><a href="#builder">Свадьба и годовщина</a></li>
+          <li><a href="#builder">Слова благодарности</a></li>
+          <li><a href="#builder">Для уюта дома</a></li>
+          <li><a href="#subscription">Корпоративное оформление</a></li>
+        </ul>
+      </div>
+
+      <!-- Footer Col 4: Contacts & Legal -->
+      <div class="footer-col footer-col--legal">
+        <h4 class="footer-col__title">Ателье в Москве</h4>
+        <div class="footer-contacts-block">
+          <p class="footer-phone" data-config="phone">+7 (495) 822-49-18</p>
+          <p class="footer-address" data-config="address">Москва, Чистопрудный бульвар, 12, стр. 4</p>
+          <p class="footer-email" data-config="email">atelier@fleur-botanical.ru</p>
+          <p class="footer-schedule" data-config="schedule">Пн-Пт: 09:00 — 21:00, Сб-Вс: 10:00 — 20:00</p>
+        </div>
+        <div class="footer-legal-requisites">
+          <span>ИП Смирнова Е. В.</span>
+          <span>ОГРНИП 321774600192841</span>
+          <span>ИНН 770192847291</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom Copyright Sub-bar -->
+    <div class="site-footer__bottom">
+      <div class="container site-footer__bottom-inner">
+        <p class="copyright-text">© 2018–2026 FLEUR Botanical Atelier. Все права защищены.</p>
+        <div class="footer-policy-links">
+          <a href="#" class="policy-link" id="btnOpenPrivacyModal">Политика конфиденциальности</a>
+          <span class="policy-divider">•</span>
+          <a href="#" class="policy-link" id="btnOpenOfertaModal">Публичная оферта</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =================================================================
+       UNIVERSAL ORDER / LEAD CAPTURE MODAL
+       ================================================================= -->
+  <div class="modal" id="orderModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalHeading">
+    <div class="modal__backdrop" id="modalBackdrop"></div>
+    <div class="modal__dialog">
+      <button type="button" class="modal__close" id="modalCloseBtn" aria-label="Закрыть окно">
+        &times;
+      </button>
+
+      <!-- Step 1: Form View -->
+      <div class="modal__content" id="modalFormView">
+        <div class="modal__header">
+          <span class="modal__badge">FLEUR Botanical</span>
+          <h3 class="modal__title" id="modalHeading">Оформление заказа</h3>
+          <p class="modal__subtitle" id="modalSubtitle">
+            Заполните контакты, и мы свяжемся с вами в течение 5 минут для подтверждения деталей
+          </p>
+        </div>
+
+        <!-- Selected Item Banner (populated dynamically) -->
+        <div class="modal-item-banner" id="modalItemBanner">
+          <div class="modal-item-banner__icon">🌸</div>
+          <div class="modal-item-banner__info">
+            <span class="modal-item-banner__label">Выбранная композиция:</span>
+            <strong class="modal-item-banner__name" id="modalItemName">Индивидуальный букет</strong>
+          </div>
+        </div>
+
+        <form class="modal-form" id="leadOrderForm" novalidate>
+          <input type="hidden" id="formSourceInput" name="source" value="Основная форма">
+          <input type="hidden" id="formBouquetInput" name="bouquet" value="Индивидуальный заказ">
+          <input type="hidden" id="formPriceInput" name="price" value="">
+
+          <!-- Name -->
+          <div class="form-group">
+            <label for="userNameInput" class="form-label">Ваше имя <span class="required">*</span></label>
+            <input type="text" id="userNameInput" name="name" class="form-input" placeholder="Например, Анна" required minlength="2">
+            <span class="form-error" id="nameError">Пожалуйста, укажите ваше имя (не менее 2 символов)</span>
+          </div>
+
+          <!-- Phone (with strict mask) -->
+          <div class="form-group">
+            <label for="userPhoneInput" class="form-label">Номер телефона <span class="required">*</span></label>
+            <input type="tel" id="userPhoneInput" name="phone" class="form-input phone-mask" placeholder="+7 (___) ___-__-__" required>
+            <span class="form-error" id="phoneError">Пожалуйста, введите полный номер телефона</span>
+          </div>
+
+          <!-- Address or Pickup -->
+          <div class="form-group">
+            <label for="userAddressInput" class="form-label">Адрес доставки по Москве</label>
+            <input type="text" id="userAddressInput" name="address" class="form-input" placeholder="Улица, дом, квартира (или укажите «Самовывоз из ателье»)">
+          </div>
+
+          <!-- Date & Time Slot -->
+          <div class="form-row">
+            <div class="form-group">
+              <label for="userDateInput" class="form-label">Дата вручения</label>
+              <input type="date" id="userDateInput" name="date" class="form-input" min="2026-11-15">
+            </div>
+            <div class="form-group">
+              <label for="userTimeInput" class="form-label">Желаемое время</label>
+              <select id="userTimeInput" name="time" class="form-select">
+                <option value="Срочно (в течение 60-90 мин)">Срочно (в течение 60-90 мин)</option>
+                <option value="Утро (09:00 — 13:00)">Утро (09:00 — 13:00)</option>
+                <option value="День (13:00 — 17:00)" selected>День (13:00 — 17:00)</option>
+                <option value="Вечер (17:00 — 21:00)">Вечер (17:00 — 21:00)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Comment / Postcard Text -->
+          <div class="form-group">
+            <label for="userCommentInput" class="form-label">Текст для каллиграфической открытки с сургучом</label>
+            <textarea id="userCommentInput" name="comment" class="form-textarea" rows="3" placeholder="Напишите слова, которые наш каллиграф бережно выведет тушью на хлопковой бумаге..."></textarea>
+          </div>
+
+          <!-- Privacy Policy Checkbox -->
+          <div class="form-checkbox-group">
+            <label class="custom-checkbox">
+              <input type="checkbox" id="userConsentInput" checked required>
+              <span class="custom-checkbox__mark"></span>
+              <span class="custom-checkbox__label">
+                Соглашаюсь с <a href="#" class="link-inline" id="consentPolicyLink">политикой конфиденциальности</a> и условиями оферты
+              </span>
+            </label>
+            <span class="form-error" id="consentError">Для отправки заявки необходимо согласие</span>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="btn btn--primary btn--full btn--lg" id="btnSubmitOrder">
+            <span class="btn__text">Подтвердить заказ</span>
+            <span class="btn__spinner" aria-hidden="true"></span>
+          </button>
+
+          <p class="modal-form__note">
+            🔒 Мы не передаем ваши данные третьим лицам. Фото готового букета пришлем в Telegram/WhatsApp.
+          </p>
+        </form>
+      </div>
+
+      <!-- Step 2: Success Confirmation View -->
+      <div class="modal__content modal__content--success" id="modalSuccessView" style="display: none;">
+        <div class="success-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" class="icon-success"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <span class="modal__badge">Заказ успешно принят</span>
+        <h3 class="modal__title">Спасибо за доверие к FLEUR!</h3>
+        <p class="modal__subtitle">
+          Ваш заказ <strong id="successOrderNumber">#FL-8492</strong> передан флористам. Мы уже подбираем самые свежие бутоны.
+        </p>
+
+        <div class="success-details-card">
+          <div class="success-row">
+            <span>Композиция:</span>
+            <strong id="successBouquetName">Рассвет в Провансе</strong>
+          </div>
+          <div class="success-row">
+            <span>Имя заказчика:</span>
+            <strong id="successCustomerName">Анна</strong>
+          </div>
+          <div class="success-row">
+            <span>Телефон:</span>
+            <strong id="successCustomerPhone">+7 (999) 000-00-00</strong>
+          </div>
+          <div class="success-row">
+            <span>Следующий шаг:</span>
+            <span class="text-rose">Отправим фото готового букета в мессенджер</span>
+          </div>
+        </div>
+
+        <button type="button" class="btn btn--secondary btn--full btn--md" id="btnCloseSuccessModal">
+          Вернуться на сайт
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- =================================================================
+       QUICK VIEW BOUQUET MODAL
+       ================================================================= -->
+  <div class="modal" id="quickViewModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="qvModalTitle">
+    <div class="modal__backdrop" id="qvModalBackdrop"></div>
+    <div class="modal__dialog modal__dialog--wide">
+      <button type="button" class="modal__close" id="qvModalCloseBtn" aria-label="Закрыть окно">
+        &times;
+      </button>
+
+      <div class="quickview-layout">
+        <div class="quickview-media">
+          <img id="qvImage" src="" alt="Детали букета" class="quickview-img" width="460" height="540">
+          <span class="quickview-badge" id="qvBadge">Хит сезона</span>
+        </div>
+        <div class="quickview-info">
+          <span class="modal__badge">Авторский рецепт</span>
+          <h3 class="quickview-title" id="qvTitle">Рассвет в Провансе</h3>
+          <div class="quickview-price" id="qvPrice">7 900 ₽</div>
+          
+          <div class="quickview-section">
+            <h4 class="quickview-section__title">Флористический состав:</h4>
+            <p class="quickview-section__text" id="qvComposition">Загрузка...</p>
+          </div>
+
+          <div class="quickview-section">
+            <h4 class="quickview-section__title">Особенности и уход:</h4>
+            <ul class="quickview-features">
+              <li>Поставляется в фирменном аквабоксе с питательным раствором</li>
+              <li>Стойкость в вазе: 7–12 дней при регулярной подрезке</li>
+              <li>Каллиграфическая открытка с сургучом прилагается бесплатно</li>
+            </ul>
+          </div>
+
+          <div class="quickview-actions">
+            <button type="button" class="btn btn--primary btn--full btn--lg" id="btnQvOrder">
+              Заказать этот букет
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =================================================================
+       PRIVACY / LEGAL INFO MODAL
+       ================================================================= -->
+  <div class="modal" id="legalModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="legalModalTitle">
+    <div class="modal__backdrop" id="legalModalBackdrop"></div>
+    <div class="modal__dialog">
+      <button type="button" class="modal__close" id="legalModalCloseBtn" aria-label="Закрыть окно">
+        &times;
+      </button>
+      <div class="modal__content">
+        <h3 class="modal__title" id="legalModalTitle">Политика конфиденциальности</h3>
+        <div class="legal-text-scroll">
+          <p>Настоящая Политика конфиденциальности персональных данных действует в отношении всей информации, которую сайт FLEUR Botanical Atelier (ИП Смирнова Е. В., ОГРНИП 321774600192841, ИНН 770192847291) может получить о Пользователе во время использования сайта.</p>
+          <h4>1. Сбор информации</h4>
+          <p>Мы собираем только те персональные данные, которые вы предоставляете добровольно при оформлении заказа: имя, номер телефона, адрес доставки и текст открытки. Эти данные необходимы исключительно для надлежащего выполнения заказа и согласования букета перед доставкой.</p>
+          <h4>2. Защита и конфиденциальность</h4>
+          <p>Мы никогда не передаем ваши контактные данные третьим лицам или рекламным сетям. Доступ к контактным данным имеют исключительно менеджер и курьер, выполняющий ваш заказ.</p>
+          <h4>3. Контакты по вопросам данных</h4>
+          <p>По любым вопросам относительно ваших персональных данных вы можете связаться с нами по адресу: atelier@fleur-botanical.ru.</p>
+        </div>
+        <button type="button" class="btn btn--secondary btn--full btn--md" id="btnCloseLegalModal" style="margin-top: 1.5rem;">
+          Понятно
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast" id="siteToast" role="status" aria-live="polite" aria-hidden="true">
+    <div class="toast__icon">🌿</div>
+    <div class="toast__message" id="toastMessage">Сообщение</div>
+  </div>
+
+  <!-- Main JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>

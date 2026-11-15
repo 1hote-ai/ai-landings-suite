@@ -1,0 +1,1548 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Лапки & Хвостик — Ветеринарный центр & СПА-Груминг в Москве</title>
+  <meta name="description" content="Ветеринарная клиника доказательной медицины и бережный салон груминга в Москве. Круглосуточный стационар, собственная лаборатория, Fear-Free протоколы без стресса для кошек и собак.">
+  <meta name="theme-color" content="#0284C7">
+  
+  <!-- Favicon (SVG) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐾</text></svg>">
+
+  <!-- Google Fonts: Fredoka + Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Yandex Maps API 2.1 -->
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=&lang=ru_RU" type="text/javascript"></script>
+</head>
+<body>
+
+  <!-- ================= TOPBAR ================= -->
+  <aside class="topbar">
+    <div class="container topbar__container">
+      <div class="topbar__left">
+        <!-- Live status updated dynamically via script.js -->
+        <div class="status-badge" id="live-status-badge">
+          <span class="status-badge__dot"></span>
+          <span class="status-badge__text" id="live-status-text">Проверка режима работы...</span>
+        </div>
+        <div class="topbar__address">
+          <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
+          <span data-config="address.street">ул. 10-летия Октября, д. 11</span>
+          <span class="topbar__metro" data-config="address.metro">м. Спортивная</span>
+        </div>
+      </div>
+
+      <div class="topbar__right">
+        <a href="#triage" class="topbar__emergency-link">
+          <span class="pulse-warning"></span>
+          <span>Экстренная помощь 24/7:</span>
+          <strong data-config="contacts.emergencyPhone">+7 (495) 822-44-99</strong>
+        </a>
+        <div class="topbar__socials">
+          <a href="#" class="social-icon" data-config-link="contacts.whatsapp" title="WhatsApp" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 2C6.495 2 2 6.494 2 12.029c0 1.942.556 3.758 1.523 5.303L2 22l4.823-1.488A9.972 9.972 0 0012.031 22C17.568 22 22 17.506 22 12.029 22 6.494 17.568 2 12.031 2zm5.834 14.178c-.244.685-1.42 1.309-1.97 1.368-.507.054-1.168.082-3.754-.987-3.08-1.272-5.06-4.417-5.213-4.62-.152-.204-1.242-1.656-1.242-3.158 0-1.503.785-2.243 1.063-2.548.277-.306.606-.383.81-.383.203 0 .406.002.583.01.189.009.444-.072.694.528.258.621.879 2.148.956 2.304.077.156.128.339.026.543-.102.203-.153.33-.305.508-.152.179-.32.399-.457.535-.153.152-.312.317-.134.623.178.305.792 1.304 1.7 2.112 1.168 1.039 2.152 1.36 2.457 1.513.305.152.483.127.661-.077.178-.203.763-.889.966-1.194.203-.305.406-.254.685-.152.279.102 1.776.837 2.08 1.039.305.203.508.305.584.432.076.127.076.737-.168 1.422z"/></svg>
+          </a>
+          <a href="#" class="social-icon" data-config-link="contacts.telegram" title="Telegram" aria-label="Telegram">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .36z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ================= HEADER & NAV ================= -->
+  <header class="header" id="header">
+    <div class="container header__container">
+      <!-- Logo -->
+      <a href="#" class="logo">
+        <div class="logo__icon-wrap">
+          <svg class="logo__icon" viewBox="0 0 32 32" fill="none">
+            <path d="M16 20c-3.5 0-6.5 2.2-6.5 5 0 2.2 2.8 4 6.5 4s6.5-1.8 6.5-4c0-2.8-3-5-6-5z" fill="#0284C7"/>
+            <circle cx="8" cy="14" r="3.5" fill="#FDBA74"/>
+            <circle cx="24" cy="14" r="3.5" fill="#FDBA74"/>
+            <circle cx="12" cy="7" r="3.5" fill="#DDD6FE"/>
+            <circle cx="20" cy="7" r="3.5" fill="#DDD6FE"/>
+          </svg>
+        </div>
+        <div class="logo__text">
+          <span class="logo__brand" data-config="brand.name">Лапки &amp; Хвостик</span>
+          <span class="logo__tagline" data-config="brand.tagline">Ветклиника &amp; СПА-Груминг</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#services" class="nav-link">Услуги и цены</a></li>
+          <li class="nav-item"><a href="#triage" class="nav-link nav-link--highlight">Экспресс-триаж 🩺</a></li>
+          <li class="nav-item"><a href="#fear-free" class="nav-link">Без стресса</a></li>
+          <li class="nav-item"><a href="#grooming" class="nav-link">СПА-Груминг</a></li>
+          <li class="nav-item"><a href="#doctors" class="nav-link">Врачи</a></li>
+          <li class="nav-item"><a href="#gallery" class="nav-link">Клиника</a></li>
+          <li class="nav-item"><a href="#reviews" class="nav-link">Отзывы</a></li>
+          <li class="nav-item"><a href="#faq" class="nav-link">FAQ</a></li>
+          <li class="nav-item"><a href="#contacts" class="nav-link">Контакты</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header CTAs -->
+      <div class="header__actions">
+        <a href="tel:+74958224412" class="header__phone" data-config="contacts.phone" data-config-link="contacts.phone">
+          <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"></path>
+          </svg>
+          <span>+7 (495) 822-44-12</span>
+        </a>
+        <button class="btn btn--primary open-booking-btn" data-source="header_cta">
+          <span>Записаться онлайн</span>
+          <svg class="icon icon-xs" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+        <!-- Mobile menu button -->
+        <button class="burger-btn" id="burger-btn" aria-label="Открыть мобильное меню" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Navigation -->
+  <div class="mobile-drawer" id="mobile-drawer">
+    <div class="mobile-drawer__overlay" id="drawer-overlay"></div>
+    <div class="mobile-drawer__content">
+      <div class="mobile-drawer__header">
+        <div class="logo">
+          <div class="logo__icon-wrap">
+            <svg class="logo__icon" viewBox="0 0 32 32" fill="none">
+              <path d="M16 20c-3.5 0-6.5 2.2-6.5 5 0 2.2 2.8 4 6.5 4s6.5-1.8 6.5-4c0-2.8-3-5-6-5z" fill="#0284C7"/>
+              <circle cx="8" cy="14" r="3.5" fill="#FDBA74"/>
+              <circle cx="24" cy="14" r="3.5" fill="#FDBA74"/>
+              <circle cx="12" cy="7" r="3.5" fill="#DDD6FE"/>
+              <circle cx="20" cy="7" r="3.5" fill="#DDD6FE"/>
+            </svg>
+          </div>
+          <span class="logo__brand">Лапки &amp; Хвостик</span>
+        </div>
+        <button class="drawer-close-btn" id="drawer-close-btn" aria-label="Закрыть меню">&times;</button>
+      </div>
+
+      <nav class="mobile-drawer__nav">
+        <a href="#services" class="mobile-nav-link">Услуги и цены</a>
+        <a href="#triage" class="mobile-nav-link mobile-nav-link--highlight">Экспресс-триаж симптомов 🩺</a>
+        <a href="#fear-free" class="mobile-nav-link">Философия Fear-Free</a>
+        <a href="#grooming" class="mobile-nav-link">СПА-Груминг &amp; До/После</a>
+        <a href="#doctors" class="mobile-nav-link">Наши врачи</a>
+        <a href="#gallery" class="mobile-nav-link">Фотографии клиники</a>
+        <a href="#reviews" class="mobile-nav-link">Отзывы владельцев</a>
+        <a href="#faq" class="mobile-nav-link">Вопросы и ответы</a>
+        <a href="#contacts" class="mobile-nav-link">Контакты и адрес</a>
+      </nav>
+
+      <div class="mobile-drawer__footer">
+        <button class="btn btn--primary btn--full open-booking-btn" data-source="mobile_drawer">
+          Записаться на приём
+        </button>
+        <a href="tel:+74958224412" class="btn btn--outline btn--full mt-2" data-config-link="contacts.phone">
+          📞 Позвонить в клинику
+        </a>
+        <div class="mobile-drawer__contacts">
+          <p class="text-sm text-muted" data-config="schedule.clinicHours">Пн-Вс: 09:00 — 21:00</p>
+          <p class="text-sm text-danger font-medium mt-1">🚨 ОРИТ 24/7: <a href="tel:+74958224499" data-config="contacts.emergencyPhone">+7 (495) 822-44-99</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- ================= HERO SECTION ================= -->
+    <section class="hero" id="hero">
+      <div class="hero__bg-blob hero__bg-blob--1"></div>
+      <div class="hero__bg-blob hero__bg-blob--2"></div>
+
+      <div class="container hero__container">
+        <!-- Hero Text -->
+        <div class="hero__content">
+          <div class="hero__badge">
+            <span class="badge-icon">🌿</span>
+            <span class="badge-text">Клиника доказательной ветеринарии &amp; Fear-Free салон</span>
+          </div>
+
+          <h1 class="hero__title">
+            Забота о здоровье и красоте вашего хвостика — <span class="text-highlight">без стресса и боли</span>
+          </h1>
+
+          <p class="hero__lead">
+            Современный ветеринарный госпиталь, круглосуточный стационар ОРИТ и бережный груминг в Москве. Лечим кошек, собак и экзотических питомцев по международным протоколам WSAVA.
+          </p>
+
+          <div class="hero__cta-group">
+            <button class="btn btn--primary btn--lg open-booking-btn" data-source="hero_primary">
+              <span>Записаться на приём</span>
+              <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+            <a href="#triage" class="btn btn--secondary btn--lg">
+              <span>🩺 Экспресс-тест симптомов</span>
+            </a>
+          </div>
+
+          <!-- Trust Badges -->
+          <div class="hero__trust-grid">
+            <div class="trust-card">
+              <div class="trust-card__stars">★★★★★</div>
+              <div class="trust-card__info">
+                <strong>4.9 / 5.0</strong>
+                <span>в Яндекс Картах (1 420+ отзывов)</span>
+              </div>
+            </div>
+            <div class="trust-card">
+              <div class="trust-card__icon">🐾</div>
+              <div class="trust-card__info">
+                <strong>Fear-Free® подход</strong>
+                <span>Раздельные зоны для кошек и собак</span>
+              </div>
+            </div>
+            <div class="trust-card">
+              <div class="trust-card__icon">⏱️</div>
+              <div class="trust-card__info">
+                <strong>Анализы за 20 минут</strong>
+                <span>Собственная лаборатория IDEXX</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual Media -->
+        <div class="hero__visual">
+          <div class="hero__image-wrapper">
+            <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на путь к вашему локальному файлу, например images/hero-vet.jpg -->
+            <img 
+              src="https://images.unsplash.com/photo-1628009368231-7bb7cfcb0def?auto=format&fit=crop&w=1200&q=80" 
+              alt="Врач-терапевт клиники Лапки и Хвостик осматривает собаку" 
+              class="hero__img"
+              loading="eager"
+            >
+            
+            <!-- Floating Floating Stat Cards -->
+            <div class="floating-badge floating-badge--top">
+              <div class="floating-badge__icon">🩺</div>
+              <div class="floating-badge__content">
+                <strong>Главврач на смене</strong>
+                <span>Стаж врачей от 7 до 15 лет</span>
+              </div>
+            </div>
+
+            <div class="floating-badge floating-badge--bottom">
+              <div class="floating-badge__icon pulse-green"></div>
+              <div class="floating-badge__content">
+                <strong id="hero-live-status">Приём открыт</strong>
+                <span>Без очередей, по записи</span>
+              </div>
+            </div>
+
+            <div class="floating-badge floating-badge--right">
+              <span class="badge-paw">🐾</span>
+              <div class="floating-badge__content">
+                <strong>12 000+</strong>
+                <span>Здоровых хвостиков за 5 лет</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= EMERGENCY TRIAGE SECTION ================= -->
+    <section class="section section--triage" id="triage">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-tag section-tag--warning">
+            <span class="pulse-warning"></span> Интерактивный ветеринарный помощник
+          </div>
+          <h2 class="section-title">Экспресс-оценка состояния питомца (Триаж)</h2>
+          <p class="section-subtitle">
+            Не знаете, требуется ли срочный визит к врачу? Пройдите 3 быстрых шага, чтобы понять степень срочности и получить рекомендации дежурного врача.
+          </p>
+        </div>
+
+        <div class="triage-card" id="triage-widget">
+          <!-- Step Indicators -->
+          <div class="triage-steps-nav">
+            <div class="triage-step-tab active" data-step="1">
+              <span class="step-num">1</span>
+              <span class="step-label">Вид питомца</span>
+            </div>
+            <div class="triage-step-tab" data-step="2">
+              <span class="step-num">2</span>
+              <span class="step-label">Симптомы</span>
+            </div>
+            <div class="triage-step-tab" data-step="3">
+              <span class="step-num">3</span>
+              <span class="step-label">Красные флаги</span>
+            </div>
+            <div class="triage-step-tab" data-step="4">
+              <span class="step-num">4</span>
+              <span class="step-label">Результат</span>
+            </div>
+          </div>
+
+          <!-- Step 1: Pet Type -->
+          <div class="triage-step-content active" id="triage-step-1">
+            <h3 class="triage-title">Шаг 1: Кто ваш любимец?</h3>
+            <p class="triage-desc">Выберите вид животного для персонализации алгоритма оценки:</p>
+            <div class="pet-type-selector">
+              <label class="pet-type-card">
+                <input type="radio" name="triage-pet" value="dog" checked>
+                <div class="pet-type-card__body">
+                  <span class="pet-emoji">🐕</span>
+                  <span class="pet-name">Собака</span>
+                  <span class="pet-sub">Щенок или взрослая</span>
+                </div>
+              </label>
+
+              <label class="pet-type-card">
+                <input type="radio" name="triage-pet" value="cat">
+                <div class="pet-type-card__body">
+                  <span class="pet-emoji">🐈</span>
+                  <span class="pet-name">Кошка</span>
+                  <span class="pet-sub">Котёнок или взрослая</span>
+                </div>
+              </label>
+
+              <label class="pet-type-card">
+                <input type="radio" name="triage-pet" value="exotic">
+                <div class="pet-type-card__body">
+                  <span class="pet-emoji">🐰</span>
+                  <span class="pet-name">Грызун / Экзот</span>
+                  <span class="pet-sub">Кролик, хомяк, хорёк, птица</span>
+                </div>
+              </label>
+            </div>
+
+            <div class="triage-actions">
+              <div></div>
+              <button class="btn btn--primary" id="triage-to-step-2">
+                <span>Далее: Симптомы</span>
+                <svg class="icon icon-xs" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 2: Symptoms Category -->
+          <div class="triage-step-content" id="triage-step-2">
+            <h3 class="triage-title">Шаг 2: Что вас насторожило?</h3>
+            <p class="triage-desc">Выберите главную жалобу или группу симптомов:</p>
+            
+            <div class="symptom-grid">
+              <label class="symptom-btn">
+                <input type="radio" name="triage-symptom" value="apathy" checked>
+                <span class="symptom-btn__content">
+                  <span class="sym-icon">😴</span>
+                  <span class="sym-text">Вялость, отказ от еды или воды (> 12ч)</span>
+                </span>
+              </label>
+
+              <label class="symptom-btn">
+                <input type="radio" name="triage-symptom" value="gi">
+                <span class="symptom-btn__content">
+                  <span class="sym-icon">🤢</span>
+                  <span class="sym-text">Рвота или жидкий стул (диарея)</span>
+                </span>
+              </label>
+
+              <label class="symptom-btn">
+                <input type="radio" name="triage-symptom" value="injury">
+                <span class="symptom-btn__content">
+                  <span class="sym-icon">🩹</span>
+                  <span class="sym-text">Травма, хромота, скулит при касании</span>
+                </span>
+              </label>
+
+              <label class="symptom-btn">
+                <input type="radio" name="triage-symptom" value="breathing">
+                <span class="symptom-btn__content">
+                  <span class="sym-icon">🫁</span>
+                  <span class="sym-text">Одышка, дыхание с открытым ртом, кашель</span>
+                </span>
+              </label>
+
+              <label class="symptom-btn">
+                <input type="radio" name="triage-symptom" value="skin">
+                <span class="symptom-btn__content">
+                  <span class="sym-icon">🧼</span>
+                  <span class="sym-text">Зуд, расчесы, выпадение шерсти, покраснения</span>
+                </span>
+              </label>
+
+              <label class="symptom-btn">
+                <input type="radio" name="triage-symptom" value="wellness">
+                <span class="symptom-btn__content">
+                  <span class="sym-icon">💉</span>
+                  <span class="sym-text">Плановая вакцинация / чекап / груминг</span>
+                </span>
+              </label>
+            </div>
+
+            <div class="triage-actions">
+              <button class="btn btn--outline" id="triage-back-to-1">Назад</button>
+              <button class="btn btn--primary" id="triage-to-step-3">
+                <span>Далее: Проверка угроз</span>
+                <svg class="icon icon-xs" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 3: Red Flags Checklist -->
+          <div class="triage-step-content" id="triage-step-3">
+            <h3 class="triage-title">Шаг 3: Есть ли критические симптомы?</h3>
+            <p class="triage-desc">Отметьте, если у питомца прямо сейчас наблюдается хотя бы один из пунктов:</p>
+
+            <div class="red-flags-list">
+              <label class="checkbox-card">
+                <input type="checkbox" name="red-flag" value="gums">
+                <span class="checkbox-indicator"></span>
+                <span class="checkbox-text">Десны бледные, белые или с синеватым оттенком</span>
+              </label>
+
+              <label class="checkbox-card">
+                <input type="checkbox" name="red-flag" value="seizures">
+                <span class="checkbox-indicator"></span>
+                <span class="checkbox-text">Судороги, потеря координации или потеря сознания</span>
+              </label>
+
+              <label class="checkbox-card">
+                <input type="checkbox" name="red-flag" value="choking">
+                <span class="checkbox-indicator"></span>
+                <span class="checkbox-text">Тяжелое прерывистое дыхание, хрипы или удушье</span>
+              </label>
+
+              <label class="checkbox-card">
+                <input type="checkbox" name="red-flag" value="poison">
+                <span class="checkbox-indicator"></span>
+                <span class="checkbox-text">Подозрение на проглатывание яда, иголки, кости или шоколада</span>
+              </label>
+
+              <label class="checkbox-card">
+                <input type="checkbox" name="red-flag" value="urine">
+                <span class="checkbox-indicator"></span>
+                <span class="checkbox-text">Не может помочиться, сильно тужится и кричит (особенно коты!)</span>
+              </label>
+            </div>
+
+            <div class="triage-actions">
+              <button class="btn btn--outline" id="triage-back-to-2">Назад</button>
+              <button class="btn btn--primary" id="triage-calculate">
+                <span>Рассчитать рекомендацию</span>
+                <svg class="icon icon-xs" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 4: Urgency Result -->
+          <div class="triage-step-content" id="triage-step-4">
+            <div id="triage-result-container">
+              <!-- Dynamically populated via script.js -->
+            </div>
+
+            <div class="triage-actions triage-actions--result">
+              <button class="btn btn--ghost" id="triage-restart">Пройти заново</button>
+              <button class="btn btn--primary open-booking-btn" id="triage-book-btn" data-source="triage_result">
+                <span>Записаться с этими симптомами</span>
+                <svg class="icon icon-xs" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FEAR-FREE PHILOSOPHY & ADVANTAGES ================= -->
+    <section class="section section--fear-free" id="fear-free">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-tag section-tag--lavender">
+            <span>🐾</span> Принципы бережной заботы
+          </div>
+          <h2 class="section-title">Почему питомцы бегут к нам виляя хвостом</h2>
+          <p class="section-subtitle">
+            Мы избавились от запаха страха, железных столов и грубого удержания. В клинике создана среда, где комфортно и четвероногим друзьям, и их родителям.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <!-- Card 1 -->
+          <div class="feature-card">
+            <div class="feature-card__icon-wrap bg-lavender">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+              </svg>
+            </div>
+            <h3 class="feature-card__title">Cat-Friendly: раздельные зоны</h3>
+            <p class="feature-card__desc">
+              Отдельный тихий зал ожидания и смотровой кабинет для кошек с диффузорами Feliway. Кошки не чувствуют запаха и не слышат лая собак, поэтому сохраняют спокойствие.
+            </p>
+            <span class="feature-card__badge">Без стресса для котиков</span>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="feature-card">
+            <div class="feature-card__icon-wrap bg-teal">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+              </svg>
+            </div>
+            <h3 class="feature-card__title">Доказательная медицина WSAVA</h3>
+            <p class="feature-card__desc">
+              Никаких неработающих капельниц, гомеопатии или ненужных назначений. Лечим строго по актуальным международным стандартам ветеринарии.
+            </p>
+            <span class="feature-card__badge">Честные назначения</span>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="feature-card">
+            <div class="feature-card__icon-wrap bg-peach">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </div>
+            <h3 class="feature-card__title">Экспресс-диагностика за 1 визит</h3>
+            <p class="feature-card__desc">
+              Собственная автоматическая лаборатория IDEXX: клинический и биохимический анализ крови за 20 минут. УЗИ экспертного класса и цифровой рентген на месте.
+            </p>
+            <span class="feature-card__badge">Результаты сразу</span>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="feature-card">
+            <div class="feature-card__icon-wrap bg-teal">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+              </svg>
+            </div>
+            <h3 class="feature-card__title">Прозрачные фиксированные цены</h3>
+            <p class="feature-card__desc">
+              План лечения и точная смета обсуждаются с владельцем до начала процедур. Никаких внезапных строчек в чеке и скрытых манипуляций.
+            </p>
+            <span class="feature-card__badge">Без сюрпризов</span>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="feature-card">
+            <div class="feature-card__icon-wrap bg-lavender">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M15 10l-4 4l6 6l4-16l-18 7l4 2l2 6l3-4"></path>
+              </svg>
+            </div>
+            <h3 class="feature-card__title">Бережный Fear-Free груминг</h3>
+            <p class="feature-card__desc">
+              Купание и стрижка без окриков и жесткой фиксации. Используем только гипоаллергенную премиум-косметику Chris Christensen и Iv San Bernard.
+            </p>
+            <span class="feature-card__badge">СПА-удовольствие</span>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="feature-card">
+            <div class="feature-card__icon-wrap bg-peach">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+              </svg>
+            </div>
+            <h3 class="feature-card__title">ОРИТ и стационар 24/7</h3>
+            <p class="feature-card__desc">
+              Круглосуточный пост интенсивной терапии с мониторами пациента, кислородными концентраторами и подогреваемыми боксами.
+            </p>
+            <span class="feature-card__badge">Под надзором круглосуточно</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SERVICES & PRICING ================= -->
+    <section class="section section--services" id="services">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-tag section-tag--teal">
+            <span>📋</span> Полный спектр помощи
+          </div>
+          <h2 class="section-title">Услуги ветеринарного центра и СПА</h2>
+          <p class="section-subtitle">
+            От планового чекапа и эстетического груминга до сложнейших хирургических операций. Честные цены без скрытых платежей.
+          </p>
+
+          <!-- Category filter buttons -->
+          <div class="service-filters" id="service-filters">
+            <button class="filter-btn active" data-filter="all">Все услуги</button>
+            <button class="filter-btn" data-filter="therapy">Терапия &amp; Приём</button>
+            <button class="filter-btn" data-filter="diagnostics">Диагностика &amp; УЗИ</button>
+            <button class="filter-btn" data-filter="surgery">Хирургия &amp; Стоматология</button>
+            <button class="filter-btn" data-filter="grooming">Груминг &amp; СПА</button>
+            <button class="filter-btn" data-filter="prevention">Вакцинация &amp; Чекапы</button>
+          </div>
+        </div>
+
+        <div class="services-grid" id="services-grid">
+          <!-- Item 1: Therapy -->
+          <div class="service-card" data-category="therapy">
+            <div class="service-card__top">
+              <span class="service-category">Терапия</span>
+              <span class="service-badge">Популярно</span>
+            </div>
+            <h3 class="service-card__title">Первичный приём и осмотр терапевта</h3>
+            <p class="service-card__desc">
+              Полный клинический осмотр питомца: термометрия, аускультация сердца и лёгких, пальпация, сбор анамнеза и составление индивидуального плана лечения.
+            </p>
+            <ul class="service-features">
+              <li>Длительность: 40 минут без спешки</li>
+              <li>Электронная медкарта в личном кабинете</li>
+              <li>Консультация по питанию и уходу</li>
+            </ul>
+            <div class="service-card__footer">
+              <div class="service-price">
+                <span class="price-val">1 800 ₽</span>
+                <span class="price-note">приём по записи</span>
+              </div>
+              <button class="btn btn--outline-primary open-booking-btn" data-service="Первичный приём терапевта">Записаться</button>
+            </div>
+          </div>
+
+          <!-- Item 2: Diagnostics -->
+          <div class="service-card" data-category="diagnostics">
+            <div class="service-card__top">
+              <span class="service-category">Диагностика</span>
+              <span class="service-badge bg-lavender-subtle">Экспертный класс</span>
+            </div>
+            <h3 class="service-card__title">УЗИ брюшной полости экспертного класса</h3>
+            <p class="service-card__desc">
+              Исследование всех органов брюшной полости на аппарате Mindray с цветным допплером. Подробный протокол с фото и заключением врача-сонолога сразу после процедуры.
+            </p>
+            <ul class="service-features">
+              <li>Печень, почки, селезёнка, ЖКТ, мочеполовая</li>
+              <li>Протокол исследования выдается на руки</li>
+              <li>Без седации, в мягких позиционерах</li>
+            </ul>
+            <div class="service-card__footer">
+              <div class="service-price">
+                <span class="price-val">2 900 ₽</span>
+                <span class="price-note">все органы брюшной полости</span>
+              </div>
+              <button class="btn btn--outline-primary open-booking-btn" data-service="УЗИ брюшной полости">Записаться</button>
+            </div>
+          </div>
+
+          <!-- Item 3: Prevention / Checkup -->
+          <div class="service-card" data-category="prevention">
+            <div class="service-card__top">
+              <span class="service-category">Профилактика</span>
+              <span class="service-badge bg-peach-subtle">Выгодно</span>
+            </div>
+            <h3 class="service-card__title">Комплексный чекап «Здоровый хвостик»</h3>
+            <p class="service-card__desc">
+              Ежегодная диспансеризация для своевременного выявления бессимптомных болезней: приём врача, клинический и биохимический анализ крови, общий анализ мочи и скрининговое УЗИ.
+            </p>
+            <ul class="service-features">
+              <li>Экономия 25% от раздельной стоимости</li>
+              <li>Анализы готовы в тот же день</li>
+              <li>Рекомендации по коррекции рациона</li>
+            </ul>
+            <div class="service-card__footer">
+              <div class="service-price">
+                <span class="price-val">5 800 ₽</span>
+                <span class="price-old">7 900 ₽</span>
+              </div>
+              <button class="btn btn--primary open-booking-btn" data-service="Чекап Здоровый хвостик">Выбрать чекап</button>
+            </div>
+          </div>
+
+          <!-- Item 4: Grooming -->
+          <div class="service-card" data-category="grooming">
+            <div class="service-card__top">
+              <span class="service-category">Груминг &amp; СПА</span>
+              <span class="service-badge">Fear-Free</span>
+            </div>
+            <h3 class="service-card__title">Комплексный гигиенический СПА-уход</h3>
+            <p class="service-card__desc">
+              Для собак и кошек всех пород: бережное мытье в 3 этапа премиум-косметикой, сушка теплым феном с компрессором, стрижка когтей, чистка ушек и глаз, окантовка лапок.
+            </p>
+            <ul class="service-features">
+              <li>Косметика Chris Christensen (США)</li>
+              <li>Стрижка когтей с обработкой гриндером</li>
+              <li>Парфюмирование гипоаллергенным спреем</li>
+            </ul>
+            <div class="service-card__footer">
+              <div class="service-price">
+                <span class="price-val">от 2 400 ₽</span>
+                <span class="price-note">зависит от размера питомца</span>
+              </div>
+              <button class="btn btn--outline-primary open-booking-btn" data-service="Комплексный СПА-уход">Записаться</button>
+            </div>
+          </div>
+
+          <!-- Item 5: Surgery & Dentistry -->
+          <div class="service-card" data-category="surgery">
+            <div class="service-card__top">
+              <span class="service-category">Стоматология</span>
+              <span class="service-badge">Свежее дыхание</span>
+            </div>
+            <h3 class="service-card__title">Ультразвуковая санация ротовой полости</h3>
+            <p class="service-card__desc">
+              Удаление зубного камня ультразвуковым скалером, глубокая полировка эмали фторсодержащей пастой и антисептическая обработка десен.
+            </p>
+            <ul class="service-features">
+              <li>Ингаляционный (газовый) изофлурановый наркоз</li>
+              <li>Анестезиологический мониторинг жизненных функций</li>
+              <li>Сохранение здоровых зубов питомца</li>
+            </ul>
+            <div class="service-card__footer">
+              <div class="service-price">
+                <span class="price-val">от 4 500 ₽</span>
+                <span class="price-note">включая полировку эмали</span>
+              </div>
+              <button class="btn btn--outline-primary open-booking-btn" data-service="Санация ротовой полости">Записаться</button>
+            </div>
+          </div>
+
+          <!-- Item 6: Prevention -->
+          <div class="service-card" data-category="prevention">
+            <div class="service-card__top">
+              <span class="service-category">Вакцинация</span>
+              <span class="service-badge">Международный паспорт</span>
+            </div>
+            <h3 class="service-card__title">Комплексная вакцинация импортными препаратами</h3>
+            <p class="service-card__desc">
+              Вакцинация собак (Нобивак, Биокан) и кошек (Пуревакс, Фелоцел) от опасных инфекций и бешенства с регистрацией в государственной ветеринарной базе.
+            </p>
+            <ul class="service-features">
+              <li>Предвакцинальный осмотр врача включен</li>
+              <li>Официальная печать в международный ветпаспорт</li>
+              <li>Чипирование с внесением в базу Animal-ID (+ 1 500 ₽)</li>
+            </ul>
+            <div class="service-card__footer">
+              <div class="service-price">
+                <span class="price-val">от 3 200 ₽</span>
+                <span class="price-note">осмотр + вакцина + паспорт</span>
+              </div>
+              <button class="btn btn--outline-primary open-booking-btn" data-service="Комплексная вакцинация">Записаться</button>
+            </div>
+          </div>
+
+          <!-- Item 7: Surgery -->
+          <div class="service-card" data-category="surgery">
+            <div class="service-card__top">
+              <span class="service-category">Хирургия</span>
+              <span class="service-badge">Микроинвазивно</span>
+            </div>
+            <h3 class="service-card__title">Лапароскопическая стерилизация / кастрация</h3>
+            <p class="service-card__desc">
+              Современная малотравматичная операция через мини-прокол 5 мм. Быстрое пробуждение в течение 30 минут, без ношения послеоперационной попоны и снятия швов.
+            </p>
+            <ul class="service-features">
+              <li>Внутрикожный саморассасывающийся шов</li>
+              <li>Предоперационный скрининг сердца (ЭХО-КГ)</li>
+              <li>Возвращение домой в день операции</li>
+            </ul>
+            <div class="service-card__footer">
+              <div class="service-price">
+                <span class="price-val">от 6 900 ₽</span>
+                <span class="price-note">всё включено под ключ</span>
+              </div>
+              <button class="btn btn--outline-primary open-booking-btn" data-service="Лапароскопическая стерилизация">Записаться</button>
+            </div>
+          </div>
+
+          <!-- Item 8: Grooming -->
+          <div class="service-card" data-category="grooming">
+            <div class="service-card__top">
+              <span class="service-category">Груминг &amp; СПА</span>
+              <span class="service-badge">Чистый дом</span>
+            </div>
+            <h3 class="service-card__title">Экспресс-линька для кошек и собак</h3>
+            <p class="service-card__desc">
+              Специальная 4-ступенчатая процедура с распариванием в питательной маске, бережным вычесыванием отмершего подшерстка и продувом компрессором. Убирает до 90% линяющей шерсти!
+            </p>
+            <ul class="service-features">
+              <li>Защита вашей мебели и одежды от шерсти на 2-3 месяца</li>
+              <li>Мягкое вычесывание без боли и микротравм кожи</li>
+              <li>Озоновая гидромассажная ванна в подарок</li>
+            </ul>
+            <div class="service-card__footer">
+              <div class="service-price">
+                <span class="price-val">от 3 100 ₽</span>
+                <span class="price-note">в зависимости от густоты шерсти</span>
+              </div>
+              <button class="btn btn--outline-primary open-booking-btn" data-service="Экспресс-линька">Записаться</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= GROOMING SPA & BEFORE/AFTER ================= -->
+    <section class="section section--grooming" id="grooming">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-tag section-tag--peach">
+            <span>✨</span> Красота &amp; Комфорт
+          </div>
+          <h2 class="section-title">СПА-Груминг салон: Преображение любимцев</h2>
+          <p class="section-subtitle">
+            Посмотрите, какими шелковистыми, опрятными и счастливыми становятся питомцы после визита к нашим топ-грумерам.
+          </p>
+        </div>
+
+        <div class="transformation-showcase">
+          <div class="transformation-card">
+            <div class="transformation-images">
+              <div class="transformation-side">
+                <span class="photo-label">До процедуры</span>
+                <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/grooming-dog-before.jpg -->
+                <img src="https://images.unsplash.com/photo-1541599540903-216a46ca1dc0?auto=format&fit=crop&w=800&q=80" alt="Шпиц до стрижки и экспресс-линьки">
+              </div>
+              <div class="transformation-side">
+                <span class="photo-label photo-label--after">После груминга ✨</span>
+                <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/grooming-dog-after.jpg -->
+                <img src="https://images.unsplash.com/photo-1535930891776-0c2dfb7fda1a?auto=format&fit=crop&w=800&q=80" alt="Шпиц после породного груминга">
+              </div>
+            </div>
+            <div class="transformation-info">
+              <div class="pet-meta">
+                <span class="pet-breed">Померанский шпиц Арчи (2.5 года)</span>
+                <span class="pet-procedure">Комплекс «Teddy Bear» + Озоновая СПА-ванна</span>
+              </div>
+              <p class="pet-comment">
+                «Арчи панически боялся шума фена. Грумер Полина нашла подход через вкусняшки и мягкую адаптацию. Шерсть сияет, ни одного колтуна!»
+              </p>
+              <div class="groomer-tag">Мастер: Полина Ковалева (Топ-грумер)</div>
+            </div>
+          </div>
+
+          <div class="transformation-card">
+            <div class="transformation-images">
+              <div class="transformation-side">
+                <span class="photo-label">До процедуры</span>
+                <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/grooming-cat-before.jpg -->
+                <img src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?auto=format&fit=crop&w=800&q=80" alt="Британский кот до экспресс-линьки">
+              </div>
+              <div class="transformation-side">
+                <span class="photo-label photo-label--after">После ухода ✨</span>
+                <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/grooming-cat-after.jpg -->
+                <img src="https://images.unsplash.com/photo-1561948955-570b270e7c36?auto=format&fit=crop&w=800&q=80" alt="Британский кот после ухода">
+              </div>
+            </div>
+            <div class="transformation-info">
+              <div class="pet-meta">
+                <span class="pet-breed">Британский кот Саймон (4 года)</span>
+                <span class="pet-procedure">Экспресс-линька без стрижки под ноль</span>
+              </div>
+              <p class="pet-comment">
+                «Мы категорически против бритья кошек машинкой, это разрушает терморегуляцию. После бережной экспресс-линьки дома наконец-то чистые диваны!»
+              </p>
+              <div class="groomer-tag">Мастер: Дарья Соколова (Грумер-фелинолог)</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grooming-cta-box">
+          <div class="grooming-cta-box__text">
+            <h3>Хотите записать хвостика на СПА-день?</h3>
+            <p>При первом посещении — консультация дерматолога по состоянию кожи и шерсти бесплатно!</p>
+          </div>
+          <button class="btn btn--primary open-booking-btn" data-service="Первый СПА-груминг">
+            <span>Записаться в СПА-салон</span>
+            <svg class="icon icon-xs" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= DOCTORS & SPECIALISTS ================= -->
+    <section class="section section--doctors" id="doctors">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-tag section-tag--teal">
+            <span>👨‍⚕️👩‍⚕️</span> Экспертная команда
+          </div>
+          <h2 class="section-title">Врачи, которым доверяют самое дорогое</h2>
+          <p class="section-subtitle">
+            Постоянное повышение квалификации, регулярные стажировки в ведущих ветклиниках Европы и безграничная любовь к животным.
+          </p>
+        </div>
+
+        <div class="doctors-grid">
+          <!-- Doctor 1 -->
+          <div class="doctor-card">
+            <div class="doctor-card__photo-wrap">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/doctor-1.jpg -->
+              <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=800&q=80" alt="Смирнова Анна Владимировна, главврач кардиолог" class="doctor-card__img">
+              <span class="doctor-exp">Стаж 12 лет</span>
+            </div>
+            <div class="doctor-card__info">
+              <h3 class="doctor-name">Смирнова Анна Владимировна</h3>
+              <p class="doctor-role">Главный врач, ветеринарный кардиолог</p>
+              <p class="doctor-desc">
+                Член Российского кардиологического ветеринарного общества (РКВО). Эксперт в области эхокардиографии и ведения пациентов с пороками сердца.
+              </p>
+              <div class="doctor-credo">«Каждое сердечко заслуживает биться ритмично и спокойно»</div>
+              <button class="btn btn--outline-primary btn--full open-booking-btn" data-doctor="Смирнова Анна Владимировна">Записаться к доктору</button>
+            </div>
+          </div>
+
+          <!-- Doctor 2 -->
+          <div class="doctor-card">
+            <div class="doctor-card__photo-wrap">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/doctor-2.jpg -->
+              <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=800&q=80" alt="Романов Дмитрий Сергеевич, хирург-травматолог" class="doctor-card__img">
+              <span class="doctor-exp">Стаж 10 лет</span>
+            </div>
+            <div class="doctor-card__info">
+              <h3 class="doctor-name">Романов Дмитрий Сергеевич</h3>
+              <p class="doctor-role">Ведущий хирург-ортопед, травматолог</p>
+              <p class="doctor-desc">
+                Специализируется на остеосинтезе, лечении разрыва передней крестовидной связки (TPLO) и лапароскопических малотравматичных операциях.
+              </p>
+              <div class="doctor-credo">«Точность движения и микроинвазивность — залог быстрого восстановления»</div>
+              <button class="btn btn--outline-primary btn--full open-booking-btn" data-doctor="Романов Дмитрий Сергеевич">Записаться к доктору</button>
+            </div>
+          </div>
+
+          <!-- Doctor 3 -->
+          <div class="doctor-card">
+            <div class="doctor-card__photo-wrap">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/doctor-3.jpg -->
+              <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=800&q=80" alt="Васильева Екатерина Игоревна, дерматолог цитолог" class="doctor-card__img">
+              <span class="doctor-exp">Стаж 8 лет</span>
+            </div>
+            <div class="doctor-card__info">
+              <h3 class="doctor-name">Васильева Екатерина Игоревна</h3>
+              <p class="doctor-role">Ветеринарный дерматолог, аллерголог, цитолог</p>
+              <p class="doctor-desc">
+                Успешно лечит упорные отиты, атопические дерматиты и пищевые непереносимости. Сертифицированный Cat-Friendly специалист ISFM.
+              </p>
+              <div class="doctor-credo">«Здоровая кожа — это радость движения без зуда и боли»</div>
+              <button class="btn btn--outline-primary btn--full open-booking-btn" data-doctor="Васильева Екатерина Игоревна">Записаться к доктору</button>
+            </div>
+          </div>
+
+          <!-- Doctor 4 -->
+          <div class="doctor-card">
+            <div class="doctor-card__photo-wrap">
+              <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/groomer-1.jpg -->
+              <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&w=800&q=80" alt="Ковалева Полина Андреевна, топ-грумер" class="doctor-card__img">
+              <span class="doctor-exp">Стаж 7 лет</span>
+            </div>
+            <div class="doctor-card__info">
+              <h3 class="doctor-name">Ковалева Полина Андреевна</h3>
+              <p class="doctor-role">Шеф-грумер клиники, зоопсихолог</p>
+              <p class="doctor-desc">
+                Победитель всероссийских чемпионатов груминга. Эксперт по адаптации пугливых и агрессивных собак через методики позитивного подкрепления.
+              </p>
+              <div class="doctor-credo">«Груминг должен быть приятным ритуалом заботы, а не испытанием»</div>
+              <button class="btn btn--outline-primary btn--full open-booking-btn" data-doctor="Ковалева Полина Андреевна">Записаться к мастеру</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PHOTO GALLERY / CLINIC TOUR ================= -->
+    <section class="section section--gallery" id="gallery">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-tag section-tag--lavender">
+            <span>🏥</span> Пространство клиники
+          </div>
+          <h2 class="section-title">Современная клиника европейского уровня</h2>
+          <p class="section-subtitle">
+            Взгляните на наше оборудование, стерильные операционные блоки, уютный холл и изолированные комфортные стационары.
+          </p>
+        </div>
+
+        <div class="gallery-grid">
+          <div class="gallery-item gallery-item--wide">
+            <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/clinic-reception.jpg -->
+            <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1000&q=80" alt="Зона ресепшн и комфортный холл ожидания" loading="lazy">
+            <div class="gallery-item__overlay">
+              <h4>Просторная зона ожидания</h4>
+              <p>Раздельные мягкие зоны для кошек и собак, чай и кофе для владельцев</p>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/clinic-examination.jpg -->
+            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1000&q=80" alt="Кабинет терапевтического осмотра" loading="lazy">
+            <div class="gallery-item__overlay">
+              <h4>Смотровой кабинет</h4>
+              <p>Бесшумные подъемные столы и приятная температура</p>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/clinic-surgery.jpg -->
+            <img src="https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=1000&q=80" alt="Высокотехнологичный хирургический блок" loading="lazy">
+            <div class="gallery-item__overlay">
+              <h4>Стерильная операционная</h4>
+              <p>Газовый наркоз, мониторинг капнографии и ЭКГ в реальном времени</p>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/clinic-lab.jpg -->
+            <img src="https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=1000&q=80" alt="Экспресс-лаборатория анализов IDEXX" loading="lazy">
+            <div class="gallery-item__overlay">
+              <h4>Собственная лаборатория</h4>
+              <p>Клинический и биохимический анализ крови за 20 минут</p>
+            </div>
+          </div>
+
+          <div class="gallery-item gallery-item--wide">
+            <!-- КАК ЗАМЕНИТЬ ФОТО: Замените src на images/clinic-patient.jpg -->
+            <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=1000&q=80" alt="Довольный пациент клиники после осмотра" loading="lazy">
+            <div class="gallery-item__overlay">
+              <h4>Комфортный стационар</h4>
+              <p>Индивидуальные боксы с подогревом и видеонаблюдением для хозяев</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= REVIEWS SECTION ================= -->
+    <section class="section section--reviews" id="reviews">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-tag section-tag--peach">
+            <span>💬</span> Истории выздоровления
+          </div>
+          <h2 class="section-title">Что говорят владельцы наших пациентов</h2>
+          <p class="section-subtitle">
+            Более 1 400 реальных отзывов с оценкой 4.9 на Яндекс Картах, 2ГИС и Google Maps.
+          </p>
+        </div>
+
+        <div class="reviews-grid">
+          <!-- Review 1 -->
+          <div class="review-card">
+            <div class="review-card__header">
+              <div class="review-avatar">
+                <span>ЕК</span>
+              </div>
+              <div class="review-author-meta">
+                <strong class="review-author">Елена Кузнецова</strong>
+                <span class="review-pet">Питомец: корги Персик (3 года)</span>
+              </div>
+              <div class="review-rating">★★★★★</div>
+            </div>
+            <p class="review-text">
+              «Приехали в клинику ночью со слезами: Персик на прогулке проглотил резиновую игрушку, началась неукротимая рвота. Врач ОРИТ оперативно сделал УЗИ и рентген с контрастом. Дмитрий Сергеевич провел эндоскопическое удаление без разреза живота! В 8 утра Персик уже бодро вилял попой и просил завтрак. Спасибо за спасенную жизнь нашего члена семьи!»
+            </p>
+            <div class="review-footer">
+              <span class="review-date">12 октября 2026</span>
+              <span class="review-source verified-badge">✓ Отзыв проверен (Яндекс Карты)</span>
+            </div>
+          </div>
+
+          <!-- Review 2 -->
+          <div class="review-card">
+            <div class="review-card__header">
+              <div class="review-avatar bg-peach-light">
+                <span>МИ</span>
+              </div>
+              <div class="review-author-meta">
+                <strong class="review-author">Михаил Ильин</strong>
+                <span class="review-pet">Питомец: мейн-кун Барс (5 лет)</span>
+              </div>
+              <div class="review-rating">★★★★★</div>
+            </div>
+            <p class="review-text">
+              «Барс — 9-килограммовый суровый кот, который в других клиниках дрался со всеми до крови. Здесь нас сразу отвели в отдельную кошачью зону без собак, где пахло кошачьими феромонами. Терапевт Екатерина Игоревна разговаривала с ним так ласково, что Барс впервые дал спокойно взять кровь и сделать УЗИ сердца. Теперь ходим только сюда!»
+            </p>
+            <div class="review-footer">
+              <span class="review-date">28 сентября 2026</span>
+              <span class="review-source verified-badge">✓ Отзыв проверен (Google Maps)</span>
+            </div>
+          </div>
+
+          <!-- Review 3 -->
+          <div class="review-card">
+            <div class="review-card__header">
+              <div class="review-avatar bg-lavender-light">
+                <span>АС</span>
+              </div>
+              <div class="review-author-meta">
+                <strong class="review-author">Алиса Степанова</strong>
+                <span class="review-pet">Питомец: мальтийская болонка Мими</span>
+              </div>
+              <div class="review-rating">★★★★★</div>
+            </div>
+            <p class="review-text">
+              «Настоящий рай для собак! Отдали Мими на СПА-комплекс и стрижку к Полине Ковалевой. Забрали пушистое ароматное облачко! Стрижка сделана просто идеально по стандарту, коготки аккуратно подточены гриндером, ушки чистые. А главное — собака не тряслась от стресса, а радостно виляла хвостиком. Рекомендую всем!»
+            </p>
+            <div class="review-footer">
+              <span class="review-date">4 ноября 2026</span>
+              <span class="review-source verified-badge">✓ Отзыв проверен (2ГИС)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FAQ SECTION ================= -->
+    <section class="section section--faq" id="faq">
+      <div class="container container--narrow">
+        <div class="section-header text-center">
+          <div class="section-tag section-tag--teal">
+            <span>❓</span> Ответы на вопросы
+          </div>
+          <h2 class="section-title">Часто задаваемые вопросы</h2>
+          <p class="section-subtitle">
+            Всё, что важно знать перед визитом в ветеринарную клинику и груминг-салон.
+          </p>
+        </div>
+
+        <div class="accordion" id="faq-accordion">
+          <!-- FAQ Item 1 -->
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false">
+              <span class="accordion-question">Как подготовить питомца к первому визиту, чтобы он не боялся?</span>
+              <span class="accordion-icon"></span>
+            </button>
+            <div class="accordion-body">
+              <div class="accordion-content">
+                Для кошек мы рекомендуем заранее оставить переноску открытой дома, положив внутрь любимый плед со знакомым запахом. В дороге накройте переноску легкой тканью. Для собак возьмите любимые лакомства и не кормите плотно за 2 часа до поездки. Если животное очень тревожное, позвоните нам перед выездом — мы подскажем безопасные растительные успокоительные капли.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ Item 2 -->
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false">
+              <span class="accordion-question">Нужна ли голодная диета перед УЗИ или сдачей анализов крови?</span>
+              <span class="accordion-icon"></span>
+            </button>
+            <div class="accordion-body">
+              <div class="accordion-content">
+                Да, перед плановым биохимическим анализом крови и УЗИ органов брюшной полости рекомендуется голодная диета 8–10 часов для взрослых собак и кошек (для щенков и котят до 6 месяцев — не более 4–6 часов). Воду ограничивать не нужно, свежая питьевая вода должна быть в постоянном доступе. При экстренных состояниях анализы и УЗИ проводятся немедленно без диеты.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ Item 3 -->
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false">
+              <span class="accordion-question">Как обеспечивается безопасность наркоза при операциях и санации зубов?</span>
+              <span class="accordion-icon"></span>
+            </button>
+            <div class="accordion-body">
+              <div class="accordion-content">
+                Мы используем современный ингаляционный (газовый) наркоз Изофлуран — самый щадящий для почек и печени. Перед любой анестезией проводится обязательный чекап: ЭХО-скрининг сердца и анализы крови. На протяжении всей операции за пациентом непрерывно следит отдельный врач-анестезиолог с монитором жизненных функций (пульсоксиметрия, капнография, давление, температура).
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ Item 4 -->
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false">
+              <span class="accordion-question">С какого возраста можно приводить щенка или котенка на первый груминг?</span>
+              <span class="accordion-icon"></span>
+            </button>
+            <div class="accordion-body">
+              <div class="accordion-content">
+                Первый ознакомительный визит рекомендуется делать сразу после завершения курса первичных прививок и карантина (обычно в возрасте 3–3.5 месяцев). Мы проведем мягкую социализацию: малыш познакомится со звуком воды и фена, получит угощения, мастер бережно подрежет коготки и расчешет шерстку. Это гарантирует, что собака вырастет без страха перед гигиеной.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ Item 5 -->
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false">
+              <span class="accordion-question">Можно ли владельцу находиться рядом с питомцем во время процедур?</span>
+              <span class="accordion-icon"></span>
+            </button>
+            <div class="accordion-body">
+              <div class="accordion-content">
+                На терапевтических осмотрах, вакцинациях, УЗИ и заборе анализов ваше присутствие не только разрешено, но и приветствуется — ваш голос и руки успокаивают хвостика. В операционный блок и отделение ОРИТ вход ограничен по соображениям стерильности, но дежурный врач регулярно присылает фото- и видеоотчеты о состоянии питомца в мессенджер.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ Item 6 -->
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false">
+              <span class="accordion-question">Работает ли клиника круглосуточно и что делать при ночной экстренной ситуации?</span>
+              <span class="accordion-icon"></span>
+            </button>
+            <div class="accordion-body">
+              <div class="accordion-content">
+                Плановый приём терапевтов и СПА-салон открыты ежедневно с 09:00 до 21:00. Отделение реанимации (ОРИТ), круглосуточный стационар и дежурная хирургическая бригада работают 24/7 без выходных. Если питомцу стало плохо ночью, звоните по номеру экстренной помощи <strong data-config="contacts.emergencyPhone">+7 (495) 822-44-99</strong> — вас сразу соединят с дежурным врачом для подготовки операционной к вашему приезду.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACTS & YANDEX MAP ================= -->
+    <section class="section section--contacts" id="contacts">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-tag section-tag--lavender">
+            <span>📍</span> Ждем вас в гости
+          </div>
+          <h2 class="section-title">Контакты и как до нас добраться</h2>
+          <p class="section-subtitle">
+            Уютное пространство в историческом районе Хамовники с собственной бесплатной парковкой для наших клиентов.
+          </p>
+        </div>
+
+        <div class="contacts-grid">
+          <!-- Info Column -->
+          <div class="contacts-info-card">
+            <div class="contacts-info-block">
+              <div class="info-icon bg-teal">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div class="info-details">
+                <h4>Адрес клиники</h4>
+                <p class="font-medium text-dark" data-config="address.fullAddress">г. Москва, ул. 10-летия Октября, д. 11</p>
+                <p class="text-sm text-muted" data-config="address.metro">м. Спортивная (3 мин пешком), МЦК Лужники</p>
+                <p class="text-xs text-primary mt-1" data-config="address.parkingInfo">🚗 Бесплатная парковка во дворе (въезд под шлагбаум, скажите на охране «в ветклинику»)</p>
+              </div>
+            </div>
+
+            <div class="contacts-info-block">
+              <div class="info-icon bg-peach">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div class="info-details">
+                <h4>Режим работы</h4>
+                <p class="font-medium text-dark" data-config="schedule.clinicHours">Пн-Вс: 09:00 — 21:00</p>
+                <p class="text-sm text-danger font-medium" data-config="schedule.emergencyHours">Круглосуточно 24/7 (стационар и ОРИТ)</p>
+              </div>
+            </div>
+
+            <div class="contacts-info-block">
+              <div class="info-icon bg-lavender">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+              </div>
+              <div class="info-details">
+                <h4>Телефоны для связи</h4>
+                <p class="font-medium text-dark">
+                  Запись: <a href="tel:+74958224412" data-config="contacts.phone" data-config-link="contacts.phone">+7 (495) 822-44-12</a>
+                </p>
+                <p class="font-medium text-danger">
+                  Неотложка 24/7: <a href="tel:+74958224499" data-config="contacts.emergencyPhone" data-config-link="contacts.emergencyPhone">+7 (495) 822-44-99</a>
+                </p>
+                <p class="text-sm text-muted mt-1">Email: <a href="mailto:care@lapki-hvostik.ru" data-config="contacts.email">care@lapki-hvostik.ru</a></p>
+              </div>
+            </div>
+
+            <!-- Quick Action Links -->
+            <div class="contacts-cta-actions">
+              <button class="btn btn--primary btn--full open-booking-btn" data-source="contacts_card">
+                <span>Записаться онлайн на удобное время</span>
+              </button>
+              <div class="messengers-row">
+                <a href="#" class="btn btn--messenger-wa" data-config-link="contacts.whatsapp" target="_blank" rel="noopener">
+                  <span>Написать в WhatsApp</span>
+                </a>
+                <a href="#" class="btn btn--messenger-tg" data-config-link="contacts.telegram" target="_blank" rel="noopener">
+                  <span>Написать в Telegram</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Map Column -->
+          <div class="contacts-map-card">
+            <div id="yandex-map-container" class="map-view">
+              <!-- Loading placeholder & fallback if map API is offline -->
+              <div class="map-fallback" id="map-fallback">
+                <div class="map-fallback__content">
+                  <div class="map-fallback__icon">🐾</div>
+                  <h4>Ветеринарный центр «Лапки &amp; Хвостик»</h4>
+                  <p data-config="address.fullAddress">Москва, ул. 10-летия Октября, д. 11</p>
+                  <p class="text-sm text-muted" data-config="address.metro">м. Спортивная</p>
+                  <a href="https://yandex.ru/maps/?rtext=~55.728912,37.568341" target="_blank" rel="noopener" class="btn btn--primary btn--sm mt-3" data-config-link="address.yandexMapsLink">
+                    Построить маршрут в Яндекс Картах
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container footer__container">
+      <div class="footer__brand-col">
+        <a href="#" class="logo">
+          <div class="logo__icon-wrap">
+            <svg class="logo__icon" viewBox="0 0 32 32" fill="none">
+              <path d="M16 20c-3.5 0-6.5 2.2-6.5 5 0 2.2 2.8 4 6.5 4s6.5-1.8 6.5-4c0-2.8-3-5-6-5z" fill="#0284C7"/>
+              <circle cx="8" cy="14" r="3.5" fill="#FDBA74"/>
+              <circle cx="24" cy="14" r="3.5" fill="#FDBA74"/>
+              <circle cx="12" cy="7" r="3.5" fill="#DDD6FE"/>
+              <circle cx="20" cy="7" r="3.5" fill="#DDD6FE"/>
+            </svg>
+          </div>
+          <div class="logo__text">
+            <span class="logo__brand" data-config="brand.name">Лапки &amp; Хвостик</span>
+            <span class="logo__tagline" data-config="brand.tagline">Ветклиника &amp; СПА-Груминг</span>
+          </div>
+        </a>
+        <p class="footer__desc">
+          Бережный центр ветеринарной медицины доказательного уровня и салон гигиенического груминга в Москве. Заботимся о здоровье и эмоциональном комфорте ваших питомцев.
+        </p>
+        <p class="footer__license">Лицензия ветеринарной деятельности № 77-22-004812 от 14.04.2021</p>
+      </div>
+
+      <div class="footer__nav-col">
+        <h4 class="footer__heading">Разделы</h4>
+        <ul class="footer__links">
+          <li><a href="#services">Услуги и цены</a></li>
+          <li><a href="#triage">Экспресс-триаж 🩺</a></li>
+          <li><a href="#fear-free">Философия Fear-Free</a></li>
+          <li><a href="#grooming">СПА-Груминг</a></li>
+          <li><a href="#doctors">Врачи-специалисты</a></li>
+          <li><a href="#gallery">Фото клиники</a></li>
+          <li><a href="#reviews">Отзывы клиентов</a></li>
+          <li><a href="#faq">Вопросы и ответы</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__services-col">
+        <h4 class="footer__heading">Популярные направления</h4>
+        <ul class="footer__links">
+          <li><a href="#services">Терапевтический приём</a></li>
+          <li><a href="#services">УЗИ экспертного класса</a></li>
+          <li><a href="#services">Экспресс-лаборатория</a></li>
+          <li><a href="#services">Чистка зубов ультразвуком</a></li>
+          <li><a href="#services">Экспресс-линька собак и кошек</a></li>
+          <li><a href="#services">Стационар и ОРИТ 24/7</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__contacts-col">
+        <h4 class="footer__heading">Контакты</h4>
+        <p class="footer__contact-line font-medium text-dark">
+          📞 <a href="tel:+74958224412" data-config="contacts.phone">+7 (495) 822-44-12</a>
+        </p>
+        <p class="footer__contact-line text-danger font-medium">
+          🚨 Неотложка: <a href="tel:+74958224499" data-config="contacts.emergencyPhone">+7 (495) 822-44-99</a>
+        </p>
+        <p class="footer__contact-line text-muted" data-config="address.fullAddress">
+          📍 г. Москва, ул. 10-летия Октября, д. 11
+        </p>
+        <p class="footer__contact-line text-muted" data-config="schedule.clinicHours">
+          ⏰ Пн-Вс: 09:00 — 21:00
+        </p>
+        <div class="footer__socials mt-3">
+          <a href="#" class="social-icon" data-config-link="contacts.whatsapp" title="WhatsApp" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 2C6.495 2 2 6.494 2 12.029c0 1.942.556 3.758 1.523 5.303L2 22l4.823-1.488A9.972 9.972 0 0012.031 22C17.568 22 22 17.506 22 12.029 22 6.494 17.568 2 12.031 2zm5.834 14.178c-.244.685-1.42 1.309-1.97 1.368-.507.054-1.168.082-3.754-.987-3.08-1.272-5.06-4.417-5.213-4.62-.152-.204-1.242-1.656-1.242-3.158 0-1.503.785-2.243 1.063-2.548.277-.306.606-.383.81-.383.203 0 .406.002.583.01.189.009.444-.072.694.528.258.621.879 2.148.956 2.304.077.156.128.339.026.543-.102.203-.153.33-.305.508-.152.179-.32.399-.457.535-.153.152-.312.317-.134.623.178.305.792 1.304 1.7 2.112 1.168 1.039 2.152 1.36 2.457 1.513.305.152.483.127.661-.077.178-.203.763-.889.966-1.194.203-.305.406-.254.685-.152.279.102 1.776.837 2.08 1.039.305.203.508.305.584.432.076.127.076.737-.168 1.422z"/></svg>
+          </a>
+          <a href="#" class="social-icon" data-config-link="contacts.telegram" title="Telegram" aria-label="Telegram">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .36z"/></svg>
+          </a>
+          <a href="#" class="social-icon" data-config-link="contacts.vk" title="ВКонтакте" aria-label="VKontakte">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M15.07 2H8.93C4.33 2 2 4.33 2 8.93v6.14C2 19.67 4.33 22 8.93 22h6.14c4.6 0 6.93-2.33 6.93-6.93V8.93C22 4.33 19.67 2 15.07 2zm3.38 13.91c-.53.71-1.53 1.34-2.68 1.34-.14 0-.3 0-.47-.02-1.84-.2-3.66-1.55-5.22-3.9-1.44-2.18-2.52-4.66-2.56-4.75-.12-.31-.05-.59.18-.78.21-.18.52-.25.86-.25h1.96c.55 0 .84.34.99.71.69 1.74 1.7 3.32 2.65 4.14.3.26.54.38.74.38.16 0 .3-.07.4-.2.27-.35.34-1.03.34-1.92V9.69c-.04-.98-.44-1.21-1.01-1.31-.22-.04-.37-.2-.37-.36 0-.25.26-.5.71-.5h3.05c.57 0 .97.35.97.87v4.18c0 .35.12.5.25.5.11 0 .24-.1.4-.29 1.15-1.33 1.95-3.41 1.98-3.47.16-.38.53-.61.98-.61h2.09c.43 0 .76.16.89.43.14.27.09.62-.12.98-.59 1.05-1.92 2.92-2.55 3.73-.24.31-.28.45-.19.64.08.17.29.43.68.8 1.15 1.09 1.8 2.05 1.95 2.87.08.43-.16.78-.6.78h-2.11c-.59 0-1.03-.25-1.56-.95z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container footer__bottom-container">
+        <p class="copyright">© 2026 Ветеринарный центр «Лапки &amp; Хвостик». Все права защищены.</p>
+        <div class="footer__legal">
+          <a href="#" class="legal-link">Политика конфиденциальности</a>
+          <span class="divider">•</span>
+          <a href="#" class="legal-link">Правила оказания ветеринарных услуг</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= APPOINTMENT MODAL ================= -->
+  <div class="modal" id="booking-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal__backdrop" id="modal-backdrop"></div>
+    <div class="modal__dialog">
+      <button class="modal__close-btn" id="modal-close-btn" aria-label="Закрыть окно">&times;</button>
+      
+      <!-- Form Step -->
+      <div class="modal__body" id="modal-form-view">
+        <div class="modal__header">
+          <div class="modal__icon-pill">🐾</div>
+          <h3 class="modal__title" id="modal-title">Онлайн-запись в центр «Лапки &amp; Хвостик»</h3>
+          <p class="modal__subtitle">
+            Оставьте данные, и наш администратор перезвонит в течение 5 минут для подтверждения удобного времени.
+          </p>
+        </div>
+
+        <form class="booking-form" id="booking-form" novalidate>
+          <!-- Pet Species Quick Radio -->
+          <div class="form-group">
+            <label class="form-label">Вид питомца *</label>
+            <div class="species-radios">
+              <label class="species-chip">
+                <input type="radio" name="modal_pet_type" value="Собака" checked>
+                <span>🐕 Собака</span>
+              </label>
+              <label class="species-chip">
+                <input type="radio" name="modal_pet_type" value="Кошка">
+                <span>🐈 Кошка</span>
+              </label>
+              <label class="species-chip">
+                <input type="radio" name="modal_pet_type" value="Другое">
+                <span>🐰 Грызун / Экзот</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <!-- Pet Name -->
+            <div class="form-group">
+              <label for="form-pet-name" class="form-label">Кличка и порода питомца *</label>
+              <input type="text" id="form-pet-name" name="pet_name" class="form-control" placeholder="Например: Корги Арчи" required>
+              <span class="form-error" id="error-pet-name">Пожалуйста, укажите кличку питомца</span>
+            </div>
+
+            <!-- Service Selection -->
+            <div class="form-group">
+              <label for="form-service" class="form-label">Интересующая услуга *</label>
+              <select id="form-service" name="service" class="form-control" required>
+                <option value="">Выберите услугу...</option>
+                <option value="Первичный приём терапевта">Первичный приём терапевта (1 800 ₽)</option>
+                <option value="УЗИ брюшной полости">УЗИ брюшной полости экспертное (2 900 ₽)</option>
+                <option value="Чекап Здоровый хвостик">Чекап «Здоровый хвостик» (5 800 ₽)</option>
+                <option value="Комплексный СПА-уход">Комплексный СПА-груминг (от 2 400 ₽)</option>
+                <option value="Экспресс-линька">Экспресс-линька (от 3 100 ₽)</option>
+                <option value="Комплексная вакцинация">Вакцинация импортными препаратами (от 3 200 ₽)</option>
+                <option value="Санация ротовой полости">Ультразвуковая чистка зубов (от 4 500 ₽)</option>
+                <option value="Лапароскопическая стерилизация">Стерилизация / Кастрация (от 6 900 ₽)</option>
+                <option value="Срочная консультация дежурного врача">Срочный приём дежурного врача (ОРИТ)</option>
+                <option value="Другая услуга">Другой вопрос или услуга</option>
+              </select>
+              <span class="form-error" id="error-service">Пожалуйста, выберите направление</span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <!-- Owner Name -->
+            <div class="form-group">
+              <label for="form-owner-name" class="form-label">Ваше имя *</label>
+              <input type="text" id="form-owner-name" name="owner_name" class="form-control" placeholder="Иван" required>
+              <span class="form-error" id="error-owner-name">Пожалуйста, укажите ваше имя</span>
+            </div>
+
+            <!-- Owner Phone with mask -->
+            <div class="form-group">
+              <label for="form-phone" class="form-label">Номер телефона *</label>
+              <input type="tel" id="form-phone" name="phone" class="form-control" placeholder="+7 (___) ___-__-__" required>
+              <span class="form-error" id="error-phone">Введите корректный номер телефона (10 цифр)</span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <!-- Preferred Date -->
+            <div class="form-group">
+              <label for="form-date" class="form-label">Желаемая дата визита</label>
+              <input type="date" id="form-date" name="preferred_date" class="form-control">
+            </div>
+
+            <!-- Preferred Time Window -->
+            <div class="form-group">
+              <label for="form-time" class="form-label">Удобное время</label>
+              <select id="form-time" name="preferred_time" class="form-control">
+                <option value="Как можно скорее">Как можно скорее (Срочно)</option>
+                <option value="Утро (09:00 - 12:00)" selected>Утро (09:00 — 12:00)</option>
+                <option value="День (12:00 - 16:00)">День (12:00 — 16:00)</option>
+                <option value="Вечер (16:00 - 21:00)">Вечер (16:00 — 21:00)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Notes / Symptoms -->
+          <div class="form-group">
+            <label for="form-notes" class="form-label">Симптомы или пожелания к приёму</label>
+            <textarea id="form-notes" name="notes" class="form-control" rows="2" placeholder="Опишите, что беспокоит хвостика, или выберите нужного врача"></textarea>
+          </div>
+
+          <!-- Privacy Agreement -->
+          <div class="form-group form-group--checkbox">
+            <label class="checkbox-container">
+              <input type="checkbox" id="form-consent" name="consent" checked required>
+              <span class="checkmark"></span>
+              <span class="checkbox-label-text">
+                Я даю согласие на обработку персональных данных и согласен с <a href="#" class="link-underline">политикой конфиденциальности</a>
+              </span>
+            </label>
+            <span class="form-error" id="error-consent">Требуется согласие на обработку данных</span>
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--full btn--lg" id="submit-booking-btn">
+            <span>Подтвердить запись</span>
+            <svg class="icon icon-xs" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+        </form>
+      </div>
+
+      <!-- Success View (hidden initially) -->
+      <div class="modal__body modal__body--success" id="modal-success-view" style="display: none;">
+        <div class="success-animation">
+          <div class="checkmark-circle">
+            <div class="checkmark-stem"></div>
+            <div class="checkmark-kick"></div>
+          </div>
+        </div>
+        <h3 class="modal__title mt-3">Заявка успешно принята!</h3>
+        <p class="modal__subtitle">
+          Номер вашего талона: <strong id="success-ticket-id" class="text-primary">#LH-8419</strong>.
+        </p>
+        <div class="success-details-card">
+          <p>Мы получили данные по питомцу <strong id="success-pet-name">Арчи</strong> на услугу <strong id="success-service-name">Приём терапевта</strong>.</p>
+          <p class="text-sm text-muted mt-2">Администратор позвонит по номеру <strong id="success-phone">+7 (___) ___-__-__</strong> в течение 5 минут для уточнения деталей.</p>
+        </div>
+        <div class="success-tips-box">
+          <p class="text-xs text-muted">
+            🐾 <strong>Совет от ветеринара:</strong> не кормите питомца плотно перед визитом и возьмите с собой ветеринарный паспорт (при наличии).
+          </p>
+        </div>
+        <button class="btn btn--primary btn--full mt-4" id="modal-success-close-btn">
+          Отлично, жду звонка!
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= FLOATING ACTION BUTTONS (MOBILE) ================= -->
+  <aside class="floating-actions" aria-label="Быстрые действия">
+    <a href="tel:+74958224412" class="float-btn float-btn--call" data-config-link="contacts.phone" aria-label="Позвонить в клинику">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+      <span class="float-btn__label">Звонок</span>
+    </a>
+    <button class="float-btn float-btn--book open-booking-btn" data-source="floating_action_btn" aria-label="Записаться онлайн">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+      <span class="float-btn__label">Запись</span>
+    </button>
+  </aside>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>
