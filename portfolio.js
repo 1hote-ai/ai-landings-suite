@@ -1,6 +1,6 @@
 /**
- * NEXUS WEB // AI-POWERED WEB PRODUCTION
- * Client Portfolio & Interactive Engine
+ * Егор // Веб-разработка & AI-лендинги
+ * Портфолио & Интерактивный калькулятор
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -106,6 +106,7 @@ function initCalculator() {
   
   const priceDisplay = document.getElementById('calcPriceDisplay');
   const termDisplay = document.getElementById('calcTermDisplay');
+  const calcApplyBtn = document.getElementById('calcApplyBtn');
 
   if (!priceDisplay || !termDisplay) return;
 
@@ -149,6 +150,13 @@ function initCalculator() {
       termText = `Срок готовности: <strong>${baseHours} часов</strong>`;
     }
     termDisplay.innerHTML = termText;
+
+    // Dynamic Telegram button link
+    if (calcApplyBtn) {
+      const activeTypeName = activeType ? activeType.querySelector('strong')?.textContent.trim() : 'Лендинг';
+      const tgMsg = `Здравствуйте, Егор! Меня интересует ${activeTypeName}, предварительный расчет в калькуляторе: ${totalPrice.toLocaleString('ru-RU')} ₽. Хочу обсудить запуск.`;
+      calcApplyBtn.href = `https://t.me/hoteqqe?text=${encodeURIComponent(tgMsg)}`;
+    }
   }
 
   // Type buttons click
